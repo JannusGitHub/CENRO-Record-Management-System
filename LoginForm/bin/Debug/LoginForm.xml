@@ -1,0 +1,666 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+LoginForm
+</name>
+</assembly>
+<members>
+<member name="T:LoginForm.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Certificate_28px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Certificate_28px1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Search_28px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Search_28px_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Undo_28px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Undo_28px_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.HospitalAndMedicalEstablishment_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentFood_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentNonFood_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Resort_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.user_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.HospitalAndMedicalEstablishment_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentFood_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentNonFood_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Resort_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.user_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.HospitalAndMedicalEstablishment_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentFood_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.IndustrialEstablishmentNonFood_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.Resort_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.user_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.WasteManagementFacility_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.AgriculturalBusiness_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.CommercialEstablishment_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.FuneralParlor_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.HospitalAndMedicalEstablishment_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentFood_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.Junkshop_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.PetroleumProducts_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.Resort_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.user_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.cenro_DBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.cenro_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.cenro_DBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.cenro_DBDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSet.FastfoodCanteenAndRestaurant_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSet.FastfoodCanteenAndRestaurant_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSet.FastfoodCanteenAndRestaurant_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.FastfoodDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.FastfoodDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.FastfoodDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.FastfoodDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.FastfoodDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSet.HospitalAndMedicalEstablishment_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSet.HospitalAndMedicalEstablishment_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSet.HospitalAndMedicalEstablishment_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSetTableAdapters.HospitalAndMedicalEstablishment_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.HospitalDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.HospitalDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.HospitalDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.HospitalDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.HospitalDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSet.IndustrialEstablishmentFood_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSet.IndustrialEstablishmentFood_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSet.IndustrialEstablishmentFood_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSetTableAdapters.IndustrialEstablishmentFood_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.IEFDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.IEFDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.IEFDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.IEFDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.IEFDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSet.IndustrialEstablishmentNonFood_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSet.IndustrialEstablishmentNonFood_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSet.IndustrialEstablishmentNonFood_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.IENFDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.IENFDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.IENFDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.IENFDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSet.LogHistory_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSet.LogHistory_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSet.LogHistory_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSetTableAdapters.LogHistory_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.LogHistoryDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.LogHistoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.LogHistoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.LogHistoryDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.LogHistoryDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9996D960-5926-4CA3-962E-072454A8E5EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LoginForm.My.MyApplication</StartupObject>
+    <RootNamespace>LoginForm</RootNamespace>
+    <AssemblyName>LoginForm</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LoginForm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LoginForm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivateOrDeactivateForm.Designer.vb">
+      <DependentUpon>ActivateOrDeactivateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ActivateOrDeactivateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup.Designer.vb">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupDatabaseForm.Designer.vb">
+      <DependentUpon>BackupDatabaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BackupDatabaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cenro_DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cenro_DBDataSet.vb">
+      <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IEFCertificationPopupForm.Designer.vb">
+      <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFCertificationPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodCertificationPopupForm.Designer.vb">
+      <DependentUpon>FastfoodCertificationPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodCertificationPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FastfoodDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodOathOfUndertakingForm.Designer.vb">
+      <DependentUpon>FastfoodOathOfUndertakingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodOathOfUndertakingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodPrintedCertificationForm.Designer.vb">
+      <DependentUpon>FastfoodPrintedCertificationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodPrintedCertificationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodReportForm.Designer.vb">
+      <DependentUpon>FastfoodReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodReqForm.Designer.vb">
+      <DependentUpon>FastfoodReqForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodReqForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificationMainForm.Designer.vb">
+      <DependentUpon>CertificationMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CertificationMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalAndMedicalReqForm.Designer.vb">
+      <DependentUpon>HospitalAndMedicalReqForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalAndMedicalReqForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalCertificationPopupForm.Designer.vb">
+      <DependentUpon>HospitalCertificationPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalCertificationPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalOathOfUndertakingForm.Designer.vb">
+      <DependentUpon>HospitalOathOfUndertakingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalOathOfUndertakingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalPrintedCertificationForm.Designer.vb">
+      <DependentUpon>HospitalPrintedCertificationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalPrintedCertificationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalReportForm.Designer.vb">
+      <DependentUpon>HospitalReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEFDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IEFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IEFReportForm.Designer.vb">
+      <DependentUpon>IEFReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFCertificationPopupForm.Designer.vb">
+      <DependentUpon>IENFCertificationPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFCertificationPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IENFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IENFOathOfUndertakingForm.Designer.vb">
+      <DependentUpon>IENFOathOfUndertakingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFOathOfUndertakingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFPrintedCertificateForm.Designer.vb">
+      <DependentUpon>IENFPrintedCertificateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFPrintedCertificateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFReportForm.Designer.vb">
+      <DependentUpon>IENFReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectorCategoryForm.Designer.vb">
+      <DependentUpon>InspectorCategoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InspectorCategoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFReqForm.Designer.vb">
+      <DependentUpon>IENFReqForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFReqForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogHistoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogHistoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogHistoryDataSet.vb">
+      <DependentUpon>LogHistoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogHistoryForm.Designer.vb">
+      <DependentUpon>LogHistoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogHistoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OathOfUndertakingForm.Designer.vb">
+      <DependentUpon>OathOfUndertakingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OathOfUndertakingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEFPrintedCertificateForm.Designer.vb">
+      <DependentUpon>IEFPrintedCertificateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFPrintedCertificateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCategory.Designer.vb">
+      <DependentUpon>ReportCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagementForm.Designer.vb">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.vb">
+      <DependentUpon>Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEFForm.Designer.vb">
+      <DependentUpon>IEFForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastfoodCanteenAndRestoForm.Designer.vb">
+      <DependentUpon>FastfoodCanteenAndRestoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodCanteenAndRestoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordform.Designer.vb">
+      <DependentUpon>ForgotPasswordform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalAndEstablishmentForm.Designer.vb">
+      <DependentUpon>HospitalAndEstablishmentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalAndEstablishmentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFForm.Designer.vb">
+      <DependentUpon>IENFForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectorForm.Designer.vb">
+      <DependentUpon>InspectorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InspectorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="IEFReqForm.Designer.vb">
+      <DependentUpon>IEFReqForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFReqForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ActivateOrDeactivateForm.resx">
+      <DependentUpon>ActivateOrDeactivateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup.resx">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupDatabaseForm.resx">
+      <DependentUpon>BackupDatabaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificate.rdlc" />
+    <EmbeddedResource Include="IEFCertificationPopupForm.resx">
+      <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodCertificationPopupForm.resx">
+      <DependentUpon>FastfoodCertificationPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodOathOfUndertakingForm.resx">
+      <DependentUpon>FastfoodOathOfUndertakingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodPrintedCertificationForm.resx">
+      <DependentUpon>FastfoodPrintedCertificationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodReport.rdlc" />
+    <EmbeddedResource Include="FastfoodReportForm.resx">
+      <DependentUpon>FastfoodReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodReqForm.resx">
+      <DependentUpon>FastfoodReqForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificationMainForm.resx">
+      <DependentUpon>CertificationMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalAndMedicalReqForm.resx">
+      <DependentUpon>HospitalAndMedicalReqForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalCertificationPopupForm.resx">
+      <DependentUpon>HospitalCertificationPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalEstablishmentReport.rdlc" />
+    <EmbeddedResource Include="HospitalOathOfUndertakingForm.resx">
+      <DependentUpon>HospitalOathOfUndertakingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalPrintedCertificationForm.resx">
+      <DependentUpon>HospitalPrintedCertificationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalReportForm.resx">
+      <DependentUpon>HospitalReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFReportForm.resx">
+      <DependentUpon>IEFReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalIENFOathOfUndertaking.rdlc" />
+    <EmbeddedResource Include="IENFCertificationPopupForm.resx">
+      <DependentUpon>IENFCertificationPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFOathOfUndertakingForm.resx">
+      <DependentUpon>IENFOathOfUndertakingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFPrintedCertificateForm.resx">
+      <DependentUpon>IENFPrintedCertificateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFReport.rdlc" />
+    <EmbeddedResource Include="IENFReportForm.resx">
+      <DependentUpon>IENFReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectorCategoryForm.resx">
+      <DependentUpon>InspectorCategoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFReqForm.resx">
+      <DependentUpon>IENFReqForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFReport.rdlc" />
+    <EmbeddedResource Include="LogHistoryForm.resx">
+      <DependentUpon>LogHistoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogHistoryReport.rdlc" />
+    <EmbeddedResource Include="IENFOathOfUndertaking.rdlc" />
+    <EmbeddedResource Include="FastfoodOathOfUndertaking.rdlc" />
+    <EmbeddedResource Include="IEFOathOfUndertaking.rdlc" />
+    <EmbeddedResource Include="OathOfUndertakingForm.resx">
+      <DependentUpon>OathOfUndertakingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFPrintedCertificateForm.resx">
+      <DependentUpon>IEFPrintedCertificateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCategory.resx">
+      <DependentUpon>ReportCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFForm.resx">
+      <DependentUpon>IEFForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodCanteenAndRestoForm.resx">
+      <DependentUpon>FastfoodCanteenAndRestoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordform.resx">
+      <DependentUpon>ForgotPasswordform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalAndEstablishmentForm.resx">
+      <DependentUpon>HospitalAndEstablishmentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFForm.resx">
+      <DependentUpon>IENFForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspectorForm.resx">
+      <DependentUpon>InspectorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFReqForm.resx">
+      <DependentUpon>IEFReqForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cenro_DBDataSet.xsc">
+      <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cenro_DBDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cenro_DBDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="cenro_DBDataSet.xss">
+      <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FastfoodDataSet.xsc">
+      <DependentUpon>FastfoodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FastfoodDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FastfoodDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FastfoodDataSet.xss">
+      <DependentUpon>FastfoodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet.xsc">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet.xss">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IEFDataSet.xsc">
+      <DependentUpon>IEFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IEFDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IEFDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="IEFDataSet.xss">
+      <DependentUpon>IEFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IENFDataSet.xsc">
+      <DependentUpon>IENFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IENFDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IENFDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="IENFDataSet.xss">
+      <DependentUpon>IENFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LogHistoryDataSet.xsc">
+      <DependentUpon>LogHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LogHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogHistoryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogHistoryDataSet.xss">
+      <DependentUpon>LogHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_28px.png" />
+    <None Include="Resources\icons8_Search_28px_2.png" />
+    <None Include="Resources\icons8_Certificate_28px1.png" />
+    <None Include="Resources\icons8_Undo_28px.png" />
+    <None Include="Resources\icons8_Undo_28px_1.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
