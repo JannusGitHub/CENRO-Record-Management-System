@@ -57,27 +57,7 @@ LoginForm
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -97,47 +77,12 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.Resort_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.user_tblDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -157,47 +102,12 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.Resort_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.user_tblRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.WasteManagementFacility_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.AgriculturalBusiness_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.CommercialEstablishment_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.FuneralParlor_tblRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -217,47 +127,12 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSet.Junkshop_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.PetroleumProducts_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSet.Resort_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSet.user_tblRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.WasteManagementFacility_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.AgriculturalBusiness_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.CommercialEstablishment_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
 <member name="T:LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.FuneralParlor_tblTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -273,21 +148,6 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.Junkshop_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.PetroleumProducts_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LoginForm.cenro_DBDataSetTableAdapters.Resort_tblTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

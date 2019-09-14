@@ -73,6 +73,7 @@ Public Class Backup
             Else 'if sql server authentication(requires login is selected)
                 constr = "Data Source=" & get_servername & ";Initial Catalog=" & cmbDatabase.Text & ";user id=" & get_userid & ";password=" & get_password & ";Integrated Security=false"
             End If
+
             con = New SqlConnection(constr) 'get connection string
             con.Open() 'open connection
             Dim strquery As String
@@ -81,7 +82,7 @@ Public Class Backup
             'save_dialog.Filter = "SQL Server database backup files|*.bak"
             save_dialog.ShowDialog()
             Filename = save_dialog.FileName
-            strquery = "backup database " & database & " TO disk='" & Filename & "'"
+            strquery = "backup database " & database & " to disk='" & Filename & "'"
 
             Try
                 cmd = New SqlCommand(strquery, con)
@@ -98,6 +99,10 @@ Public Class Backup
         Catch ex As Exception
             Me.Cursor = Cursors.Default
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            If ConnectionState.Open Then
+                con.Close()
+            End If
         End Try
     End Sub
 
@@ -138,10 +143,13 @@ Public Class Backup
             'open sql database to restore
             If opendialog.ShowDialog = Windows.Forms.DialogResult.OK Then
                 Me.Cursor = Cursors.WaitCursor
+                SqlConnection.ClearAllPools()
                 con2 = New SqlConnection(constr2) 'get/set connection data source
                 con2.Open() 'open connection
                 filename2 = opendialog.FileName 'get the file name and path of the sql database selected
-                strquery2 = "Restore database " & database2 & " from disk='" & filename2 & "'" + "WITH REPLACE"
+                'strquery2 = "Restore database " & database2 & " from disk='" & filename2 & "'" &
+                '"WITH REPLACE"
+                strquery2 = "USE Master ALTER DATABASE [" & database2 & "] SET Single_User WITH Rollback Immediate Restore database [" & database2 & "] FROM disk='" & filename2 & "' WITH REPLACE ALTER DATABASE [" & database2 & "] SET Multi_User "
 
                 'execute command
                 Try

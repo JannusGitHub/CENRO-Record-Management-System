@@ -55,7 +55,7 @@ Public Class IEFForm
             adapter1.Fill(table1)
             DataGridView2.DataSource = table1
         ElseIf ComboBox1.SelectedItem.ToString() = "All" Then
-            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)  like '%" & SearchReq.Text & "%' "
+            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),SelfMonitoringReport)  like '%" & SearchReq.Text & "%' "
             Dim command2 As New SqlCommand(searchQuery2, connection)
             Dim adapter2 As New SqlDataAdapter(command2)
             Dim table2 As New DataTable()
@@ -97,7 +97,7 @@ Public Class IEFForm
             adapter2.Fill(table2)
             DataGridView1.DataSource = table2
         ElseIf ComboBox2.SelectedItem.ToString() = "All" Then
-            Dim searchQuery3 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),Address)+'-'+Convert(nvarchar(50),EmailAddress)+'-'+Convert(nvarchar(50),CEO_President)+'-'+Convert(nvarchar(50),GeneralManager)+'-'+Convert(nvarchar(50),PollutionControlOfficer)+'-'+Convert(nvarchar(50),NatureOfBusiness)+'-'+Convert(nvarchar(50),ContactNumber)+'-'+Convert(nvarchar(50),NameOfAccreditedWasteHauler)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)  like '%" & Search.Text & "%' "
+            Dim searchQuery3 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),Address)+'-'+Convert(nvarchar(50),EmailAddress)+'-'+Convert(nvarchar(50),CEO_President)+'-'+Convert(nvarchar(50),GeneralManager)+'-'+Convert(nvarchar(50),PollutionControlOfficer)+'-'+Convert(nvarchar(50),NatureOfBusiness)+'-'+Convert(nvarchar(50),ContactNumber)+'-'+Convert(nvarchar(50),NameOfAccreditedWasteHauler)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),SelfMonitoringReport)  like '%" & Search.Text & "%' "
             Dim command3 As New SqlCommand(searchQuery3, connection)
             Dim adapter3 As New SqlDataAdapter(command3)
             Dim table3 As New DataTable()
@@ -108,7 +108,7 @@ Public Class IEFForm
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         Try
-            If NameOfEstablishment.Text = "" And Address.Text = "" And EmailAddress.Text = "" And CEOPresident.Text = "" And GeneralManager.Text = "" And PollutionControlOfficer.Text = "" And NatureOfBusiness.Text = "" And ContactNumber.Text = "" And NameOfAccreditedWasteHauler.Text = "" And ControlNumber.Text = "" And BrgyClearance.Text = "" And DTISEC.Text = "" And ECC.Text = "" And PTO.Text = "" And DP.Text = "" And BFAD.Text = "" And AccreditedWasteHauler.Text = "" Then
+            If NameOfEstablishment.Text = "" And Address.Text = "" And EmailAddress.Text = "" And CEOPresident.Text = "" And GeneralManager.Text = "" And PollutionControlOfficer.Text = "" And NatureOfBusiness.Text = "" And ContactNumber.Text = "" And NameOfAccreditedWasteHauler.Text = "" And ControlNumber.Text = "" And BrgyClearance.Text = "" And DTISEC.Text = "" And ECC.Text = "" And PTO.Text = "" And DP.Text = "" And BFAD.Text = "" And AccreditedWasteHauler.Text = "" And SMR.Text = "" Then
                 MessageBox.Show("All confirmation is required", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf NameOfEstablishment.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -144,6 +144,8 @@ Public Class IEFForm
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf AccreditedWasteHauler.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ElseIf SMR.Text = "" Then
+                MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 Dim command As SqlCommand
                 Dim datareader As SqlDataReader
@@ -161,7 +163,7 @@ Public Class IEFForm
                 Else
                     connection.Close()
                     connection.Open()
-                    Dim insertquery As String = "insert into IndustrialEstablishmentFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@BFAD,@AccreditedWasteHauler)"
+                    Dim insertquery As String = "insert into IndustrialEstablishmentFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler,SelfMonitoringReport) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@BFAD,@AccreditedWasteHauler,@SMR)"
                     Dim cmd As New SqlCommand(insertquery, connection)
                     cmd.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment.Text)
                     cmd.Parameters.AddWithValue("@Address", Address.Text)
@@ -180,6 +182,7 @@ Public Class IEFForm
                     cmd.Parameters.AddWithValue("@DP", DP.Text)
                     cmd.Parameters.AddWithValue("@BFAD", BFAD.Text)
                     cmd.Parameters.AddWithValue("@AccreditedWasteHauler", AccreditedWasteHauler.Text)
+                    cmd.Parameters.AddWithValue("@SMR", SMR.Text)
                     cmd.ExecuteNonQuery()
                     MessageBox.Show("Successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     ControlNumber.Clear()
@@ -200,6 +203,7 @@ Public Class IEFForm
                     DP.Clear()
                     BFAD.Clear()
                     AccreditedWasteHauler.Clear()
+                    SMR.Clear()
                 End If
                 datareader.Close()
                 connection.Close()
@@ -211,7 +215,7 @@ Public Class IEFForm
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
-        If NameOfEstablishment.Text = "" And Address.Text = "" And EmailAddress.Text = "" And CEOPresident.Text = "" And GeneralManager.Text = "" And PollutionControlOfficer.Text = "" And NatureOfBusiness.Text = "" And ContactNumber.Text = "" And NameOfAccreditedWasteHauler.Text = "" And ControlNumber.Text = "" And BrgyClearance.Text = "" And DTISEC.Text = "" And ECC.Text = "" And PTO.Text = "" And DP.Text = "" And BFAD.Text = "" And AccreditedWasteHauler.Text = "" Then
+        If NameOfEstablishment.Text = "" And Address.Text = "" And EmailAddress.Text = "" And CEOPresident.Text = "" And GeneralManager.Text = "" And PollutionControlOfficer.Text = "" And NatureOfBusiness.Text = "" And ContactNumber.Text = "" And NameOfAccreditedWasteHauler.Text = "" And ControlNumber.Text = "" And BrgyClearance.Text = "" And DTISEC.Text = "" And ECC.Text = "" And PTO.Text = "" And DP.Text = "" And BFAD.Text = "" And AccreditedWasteHauler.Text = "" And SMR.Text = "" Then
             MessageBox.Show("All confirmation is required", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf NameOfEstablishment.Text = "" Then
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -247,6 +251,8 @@ Public Class IEFForm
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf AccreditedWasteHauler.Text = "" Then
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf SMR.Text = "" Then
+            MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim Updatequery As String = "Select * From IndustrialEstablishmentFood_tbl WHERE ControlNumber = '" & ControlNumber.Text & "' "
             Dim cmd As New SqlCommand(Updatequery, connection)
@@ -258,7 +264,7 @@ Public Class IEFForm
                 clear()
                 ControlNumber.Focus()
             Else
-                Dim Update1 As String = "UPDATE IndustrialEstablishmentFood_tbl set NameOfEstablishment = '" & NameOfEstablishment.Text & "', Address = '" & Address.Text & "', EmailAddress = '" & EmailAddress.Text & "', CEO_President = '" & CEOPresident.Text & "', GeneralManager = '" & GeneralManager.Text & "', PollutionControlOfficer = '" & PollutionControlOfficer.Text & "', NatureOfBusiness = '" & NatureOfBusiness.Text & "', ContactNumber = '" & ContactNumber.Text & "', NameOfAccreditedWasteHauler = '" & NameOfAccreditedWasteHauler.Text & "', BrgyClearanceWithCTC = '" & BrgyClearance.Text & "', DTI_SEC = '" & DTISEC.Text & "', ECC = '" & ECC.Text & "', PTO = '" & PTO.Text & "', DP = '" & DP.Text & "', BFAD = '" & BFAD.Text & "', AccreditedWasteHauler = '" & AccreditedWasteHauler.Text & "' WHERE ControlNumber = '" & ControlNumber.Text & "' "
+                Dim Update1 As String = "UPDATE IndustrialEstablishmentFood_tbl set NameOfEstablishment = '" & NameOfEstablishment.Text & "', Address = '" & Address.Text & "', EmailAddress = '" & EmailAddress.Text & "', CEO_President = '" & CEOPresident.Text & "', GeneralManager = '" & GeneralManager.Text & "', PollutionControlOfficer = '" & PollutionControlOfficer.Text & "', NatureOfBusiness = '" & NatureOfBusiness.Text & "', ContactNumber = '" & ContactNumber.Text & "', NameOfAccreditedWasteHauler = '" & NameOfAccreditedWasteHauler.Text & "', BrgyClearanceWithCTC = '" & BrgyClearance.Text & "', DTI_SEC = '" & DTISEC.Text & "', ECC = '" & ECC.Text & "', PTO = '" & PTO.Text & "', DP = '" & DP.Text & "', BFAD = '" & BFAD.Text & "', AccreditedWasteHauler = '" & AccreditedWasteHauler.Text & "', SelfMonitoringReport = '" & SMR.Text & "' WHERE ControlNumber = '" & ControlNumber.Text & "' "
                 Dim cmd1 As New SqlCommand(Update1, connection)
                 Dim adapter1 As New SqlDataAdapter(cmd1)
                 Dim table1 As New DataTable
@@ -273,7 +279,6 @@ Public Class IEFForm
             End If
 
         connection.Close()
-
 
         load_datagrid()
     End Sub
@@ -342,14 +347,14 @@ Public Class IEFForm
         Dim bindingsource1 As New BindingSource
         Try
             connection.Open()
-            cmd = New SqlCommand("select  IndustrialEstablishmentFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler from IndustrialEstablishmentFood_tbl", connection)
+            cmd = New SqlCommand("select  IndustrialEstablishmentFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler,SelfMonitoringReport from IndustrialEstablishmentFood_tbl", connection)
             adapter = New SqlDataAdapter(cmd)
             adapter.Fill(table)
             bindingsource.DataSource = table
             DataGridView1.DataSource = bindingsource
             adapter.Update(table)
             DataGridView1.Refresh()
-            cmd1 = New SqlCommand("select  IndustrialEstablishmentFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler from IndustrialEstablishmentFood_tbl", connection)
+            cmd1 = New SqlCommand("select  IndustrialEstablishmentFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler,SelfMonitoringReport from IndustrialEstablishmentFood_tbl", connection)
             adapter1 = New SqlDataAdapter(cmd1)
             adapter1.Fill(table1)
             bindingsource1.DataSource = table1
@@ -381,6 +386,7 @@ Public Class IEFForm
         DP.Clear()
         BFAD.Clear()
         AccreditedWasteHauler.Clear()
+        SMR.Clear()
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -406,6 +412,7 @@ Public Class IEFForm
             DP.Text = selectedrow.Cells(14).Value.ToString
             BFAD.Text = selectedrow.Cells(15).Value.ToString
             AccreditedWasteHauler.Text = selectedrow.Cells(16).Value.ToString
+            SMR.Text = selectedrow.Cells(17).Value.ToString
         End If
     End Sub
 
@@ -424,6 +431,7 @@ Public Class IEFForm
             DP1.Text = selectedrow.Cells(6).Value.ToString
             BFAD1.Text = selectedrow.Cells(7).Value.ToString
             AccreditedWasteHauler1.Text = selectedrow.Cells(8).Value.ToString
+            SMR1.Text = selectedrow.Cells(9).Value.ToString
         End If
     End Sub
 

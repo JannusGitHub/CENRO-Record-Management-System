@@ -42,25 +42,25 @@ Public Class Login
                     Dim cmd As New SqlCommand(insertquery, connection)
                     reader.Close()
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show(("Successfully login as " & table.Rows(0)(15)), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(("Successfully login as Administrator"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Main.Show()
                     Me.Refresh()
                     Me.Hide()
                     connection.Close()
                 ElseIf usertype = "Administrator" And status = "Inactive" Then
-                    MessageBox.Show("Maybe that account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     'if inspector exist then execute this
                 ElseIf usertype = "Inspector" And status = "Active" Then
                     Dim insertqueryinspector As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username.Text & "', '" & Inpector & "', '" & Login & "', '" & dateofloghistory & "')"
                     Dim cmd As New SqlCommand(insertqueryinspector, connection)
                     reader.Close()
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show(("Successfully login as " & table.Rows(0)(15)), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(("Successfully login as Inspector"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     InspectorForm.Show()
                     Me.Hide()
                     connection.Close()
                 ElseIf usertype = "Inspector" And status = "Inactive" Then
-                    MessageBox.Show("Maybe that account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             ElseIf MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
