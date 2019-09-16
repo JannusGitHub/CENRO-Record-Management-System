@@ -35,6 +35,16 @@ Partial Public Class cenro_DBDataSet
     
     Private tableuser_tbl As user_tblDataTable
     
+    Private tableYearEndReport_tbl As YearEndReport_tblDataTable
+    
+    Private relationFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl As Global.System.Data.DataRelation
+    
+    Private relationFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl As Global.System.Data.DataRelation
+    
+    Private relationFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl As Global.System.Data.DataRelation
+    
+    Private relationFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -78,6 +88,9 @@ Partial Public Class cenro_DBDataSet
             End If
             If (Not (ds.Tables("user_tbl")) Is Nothing) Then
                 MyBase.Tables.Add(New user_tblDataTable(ds.Tables("user_tbl")))
+            End If
+            If (Not (ds.Tables("YearEndReport_tbl")) Is Nothing) Then
+                MyBase.Tables.Add(New YearEndReport_tblDataTable(ds.Tables("YearEndReport_tbl")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -143,6 +156,16 @@ Partial Public Class cenro_DBDataSet
     Public ReadOnly Property user_tbl() As user_tblDataTable
         Get
             Return Me.tableuser_tbl
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property YearEndReport_tbl() As YearEndReport_tblDataTable
+        Get
+            Return Me.tableYearEndReport_tbl
         End Get
     End Property
     
@@ -228,6 +251,9 @@ Partial Public Class cenro_DBDataSet
             If (Not (ds.Tables("user_tbl")) Is Nothing) Then
                 MyBase.Tables.Add(New user_tblDataTable(ds.Tables("user_tbl")))
             End If
+            If (Not (ds.Tables("YearEndReport_tbl")) Is Nothing) Then
+                MyBase.Tables.Add(New YearEndReport_tblDataTable(ds.Tables("YearEndReport_tbl")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -290,6 +316,16 @@ Partial Public Class cenro_DBDataSet
                 Me.tableuser_tbl.InitVars
             End If
         End If
+        Me.tableYearEndReport_tbl = CType(MyBase.Tables("YearEndReport_tbl"),YearEndReport_tblDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableYearEndReport_tbl) Is Nothing) Then
+                Me.tableYearEndReport_tbl.InitVars
+            End If
+        End If
+        Me.relationFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl = Me.Relations("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl")
+        Me.relationFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl = Me.Relations("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl")
+        Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl = Me.Relations("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl")
+        Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl = Me.Relations("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -310,6 +346,16 @@ Partial Public Class cenro_DBDataSet
         MyBase.Tables.Add(Me.tableIndustrialEstablishmentNonFood_tbl)
         Me.tableuser_tbl = New user_tblDataTable()
         MyBase.Tables.Add(Me.tableuser_tbl)
+        Me.tableYearEndReport_tbl = New YearEndReport_tblDataTable()
+        MyBase.Tables.Add(Me.tableYearEndReport_tbl)
+        Me.relationFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl = New Global.System.Data.DataRelation("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl", New Global.System.Data.DataColumn() {Me.tableFastfoodCanteenAndRestaurant_tbl.Fastfood_Canteen_RestaurantIDColumn}, New Global.System.Data.DataColumn() {Me.tableYearEndReport_tbl.Fastfood_Canteen_RestaurantIDColumn}, false)
+        Me.Relations.Add(Me.relationFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl)
+        Me.relationFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl = New Global.System.Data.DataRelation("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl", New Global.System.Data.DataColumn() {Me.tableHospitalAndMedicalEstablishment_tbl.HospitalAndMedicalEstablishmentIDColumn}, New Global.System.Data.DataColumn() {Me.tableYearEndReport_tbl.HospitalAndMedicalEstablishmentIDColumn}, false)
+        Me.Relations.Add(Me.relationFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl)
+        Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl = New Global.System.Data.DataRelation("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl", New Global.System.Data.DataColumn() {Me.tableIndustrialEstablishmentFood_tbl.IndustrialEstablishmentFoodIDColumn}, New Global.System.Data.DataColumn() {Me.tableYearEndReport_tbl.IndustrialEstablishmentFoodIDColumn}, false)
+        Me.Relations.Add(Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl)
+        Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl = New Global.System.Data.DataRelation("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl", New Global.System.Data.DataColumn() {Me.tableIndustrialEstablishmentNonFood_tbl.IndustrialEstablishmentNonFoodIDColumn}, New Global.System.Data.DataColumn() {Me.tableYearEndReport_tbl.IndustrialEstablishmentNonFoodIDColumn}, false)
+        Me.Relations.Add(Me.relationFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -339,6 +385,12 @@ Partial Public Class cenro_DBDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Private Function ShouldSerializeuser_tbl() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Private Function ShouldSerializeYearEndReport_tbl() As Boolean
         Return false
     End Function
     
@@ -414,6 +466,9 @@ Partial Public Class cenro_DBDataSet
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Public Delegate Sub user_tblRowChangeEventHandler(ByVal sender As Object, ByVal e As user_tblRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Public Delegate Sub YearEndReport_tblRowChangeEventHandler(ByVal sender As Object, ByVal e As YearEndReport_tblRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -3361,6 +3416,391 @@ Partial Public Class cenro_DBDataSet
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class YearEndReport_tblDataTable
+        Inherits Global.System.Data.TypedTableBase(Of YearEndReport_tblRow)
+        
+        Private columnYearEndReportID As Global.System.Data.DataColumn
+        
+        Private columnIndustrialEstablishmentFoodID As Global.System.Data.DataColumn
+        
+        Private columnIndustrialEstablishmentNonFoodID As Global.System.Data.DataColumn
+        
+        Private columnHospitalAndMedicalEstablishmentID As Global.System.Data.DataColumn
+        
+        Private columnFastfood_Canteen_RestaurantID As Global.System.Data.DataColumn
+        
+        Private columnNameOfEstablishment As Global.System.Data.DataColumn
+        
+        Private columnAddress As Global.System.Data.DataColumn
+        
+        Private columnControlNumber As Global.System.Data.DataColumn
+        
+        Private columnStatus As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "YearEndReport_tbl"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property YearEndReportIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnYearEndReportID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property IndustrialEstablishmentFoodIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIndustrialEstablishmentFoodID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property IndustrialEstablishmentNonFoodIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIndustrialEstablishmentNonFoodID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property HospitalAndMedicalEstablishmentIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHospitalAndMedicalEstablishmentID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Fastfood_Canteen_RestaurantIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFastfood_Canteen_RestaurantID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NameOfEstablishmentColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameOfEstablishment
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property AddressColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAddress
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ControlNumberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnControlNumber
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property StatusColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnStatus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As YearEndReport_tblRow
+            Get
+                Return CType(Me.Rows(index),YearEndReport_tblRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event YearEndReport_tblRowChanging As YearEndReport_tblRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event YearEndReport_tblRowChanged As YearEndReport_tblRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event YearEndReport_tblRowDeleting As YearEndReport_tblRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event YearEndReport_tblRowDeleted As YearEndReport_tblRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Sub AddYearEndReport_tblRow(ByVal row As YearEndReport_tblRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Function AddYearEndReport_tblRow(ByVal parentIndustrialEstablishmentFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl As IndustrialEstablishmentFood_tblRow, ByVal parentIndustrialEstablishmentNonFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl As IndustrialEstablishmentNonFood_tblRow, ByVal parentHospitalAndMedicalEstablishment_tblRowByFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl As HospitalAndMedicalEstablishment_tblRow, ByVal parentFastfoodCanteenAndRestaurant_tblRowByFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl As FastfoodCanteenAndRestaurant_tblRow, ByVal NameOfEstablishment As String, ByVal Address As String, ByVal ControlNumber As String, ByVal Status As String) As YearEndReport_tblRow
+            Dim rowYearEndReport_tblRow As YearEndReport_tblRow = CType(Me.NewRow,YearEndReport_tblRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Nothing, Nothing, NameOfEstablishment, Address, ControlNumber, Status}
+            If (Not (parentIndustrialEstablishmentFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl) Is Nothing) Then
+                columnValuesArray(1) = parentIndustrialEstablishmentFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl(0)
+            End If
+            If (Not (parentIndustrialEstablishmentNonFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl) Is Nothing) Then
+                columnValuesArray(2) = parentIndustrialEstablishmentNonFood_tblRowByFK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl(0)
+            End If
+            If (Not (parentHospitalAndMedicalEstablishment_tblRowByFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl) Is Nothing) Then
+                columnValuesArray(3) = parentHospitalAndMedicalEstablishment_tblRowByFK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl(0)
+            End If
+            If (Not (parentFastfoodCanteenAndRestaurant_tblRowByFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl) Is Nothing) Then
+                columnValuesArray(4) = parentFastfoodCanteenAndRestaurant_tblRowByFK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl(0)
+            End If
+            rowYearEndReport_tblRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowYearEndReport_tblRow)
+            Return rowYearEndReport_tblRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function FindByYearEndReportID(ByVal YearEndReportID As Integer) As YearEndReport_tblRow
+            Return CType(Me.Rows.Find(New Object() {YearEndReportID}),YearEndReport_tblRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As YearEndReport_tblDataTable = CType(MyBase.Clone,YearEndReport_tblDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New YearEndReport_tblDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnYearEndReportID = MyBase.Columns("YearEndReportID")
+            Me.columnIndustrialEstablishmentFoodID = MyBase.Columns("IndustrialEstablishmentFoodID")
+            Me.columnIndustrialEstablishmentNonFoodID = MyBase.Columns("IndustrialEstablishmentNonFoodID")
+            Me.columnHospitalAndMedicalEstablishmentID = MyBase.Columns("HospitalAndMedicalEstablishmentID")
+            Me.columnFastfood_Canteen_RestaurantID = MyBase.Columns("Fastfood_Canteen_RestaurantID")
+            Me.columnNameOfEstablishment = MyBase.Columns("NameOfEstablishment")
+            Me.columnAddress = MyBase.Columns("Address")
+            Me.columnControlNumber = MyBase.Columns("ControlNumber")
+            Me.columnStatus = MyBase.Columns("Status")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnYearEndReportID = New Global.System.Data.DataColumn("YearEndReportID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYearEndReportID)
+            Me.columnIndustrialEstablishmentFoodID = New Global.System.Data.DataColumn("IndustrialEstablishmentFoodID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIndustrialEstablishmentFoodID)
+            Me.columnIndustrialEstablishmentNonFoodID = New Global.System.Data.DataColumn("IndustrialEstablishmentNonFoodID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIndustrialEstablishmentNonFoodID)
+            Me.columnHospitalAndMedicalEstablishmentID = New Global.System.Data.DataColumn("HospitalAndMedicalEstablishmentID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHospitalAndMedicalEstablishmentID)
+            Me.columnFastfood_Canteen_RestaurantID = New Global.System.Data.DataColumn("Fastfood_Canteen_RestaurantID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFastfood_Canteen_RestaurantID)
+            Me.columnNameOfEstablishment = New Global.System.Data.DataColumn("NameOfEstablishment", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameOfEstablishment)
+            Me.columnAddress = New Global.System.Data.DataColumn("Address", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAddress)
+            Me.columnControlNumber = New Global.System.Data.DataColumn("ControlNumber", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnControlNumber)
+            Me.columnStatus = New Global.System.Data.DataColumn("Status", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnStatus)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnYearEndReportID}, true))
+            Me.columnYearEndReportID.AutoIncrement = true
+            Me.columnYearEndReportID.AutoIncrementSeed = -1
+            Me.columnYearEndReportID.AutoIncrementStep = -1
+            Me.columnYearEndReportID.AllowDBNull = false
+            Me.columnYearEndReportID.ReadOnly = true
+            Me.columnYearEndReportID.Unique = true
+            Me.columnNameOfEstablishment.MaxLength = 2147483647
+            Me.columnAddress.MaxLength = 2147483647
+            Me.columnControlNumber.MaxLength = 2147483647
+            Me.columnStatus.MaxLength = 2147483647
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function NewYearEndReport_tblRow() As YearEndReport_tblRow
+            Return CType(Me.NewRow,YearEndReport_tblRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New YearEndReport_tblRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(YearEndReport_tblRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.YearEndReport_tblRowChangedEvent) Is Nothing) Then
+                RaiseEvent YearEndReport_tblRowChanged(Me, New YearEndReport_tblRowChangeEvent(CType(e.Row,YearEndReport_tblRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.YearEndReport_tblRowChangingEvent) Is Nothing) Then
+                RaiseEvent YearEndReport_tblRowChanging(Me, New YearEndReport_tblRowChangeEvent(CType(e.Row,YearEndReport_tblRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.YearEndReport_tblRowDeletedEvent) Is Nothing) Then
+                RaiseEvent YearEndReport_tblRowDeleted(Me, New YearEndReport_tblRowChangeEvent(CType(e.Row,YearEndReport_tblRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.YearEndReport_tblRowDeletingEvent) Is Nothing) Then
+                RaiseEvent YearEndReport_tblRowDeleting(Me, New YearEndReport_tblRowChangeEvent(CType(e.Row,YearEndReport_tblRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub RemoveYearEndReport_tblRow(ByVal row As YearEndReport_tblRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As cenro_DBDataSet = New cenro_DBDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "YearEndReport_tblDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class FastfoodCanteenAndRestaurant_tblRow
@@ -3955,6 +4395,16 @@ Partial Public Class cenro_DBDataSet
         Public Sub SetRemarksNull()
             Me(Me.tableFastfoodCanteenAndRestaurant_tbl.RemarksColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function GetYearEndReport_tblRows() As YearEndReport_tblRow()
+            If (Me.Table.ChildRelations("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl") Is Nothing) Then
+                Return New YearEndReport_tblRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl")),YearEndReport_tblRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -4637,6 +5087,16 @@ Partial Public Class cenro_DBDataSet
         Public Sub SetRemarksNull()
             Me(Me.tableHospitalAndMedicalEstablishment_tbl.RemarksColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function GetYearEndReport_tblRows() As YearEndReport_tblRow()
+            If (Me.Table.ChildRelations("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl") Is Nothing) Then
+                Return New YearEndReport_tblRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl")),YearEndReport_tblRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -5288,6 +5748,16 @@ Partial Public Class cenro_DBDataSet
         Public Sub SetSelfMonitoringReportNull()
             Me(Me.tableIndustrialEstablishmentFood_tbl.SelfMonitoringReportColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function GetYearEndReport_tblRows() As YearEndReport_tblRow()
+            If (Me.Table.ChildRelations("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl") Is Nothing) Then
+                Return New YearEndReport_tblRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl")),YearEndReport_tblRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -5970,6 +6440,16 @@ Partial Public Class cenro_DBDataSet
         Public Sub SetRemarksNull()
             Me(Me.tableIndustrialEstablishmentNonFood_tbl.RemarksColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function GetYearEndReport_tblRows() As YearEndReport_tblRow()
+            If (Me.Table.ChildRelations("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl") Is Nothing) Then
+                Return New YearEndReport_tblRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl")),YearEndReport_tblRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -6459,6 +6939,298 @@ Partial Public Class cenro_DBDataSet
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class YearEndReport_tblRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableYearEndReport_tbl As YearEndReport_tblDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableYearEndReport_tbl = CType(Me.Table,YearEndReport_tblDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property YearEndReportID() As Integer
+            Get
+                Return CType(Me(Me.tableYearEndReport_tbl.YearEndReportIDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.YearEndReportIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property IndustrialEstablishmentFoodID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentFoodIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IndustrialEstablishmentFoodID' in table 'YearEndReport_tbl'"& _ 
+                            " is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentFoodIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property IndustrialEstablishmentNonFoodID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentNonFoodIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IndustrialEstablishmentNonFoodID' in table 'YearEndReport_t"& _ 
+                            "bl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentNonFoodIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property HospitalAndMedicalEstablishmentID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.HospitalAndMedicalEstablishmentIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'HospitalAndMedicalEstablishmentID' in table 'YearEndReport_"& _ 
+                            "tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.HospitalAndMedicalEstablishmentIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Fastfood_Canteen_RestaurantID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.Fastfood_Canteen_RestaurantIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fastfood_Canteen_RestaurantID' in table 'YearEndReport_tbl'"& _ 
+                            " is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.Fastfood_Canteen_RestaurantIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property NameOfEstablishment() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.NameOfEstablishmentColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameOfEstablishment' in table 'YearEndReport_tbl' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.NameOfEstablishmentColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Address() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.AddressColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Address' in table 'YearEndReport_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.AddressColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ControlNumber() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.ControlNumberColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ControlNumber' in table 'YearEndReport_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.ControlNumberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Status() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableYearEndReport_tbl.StatusColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Status' in table 'YearEndReport_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableYearEndReport_tbl.StatusColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property FastfoodCanteenAndRestaurant_tblRow() As FastfoodCanteenAndRestaurant_tblRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl")),FastfoodCanteenAndRestaurant_tblRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_YearEndReport_tbl_FastfoodCanteenAndRestaurant_tbl"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property HospitalAndMedicalEstablishment_tblRow() As HospitalAndMedicalEstablishment_tblRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl")),HospitalAndMedicalEstablishment_tblRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_YearEndReport_tbl_HospitalAndMedicalEstablishment_tbl"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property IndustrialEstablishmentFood_tblRow() As IndustrialEstablishmentFood_tblRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl")),IndustrialEstablishmentFood_tblRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_YearEndReport_tbl_IndustrialEstablishmentFood_tbl"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property IndustrialEstablishmentNonFood_tblRow() As IndustrialEstablishmentNonFood_tblRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl")),IndustrialEstablishmentNonFood_tblRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_YearEndReport_tbl_IndustrialEstablishmentNonFood_tbl"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsIndustrialEstablishmentFoodIDNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.IndustrialEstablishmentFoodIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetIndustrialEstablishmentFoodIDNull()
+            Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentFoodIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsIndustrialEstablishmentNonFoodIDNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.IndustrialEstablishmentNonFoodIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetIndustrialEstablishmentNonFoodIDNull()
+            Me(Me.tableYearEndReport_tbl.IndustrialEstablishmentNonFoodIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsHospitalAndMedicalEstablishmentIDNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.HospitalAndMedicalEstablishmentIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetHospitalAndMedicalEstablishmentIDNull()
+            Me(Me.tableYearEndReport_tbl.HospitalAndMedicalEstablishmentIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFastfood_Canteen_RestaurantIDNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.Fastfood_Canteen_RestaurantIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFastfood_Canteen_RestaurantIDNull()
+            Me(Me.tableYearEndReport_tbl.Fastfood_Canteen_RestaurantIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNameOfEstablishmentNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.NameOfEstablishmentColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNameOfEstablishmentNull()
+            Me(Me.tableYearEndReport_tbl.NameOfEstablishmentColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAddressNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.AddressColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAddressNull()
+            Me(Me.tableYearEndReport_tbl.AddressColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsControlNumberNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.ControlNumberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetControlNumberNull()
+            Me(Me.tableYearEndReport_tbl.ControlNumberColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsStatusNull() As Boolean
+            Return Me.IsNull(Me.tableYearEndReport_tbl.StatusColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetStatusNull()
+            Me(Me.tableYearEndReport_tbl.StatusColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -6624,6 +7396,42 @@ Partial Public Class cenro_DBDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property Row() As user_tblRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Public Class YearEndReport_tblRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As YearEndReport_tblRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New(ByVal row As YearEndReport_tblRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Row() As YearEndReport_tblRow
             Get
                 Return Me.eventRow
             End Get
@@ -10359,6 +11167,508 @@ Namespace cenro_DBDataSetTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class YearEndReport_tblTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "YearEndReport_tbl"
+            tableMapping.ColumnMappings.Add("YearEndReportID", "YearEndReportID")
+            tableMapping.ColumnMappings.Add("IndustrialEstablishmentFoodID", "IndustrialEstablishmentFoodID")
+            tableMapping.ColumnMappings.Add("IndustrialEstablishmentNonFoodID", "IndustrialEstablishmentNonFoodID")
+            tableMapping.ColumnMappings.Add("HospitalAndMedicalEstablishmentID", "HospitalAndMedicalEstablishmentID")
+            tableMapping.ColumnMappings.Add("Fastfood_Canteen_RestaurantID", "Fastfood_Canteen_RestaurantID")
+            tableMapping.ColumnMappings.Add("NameOfEstablishment", "NameOfEstablishment")
+            tableMapping.ColumnMappings.Add("Address", "Address")
+            tableMapping.ColumnMappings.Add("ControlNumber", "ControlNumber")
+            tableMapping.ColumnMappings.Add("Status", "Status")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [YearEndReport_tbl] WHERE (([YearEndReportID] = @Original_YearEndRepo"& _ 
+                "rtID) AND ((@IsNull_IndustrialEstablishmentFoodID = 1 AND [IndustrialEstablishme"& _ 
+                "ntFoodID] IS NULL) OR ([IndustrialEstablishmentFoodID] = @Original_IndustrialEst"& _ 
+                "ablishmentFoodID)) AND ((@IsNull_IndustrialEstablishmentNonFoodID = 1 AND [Indus"& _ 
+                "trialEstablishmentNonFoodID] IS NULL) OR ([IndustrialEstablishmentNonFoodID] = @"& _ 
+                "Original_IndustrialEstablishmentNonFoodID)) AND ((@IsNull_HospitalAndMedicalEsta"& _ 
+                "blishmentID = 1 AND [HospitalAndMedicalEstablishmentID] IS NULL) OR ([HospitalAn"& _ 
+                "dMedicalEstablishmentID] = @Original_HospitalAndMedicalEstablishmentID)) AND ((@"& _ 
+                "IsNull_Fastfood_Canteen_RestaurantID = 1 AND [Fastfood_Canteen_RestaurantID] IS "& _ 
+                "NULL) OR ([Fastfood_Canteen_RestaurantID] = @Original_Fastfood_Canteen_Restauran"& _ 
+                "tID)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_YearEndReportID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YearEndReportID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [YearEndReport_tbl] ([IndustrialEstablishmentFoodID], [IndustrialEsta"& _ 
+                "blishmentNonFoodID], [HospitalAndMedicalEstablishmentID], [Fastfood_Canteen_Rest"& _ 
+                "aurantID], [NameOfEstablishment], [Address], [ControlNumber], [Status]) VALUES ("& _ 
+                "@IndustrialEstablishmentFoodID, @IndustrialEstablishmentNonFoodID, @HospitalAndM"& _ 
+                "edicalEstablishmentID, @Fastfood_Canteen_RestaurantID, @NameOfEstablishment, @Ad"& _ 
+                "dress, @ControlNumber, @Status);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT YearEndReportID, IndustrialEstablishmen"& _ 
+                "tFoodID, IndustrialEstablishmentNonFoodID, HospitalAndMedicalEstablishmentID, Fa"& _ 
+                "stfood_Canteen_RestaurantID, NameOfEstablishment, Address, ControlNumber, Status"& _ 
+                " FROM YearEndReport_tbl WHERE (YearEndReportID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ControlNumber", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ControlNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Status", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [YearEndReport_tbl] SET [IndustrialEstablishmentFoodID] = @IndustrialEstab"& _ 
+                "lishmentFoodID, [IndustrialEstablishmentNonFoodID] = @IndustrialEstablishmentNon"& _ 
+                "FoodID, [HospitalAndMedicalEstablishmentID] = @HospitalAndMedicalEstablishmentID"& _ 
+                ", [Fastfood_Canteen_RestaurantID] = @Fastfood_Canteen_RestaurantID, [NameOfEstab"& _ 
+                "lishment] = @NameOfEstablishment, [Address] = @Address, [ControlNumber] = @Contr"& _ 
+                "olNumber, [Status] = @Status WHERE (([YearEndReportID] = @Original_YearEndReport"& _ 
+                "ID) AND ((@IsNull_IndustrialEstablishmentFoodID = 1 AND [IndustrialEstablishment"& _ 
+                "FoodID] IS NULL) OR ([IndustrialEstablishmentFoodID] = @Original_IndustrialEstab"& _ 
+                "lishmentFoodID)) AND ((@IsNull_IndustrialEstablishmentNonFoodID = 1 AND [Industr"& _ 
+                "ialEstablishmentNonFoodID] IS NULL) OR ([IndustrialEstablishmentNonFoodID] = @Or"& _ 
+                "iginal_IndustrialEstablishmentNonFoodID)) AND ((@IsNull_HospitalAndMedicalEstabl"& _ 
+                "ishmentID = 1 AND [HospitalAndMedicalEstablishmentID] IS NULL) OR ([HospitalAndM"& _ 
+                "edicalEstablishmentID] = @Original_HospitalAndMedicalEstablishmentID)) AND ((@Is"& _ 
+                "Null_Fastfood_Canteen_RestaurantID = 1 AND [Fastfood_Canteen_RestaurantID] IS NU"& _ 
+                "LL) OR ([Fastfood_Canteen_RestaurantID] = @Original_Fastfood_Canteen_RestaurantI"& _ 
+                "D)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT YearEndReportID, IndustrialEstablishmentFoodID, IndustrialEstablis"& _ 
+                "hmentNonFoodID, HospitalAndMedicalEstablishmentID, Fastfood_Canteen_RestaurantID"& _ 
+                ", NameOfEstablishment, Address, ControlNumber, Status FROM YearEndReport_tbl WHE"& _ 
+                "RE (YearEndReportID = @YearEndReportID)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ControlNumber", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ControlNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Status", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_YearEndReportID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YearEndReportID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YearEndReportID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "YearEndReportID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.LoginForm.My.MySettings.Default.cenro_DBConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        YearEndReportID, IndustrialEstablishmentFoodID, IndustrialEstablish"& _ 
+                "mentNonFoodID, HospitalAndMedicalEstablishmentID, Fastfood_Canteen_RestaurantID,"& _ 
+                " NameOfEstablishment, Address, ControlNumber, Status"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            YearEndRep"& _ 
+                "ort_tbl"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As cenro_DBDataSet.YearEndReport_tblDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As cenro_DBDataSet.YearEndReport_tblDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As cenro_DBDataSet.YearEndReport_tblDataTable = New cenro_DBDataSet.YearEndReport_tblDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As cenro_DBDataSet.YearEndReport_tblDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As cenro_DBDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "YearEndReport_tbl")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_YearEndReportID As Integer, ByVal Original_IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal Original_IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal Original_HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Original_Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_YearEndReportID,Integer)
+            If (Original_IndustrialEstablishmentFoodID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_IndustrialEstablishmentFoodID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Original_IndustrialEstablishmentNonFoodID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_IndustrialEstablishmentNonFoodID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HospitalAndMedicalEstablishmentID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_HospitalAndMedicalEstablishmentID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Fastfood_Canteen_RestaurantID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Fastfood_Canteen_RestaurantID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer), ByVal NameOfEstablishment As String, ByVal Address As String, ByVal ControlNumber As String, ByVal Status As String) As Integer
+            If (IndustrialEstablishmentFoodID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(IndustrialEstablishmentFoodID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (IndustrialEstablishmentNonFoodID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(IndustrialEstablishmentNonFoodID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (HospitalAndMedicalEstablishmentID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(HospitalAndMedicalEstablishmentID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Fastfood_Canteen_RestaurantID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Fastfood_Canteen_RestaurantID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (NameOfEstablishment Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(NameOfEstablishment,String)
+            End If
+            If (Address Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Address,String)
+            End If
+            If (ControlNumber Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(ControlNumber,String)
+            End If
+            If (Status Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Status,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer), ByVal NameOfEstablishment As String, ByVal Address As String, ByVal ControlNumber As String, ByVal Status As String, ByVal Original_YearEndReportID As Integer, ByVal Original_IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal Original_IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal Original_HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Original_Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer), ByVal YearEndReportID As Integer) As Integer
+            If (IndustrialEstablishmentFoodID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IndustrialEstablishmentFoodID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (IndustrialEstablishmentNonFoodID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(IndustrialEstablishmentNonFoodID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (HospitalAndMedicalEstablishmentID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(HospitalAndMedicalEstablishmentID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Fastfood_Canteen_RestaurantID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Fastfood_Canteen_RestaurantID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (NameOfEstablishment Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(NameOfEstablishment,String)
+            End If
+            If (Address Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Address,String)
+            End If
+            If (ControlNumber Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(ControlNumber,String)
+            End If
+            If (Status Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Status,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_YearEndReportID,Integer)
+            If (Original_IndustrialEstablishmentFoodID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_IndustrialEstablishmentFoodID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_IndustrialEstablishmentNonFoodID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_IndustrialEstablishmentNonFoodID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_HospitalAndMedicalEstablishmentID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_HospitalAndMedicalEstablishmentID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Fastfood_Canteen_RestaurantID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Fastfood_Canteen_RestaurantID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(YearEndReportID,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer), ByVal NameOfEstablishment As String, ByVal Address As String, ByVal ControlNumber As String, ByVal Status As String, ByVal Original_YearEndReportID As Integer, ByVal Original_IndustrialEstablishmentFoodID As Global.System.Nullable(Of Integer), ByVal Original_IndustrialEstablishmentNonFoodID As Global.System.Nullable(Of Integer), ByVal Original_HospitalAndMedicalEstablishmentID As Global.System.Nullable(Of Integer), ByVal Original_Fastfood_Canteen_RestaurantID As Global.System.Nullable(Of Integer)) As Integer
+            Return Me.Update(IndustrialEstablishmentFoodID, IndustrialEstablishmentNonFoodID, HospitalAndMedicalEstablishmentID, Fastfood_Canteen_RestaurantID, NameOfEstablishment, Address, ControlNumber, Status, Original_YearEndReportID, Original_IndustrialEstablishmentFoodID, Original_IndustrialEstablishmentNonFoodID, Original_HospitalAndMedicalEstablishmentID, Original_Fastfood_Canteen_RestaurantID, Original_YearEndReportID)
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -10380,6 +11690,8 @@ Namespace cenro_DBDataSetTableAdapters
         Private _industrialEstablishmentNonFood_tblTableAdapter As IndustrialEstablishmentNonFood_tblTableAdapter
         
         Private _user_tblTableAdapter As user_tblTableAdapter
+        
+        Private _yearEndReport_tblTableAdapter As YearEndReport_tblTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -10467,6 +11779,20 @@ Namespace cenro_DBDataSetTableAdapters
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property YearEndReport_tblTableAdapter() As YearEndReport_tblTableAdapter
+            Get
+                Return Me._yearEndReport_tblTableAdapter
+            End Get
+            Set
+                Me._yearEndReport_tblTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property BackupDataSetBeforeUpdate() As Boolean
             Get
@@ -10505,6 +11831,10 @@ Namespace cenro_DBDataSetTableAdapters
                             AndAlso (Not (Me._user_tblTableAdapter.Connection) Is Nothing)) Then
                     Return Me._user_tblTableAdapter.Connection
                 End If
+                If ((Not (Me._yearEndReport_tblTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._yearEndReport_tblTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._yearEndReport_tblTableAdapter.Connection
+                End If
                 Return Nothing
             End Get
             Set
@@ -10531,6 +11861,9 @@ Namespace cenro_DBDataSetTableAdapters
                     count = (count + 1)
                 End If
                 If (Not (Me._user_tblTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -10589,6 +11922,15 @@ Namespace cenro_DBDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
+            If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.YearEndReport_tbl.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._yearEndReport_tblTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -10639,6 +11981,14 @@ Namespace cenro_DBDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.YearEndReport_tbl.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._yearEndReport_tblTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -10649,6 +11999,14 @@ Namespace cenro_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As cenro_DBDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.YearEndReport_tbl.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._yearEndReport_tblTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._user_tblTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.user_tbl.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -10755,6 +12113,11 @@ Namespace cenro_DBDataSetTableAdapters
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
+            If ((Not (Me._yearEndReport_tblTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._yearEndReport_tblTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
                 Throw New Global.System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana"& _ 
@@ -10830,6 +12193,15 @@ Namespace cenro_DBDataSetTableAdapters
                     If Me._user_tblTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._user_tblTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._user_tblTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._yearEndReport_tblTableAdapter, Me._yearEndReport_tblTableAdapter.Connection)
+                    Me._yearEndReport_tblTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._yearEndReport_tblTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._yearEndReport_tblTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._yearEndReport_tblTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._yearEndReport_tblTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -10911,6 +12283,10 @@ Namespace cenro_DBDataSetTableAdapters
                 If (Not (Me._user_tblTableAdapter) Is Nothing) Then
                     Me._user_tblTableAdapter.Connection = CType(revertConnections(Me._user_tblTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._user_tblTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._yearEndReport_tblTableAdapter) Is Nothing) Then
+                    Me._yearEndReport_tblTableAdapter.Connection = CType(revertConnections(Me._yearEndReport_tblTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._yearEndReport_tblTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

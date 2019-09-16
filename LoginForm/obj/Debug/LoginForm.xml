@@ -82,6 +82,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:LoginForm.cenro_DBDataSet.YearEndReport_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:LoginForm.cenro_DBDataSet.FastfoodCanteenAndRestaurant_tblRow">
 <summary>
 Represents strongly named DataRow class.
@@ -103,6 +108,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:LoginForm.cenro_DBDataSet.user_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSet.YearEndReport_tblRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -132,6 +142,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:LoginForm.cenro_DBDataSet.YearEndReport_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -153,6 +168,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:LoginForm.cenro_DBDataSetTableAdapters.user_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.cenro_DBDataSetTableAdapters.YearEndReport_tblTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
