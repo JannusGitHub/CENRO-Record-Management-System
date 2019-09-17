@@ -24,8 +24,8 @@ Partial Class UserManagementForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserManagementForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -319,6 +319,7 @@ Partial Class UserManagementForm
         '
         Me.Answer.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Answer.Location = New System.Drawing.Point(493, 454)
+        Me.Answer.MaxLength = 20
         Me.Answer.Multiline = True
         Me.Answer.Name = "Answer"
         Me.Answer.Size = New System.Drawing.Size(175, 23)
@@ -398,6 +399,7 @@ Partial Class UserManagementForm
         '
         Me.Username.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Username.Location = New System.Drawing.Point(493, 255)
+        Me.Username.MaxLength = 50
         Me.Username.Multiline = True
         Me.Username.Name = "Username"
         Me.Username.Size = New System.Drawing.Size(175, 23)
@@ -417,6 +419,7 @@ Partial Class UserManagementForm
         '
         Me.Position.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Position.Location = New System.Drawing.Point(279, 355)
+        Me.Position.MaxLength = 20
         Me.Position.Multiline = True
         Me.Position.Name = "Position"
         Me.Position.Size = New System.Drawing.Size(175, 23)
@@ -436,6 +439,7 @@ Partial Class UserManagementForm
         '
         Me.Division.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Division.Location = New System.Drawing.Point(279, 305)
+        Me.Division.MaxLength = 20
         Me.Division.Multiline = True
         Me.Division.Name = "Division"
         Me.Division.Size = New System.Drawing.Size(175, 23)
@@ -455,6 +459,7 @@ Partial Class UserManagementForm
         '
         Me.EmailAddress.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailAddress.Location = New System.Drawing.Point(279, 255)
+        Me.EmailAddress.MaxLength = 50
         Me.EmailAddress.Multiline = True
         Me.EmailAddress.Name = "EmailAddress"
         Me.EmailAddress.Size = New System.Drawing.Size(175, 23)
@@ -474,7 +479,7 @@ Partial Class UserManagementForm
         '
         Me.ContactNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ContactNumber.Location = New System.Drawing.Point(279, 205)
-        Me.ContactNumber.MaxLength = 15
+        Me.ContactNumber.MaxLength = 11
         Me.ContactNumber.Multiline = True
         Me.ContactNumber.Name = "ContactNumber"
         Me.ContactNumber.Size = New System.Drawing.Size(175, 23)
@@ -492,10 +497,12 @@ Partial Class UserManagementForm
         '
         'Age
         '
+        Me.Age.BackColor = System.Drawing.Color.White
         Me.Age.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Age.Location = New System.Drawing.Point(61, 404)
         Me.Age.Multiline = True
         Me.Age.Name = "Age"
+        Me.Age.ReadOnly = True
         Me.Age.ShortcutsEnabled = False
         Me.Age.Size = New System.Drawing.Size(175, 23)
         Me.Age.TabIndex = 4
@@ -514,6 +521,7 @@ Partial Class UserManagementForm
         '
         Me.Lastname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lastname.Location = New System.Drawing.Point(61, 305)
+        Me.Lastname.MaxLength = 20
         Me.Lastname.Multiline = True
         Me.Lastname.Name = "Lastname"
         Me.Lastname.Size = New System.Drawing.Size(175, 23)
@@ -533,6 +541,7 @@ Partial Class UserManagementForm
         '
         Me.Middlename.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Middlename.Location = New System.Drawing.Point(61, 255)
+        Me.Middlename.MaxLength = 20
         Me.Middlename.Multiline = True
         Me.Middlename.Name = "Middlename"
         Me.Middlename.Size = New System.Drawing.Size(175, 23)
@@ -567,6 +576,7 @@ Partial Class UserManagementForm
         '
         Me.Firstname.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Firstname.Location = New System.Drawing.Point(61, 205)
+        Me.Firstname.MaxLength = 20
         Me.Firstname.Multiline = True
         Me.Firstname.Name = "Firstname"
         Me.Firstname.Size = New System.Drawing.Size(175, 23)
@@ -755,6 +765,7 @@ Partial Class UserManagementForm
         '
         Me.UserID.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserID.Location = New System.Drawing.Point(10, 33)
+        Me.UserID.MaxLength = 25
         Me.UserID.Multiline = True
         Me.UserID.Name = "UserID"
         Me.UserID.Size = New System.Drawing.Size(175, 23)
@@ -781,14 +792,14 @@ Partial Class UserManagementForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.ColumnHeadersHeight = 26
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.FirstnameDataGridViewTextBoxColumn, Me.MiddlenameDataGridViewTextBoxColumn, Me.LastnameDataGridViewTextBoxColumn, Me.BirthdateDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.GenderDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.EmailAddressDataGridViewTextBoxColumn, Me.DivisionDataGridViewTextBoxColumn, Me.PositionDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.QuestionDataGridViewTextBoxColumn, Me.AnswerDataGridViewTextBoxColumn, Me.UsertypeDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.UsertblBindingSource
@@ -797,9 +808,9 @@ Partial Class UserManagementForm
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(724, 205)
         Me.DataGridView2.TabIndex = 126
@@ -1058,6 +1069,7 @@ Partial Class UserManagementForm
         '
         Me.AnswerEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AnswerEdit.Location = New System.Drawing.Point(551, 183)
+        Me.AnswerEdit.MaxLength = 20
         Me.AnswerEdit.Multiline = True
         Me.AnswerEdit.Name = "AnswerEdit"
         Me.AnswerEdit.Size = New System.Drawing.Size(175, 23)
@@ -1117,6 +1129,7 @@ Partial Class UserManagementForm
         '
         Me.UsernameEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameEdit.Location = New System.Drawing.Point(551, 33)
+        Me.UsernameEdit.MaxLength = 50
         Me.UsernameEdit.Multiline = True
         Me.UsernameEdit.Name = "UsernameEdit"
         Me.UsernameEdit.Size = New System.Drawing.Size(175, 23)
@@ -1136,6 +1149,7 @@ Partial Class UserManagementForm
         '
         Me.PositionEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PositionEdit.Location = New System.Drawing.Point(275, 232)
+        Me.PositionEdit.MaxLength = 20
         Me.PositionEdit.Multiline = True
         Me.PositionEdit.Name = "PositionEdit"
         Me.PositionEdit.Size = New System.Drawing.Size(175, 23)
@@ -1155,6 +1169,7 @@ Partial Class UserManagementForm
         '
         Me.DivisionEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DivisionEdit.Location = New System.Drawing.Point(275, 183)
+        Me.DivisionEdit.MaxLength = 20
         Me.DivisionEdit.Multiline = True
         Me.DivisionEdit.Name = "DivisionEdit"
         Me.DivisionEdit.Size = New System.Drawing.Size(175, 23)
@@ -1174,6 +1189,7 @@ Partial Class UserManagementForm
         '
         Me.EmailEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailEdit.Location = New System.Drawing.Point(275, 133)
+        Me.EmailEdit.MaxLength = 50
         Me.EmailEdit.Multiline = True
         Me.EmailEdit.Name = "EmailEdit"
         Me.EmailEdit.Size = New System.Drawing.Size(175, 23)
@@ -1193,7 +1209,7 @@ Partial Class UserManagementForm
         '
         Me.ContactNumberEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ContactNumberEdit.Location = New System.Drawing.Point(275, 83)
-        Me.ContactNumberEdit.MaxLength = 15
+        Me.ContactNumberEdit.MaxLength = 11
         Me.ContactNumberEdit.Multiline = True
         Me.ContactNumberEdit.Name = "ContactNumberEdit"
         Me.ContactNumberEdit.Size = New System.Drawing.Size(175, 23)
@@ -1211,10 +1227,12 @@ Partial Class UserManagementForm
         '
         'AgeEdit
         '
+        Me.AgeEdit.BackColor = System.Drawing.Color.White
         Me.AgeEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AgeEdit.Location = New System.Drawing.Point(10, 282)
         Me.AgeEdit.Multiline = True
         Me.AgeEdit.Name = "AgeEdit"
+        Me.AgeEdit.ReadOnly = True
         Me.AgeEdit.ShortcutsEnabled = False
         Me.AgeEdit.Size = New System.Drawing.Size(175, 23)
         Me.AgeEdit.TabIndex = 6
@@ -1233,6 +1251,7 @@ Partial Class UserManagementForm
         '
         Me.LastnameEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LastnameEdit.Location = New System.Drawing.Point(10, 183)
+        Me.LastnameEdit.MaxLength = 20
         Me.LastnameEdit.Multiline = True
         Me.LastnameEdit.Name = "LastnameEdit"
         Me.LastnameEdit.Size = New System.Drawing.Size(175, 23)
@@ -1252,6 +1271,7 @@ Partial Class UserManagementForm
         '
         Me.MiddlenameEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MiddlenameEdit.Location = New System.Drawing.Point(10, 133)
+        Me.MiddlenameEdit.MaxLength = 20
         Me.MiddlenameEdit.Multiline = True
         Me.MiddlenameEdit.Name = "MiddlenameEdit"
         Me.MiddlenameEdit.Size = New System.Drawing.Size(175, 23)
@@ -1261,6 +1281,7 @@ Partial Class UserManagementForm
         '
         Me.FirstnameEdit.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FirstnameEdit.Location = New System.Drawing.Point(10, 83)
+        Me.FirstnameEdit.MaxLength = 20
         Me.FirstnameEdit.Multiline = True
         Me.FirstnameEdit.Name = "FirstnameEdit"
         Me.FirstnameEdit.Size = New System.Drawing.Size(175, 23)

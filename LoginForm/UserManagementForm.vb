@@ -410,7 +410,7 @@ Public Class UserManagementForm
 
     Private Sub Firstname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Firstname.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -420,7 +420,7 @@ Public Class UserManagementForm
 
     Private Sub Middlename_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Middlename.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -430,17 +430,7 @@ Public Class UserManagementForm
 
     Private Sub Lastname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Lastname.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
-            If Not allowedchars.Contains(e.KeyChar.ToString) Then
-                e.KeyChar = ChrW(0)
-                e.Handled = True
-            End If
-        End If
-    End Sub
-
-    Private Sub Age_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Age.KeyPress
-        If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = ""
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -454,7 +444,7 @@ Public Class UserManagementForm
 
     Private Sub Division_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Division.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -464,7 +454,7 @@ Public Class UserManagementForm
 
     Private Sub FirstnameEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles FirstnameEdit.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -474,7 +464,7 @@ Public Class UserManagementForm
 
     Private Sub MiddlenameEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MiddlenameEdit.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -484,17 +474,7 @@ Public Class UserManagementForm
 
     Private Sub LastnameEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LastnameEdit.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            If Not allowedchars.Contains(e.KeyChar.ToString) Then
-                e.KeyChar = ChrW(0)
-                e.Handled = True
-            End If
-        End If
-    End Sub
-
-    Private Sub AgeEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AgeEdit.KeyPress
-        If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = ""
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -514,7 +494,7 @@ Public Class UserManagementForm
 
     Private Sub DivisionEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DivisionEdit.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -524,7 +504,7 @@ Public Class UserManagementForm
 
     Private Sub Position_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Position.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -534,7 +514,7 @@ Public Class UserManagementForm
 
     Private Sub PositionEdit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PositionEdit.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            Dim allowedchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             If Not allowedchars.Contains(e.KeyChar.ToString) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True
@@ -634,4 +614,75 @@ Public Class UserManagementForm
             End If
         End If
     End Sub
+
+    Private Sub Firstname_TextChanged(sender As Object, e As EventArgs) Handles Firstname.TextChanged
+        Firstname.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Firstname.Text.ToLower)
+        Firstname.Select(Firstname.Text.Length, 0)
+    End Sub
+
+    Private Sub Middlename_TextChanged(sender As Object, e As EventArgs) Handles Middlename.TextChanged
+        Middlename.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Middlename.Text.ToLower)
+        Middlename.Select(Middlename.Text.Length, 0)
+    End Sub
+
+    Private Sub Lastname_TextChanged(sender As Object, e As EventArgs) Handles Lastname.TextChanged
+        Lastname.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Lastname.Text.ToLower)
+        Lastname.Select(Lastname.Text.Length, 0)
+    End Sub
+
+    Private Sub Division_TextChanged(sender As Object, e As EventArgs) Handles Division.TextChanged
+        Division.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Division.Text.ToLower)
+        Division.Select(Division.Text.Length, 0)
+    End Sub
+
+    Private Sub Position_TextChanged(sender As Object, e As EventArgs) Handles Position.TextChanged
+        Position.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Position.Text.ToLower)
+        Position.Select(Position.Text.Length, 0)
+    End Sub
+
+    Private Sub Answer_TextChanged(sender As Object, e As EventArgs) Handles Answer.TextChanged
+        Answer.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Answer.Text.ToLower)
+        Answer.Select(Answer.Text.Length, 0)
+    End Sub
+
+    Private Sub UserID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles UserID.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedchars As String = "1234567890"
+            If Not allowedchars.Contains(e.KeyChar.ToString) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub FirstnameEdit_TextChanged(sender As Object, e As EventArgs) Handles FirstnameEdit.TextChanged
+        FirstnameEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(FirstnameEdit.Text.ToLower)
+        FirstnameEdit.Select(FirstnameEdit.Text.Length, 0)
+    End Sub
+
+    Private Sub MiddlenameEdit_TextChanged(sender As Object, e As EventArgs) Handles MiddlenameEdit.TextChanged
+        MiddlenameEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(MiddlenameEdit.Text.ToLower)
+        MiddlenameEdit.Select(MiddlenameEdit.Text.Length, 0)
+    End Sub
+
+    Private Sub LastnameEdit_TextChanged(sender As Object, e As EventArgs) Handles LastnameEdit.TextChanged
+        LastnameEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(LastnameEdit.Text.ToLower)
+        LastnameEdit.Select(LastnameEdit.Text.Length, 0)
+    End Sub
+
+    Private Sub DivisionEdit_TextChanged(sender As Object, e As EventArgs) Handles DivisionEdit.TextChanged
+        DivisionEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(DivisionEdit.Text.ToLower)
+        DivisionEdit.Select(DivisionEdit.Text.Length, 0)
+    End Sub
+
+    Private Sub PositionEdit_TextChanged(sender As Object, e As EventArgs) Handles PositionEdit.TextChanged
+        PositionEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(PositionEdit.Text.ToLower)
+        PositionEdit.Select(PositionEdit.Text.Length, 0)
+    End Sub
+
+    Private Sub AnswerEdit_TextChanged(sender As Object, e As EventArgs) Handles AnswerEdit.TextChanged
+        AnswerEdit.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(AnswerEdit.Text.ToLower)
+        AnswerEdit.Select(AnswerEdit.Text.Length, 0)
+    End Sub
+
 End Class

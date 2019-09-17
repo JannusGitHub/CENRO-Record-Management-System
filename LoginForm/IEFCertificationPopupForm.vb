@@ -25,10 +25,10 @@ Public Class IEFCertificationPopupForm
                 Dim DP As String = reader("DP")
                 Dim BFAD As String = reader("BFAD")
                 Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
-
+                Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
 
                 'PRINT IF THE REQUIREMENTS ARE COMPLIANT
-                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And BFAD = "Compliant" And AccreditedWasteHauler = "Compliant" Then
+                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And BFAD = "Compliant" And AccreditedWasteHauler = "Compliant" And SelfMonitoringReport = "Compliant" Then
                     Me.Hide()
                     With IEFPrintedCertificateForm
                         .TopLevel = False

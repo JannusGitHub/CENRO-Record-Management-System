@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
+
 Public Class IEFForm
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8;Initial Catalog=cenro_DB;Integrated Security=True")
 
@@ -244,7 +245,7 @@ Public Class IEFForm
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        connection.Close
+        connection.Close()
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
@@ -309,7 +310,7 @@ Public Class IEFForm
                 clear()
             End If
             connection.Close()
-            End If
+        End If
 
         connection.Close()
 
@@ -507,6 +508,56 @@ Public Class IEFForm
     Private Sub ControlNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ControlNumber.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "-" Then
             e.Handled = True
+        End If
+    End Sub
+
+    Private Sub NameOfEstablishment_TextChanged(sender As Object, e As EventArgs) Handles NameOfEstablishment.TextChanged
+        NameOfEstablishment.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NameOfEstablishment.Text.ToLower)
+        NameOfEstablishment.Select(NameOfEstablishment.Text.Length, 0)
+    End Sub
+
+    Private Sub Address_TextChanged(sender As Object, e As EventArgs) Handles Address.TextChanged
+        Address.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Address.Text.ToLower)
+        Address.Select(Address.Text.Length, 0)
+    End Sub
+
+    Private Sub EmailAddress_TextChanged(sender As Object, e As EventArgs) Handles EmailAddress.TextChanged
+        EmailAddress.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(EmailAddress.Text.ToLower)
+        EmailAddress.Select(EmailAddress.Text.Length, 0)
+    End Sub
+
+    Private Sub CEOPresident_TextChanged(sender As Object, e As EventArgs) Handles CEOPresident.TextChanged
+        CEOPresident.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(CEOPresident.Text.ToLower)
+        CEOPresident.Select(CEOPresident.Text.Length, 0)
+    End Sub
+
+    Private Sub GeneralManager_TextChanged(sender As Object, e As EventArgs) Handles GeneralManager.TextChanged
+        GeneralManager.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(GeneralManager.Text.ToLower)
+        GeneralManager.Select(GeneralManager.Text.Length, 0)
+    End Sub
+
+    Private Sub PollutionControlOfficer_TextChanged(sender As Object, e As EventArgs) Handles PollutionControlOfficer.TextChanged
+        PollutionControlOfficer.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(PollutionControlOfficer.Text.ToLower)
+        PollutionControlOfficer.Select(PollutionControlOfficer.Text.Length, 0)
+    End Sub
+
+    Private Sub NatureOfBusiness_TextChanged(sender As Object, e As EventArgs) Handles NatureOfBusiness.TextChanged
+        NatureOfBusiness.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NatureOfBusiness.Text.ToLower)
+        NatureOfBusiness.Select(NatureOfBusiness.Text.Length, 0)
+    End Sub
+
+    Private Sub NameOfAccreditedWasteHauler_TextChanged(sender As Object, e As EventArgs) Handles NameOfAccreditedWasteHauler.TextChanged
+        NameOfAccreditedWasteHauler.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NameOfAccreditedWasteHauler.Text.ToLower)
+        NameOfAccreditedWasteHauler.Select(NameOfAccreditedWasteHauler.Text.Length, 0)
+    End Sub
+
+    Private Sub ContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ContactNumber.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedchars As String = "1234567890-()+"
+            If Not allowedchars.Contains(e.KeyChar.ToString) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
         End If
     End Sub
 End Class
