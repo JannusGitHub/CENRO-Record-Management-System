@@ -336,7 +336,6 @@ C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\bin\Debug\zh-CH
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.vbprojAssemblyReference.cache
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.ActivateOrDeactivateForm.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.Backup.resources
-C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.BackupDatabaseForm.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IEFCertificationPopupForm.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.FastfoodCertificationPopupForm.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.FastfoodOathOfUndertakingForm.resources
@@ -379,3 +378,4 @@ C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\Login
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.exe
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.xml
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.Settings.resources

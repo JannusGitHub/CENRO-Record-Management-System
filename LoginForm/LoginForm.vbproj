@@ -122,12 +122,6 @@
     <Compile Include="Backup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BackupDatabaseForm.Designer.vb">
-      <DependentUpon>BackupDatabaseForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BackupDatabaseForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="cenro_DBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -302,6 +296,12 @@
     <Compile Include="ReportCategory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.Designer.vb">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
@@ -398,9 +398,6 @@
     <EmbeddedResource Include="Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BackupDatabaseForm.resx">
-      <DependentUpon>BackupDatabaseForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Certificate.rdlc" />
     <EmbeddedResource Include="IEFCertificationPopupForm.resx">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
@@ -479,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportCategory.resx">
       <DependentUpon>ReportCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

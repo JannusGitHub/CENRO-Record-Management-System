@@ -164,8 +164,7 @@ Public Class IEFForm
                 Else
                     connection.Close()
                     connection.Open()
-                    Dim insertquery As String = "insert into IndustrialEstablishmentFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler,SelfMonitoringReport) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@BFAD,@AccreditedWasteHauler,@SMR)" &
-                    "SELECT IndustrialEstablishmentFoodID FROM IndustrialEstablishmentFood_tbl WHERE IndustrialEstablishmentFoodID = @@IDENTITY"
+                    Dim insertquery As String = "insert into IndustrialEstablishmentFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,BFAD,AccreditedWasteHauler,SelfMonitoringReport) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@BFAD,@AccreditedWasteHauler,@SMR)"
                     Dim cmd As New SqlCommand(insertquery, connection)
                     cmd.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment.Text)
                     cmd.Parameters.AddWithValue("@Address", Address.Text)
@@ -186,56 +185,60 @@ Public Class IEFForm
                     cmd.Parameters.AddWithValue("@AccreditedWasteHauler", AccreditedWasteHauler.Text)
                     cmd.Parameters.AddWithValue("@SMR", SMR.Text)
                     cmd.ExecuteNonQuery()
-                    ' insert the new row and read back the IDENTITY field
-                    'Dim IndustrialEstablishmentFoodID As Integer = CInt(cmd.ExecuteScalar())
                     MessageBox.Show("Successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     clear() 'clear all fields after inserted to database
 
-
-                    '-----------INCOMPLETE WORK------------
-                    'insert to another table(YearEndReport_tbl) to update the Status Column in that table
-                    ' Dim commandToUpdateStatus As New SqlCommand("SELECT * FROM IndustrialEstablishmentFood_tbl", connection)
-                    'Dim adapterToUpdateStatus As New SqlDataAdapter(commandToUpdateStatus)
-                    'Dim tableToUpdateStatus As New DataTable()
-                    'adapterToUpdateStatus.Fill(tableToUpdateStatus)
+                    'insert to another table(YearEndReport_tbl) to update the (Status) Column in that table, after inserting new company
+                    Dim commandToUpdateStatus As New SqlCommand("SELECT * FROM IndustrialEstablishmentFood_tbl ORDER BY IndustrialEstablishmentFoodID DESC", connection)
+                    Dim adapterToUpdateStatus As New SqlDataAdapter(commandToUpdateStatus)
+                    Dim tableToUpdateStatus As New DataTable()
+                    adapterToUpdateStatus.Fill(tableToUpdateStatus)
 
                     'open connection
-                    'If connection.State = ConnectionState.Closed Then connection.Open()
+                    If connection.State = ConnectionState.Closed Then connection.Open()
 
                     'declare variable reader to read data in database
-                    'Dim reader As SqlDataReader = commandToUpdateStatus.ExecuteReader
+                    Dim reader As SqlDataReader = commandToUpdateStatus.ExecuteReader
 
-                    'If reader.Read = True Then
-                    'declaring variables to store data from the database
-                    'Dim BrgyClearanceWithCTC As String = reader("BrgyClearanceWithCTC")
-                    'Dim DTI_SEC As String = reader("DTI_SEC")
-                    'Dim ECC As String = reader("ECC")
-                    'Dim PTO As String = reader("PTO")
-                    'Dim DP As String = reader("DP")
-                    'Dim BFAD As String = reader("BFAD")
-                    'Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
-                    'Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
-                    'Dim compliantStatus As String = "Compliant"
-                    'Dim oathStatus As String = "Oath"
+                    If reader.Read = True Then
+                        'declaring variables to store data from the database
+                        'this is the requirements column in IndustrialEstablishmentFood_tbl
+                        Dim BrgyClearanceWithCTC As String = reader("BrgyClearanceWithCTC")
+                        Dim DTI_SEC As String = reader("DTI_SEC")
+                        Dim ECC As String = reader("ECC")
+                        Dim PTO As String = reader("PTO")
+                        Dim DP As String = reader("DP")
+                        Dim BFAD As String = reader("BFAD")
+                        Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
+                        Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
 
-                    'If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And BFAD = "Compliant" And AccreditedWasteHauler = "Compliant" And SelfMonitoringReport = "Compliant" Then
-                    'Dim insertCompliant As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentFoodID & "','" & NameOfEstablishment.Text & "', '" & Address.Text & "', '" & ControlNumber.Text & "', '" & compliantStatus & "')"
-                    'Dim commandToInsertCompliant As New SqlCommand(insertCompliant, connection)
-                    'reader.Close()
-                    'commandToInsertCompliant.ExecuteNonQuery()
-                    'connection.Close()
+                        'this is the column in YearEndReport_tbl
+                        Dim IndustrialEstablishmentFoodID As String = reader("IndustrialEstablishmentFoodID")
+                        Dim NameOfEstablishment As String = reader("NameOfEstablishment")
+                        Dim Address As String = reader("Address")
+                        Dim ControlNumber As String = reader("ControlNumber")
+                        Dim compliantStatus As String = "Compliant"
+                        Dim oathStatus As String = "Oath"
 
-                    'ElseIf BrgyClearanceWithCTC = "Oath" Or DTI_SEC = "Oath" Or ECC = "Oath" Or PTO = "Oath" Or DP = "Oath" Or BFAD = "Oath" Or AccreditedWasteHauler = "Oath" Or SelfMonitoringReport = "Oath" Then
-                    'Dim insertOath As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentFoodID & "','" & NameOfEstablishment.Text & "', '" & Address.Text & "', '" & ControlNumber.Text & "', '" & oathStatus & "')"
-                    'Dim commandToInsertOath As New SqlCommand(insertOath, connection)
-                    'reader.Close()
-                    'commandToInsertOath.ExecuteNonQuery()
-                    'nnection.Close()
-                    'End If
-                    ' End If
+                        If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And BFAD = "Compliant" And AccreditedWasteHauler = "Compliant" And SelfMonitoringReport = "Compliant" Then
+                            Dim insertCompliant As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & compliantStatus & "')"
+                            Dim commandToInsertCompliant As New SqlCommand(insertCompliant, connection)
+                            reader.Close()
+                            commandToInsertCompliant.ExecuteNonQuery()
+                            connection.Close()
+
+                        ElseIf BrgyClearanceWithCTC = "Oath" Or DTI_SEC = "Oath" Or ECC = "Oath" Or PTO = "Oath" Or DP = "Oath" Or BFAD = "Oath" Or AccreditedWasteHauler = "Oath" Or SelfMonitoringReport = "Oath" Then
+                            Dim insertOath As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & oathStatus & "')"
+                            Dim commandToInsertOath As New SqlCommand(insertOath, connection)
+                            reader.Close()
+                            commandToInsertOath.ExecuteNonQuery()
+                            connection.Close()
+                        End If
+                    End If
+
                     'close the connection and the reader
-                    'reader.Close()
-                    'If connection.State = ConnectionState.Open Then connection.Close()
+                    reader.Close()
+                    If connection.State = ConnectionState.Open Then connection.Close()
                 End If
                 'close the connection and the reader
                 datareader.Close()
@@ -559,5 +562,23 @@ Public Class IEFForm
                 e.Handled = True
             End If
         End If
+    End Sub
+
+    Private Sub ControlNumber_KeyUp(sender As Object, e As KeyEventArgs) Handles ControlNumber.KeyUp
+
+        'Dim lagunaCode = "19200"
+        'Dim controlNumString As String = String.Format("{0}-{1}-", lagunaCode.Substring(0, 3), lagunaCode.Substring(3, 2))
+        'ControlNumber.Text = controlNumString
+        'If ControlNumber.TextLength = 3 Then
+        '    Dim strTemp2 As String
+        '    strTemp2 = Microsoft.VisualBasic.Right(ControlNumber.Text, 3) & "-"
+        '    ControlNumber.Text = strTemp2
+        'End If
+
+        'If ControlNumber.TextLength = 9 Then
+        '    Dim strTemp2 As String
+        '    strTemp2 = Microsoft.VisualBasic.Left(ControlNumber.Text, 2) & "-"
+        '    ControlNumber.Text = strTemp2
+        'End If
     End Sub
 End Class

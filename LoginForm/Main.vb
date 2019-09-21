@@ -53,7 +53,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
-
+        activeButton.Width = Button1.Width
+        activeButton.Top = Button1.Top
 
 
         'With Category
@@ -81,7 +82,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
-
+        activeButton.Height = Button2.Height
+        activeButton.Top = Button2.Top
 
 
 
@@ -99,7 +101,7 @@ Public Class Main
         'End With
     End Sub
 
-    Private Sub Activate_Click(sender As Object, e As EventArgs) Handles Activate.Click
+    Private Sub Activate_Click(sender As Object, e As EventArgs) Handles ActivateButton.Click
         For Each form As Form In Me.MDIpanel.Controls
             form.Close()
         Next
@@ -109,7 +111,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
-
+        activeButton.Height = ActivateButton.Height
+        activeButton.Top = ActivateButton.Top
 
         'With ActivateOrDeactivateForm
         'TopLevel = False
@@ -126,6 +129,9 @@ Public Class Main
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        activeButton.Height = Button3.Height
+        activeButton.Top = Button3.Top
+
         Dim message As String = "Do you want to logout?"
         Dim caption As String = "Confirmation"
         Dim icons As String = MessageBoxIcon.Question
@@ -167,6 +173,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
+        activeButton.Height = Button4.Height
+        activeButton.Top = Button4.Top
 
 
 
@@ -195,6 +203,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
+        activeButton.Height = Button5.Height
+        activeButton.Top = Button5.Top
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -220,6 +230,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
+        activeButton.Height = HistoryButton.Height
+        activeButton.Top = HistoryButton.Top
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -232,6 +244,8 @@ Public Class Main
             .BringToFront()
             .Show()
         End With
+        activeButton.Height = Button6.Height
+        activeButton.Top = Button6.Top
     End Sub
 
     Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDown
@@ -262,5 +276,19 @@ Public Class Main
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        For Each form As Form In Me.MDIpanel.Controls
+            form.Close()
+        Next
+        With Settings
+            .TopLevel = False
+            MDIpanel.Controls.Add(Settings)
+            .BringToFront()
+            .Show()
+        End With
+        activeButton.Height = Button7.Height
+        activeButton.Top = Button7.Top
     End Sub
 End Class

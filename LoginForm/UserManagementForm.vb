@@ -108,8 +108,6 @@ Public Class UserManagementForm
         connection.Open()
         cmd.ExecuteNonQuery()
         connection.Close()
-
-
     End Sub
 
     Private Sub UserManagementForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
