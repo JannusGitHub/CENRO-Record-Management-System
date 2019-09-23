@@ -27,11 +27,12 @@ Public Class HospitalCertificationPopupForm
                 Dim DENR_IDNumber As String = reader("DENR_IDNumber")
                 Dim DOHAccreditation As String = reader("DOHAccreditation")
                 Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
+                Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
 
 
 
                 'PRINT IF THE REQUIREMENTS ARE COMPLIANT
-                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And DOHAccreditation = "Compliant" And AccreditedWasteHauler = "Compliant" Then
+                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And DOHAccreditation = "Compliant" And AccreditedWasteHauler = "Compliant" And SelfMonitoringReport = "Compliant" Then
                     Me.Hide()
                     With HospitalPrintedCertificationForm
                         .TopLevel = False
@@ -42,7 +43,7 @@ Public Class HospitalCertificationPopupForm
                     reader.Close()
                     connection.Close()
                 Else
-                    MessageBox.Show("An error occured! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             End If

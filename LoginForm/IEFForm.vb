@@ -416,14 +416,30 @@ Public Class IEFForm
         ContactNumber.Clear()
         NameOfAccreditedWasteHauler.Clear()
         ControlNumber.Clear()
-        BrgyClearance.Clear()
-        DTISEC.Clear()
-        ECC.Clear()
-        PTO.Clear()
-        DP.Clear()
-        BFAD.Clear()
-        AccreditedWasteHauler.Clear()
-        SMR.Clear()
+        If BrgyClearance.Text = BrgyClearance.SelectedItem Then
+            BrgyClearance.Text = ""
+        End If
+        If DTISEC.Text = DTISEC.SelectedItem Then
+            DTISEC.Text = ""
+        End If
+        If ECC.Text = ECC.SelectedItem Then
+            ECC.Text = ""
+        End If
+        If PTO.Text = PTO.SelectedItem Then
+            PTO.Text = ""
+        End If
+        If DP.Text = DP.SelectedItem Then
+            DP.Text = ""
+        End If
+        If BFAD.Text = BFAD.SelectedItem Then
+            BFAD.Text = ""
+        End If
+        If AccreditedWasteHauler.Text = AccreditedWasteHauler.SelectedItem Then
+            AccreditedWasteHauler.Text = ""
+        End If
+        If SMR.Text = SMR.SelectedItem Then
+            SMR.Text = ""
+        End If
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -525,8 +541,7 @@ Public Class IEFForm
     End Sub
 
     Private Sub EmailAddress_TextChanged(sender As Object, e As EventArgs) Handles EmailAddress.TextChanged
-        EmailAddress.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(EmailAddress.Text.ToLower)
-        EmailAddress.Select(EmailAddress.Text.Length, 0)
+
     End Sub
 
     Private Sub CEOPresident_TextChanged(sender As Object, e As EventArgs) Handles CEOPresident.TextChanged
@@ -580,5 +595,15 @@ Public Class IEFForm
         '    strTemp2 = Microsoft.VisualBasic.Left(ControlNumber.Text, 2) & "-"
         '    ControlNumber.Text = strTemp2
         'End If
+    End Sub
+
+    Private Sub BrgyClearance_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SMR.KeyPress, PTO.KeyPress, ECC.KeyPress, DTISEC.KeyPress, DP.KeyPress, BrgyClearance.KeyPress, BFAD.KeyPress, AccreditedWasteHauler.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedchars As String = ""
+            If Not allowedchars.Contains(e.KeyChar.ToString) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class

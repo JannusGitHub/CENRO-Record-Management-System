@@ -24,13 +24,13 @@ Partial Class FastfoodCanteenAndRestoForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FastfoodCanteenAndRestoForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -42,22 +42,6 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GeneralManagerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NatureOfBusinessDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FastfoodCanteenAndRestauranttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -67,17 +51,11 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.UpdateButton = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
-        Me.AccreditedWasteHauler = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.DP = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.PTO = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ECC = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DTISEC = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.BrgyClearance = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ControlNumber = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -112,14 +90,6 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ControlNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ECCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DPDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.NameOfEstablishmentReq = New System.Windows.Forms.TextBox()
@@ -138,6 +108,42 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PTO1 = New System.Windows.Forms.TextBox()
         Me.FastfoodCanteenAndRestaurant_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter()
+        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GeneralManagerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NatureOfBusinessDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ControlNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ECCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DPDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DTISEC = New System.Windows.Forms.ComboBox()
+        Me.BrgyClearance = New System.Windows.Forms.ComboBox()
+        Me.DP = New System.Windows.Forms.ComboBox()
+        Me.PTO = New System.Windows.Forms.ComboBox()
+        Me.ECC = New System.Windows.Forms.ComboBox()
+        Me.AccreditedWasteHauler = New System.Windows.Forms.ComboBox()
+        Me.SMR = New System.Windows.Forms.ComboBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -283,46 +289,823 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.ColumnHeadersHeight = 26
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ControlNumberDataGridViewTextBoxColumn, Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.EmailAddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.GeneralManagerDataGridViewTextBoxColumn, Me.PollutionControlOfficerDataGridViewTextBoxColumn, Me.NatureOfBusinessDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ControlNumberDataGridViewTextBoxColumn, Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.EmailAddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.GeneralManagerDataGridViewTextBoxColumn, Me.PollutionControlOfficerDataGridViewTextBoxColumn, Me.NatureOfBusinessDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(3, 414)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 50
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1080, 238)
         Me.DataGridView1.TabIndex = 51
+        '
+        'FastfoodCanteenAndRestauranttblBindingSource
+        '
+        Me.FastfoodCanteenAndRestauranttblBindingSource.DataMember = "FastfoodCanteenAndRestaurant_tbl"
+        Me.FastfoodCanteenAndRestauranttblBindingSource.DataSource = Me.Cenro_DBDataSet
+        '
+        'Cenro_DBDataSet
+        '
+        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
+        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(-1, 357)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(64, 21)
+        Me.Label27.TabIndex = 49
+        Me.Label27.Text = "Search"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.SMR)
+        Me.GroupBox1.Controls.Add(Me.Label31)
+        Me.GroupBox1.Controls.Add(Me.AccreditedWasteHauler)
+        Me.GroupBox1.Controls.Add(Me.DP)
+        Me.GroupBox1.Controls.Add(Me.PTO)
+        Me.GroupBox1.Controls.Add(Me.ECC)
+        Me.GroupBox1.Controls.Add(Me.DTISEC)
+        Me.GroupBox1.Controls.Add(Me.BrgyClearance)
+        Me.GroupBox1.Controls.Add(Me.GroupBox3)
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.ControlNumber)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.NameOfAccreditedWasteHauler)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.ContactNumber)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.NatureOfBusiness)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.PollutionControlOfficer)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.GeneralManager)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.CEOPresident)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.NameOfEstablishment)
+        Me.GroupBox1.Controls.Add(Me.EmailAddress)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Address)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1080, 345)
+        Me.GroupBox1.TabIndex = 46
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Fastfood, Canteen and Restaurant"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.NewButton)
+        Me.GroupBox3.Controls.Add(Me.UpdateButton)
+        Me.GroupBox3.Controls.Add(Me.DeleteButton)
+        Me.GroupBox3.Controls.Add(Me.SaveButton)
+        Me.GroupBox3.Location = New System.Drawing.Point(923, 85)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(157, 166)
+        Me.GroupBox3.TabIndex = 45
+        Me.GroupBox3.TabStop = False
+        '
+        'NewButton
+        '
+        Me.NewButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NewButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewButton.ForeColor = System.Drawing.Color.White
+        Me.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.NewButton.Location = New System.Drawing.Point(14, 16)
+        Me.NewButton.Name = "NewButton"
+        Me.NewButton.Size = New System.Drawing.Size(135, 33)
+        Me.NewButton.TabIndex = 17
+        Me.NewButton.Text = "New"
+        Me.NewButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.NewButton.UseVisualStyleBackColor = False
+        '
+        'UpdateButton
+        '
+        Me.UpdateButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UpdateButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UpdateButton.ForeColor = System.Drawing.Color.White
+        Me.UpdateButton.Image = CType(resources.GetObject("UpdateButton.Image"), System.Drawing.Image)
+        Me.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UpdateButton.Location = New System.Drawing.Point(14, 90)
+        Me.UpdateButton.Name = "UpdateButton"
+        Me.UpdateButton.Size = New System.Drawing.Size(135, 33)
+        Me.UpdateButton.TabIndex = 19
+        Me.UpdateButton.Text = "Update"
+        Me.UpdateButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.UpdateButton.UseVisualStyleBackColor = False
+        '
+        'DeleteButton
+        '
+        Me.DeleteButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteButton.ForeColor = System.Drawing.Color.White
+        Me.DeleteButton.Image = CType(resources.GetObject("DeleteButton.Image"), System.Drawing.Image)
+        Me.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DeleteButton.Location = New System.Drawing.Point(14, 127)
+        Me.DeleteButton.Name = "DeleteButton"
+        Me.DeleteButton.Size = New System.Drawing.Size(135, 33)
+        Me.DeleteButton.TabIndex = 20
+        Me.DeleteButton.Text = "Delete"
+        Me.DeleteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.DeleteButton.UseVisualStyleBackColor = False
+        '
+        'SaveButton
+        '
+        Me.SaveButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.ForeColor = System.Drawing.Color.White
+        Me.SaveButton.Image = CType(resources.GetObject("SaveButton.Image"), System.Drawing.Image)
+        Me.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.SaveButton.Location = New System.Drawing.Point(14, 53)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(135, 33)
+        Me.SaveButton.TabIndex = 18
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.SaveButton.UseVisualStyleBackColor = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(597, 175)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(207, 21)
+        Me.Label18.TabIndex = 37
+        Me.Label18.Text = "Accredited Waste Hauler"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(597, 125)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(31, 21)
+        Me.Label16.TabIndex = 33
+        Me.Label16.Text = "DP"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(597, 75)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(41, 21)
+        Me.Label15.TabIndex = 31
+        Me.Label15.Text = "PTO"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(597, 25)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 21)
+        Me.Label14.TabIndex = 29
+        Me.Label14.Text = "ECC"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(284, 275)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(72, 21)
+        Me.Label13.TabIndex = 27
+        Me.Label13.Text = "DTI/SEC"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(284, 225)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(134, 21)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "Brgy. Clearance"
+        '
+        'ControlNumber
+        '
+        Me.ControlNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ControlNumber.Location = New System.Drawing.Point(10, 49)
+        Me.ControlNumber.MaxLength = 19
+        Me.ControlNumber.Multiline = True
+        Me.ControlNumber.Name = "ControlNumber"
+        Me.ControlNumber.ShortcutsEnabled = False
+        Me.ControlNumber.Size = New System.Drawing.Size(202, 23)
+        Me.ControlNumber.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(6, 25)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(135, 21)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Control Number"
+        '
+        'NameOfAccreditedWasteHauler
+        '
+        Me.NameOfAccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameOfAccreditedWasteHauler.Location = New System.Drawing.Point(288, 199)
+        Me.NameOfAccreditedWasteHauler.MaxLength = 25
+        Me.NameOfAccreditedWasteHauler.Multiline = True
+        Me.NameOfAccreditedWasteHauler.Name = "NameOfAccreditedWasteHauler"
+        Me.NameOfAccreditedWasteHauler.Size = New System.Drawing.Size(202, 23)
+        Me.NameOfAccreditedWasteHauler.TabIndex = 10
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(284, 175)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(278, 21)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "Name of Accredited Waste Hauler"
+        '
+        'ContactNumber
+        '
+        Me.ContactNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContactNumber.Location = New System.Drawing.Point(288, 149)
+        Me.ContactNumber.MaxLength = 11
+        Me.ContactNumber.Multiline = True
+        Me.ContactNumber.Name = "ContactNumber"
+        Me.ContactNumber.Size = New System.Drawing.Size(202, 23)
+        Me.ContactNumber.TabIndex = 9
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(284, 125)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(145, 21)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Contact Number"
+        '
+        'NatureOfBusiness
+        '
+        Me.NatureOfBusiness.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NatureOfBusiness.Location = New System.Drawing.Point(288, 99)
+        Me.NatureOfBusiness.MaxLength = 25
+        Me.NatureOfBusiness.Multiline = True
+        Me.NatureOfBusiness.Name = "NatureOfBusiness"
+        Me.NatureOfBusiness.Size = New System.Drawing.Size(202, 23)
+        Me.NatureOfBusiness.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(284, 75)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(148, 21)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "Nature of Business"
+        '
+        'PollutionControlOfficer
+        '
+        Me.PollutionControlOfficer.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PollutionControlOfficer.Location = New System.Drawing.Point(288, 49)
+        Me.PollutionControlOfficer.MaxLength = 25
+        Me.PollutionControlOfficer.Multiline = True
+        Me.PollutionControlOfficer.Name = "PollutionControlOfficer"
+        Me.PollutionControlOfficer.Size = New System.Drawing.Size(202, 23)
+        Me.PollutionControlOfficer.TabIndex = 7
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(284, 25)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(193, 21)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Pollution Control Officer"
+        '
+        'GeneralManager
+        '
+        Me.GeneralManager.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralManager.Location = New System.Drawing.Point(10, 299)
+        Me.GeneralManager.MaxLength = 25
+        Me.GeneralManager.Multiline = True
+        Me.GeneralManager.Name = "GeneralManager"
+        Me.GeneralManager.Size = New System.Drawing.Size(202, 23)
+        Me.GeneralManager.TabIndex = 6
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(6, 275)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(150, 21)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "General Manager"
+        '
+        'CEOPresident
+        '
+        Me.CEOPresident.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CEOPresident.Location = New System.Drawing.Point(10, 249)
+        Me.CEOPresident.MaxLength = 25
+        Me.CEOPresident.Multiline = True
+        Me.CEOPresident.Name = "CEOPresident"
+        Me.CEOPresident.Size = New System.Drawing.Size(202, 23)
+        Me.CEOPresident.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 225)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(124, 21)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "CEO/President"
+        '
+        'NameOfEstablishment
+        '
+        Me.NameOfEstablishment.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameOfEstablishment.Location = New System.Drawing.Point(10, 99)
+        Me.NameOfEstablishment.MaxLength = 25
+        Me.NameOfEstablishment.Multiline = True
+        Me.NameOfEstablishment.Name = "NameOfEstablishment"
+        Me.NameOfEstablishment.Size = New System.Drawing.Size(202, 23)
+        Me.NameOfEstablishment.TabIndex = 2
+        '
+        'EmailAddress
+        '
+        Me.EmailAddress.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmailAddress.Location = New System.Drawing.Point(10, 199)
+        Me.EmailAddress.MaxLength = 25
+        Me.EmailAddress.Multiline = True
+        Me.EmailAddress.Name = "EmailAddress"
+        Me.EmailAddress.Size = New System.Drawing.Size(202, 23)
+        Me.EmailAddress.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 75)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(189, 21)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Name of Establishment"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(6, 175)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(117, 21)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Email Address"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 125)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 21)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Address"
+        '
+        'Address
+        '
+        Me.Address.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Address.Location = New System.Drawing.Point(10, 149)
+        Me.Address.MaxLength = 25
+        Me.Address.Multiline = True
+        Me.Address.Name = "Address"
+        Me.Address.Size = New System.Drawing.Size(202, 23)
+        Me.Address.TabIndex = 3
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Panel4)
+        Me.TabPage2.Controls.Add(Me.Panel3)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.Label28)
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Controls.Add(Me.GroupBox2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1092, 653)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Company Requirements"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.PictureBox6)
+        Me.Panel4.Controls.Add(Me.PictureBox7)
+        Me.Panel4.Controls.Add(Me.SearchReq)
+        Me.Panel4.Location = New System.Drawing.Point(3, 348)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(278, 27)
+        Me.Panel4.TabIndex = 77
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox6.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox6.TabIndex = 44
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox7.Location = New System.Drawing.Point(250, 0)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox7.TabIndex = 2
+        Me.PictureBox7.TabStop = False
+        '
+        'SearchReq
+        '
+        Me.SearchReq.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SearchReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchReq.Location = New System.Drawing.Point(26, 2)
+        Me.SearchReq.Multiline = True
+        Me.SearchReq.Name = "SearchReq"
+        Me.SearchReq.Size = New System.Drawing.Size(224, 23)
+        Me.SearchReq.TabIndex = 59
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.PictureBox4)
+        Me.Panel3.Controls.Add(Me.PictureBox5)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Location = New System.Drawing.Point(3, 348)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(278, 27)
+        Me.Panel3.TabIndex = 77
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox4.TabIndex = 44
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Location = New System.Drawing.Point(250, 0)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox5.TabIndex = 2
+        Me.PictureBox5.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(26, 2)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
+        Me.TextBox1.TabIndex = 50
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(353, 324)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(143, 21)
+        Me.Label5.TabIndex = 64
+        Me.Label5.Text = "Search Category"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"by Control Number", "by Name of Establishment", "All"})
+        Me.ComboBox1.Location = New System.Drawing.Point(360, 348)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(212, 25)
+        Me.ComboBox1.TabIndex = 63
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(-1, 324)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(64, 21)
+        Me.Label28.TabIndex = 58
+        Me.Label28.Text = "Search"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AllowUserToResizeColumns = False
+        Me.DataGridView2.AllowUserToResizeRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridView2.ColumnHeadersHeight = 26
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn1, Me.ControlNumberDataGridViewTextBoxColumn1, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3})
+        Me.DataGridView2.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle13
+        Me.DataGridView2.EnableHeadersVisualStyles = False
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 381)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle14
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(1080, 266)
+        Me.DataGridView2.TabIndex = 57
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.SMR1)
+        Me.GroupBox2.Controls.Add(Me.Label32)
+        Me.GroupBox2.Controls.Add(Me.Label29)
+        Me.GroupBox2.Controls.Add(Me.NameOfEstablishmentReq)
+        Me.GroupBox2.Controls.Add(Me.ControlNumber1)
+        Me.GroupBox2.Controls.Add(Me.Label26)
+        Me.GroupBox2.Controls.Add(Me.BrgyClearance1)
+        Me.GroupBox2.Controls.Add(Me.AccreditedWasteHauler1)
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.Label19)
+        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.DTISEC1)
+        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.Controls.Add(Me.DP1)
+        Me.GroupBox2.Controls.Add(Me.ECC1)
+        Me.GroupBox2.Controls.Add(Me.Label21)
+        Me.GroupBox2.Controls.Add(Me.Label22)
+        Me.GroupBox2.Controls.Add(Me.PTO1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(1080, 261)
+        Me.GroupBox2.TabIndex = 54
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Fastfood, Canteen and Restaurant"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(2, 49)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(189, 21)
+        Me.Label29.TabIndex = 56
+        Me.Label29.Text = "Name of Establishment"
+        '
+        'NameOfEstablishmentReq
+        '
+        Me.NameOfEstablishmentReq.BackColor = System.Drawing.Color.White
+        Me.NameOfEstablishmentReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameOfEstablishmentReq.Location = New System.Drawing.Point(6, 73)
+        Me.NameOfEstablishmentReq.Multiline = True
+        Me.NameOfEstablishmentReq.Name = "NameOfEstablishmentReq"
+        Me.NameOfEstablishmentReq.ReadOnly = True
+        Me.NameOfEstablishmentReq.Size = New System.Drawing.Size(250, 23)
+        Me.NameOfEstablishmentReq.TabIndex = 1
+        '
+        'ControlNumber1
+        '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
+        Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ControlNumber1.Location = New System.Drawing.Point(6, 123)
+        Me.ControlNumber1.Multiline = True
+        Me.ControlNumber1.Name = "ControlNumber1"
+        Me.ControlNumber1.ReadOnly = True
+        Me.ControlNumber1.Size = New System.Drawing.Size(250, 23)
+        Me.ControlNumber1.TabIndex = 2
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(2, 99)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(135, 21)
+        Me.Label26.TabIndex = 54
+        Me.Label26.Text = "Control Number"
+        '
+        'BrgyClearance1
+        '
+        Me.BrgyClearance1.BackColor = System.Drawing.Color.White
+        Me.BrgyClearance1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrgyClearance1.Location = New System.Drawing.Point(6, 173)
+        Me.BrgyClearance1.Multiline = True
+        Me.BrgyClearance1.Name = "BrgyClearance1"
+        Me.BrgyClearance1.ReadOnly = True
+        Me.BrgyClearance1.Size = New System.Drawing.Size(250, 23)
+        Me.BrgyClearance1.TabIndex = 3
+        '
+        'AccreditedWasteHauler1
+        '
+        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
+        Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(650, 123)
+        Me.AccreditedWasteHauler1.Multiline = True
+        Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
+        Me.AccreditedWasteHauler1.ReadOnly = True
+        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(250, 23)
+        Me.AccreditedWasteHauler1.TabIndex = 8
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(2, 149)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(134, 21)
+        Me.Label25.TabIndex = 39
+        Me.Label25.Text = "Brgy. Clearance"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(646, 99)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(207, 21)
+        Me.Label19.TabIndex = 51
+        Me.Label19.Text = "Accredited Waste Hauler"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(326, 49)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(72, 21)
+        Me.Label24.TabIndex = 41
+        Me.Label24.Text = "DTI/SEC"
+        '
+        'DTISEC1
+        '
+        Me.DTISEC1.BackColor = System.Drawing.Color.White
+        Me.DTISEC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTISEC1.Location = New System.Drawing.Point(330, 73)
+        Me.DTISEC1.Multiline = True
+        Me.DTISEC1.Name = "DTISEC1"
+        Me.DTISEC1.ReadOnly = True
+        Me.DTISEC1.Size = New System.Drawing.Size(250, 23)
+        Me.DTISEC1.TabIndex = 4
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(326, 99)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(45, 21)
+        Me.Label23.TabIndex = 43
+        Me.Label23.Text = "ECC"
+        '
+        'DP1
+        '
+        Me.DP1.BackColor = System.Drawing.Color.White
+        Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DP1.Location = New System.Drawing.Point(650, 73)
+        Me.DP1.Multiline = True
+        Me.DP1.Name = "DP1"
+        Me.DP1.ReadOnly = True
+        Me.DP1.Size = New System.Drawing.Size(250, 23)
+        Me.DP1.TabIndex = 7
+        '
+        'ECC1
+        '
+        Me.ECC1.BackColor = System.Drawing.Color.White
+        Me.ECC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ECC1.Location = New System.Drawing.Point(330, 123)
+        Me.ECC1.Multiline = True
+        Me.ECC1.Name = "ECC1"
+        Me.ECC1.ReadOnly = True
+        Me.ECC1.Size = New System.Drawing.Size(250, 23)
+        Me.ECC1.TabIndex = 5
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(646, 49)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(31, 21)
+        Me.Label21.TabIndex = 47
+        Me.Label21.Text = "DP"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(326, 149)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(41, 21)
+        Me.Label22.TabIndex = 45
+        Me.Label22.Text = "PTO"
+        '
+        'PTO1
+        '
+        Me.PTO1.BackColor = System.Drawing.Color.White
+        Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PTO1.Location = New System.Drawing.Point(330, 173)
+        Me.PTO1.Multiline = True
+        Me.PTO1.Name = "PTO1"
+        Me.PTO1.ReadOnly = True
+        Me.PTO1.Size = New System.Drawing.Size(250, 23)
+        Me.PTO1.TabIndex = 6
+        '
+        'FastfoodCanteenAndRestaurant_tblTableAdapter
+        '
+        Me.FastfoodCanteenAndRestaurant_tblTableAdapter.ClearBeforeFill = True
         '
         'ControlNumberDataGridViewTextBoxColumn
         '
@@ -484,625 +1267,15 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
         '
-        'FastfoodCanteenAndRestauranttblBindingSource
-        '
-        Me.FastfoodCanteenAndRestauranttblBindingSource.DataMember = "FastfoodCanteenAndRestaurant_tbl"
-        Me.FastfoodCanteenAndRestauranttblBindingSource.DataSource = Me.Cenro_DBDataSet
-        '
-        'Cenro_DBDataSet
-        '
-        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
-        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(-1, 357)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(64, 21)
-        Me.Label27.TabIndex = 49
-        Me.Label27.Text = "Search"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.GroupBox3)
-        Me.GroupBox1.Controls.Add(Me.AccreditedWasteHauler)
-        Me.GroupBox1.Controls.Add(Me.Label18)
-        Me.GroupBox1.Controls.Add(Me.DP)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.PTO)
-        Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.ECC)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.DTISEC)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.BrgyClearance)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.ControlNumber)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.NameOfAccreditedWasteHauler)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.ContactNumber)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.NatureOfBusiness)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.PollutionControlOfficer)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.GeneralManager)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.CEOPresident)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.NameOfEstablishment)
-        Me.GroupBox1.Controls.Add(Me.EmailAddress)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Address)
-        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1080, 345)
-        Me.GroupBox1.TabIndex = 46
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Fastfood, Canteen and Restaurant"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.NewButton)
-        Me.GroupBox3.Controls.Add(Me.UpdateButton)
-        Me.GroupBox3.Controls.Add(Me.DeleteButton)
-        Me.GroupBox3.Controls.Add(Me.SaveButton)
-        Me.GroupBox3.Location = New System.Drawing.Point(923, 85)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(157, 166)
-        Me.GroupBox3.TabIndex = 45
-        Me.GroupBox3.TabStop = False
-        '
-        'NewButton
-        '
-        Me.NewButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NewButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewButton.ForeColor = System.Drawing.Color.White
-        Me.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.NewButton.Location = New System.Drawing.Point(14, 16)
-        Me.NewButton.Name = "NewButton"
-        Me.NewButton.Size = New System.Drawing.Size(135, 33)
-        Me.NewButton.TabIndex = 17
-        Me.NewButton.Text = "New"
-        Me.NewButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.NewButton.UseVisualStyleBackColor = False
-        '
-        'UpdateButton
-        '
-        Me.UpdateButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UpdateButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateButton.ForeColor = System.Drawing.Color.White
-        Me.UpdateButton.Image = CType(resources.GetObject("UpdateButton.Image"), System.Drawing.Image)
-        Me.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.UpdateButton.Location = New System.Drawing.Point(14, 90)
-        Me.UpdateButton.Name = "UpdateButton"
-        Me.UpdateButton.Size = New System.Drawing.Size(135, 33)
-        Me.UpdateButton.TabIndex = 19
-        Me.UpdateButton.Text = "Update"
-        Me.UpdateButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.UpdateButton.UseVisualStyleBackColor = False
-        '
-        'DeleteButton
-        '
-        Me.DeleteButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DeleteButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteButton.ForeColor = System.Drawing.Color.White
-        Me.DeleteButton.Image = CType(resources.GetObject("DeleteButton.Image"), System.Drawing.Image)
-        Me.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DeleteButton.Location = New System.Drawing.Point(14, 127)
-        Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(135, 33)
-        Me.DeleteButton.TabIndex = 20
-        Me.DeleteButton.Text = "Delete"
-        Me.DeleteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.DeleteButton.UseVisualStyleBackColor = False
-        '
-        'SaveButton
-        '
-        Me.SaveButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SaveButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SaveButton.ForeColor = System.Drawing.Color.White
-        Me.SaveButton.Image = CType(resources.GetObject("SaveButton.Image"), System.Drawing.Image)
-        Me.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.SaveButton.Location = New System.Drawing.Point(14, 53)
-        Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(135, 33)
-        Me.SaveButton.TabIndex = 18
-        Me.SaveButton.Text = "Save"
-        Me.SaveButton.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.SaveButton.UseVisualStyleBackColor = False
-        '
-        'AccreditedWasteHauler
-        '
-        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(601, 199)
-        Me.AccreditedWasteHauler.Multiline = True
-        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
-        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(202, 23)
-        Me.AccreditedWasteHauler.TabIndex = 16
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(597, 175)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(207, 21)
-        Me.Label18.TabIndex = 37
-        Me.Label18.Text = "Accredited Waste Hauler"
-        '
-        'DP
-        '
-        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP.Location = New System.Drawing.Point(601, 149)
-        Me.DP.Multiline = True
-        Me.DP.Name = "DP"
-        Me.DP.Size = New System.Drawing.Size(202, 23)
-        Me.DP.TabIndex = 15
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(597, 125)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(31, 21)
-        Me.Label16.TabIndex = 33
-        Me.Label16.Text = "DP"
-        '
-        'PTO
-        '
-        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO.Location = New System.Drawing.Point(601, 99)
-        Me.PTO.Multiline = True
-        Me.PTO.Name = "PTO"
-        Me.PTO.Size = New System.Drawing.Size(202, 23)
-        Me.PTO.TabIndex = 14
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(597, 75)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(41, 21)
-        Me.Label15.TabIndex = 31
-        Me.Label15.Text = "PTO"
-        '
-        'ECC
-        '
-        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ECC.Location = New System.Drawing.Point(601, 49)
-        Me.ECC.Multiline = True
-        Me.ECC.Name = "ECC"
-        Me.ECC.Size = New System.Drawing.Size(202, 23)
-        Me.ECC.TabIndex = 13
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(597, 25)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(45, 21)
-        Me.Label14.TabIndex = 29
-        Me.Label14.Text = "ECC"
-        '
-        'DTISEC
-        '
-        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTISEC.Location = New System.Drawing.Point(288, 299)
-        Me.DTISEC.Multiline = True
-        Me.DTISEC.Name = "DTISEC"
-        Me.DTISEC.Size = New System.Drawing.Size(202, 23)
-        Me.DTISEC.TabIndex = 12
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(284, 275)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(72, 21)
-        Me.Label13.TabIndex = 27
-        Me.Label13.Text = "DTI/SEC"
-        '
-        'BrgyClearance
-        '
-        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BrgyClearance.Location = New System.Drawing.Point(288, 249)
-        Me.BrgyClearance.Multiline = True
-        Me.BrgyClearance.Name = "BrgyClearance"
-        Me.BrgyClearance.Size = New System.Drawing.Size(202, 23)
-        Me.BrgyClearance.TabIndex = 11
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(284, 225)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(134, 21)
-        Me.Label12.TabIndex = 25
-        Me.Label12.Text = "Brgy. Clearance"
-        '
-        'ControlNumber
-        '
-        Me.ControlNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ControlNumber.Location = New System.Drawing.Point(10, 49)
-        Me.ControlNumber.MaxLength = 19
-        Me.ControlNumber.Multiline = True
-        Me.ControlNumber.Name = "ControlNumber"
-        Me.ControlNumber.ShortcutsEnabled = False
-        Me.ControlNumber.Size = New System.Drawing.Size(202, 23)
-        Me.ControlNumber.TabIndex = 1
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 25)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(135, 21)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Control Number"
-        '
-        'NameOfAccreditedWasteHauler
-        '
-        Me.NameOfAccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameOfAccreditedWasteHauler.Location = New System.Drawing.Point(288, 199)
-        Me.NameOfAccreditedWasteHauler.Multiline = True
-        Me.NameOfAccreditedWasteHauler.Name = "NameOfAccreditedWasteHauler"
-        Me.NameOfAccreditedWasteHauler.Size = New System.Drawing.Size(202, 23)
-        Me.NameOfAccreditedWasteHauler.TabIndex = 10
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(284, 175)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(278, 21)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Name of Accredited Waste Hauler"
-        '
-        'ContactNumber
-        '
-        Me.ContactNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactNumber.Location = New System.Drawing.Point(288, 149)
-        Me.ContactNumber.Multiline = True
-        Me.ContactNumber.Name = "ContactNumber"
-        Me.ContactNumber.Size = New System.Drawing.Size(202, 23)
-        Me.ContactNumber.TabIndex = 9
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(284, 125)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(145, 21)
-        Me.Label9.TabIndex = 19
-        Me.Label9.Text = "Contact Number"
-        '
-        'NatureOfBusiness
-        '
-        Me.NatureOfBusiness.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NatureOfBusiness.Location = New System.Drawing.Point(288, 99)
-        Me.NatureOfBusiness.Multiline = True
-        Me.NatureOfBusiness.Name = "NatureOfBusiness"
-        Me.NatureOfBusiness.Size = New System.Drawing.Size(202, 23)
-        Me.NatureOfBusiness.TabIndex = 8
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(284, 75)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(148, 21)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Nature of Business"
-        '
-        'PollutionControlOfficer
-        '
-        Me.PollutionControlOfficer.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PollutionControlOfficer.Location = New System.Drawing.Point(288, 49)
-        Me.PollutionControlOfficer.Multiline = True
-        Me.PollutionControlOfficer.Name = "PollutionControlOfficer"
-        Me.PollutionControlOfficer.Size = New System.Drawing.Size(202, 23)
-        Me.PollutionControlOfficer.TabIndex = 7
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(284, 25)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(193, 21)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Pollution Control Officer"
-        '
-        'GeneralManager
-        '
-        Me.GeneralManager.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralManager.Location = New System.Drawing.Point(10, 299)
-        Me.GeneralManager.Multiline = True
-        Me.GeneralManager.Name = "GeneralManager"
-        Me.GeneralManager.Size = New System.Drawing.Size(202, 23)
-        Me.GeneralManager.TabIndex = 6
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 275)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(150, 21)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "General Manager"
-        '
-        'CEOPresident
-        '
-        Me.CEOPresident.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CEOPresident.Location = New System.Drawing.Point(10, 249)
-        Me.CEOPresident.Multiline = True
-        Me.CEOPresident.Name = "CEOPresident"
-        Me.CEOPresident.Size = New System.Drawing.Size(202, 23)
-        Me.CEOPresident.TabIndex = 5
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 225)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(124, 21)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "CEO/President"
-        '
-        'NameOfEstablishment
-        '
-        Me.NameOfEstablishment.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameOfEstablishment.Location = New System.Drawing.Point(10, 99)
-        Me.NameOfEstablishment.Multiline = True
-        Me.NameOfEstablishment.Name = "NameOfEstablishment"
-        Me.NameOfEstablishment.Size = New System.Drawing.Size(202, 23)
-        Me.NameOfEstablishment.TabIndex = 2
-        '
-        'EmailAddress
-        '
-        Me.EmailAddress.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailAddress.Location = New System.Drawing.Point(10, 199)
-        Me.EmailAddress.Multiline = True
-        Me.EmailAddress.Name = "EmailAddress"
-        Me.EmailAddress.Size = New System.Drawing.Size(202, 23)
-        Me.EmailAddress.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 75)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(189, 21)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Name of Establishment"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 175)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 21)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Email Address"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 125)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 21)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Address"
-        '
-        'Address
-        '
-        Me.Address.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Address.Location = New System.Drawing.Point(10, 149)
-        Me.Address.Multiline = True
-        Me.Address.Name = "Address"
-        Me.Address.Size = New System.Drawing.Size(202, 23)
-        Me.Address.TabIndex = 3
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.Panel4)
-        Me.TabPage2.Controls.Add(Me.Panel3)
-        Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
-        Me.TabPage2.Controls.Add(Me.Label28)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
-        Me.TabPage2.Controls.Add(Me.GroupBox2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1092, 653)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Company Requirements"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.PictureBox6)
-        Me.Panel4.Controls.Add(Me.PictureBox7)
-        Me.Panel4.Controls.Add(Me.SearchReq)
-        Me.Panel4.Location = New System.Drawing.Point(3, 348)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(278, 27)
-        Me.Panel4.TabIndex = 77
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(-1, -1)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox6.TabIndex = 44
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(250, 0)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox7.TabIndex = 2
-        Me.PictureBox7.TabStop = False
-        '
-        'SearchReq
-        '
-        Me.SearchReq.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SearchReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchReq.Location = New System.Drawing.Point(26, 2)
-        Me.SearchReq.Multiline = True
-        Me.SearchReq.Name = "SearchReq"
-        Me.SearchReq.Size = New System.Drawing.Size(224, 23)
-        Me.SearchReq.TabIndex = 59
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.PictureBox4)
-        Me.Panel3.Controls.Add(Me.PictureBox5)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(3, 348)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(278, 27)
-        Me.Panel3.TabIndex = 77
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(-1, -1)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox4.TabIndex = 44
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(250, 0)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox5.TabIndex = 2
-        Me.PictureBox5.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(26, 2)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox1.TabIndex = 50
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(353, 324)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 21)
-        Me.Label5.TabIndex = 64
-        Me.Label5.Text = "Search Category"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"by Control Number", "by Name of Establishment", "All"})
-        Me.ComboBox1.Location = New System.Drawing.Point(360, 348)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(212, 25)
-        Me.ComboBox1.TabIndex = 63
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(-1, 324)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(64, 21)
-        Me.Label28.TabIndex = 58
-        Me.Label28.Text = "Search"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AllowUserToResizeColumns = False
-        Me.DataGridView2.AllowUserToResizeRows = False
-        Me.DataGridView2.AutoGenerateColumns = False
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView2.ColumnHeadersHeight = 26
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn1, Me.ControlNumberDataGridViewTextBoxColumn1, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1})
-        Me.DataGridView2.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView2.EnableHeadersVisualStyles = False
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 381)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.RowHeadersVisible = False
-        Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(1080, 266)
-        Me.DataGridView2.TabIndex = 57
+        'SelfMonitoringReport
+        '
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'NameOfEstablishmentDataGridViewTextBoxColumn1
         '
@@ -1184,187 +1357,123 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Width = 230
         '
-        'GroupBox2
+        'DataGridViewTextBoxColumn3
         '
-        Me.GroupBox2.Controls.Add(Me.Label29)
-        Me.GroupBox2.Controls.Add(Me.NameOfEstablishmentReq)
-        Me.GroupBox2.Controls.Add(Me.ControlNumber1)
-        Me.GroupBox2.Controls.Add(Me.Label26)
-        Me.GroupBox2.Controls.Add(Me.BrgyClearance1)
-        Me.GroupBox2.Controls.Add(Me.AccreditedWasteHauler1)
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.DTISEC1)
-        Me.GroupBox2.Controls.Add(Me.Label23)
-        Me.GroupBox2.Controls.Add(Me.DP1)
-        Me.GroupBox2.Controls.Add(Me.ECC1)
-        Me.GroupBox2.Controls.Add(Me.Label21)
-        Me.GroupBox2.Controls.Add(Me.Label22)
-        Me.GroupBox2.Controls.Add(Me.PTO1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1080, 261)
-        Me.GroupBox2.TabIndex = 54
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Fastfood, Canteen and Restaurant"
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "SelfMonitoringReport"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "SMR"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn3.Width = 66
         '
-        'Label29
+        'DTISEC
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(2, 49)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(189, 21)
-        Me.Label29.TabIndex = 56
-        Me.Label29.Text = "Name of Establishment"
+        Me.DTISEC.BackColor = System.Drawing.Color.White
+        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTISEC.FormattingEnabled = True
+        Me.DTISEC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DTISEC.Location = New System.Drawing.Point(288, 299)
+        Me.DTISEC.Name = "DTISEC"
+        Me.DTISEC.Size = New System.Drawing.Size(202, 25)
+        Me.DTISEC.TabIndex = 50
         '
-        'NameOfEstablishmentReq
+        'BrgyClearance
         '
-        Me.NameOfEstablishmentReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameOfEstablishmentReq.Location = New System.Drawing.Point(6, 73)
-        Me.NameOfEstablishmentReq.Multiline = True
-        Me.NameOfEstablishmentReq.Name = "NameOfEstablishmentReq"
-        Me.NameOfEstablishmentReq.Size = New System.Drawing.Size(250, 23)
-        Me.NameOfEstablishmentReq.TabIndex = 1
+        Me.BrgyClearance.BackColor = System.Drawing.Color.White
+        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrgyClearance.FormattingEnabled = True
+        Me.BrgyClearance.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.BrgyClearance.Location = New System.Drawing.Point(288, 249)
+        Me.BrgyClearance.Name = "BrgyClearance"
+        Me.BrgyClearance.Size = New System.Drawing.Size(202, 25)
+        Me.BrgyClearance.TabIndex = 49
         '
-        'ControlNumber1
+        'DP
         '
-        Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ControlNumber1.Location = New System.Drawing.Point(6, 123)
-        Me.ControlNumber1.Multiline = True
-        Me.ControlNumber1.Name = "ControlNumber1"
-        Me.ControlNumber1.Size = New System.Drawing.Size(250, 23)
-        Me.ControlNumber1.TabIndex = 2
+        Me.DP.BackColor = System.Drawing.Color.White
+        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DP.FormattingEnabled = True
+        Me.DP.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DP.Location = New System.Drawing.Point(601, 149)
+        Me.DP.Name = "DP"
+        Me.DP.Size = New System.Drawing.Size(202, 25)
+        Me.DP.TabIndex = 54
         '
-        'Label26
+        'PTO
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(2, 99)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(135, 21)
-        Me.Label26.TabIndex = 54
-        Me.Label26.Text = "Control Number"
+        Me.PTO.BackColor = System.Drawing.Color.White
+        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PTO.FormattingEnabled = True
+        Me.PTO.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.PTO.Location = New System.Drawing.Point(601, 99)
+        Me.PTO.Name = "PTO"
+        Me.PTO.Size = New System.Drawing.Size(202, 25)
+        Me.PTO.TabIndex = 53
         '
-        'BrgyClearance1
+        'ECC
         '
-        Me.BrgyClearance1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BrgyClearance1.Location = New System.Drawing.Point(6, 173)
-        Me.BrgyClearance1.Multiline = True
-        Me.BrgyClearance1.Name = "BrgyClearance1"
-        Me.BrgyClearance1.Size = New System.Drawing.Size(250, 23)
-        Me.BrgyClearance1.TabIndex = 3
+        Me.ECC.BackColor = System.Drawing.Color.White
+        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ECC.FormattingEnabled = True
+        Me.ECC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.ECC.Location = New System.Drawing.Point(601, 49)
+        Me.ECC.Name = "ECC"
+        Me.ECC.Size = New System.Drawing.Size(202, 25)
+        Me.ECC.TabIndex = 52
         '
-        'AccreditedWasteHauler1
+        'AccreditedWasteHauler
         '
-        Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(650, 123)
-        Me.AccreditedWasteHauler1.Multiline = True
-        Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
-        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(250, 23)
-        Me.AccreditedWasteHauler1.TabIndex = 8
+        Me.AccreditedWasteHauler.BackColor = System.Drawing.Color.White
+        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccreditedWasteHauler.FormattingEnabled = True
+        Me.AccreditedWasteHauler.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(601, 199)
+        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
+        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(202, 25)
+        Me.AccreditedWasteHauler.TabIndex = 55
         '
-        'Label25
+        'SMR
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(2, 149)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(134, 21)
-        Me.Label25.TabIndex = 39
-        Me.Label25.Text = "Brgy. Clearance"
+        Me.SMR.BackColor = System.Drawing.Color.White
+        Me.SMR.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR.FormattingEnabled = True
+        Me.SMR.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.SMR.Location = New System.Drawing.Point(601, 249)
+        Me.SMR.Name = "SMR"
+        Me.SMR.Size = New System.Drawing.Size(202, 25)
+        Me.SMR.TabIndex = 57
         '
-        'Label19
+        'Label31
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(646, 99)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(207, 21)
-        Me.Label19.TabIndex = 51
-        Me.Label19.Text = "Accredited Waste Hauler"
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(598, 229)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(43, 21)
+        Me.Label31.TabIndex = 56
+        Me.Label31.Text = "SMR"
         '
-        'Label24
+        'SMR1
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(326, 49)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(72, 21)
-        Me.Label24.TabIndex = 41
-        Me.Label24.Text = "DTI/SEC"
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(650, 173)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(250, 23)
+        Me.SMR1.TabIndex = 59
         '
-        'DTISEC1
+        'Label32
         '
-        Me.DTISEC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTISEC1.Location = New System.Drawing.Point(330, 73)
-        Me.DTISEC1.Multiline = True
-        Me.DTISEC1.Name = "DTISEC1"
-        Me.DTISEC1.Size = New System.Drawing.Size(250, 23)
-        Me.DTISEC1.TabIndex = 4
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(326, 99)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(45, 21)
-        Me.Label23.TabIndex = 43
-        Me.Label23.Text = "ECC"
-        '
-        'DP1
-        '
-        Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP1.Location = New System.Drawing.Point(650, 73)
-        Me.DP1.Multiline = True
-        Me.DP1.Name = "DP1"
-        Me.DP1.Size = New System.Drawing.Size(250, 23)
-        Me.DP1.TabIndex = 7
-        '
-        'ECC1
-        '
-        Me.ECC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ECC1.Location = New System.Drawing.Point(330, 123)
-        Me.ECC1.Multiline = True
-        Me.ECC1.Name = "ECC1"
-        Me.ECC1.Size = New System.Drawing.Size(250, 23)
-        Me.ECC1.TabIndex = 5
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(646, 49)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(31, 21)
-        Me.Label21.TabIndex = 47
-        Me.Label21.Text = "DP"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(326, 149)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(41, 21)
-        Me.Label22.TabIndex = 45
-        Me.Label22.Text = "PTO"
-        '
-        'PTO1
-        '
-        Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO1.Location = New System.Drawing.Point(330, 173)
-        Me.PTO1.Multiline = True
-        Me.PTO1.Name = "PTO1"
-        Me.PTO1.Size = New System.Drawing.Size(250, 23)
-        Me.PTO1.TabIndex = 6
-        '
-        'FastfoodCanteenAndRestaurant_tblTableAdapter
-        '
-        Me.FastfoodCanteenAndRestaurant_tblTableAdapter.ClearBeforeFill = True
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(646, 149)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(43, 21)
+        Me.Label32.TabIndex = 60
+        Me.Label32.Text = "SMR"
         '
         'FastfoodCanteenAndRestoForm
         '
@@ -1417,18 +1526,12 @@ Partial Class FastfoodCanteenAndRestoForm
     Friend WithEvents GroupBox1 As GroupBox
     Private WithEvents DeleteButton As Button
     Private WithEvents UpdateButton As Button
-    Friend WithEvents AccreditedWasteHauler As TextBox
     Friend WithEvents SaveButton As Button
     Friend WithEvents Label18 As Label
-    Friend WithEvents DP As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents PTO As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents ECC As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents DTISEC As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents BrgyClearance As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ControlNumber As TextBox
     Friend WithEvents Label11 As Label
@@ -1483,6 +1586,18 @@ Partial Class FastfoodCanteenAndRestoForm
     Friend WithEvents Cenro_DBDataSet As cenro_DBDataSet
     Friend WithEvents FastfoodCanteenAndRestauranttblBindingSource As BindingSource
     Friend WithEvents FastfoodCanteenAndRestaurant_tblTableAdapter As cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Private WithEvents NewButton As Button
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1499,18 +1614,7 @@ Partial Class FastfoodCanteenAndRestoForm
     Friend WithEvents PTODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Private WithEvents NewButton As Button
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents BrgyClearanceWithCTCDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
@@ -1519,4 +1623,15 @@ Partial Class FastfoodCanteenAndRestoForm
     Friend WithEvents PTODataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DPDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DTISEC As ComboBox
+    Friend WithEvents BrgyClearance As ComboBox
+    Friend WithEvents DP As ComboBox
+    Friend WithEvents PTO As ComboBox
+    Friend WithEvents ECC As ComboBox
+    Friend WithEvents AccreditedWasteHauler As ComboBox
+    Friend WithEvents SMR As ComboBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents SMR1 As TextBox
+    Friend WithEvents Label32 As Label
 End Class

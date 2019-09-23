@@ -18,17 +18,19 @@ Public Class FastfoodCertificationPopupForm
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.Read = True Then
-                'DECLARE VARIABLES TO READ THE DATA IN DATABASE
+                'declare variables to read the data in database
+                'this is the column of the requirements in fastfood table
                 Dim BrgyClearanceWithCTC As String = reader("BrgyClearanceWithCTC")
                 Dim DTI_SEC As String = reader("DTI_SEC")
                 Dim ECC As String = reader("ECC")
                 Dim PTO As String = reader("PTO")
                 Dim DP As String = reader("DP")
                 Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
+                Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
 
 
-                'PRINT IF THE REQUIREMENTS ARE COMPLIANT
-                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And AccreditedWasteHauler = "Compliant" Then
+                'print if the requirements are compliant
+                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And AccreditedWasteHauler = "Compliant" And SelfMonitoringReport = "Compliant" Then
                     Me.Hide()
                     With FastfoodPrintedCertificationForm
                         .TopLevel = False
@@ -39,7 +41,7 @@ Public Class FastfoodCertificationPopupForm
                     reader.Close()
                     connection.Close()
                 Else
-                    MessageBox.Show("An error occured! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             End If

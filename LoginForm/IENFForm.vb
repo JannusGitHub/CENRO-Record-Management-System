@@ -73,6 +73,8 @@ Public Class IENFForm
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf PDEALicense.Text = "" Then
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf SMR.Text = "" Then
+            MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim command As SqlCommand
             Dim datareader As SqlDataReader
@@ -90,7 +92,7 @@ Public Class IENFForm
             Else
                 connection.Close()
                 connection.Open()
-                Dim insertquery As String = "insert into IndustrialEstablishmentNonFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@DENR_IDNumber,@AccreditedWasteHauler,@PDEALicense)"
+                Dim insertquery As String = "insert into IndustrialEstablishmentNonFood_tbl(NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense,SelfMonitoringReport) values (@NameOfEstablishment,@Address,@EmailAddress,@CEOPresident,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@ControlNumber,@BrgyClearance,@DTISEC,@ECC,@PTO,@DP,@DENR_IDNumber,@AccreditedWasteHauler,@PDEALicense,@SMR)"
                 Dim cmd As New SqlCommand(insertquery, connection)
                 cmd.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment.Text)
                 cmd.Parameters.AddWithValue("@Address", Address.Text)
@@ -110,9 +112,63 @@ Public Class IENFForm
                 cmd.Parameters.AddWithValue("@DENR_IDNumber", DENRIDNumber.Text)
                 cmd.Parameters.AddWithValue("@AccreditedWasteHauler", AccreditedWasteHauler.Text)
                 cmd.Parameters.AddWithValue("@PDEALicense", PDEALicense.Text)
+                cmd.Parameters.AddWithValue("@SMR", SMR.Text)
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 clearprofile()
+
+                'insert to another table(YearEndReport_tbl) to update the (Status) Column in that table, after inserting new company
+                Dim commandToUpdateStatus As New SqlCommand("SELECT * FROM IndustrialEstablishmentNonFood_tbl ORDER BY IndustrialEstablishmentNonFoodID DESC", connection)
+                Dim adapterToUpdateStatus As New SqlDataAdapter(commandToUpdateStatus)
+                Dim tableToUpdateStatus As New DataTable()
+                adapterToUpdateStatus.Fill(tableToUpdateStatus)
+
+                'open connection
+                If connection.State = ConnectionState.Closed Then connection.Open()
+
+                'declare variable reader to read data in database
+                Dim reader As SqlDataReader = commandToUpdateStatus.ExecuteReader
+
+                If reader.Read = True Then
+                    'declaring variables to store data from the database
+                    'this is the requirements column in IndustrialEstablishmentFood_tbl
+                    Dim BrgyClearanceWithCTC As String = reader("BrgyClearanceWithCTC")
+                    Dim DTI_SEC As String = reader("DTI_SEC")
+                    Dim ECC As String = reader("ECC")
+                    Dim PTO As String = reader("PTO")
+                    Dim DP As String = reader("DP")
+                    Dim DENR_IDNumber As String = reader("DENR_IDNumber")
+                    Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
+                    Dim PDEALicense As String = reader("PDEALicense")
+                    Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
+
+                    'this is the column in YearEndReport_tbl
+                    Dim IndustrialEstablishmentNonFoodID As String = reader("IndustrialEstablishmentNonFoodID")
+                    Dim NameOfEstablishment As String = reader("NameOfEstablishment")
+                    Dim Address As String = reader("Address")
+                    Dim ControlNumber As String = reader("ControlNumber")
+                    Dim compliantStatus As String = "Compliant"
+                    Dim oathStatus As String = "Oath"
+
+                    If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And AccreditedWasteHauler = "Compliant" And PDEALicense = "Compliant" And SelfMonitoringReport = "Compliant" Then
+                        Dim insertCompliant As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentNonFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & compliantStatus & "')"
+                        Dim commandToInsertCompliant As New SqlCommand(insertCompliant, connection)
+                        reader.Close()
+                        commandToInsertCompliant.ExecuteNonQuery()
+                        connection.Close()
+
+                    ElseIf BrgyClearanceWithCTC = "Oath" Or DTI_SEC = "Oath" Or ECC = "Oath" Or PTO = "Oath" Or DP = "Oath" Or DENR_IDNumber = "Oath" Or AccreditedWasteHauler = "Oath" Or PDEALicense = "Oath" Or SelfMonitoringReport = "Oath" Then
+                        Dim insertOath As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentNonFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & oathStatus & "')"
+                        Dim commandToInsertOath As New SqlCommand(insertOath, connection)
+                        reader.Close()
+                        commandToInsertOath.ExecuteNonQuery()
+                        connection.Close()
+                    End If
+                End If
+
+                'close the connection and the reader
+                reader.Close()
+                If connection.State = ConnectionState.Open Then connection.Close()
             End If
             datareader.Close()
             connection.Close()
@@ -159,6 +215,8 @@ Public Class IENFForm
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf PDEALicense.Text = "" Then
             MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        ElseIf SMR.Text = "" Then
+            MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim Update As String = "Select * From IndustrialEstablishmentNonFood_tbl WHERE ControlNumber = '" & ControlNumber.Text & "' "
             Dim cmd As New SqlCommand(Update, connection)
@@ -170,7 +228,7 @@ Public Class IENFForm
                 clearprofile()
                 ControlNumber.Focus()
             Else
-                Dim Update1 As String = "UPDATE IndustrialEstablishmentNonFood_tbl set NameOfEstablishment = '" & NameOfEstablishment.Text & "', Address = '" & Address.Text & "', EmailAddress = '" & EmailAddress.Text & "', CEO_President = '" & CEOPresident.Text & "', GeneralManager = '" & GeneralManager.Text & "', PollutionControlOfficer = '" & PollutionControlOfficer.Text & "', NatureOfBusiness = '" & NatureOfBusiness.Text & "', ContactNumber = '" & ContactNumber.Text & "', NameOfAccreditedWasteHauler = '" & NameOfAccreditedWasteHauler.Text & "', BrgyClearanceWithCTC = '" & BrgyClearance.Text & "', DTI_SEC = '" & DTISEC.Text & "', ECC = '" & ECC.Text & "', PTO = '" & PTO.Text & "', DP = '" & DP.Text & "', DENR_IDNumber = '" & DENRIDNumber.Text & "', AccreditedWasteHauler = '" & AccreditedWasteHauler.Text & "', PDEALicense = '" & PDEALicense.Text & "' WHERE ControlNumber = '" & ControlNumber.Text & "' "
+                Dim Update1 As String = "UPDATE IndustrialEstablishmentNonFood_tbl set NameOfEstablishment = '" & NameOfEstablishment.Text & "', Address = '" & Address.Text & "', EmailAddress = '" & EmailAddress.Text & "', CEO_President = '" & CEOPresident.Text & "', GeneralManager = '" & GeneralManager.Text & "', PollutionControlOfficer = '" & PollutionControlOfficer.Text & "', NatureOfBusiness = '" & NatureOfBusiness.Text & "', ContactNumber = '" & ContactNumber.Text & "', NameOfAccreditedWasteHauler = '" & NameOfAccreditedWasteHauler.Text & "', BrgyClearanceWithCTC = '" & BrgyClearance.Text & "', DTI_SEC = '" & DTISEC.Text & "', ECC = '" & ECC.Text & "', PTO = '" & PTO.Text & "', DP = '" & DP.Text & "', DENR_IDNumber = '" & DENRIDNumber.Text & "', AccreditedWasteHauler = '" & AccreditedWasteHauler.Text & "', PDEALicense = '" & PDEALicense.Text & "', SelfMonitoringReport = '" & SMR.Text & "' WHERE ControlNumber = '" & ControlNumber.Text & "' "
                 Dim cmd1 As New SqlCommand(Update1, connection)
                 Dim adapter1 As New SqlDataAdapter(cmd1)
                 Dim table1 As New DataTable
@@ -257,7 +315,7 @@ Public Class IENFForm
             adapter1.Fill(table1)
             DataGridView2.DataSource = table1
         ElseIf ComboBox1.SelectedItem.ToString() = "All" Then
-            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentNonFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),DENR_IDNumber)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),PDEALicense)  like '%" & SearchReq.Text & "%' "
+            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentNonFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),DENR_IDNumber)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),PDEALicense)+'-'+Convert(nvarchar(50),SelfMonitoringReport)  like '%" & SearchReq.Text & "%' "
             Dim command2 As New SqlCommand(searchQuery2, connection)
             Dim adapter2 As New SqlDataAdapter(command2)
             Dim table2 As New DataTable()
@@ -298,7 +356,7 @@ Public Class IENFForm
             adapter2.Fill(table2)
             DataGridView1.DataSource = table2
         ElseIf ComboBox2.SelectedItem.ToString() = "All" Then
-            Dim searchQuery3 As String = "SELECT * From IndustrialEstablishmentNonFood_tbl WHERE Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),Address)+'-'+Convert(nvarchar(50),EmailAddress)+'-'+Convert(nvarchar(50),CEO_President)+'-'+Convert(nvarchar(50),GeneralManager)+'-'+Convert(nvarchar(50),PollutionControlOfficer)+'-'+Convert(nvarchar(50),NatureOfBusiness)+'-'+Convert(nvarchar(50),ContactNumber)+'-'+Convert(nvarchar(50),NameOfAccreditedWasteHauler)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),DENR_IDNumber)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),PDEALicense)  like '%" & Search.Text & "%' "
+            Dim searchQuery3 As String = "SELECT * From IndustrialEstablishmentNonFood_tbl WHERE Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),Address)+'-'+Convert(nvarchar(50),EmailAddress)+'-'+Convert(nvarchar(50),CEO_President)+'-'+Convert(nvarchar(50),GeneralManager)+'-'+Convert(nvarchar(50),PollutionControlOfficer)+'-'+Convert(nvarchar(50),NatureOfBusiness)+'-'+Convert(nvarchar(50),ContactNumber)+'-'+Convert(nvarchar(50),NameOfAccreditedWasteHauler)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),DENR_IDNumber)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),PDEALicense)+'-'+Convert(nvarchar(50),SelfMonitoringReport)  like '%" & Search.Text & "%' "
             Dim command3 As New SqlCommand(searchQuery3, connection)
             Dim adapter3 As New SqlDataAdapter(command3)
             Dim table3 As New DataTable()
@@ -319,14 +377,33 @@ Public Class IENFForm
         ContactNumber.Clear()
         NameOfAccreditedWasteHauler.Clear()
         ControlNumber.Clear()
-        BrgyClearance.Clear()
-        DTISEC.Clear()
-        ECC.Clear()
-        PTO.Clear()
-        DP.Clear()
-        DENRIDNumber.Clear()
-        AccreditedWasteHauler.Clear()
-        PDEALicense.Clear()
+        If BrgyClearance.Text = BrgyClearance.SelectedItem Then
+            BrgyClearance.Text = ""
+        End If
+        If DTISEC.Text = DTISEC.SelectedItem Then
+            DTISEC.Text = ""
+        End If
+        If ECC.Text = ECC.SelectedItem Then
+            ECC.Text = ""
+        End If
+        If PTO.Text = PTO.SelectedItem Then
+            PTO.Text = ""
+        End If
+        If DP.Text = DP.SelectedItem Then
+            DP.Text = ""
+        End If
+        If DENRIDNumber.Text = DENRIDNumber.SelectedItem Then
+            DENRIDNumber.Text = ""
+        End If
+        If AccreditedWasteHauler.Text = AccreditedWasteHauler.SelectedItem Then
+            AccreditedWasteHauler.Text = ""
+        End If
+        If PDEALicense.Text = PDEALicense.SelectedItem Then
+            PDEALicense.Text = ""
+        End If
+        If SMR.Text = SMR.SelectedItem Then
+            SMR.Text = ""
+        End If
     End Sub
 
     Private Sub clearrequirements()
@@ -340,6 +417,7 @@ Public Class IENFForm
         DENRIDNumber1.Clear()
         AccreditedWasteHauler1.Clear()
         PDEALicense1.Clear()
+
     End Sub
 
     Private Sub load_datagrid()
@@ -353,14 +431,14 @@ Public Class IENFForm
         Dim bindingsource1 As New BindingSource
         Try
             connection.Open()
-            cmd = New SqlCommand("SELECT  IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense FROM IndustrialEstablishmentNonFood_tbl", connection)
+            cmd = New SqlCommand("SELECT  IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense,SelfMonitoringReport FROM IndustrialEstablishmentNonFood_tbl", connection)
             adapter = New SqlDataAdapter(cmd)
             adapter.Fill(table)
             bindingsource.DataSource = table
             DataGridView1.DataSource = bindingsource
             adapter.Update(table)
             DataGridView1.Refresh()
-            cmd1 = New SqlCommand("SELECT  IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense FROM IndustrialEstablishmentNonFood_tbl", connection)
+            cmd1 = New SqlCommand("SELECT  IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,DENR_IDNumber,AccreditedWasteHauler,PDEALicense,SelfMonitoringReport FROM IndustrialEstablishmentNonFood_tbl", connection)
             adapter1 = New SqlDataAdapter(cmd1)
             adapter1.Fill(table1)
             bindingsource1.DataSource = table1
@@ -398,6 +476,7 @@ Public Class IENFForm
             DENRIDNumber.Text = selectedrow.Cells(15).Value.ToString
             AccreditedWasteHauler.Text = selectedrow.Cells(16).Value.ToString
             PDEALicense.Text = selectedrow.Cells(17).Value.ToString
+            SMR.Text = selectedrow.Cells(18).Value.ToString
         End If
     End Sub
 
@@ -417,6 +496,7 @@ Public Class IENFForm
             DENRIDNumber1.Text = selectedrow.Cells(7).Value.ToString
             AccreditedWasteHauler1.Text = selectedrow.Cells(8).Value.ToString
             PDEALicense1.Text = selectedrow.Cells(9).Value.ToString
+            SMR1.Text = selectedrow.Cells(10).Value.ToString
         End If
     End Sub
 
@@ -461,6 +541,61 @@ Public Class IENFForm
     Private Sub ControlNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ControlNumber.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "-" Then
             e.Handled = True
+        End If
+    End Sub
+
+    Private Sub NameOfEstablishment_TextChanged(sender As Object, e As EventArgs) Handles NameOfEstablishment.TextChanged
+        NameOfEstablishment.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NameOfEstablishment.Text.ToLower)
+        NameOfEstablishment.Select(NameOfEstablishment.Text.Length, 0)
+    End Sub
+
+    Private Sub Address_TextChanged(sender As Object, e As EventArgs) Handles Address.TextChanged
+        Address.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Address.Text.ToLower)
+        Address.Select(Address.Text.Length, 0)
+    End Sub
+
+    Private Sub CEOPresident_TextChanged(sender As Object, e As EventArgs) Handles CEOPresident.TextChanged
+        CEOPresident.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(CEOPresident.Text.ToLower)
+        CEOPresident.Select(CEOPresident.Text.Length, 0)
+    End Sub
+
+    Private Sub GeneralManager_TextChanged(sender As Object, e As EventArgs) Handles GeneralManager.TextChanged
+        GeneralManager.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(GeneralManager.Text.ToLower)
+        GeneralManager.Select(GeneralManager.Text.Length, 0)
+    End Sub
+
+    Private Sub PollutionControlOfficer_TextChanged(sender As Object, e As EventArgs) Handles PollutionControlOfficer.TextChanged
+        PollutionControlOfficer.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(PollutionControlOfficer.Text.ToLower)
+        PollutionControlOfficer.Select(PollutionControlOfficer.Text.Length, 0)
+    End Sub
+
+    Private Sub NatureOfBusiness_TextChanged(sender As Object, e As EventArgs) Handles NatureOfBusiness.TextChanged
+        NatureOfBusiness.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NatureOfBusiness.Text.ToLower)
+        NatureOfBusiness.Select(NatureOfBusiness.Text.Length, 0)
+    End Sub
+
+    Private Sub NameOfAccreditedWasteHauler_TextChanged(sender As Object, e As EventArgs) Handles NameOfAccreditedWasteHauler.TextChanged
+        NameOfAccreditedWasteHauler.Text = Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(NameOfAccreditedWasteHauler.Text.ToLower)
+        NameOfAccreditedWasteHauler.Select(NameOfAccreditedWasteHauler.Text.Length, 0)
+    End Sub
+
+    Private Sub ContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ContactNumber.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedchars As String = "1234567890-()+"
+            If Not allowedchars.Contains(e.KeyChar.ToString) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub BrgyClearance_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SMR.KeyPress, PTO.KeyPress, PDEALicense.KeyPress, ECC.KeyPress, DTISEC.KeyPress, DP.KeyPress, DENRIDNumber.KeyPress, BrgyClearance.KeyPress, AccreditedWasteHauler.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedchars As String = ""
+            If Not allowedchars.Contains(e.KeyChar.ToString) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
         End If
     End Sub
 End Class

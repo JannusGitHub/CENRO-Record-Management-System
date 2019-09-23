@@ -522,6 +522,8 @@ Partial Public Class cenro_DBDataSet
         
         Private columnRemarks As Global.System.Data.DataColumn
         
+        Private columnSelfMonitoringReport As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -734,6 +736,14 @@ Partial Public Class cenro_DBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SelfMonitoringReportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSelfMonitoringReport
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -791,9 +801,10 @@ Partial Public Class cenro_DBDataSet
                     ByVal DP_Expiration As Date,  _
                     ByVal AccreditedWasteHauler As String,  _
                     ByVal SubmittedDocument() As Byte,  _
-                    ByVal Remarks As String) As FastfoodCanteenAndRestaurant_tblRow
+                    ByVal Remarks As String,  _
+                    ByVal SelfMonitoringReport As String) As FastfoodCanteenAndRestaurant_tblRow
             Dim rowFastfoodCanteenAndRestaurant_tblRow As FastfoodCanteenAndRestaurant_tblRow = CType(Me.NewRow,FastfoodCanteenAndRestaurant_tblRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks}
+            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks, SelfMonitoringReport}
             rowFastfoodCanteenAndRestaurant_tblRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowFastfoodCanteenAndRestaurant_tblRow)
             Return rowFastfoodCanteenAndRestaurant_tblRow
@@ -844,6 +855,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnAccreditedWasteHauler = MyBase.Columns("AccreditedWasteHauler")
             Me.columnSubmittedDocument = MyBase.Columns("SubmittedDocument")
             Me.columnRemarks = MyBase.Columns("Remarks")
+            Me.columnSelfMonitoringReport = MyBase.Columns("SelfMonitoringReport")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -893,6 +905,8 @@ Partial Public Class cenro_DBDataSet
             MyBase.Columns.Add(Me.columnSubmittedDocument)
             Me.columnRemarks = New Global.System.Data.DataColumn("Remarks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRemarks)
+            Me.columnSelfMonitoringReport = New Global.System.Data.DataColumn("SelfMonitoringReport", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSelfMonitoringReport)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnFastfood_Canteen_RestaurantID}, true))
             Me.columnFastfood_Canteen_RestaurantID.AutoIncrement = true
             Me.columnFastfood_Canteen_RestaurantID.AutoIncrementSeed = -1
@@ -918,6 +932,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnDP.MaxLength = 2147483647
             Me.columnAccreditedWasteHauler.MaxLength = 2147483647
             Me.columnRemarks.MaxLength = 2147483647
+            Me.columnSelfMonitoringReport.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1104,6 +1119,8 @@ Partial Public Class cenro_DBDataSet
         Private columnSubmittedDocument As Global.System.Data.DataColumn
         
         Private columnRemarks As Global.System.Data.DataColumn
+        
+        Private columnSelfMonitoringReport As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -1341,6 +1358,14 @@ Partial Public Class cenro_DBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SelfMonitoringReportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSelfMonitoringReport
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1401,9 +1426,10 @@ Partial Public Class cenro_DBDataSet
                     ByVal DOHAccreditation_Expiration As Date,  _
                     ByVal AccreditedWasteHauler As String,  _
                     ByVal SubmittedDocument() As Byte,  _
-                    ByVal Remarks As String) As HospitalAndMedicalEstablishment_tblRow
+                    ByVal Remarks As String,  _
+                    ByVal SelfMonitoringReport As String) As HospitalAndMedicalEstablishment_tblRow
             Dim rowHospitalAndMedicalEstablishment_tblRow As HospitalAndMedicalEstablishment_tblRow = CType(Me.NewRow,HospitalAndMedicalEstablishment_tblRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks}
+            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks, SelfMonitoringReport}
             rowHospitalAndMedicalEstablishment_tblRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowHospitalAndMedicalEstablishment_tblRow)
             Return rowHospitalAndMedicalEstablishment_tblRow
@@ -1457,6 +1483,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnAccreditedWasteHauler = MyBase.Columns("AccreditedWasteHauler")
             Me.columnSubmittedDocument = MyBase.Columns("SubmittedDocument")
             Me.columnRemarks = MyBase.Columns("Remarks")
+            Me.columnSelfMonitoringReport = MyBase.Columns("SelfMonitoringReport")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1512,6 +1539,8 @@ Partial Public Class cenro_DBDataSet
             MyBase.Columns.Add(Me.columnSubmittedDocument)
             Me.columnRemarks = New Global.System.Data.DataColumn("Remarks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRemarks)
+            Me.columnSelfMonitoringReport = New Global.System.Data.DataColumn("SelfMonitoringReport", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSelfMonitoringReport)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnHospitalAndMedicalEstablishmentID}, true))
             Me.columnHospitalAndMedicalEstablishmentID.AutoIncrement = true
             Me.columnHospitalAndMedicalEstablishmentID.AutoIncrementSeed = -1
@@ -1539,6 +1568,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnDOHAccreditation.MaxLength = 2147483647
             Me.columnAccreditedWasteHauler.MaxLength = 2147483647
             Me.columnRemarks.MaxLength = 2147483647
+            Me.columnSelfMonitoringReport.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2333,6 +2363,8 @@ Partial Public Class cenro_DBDataSet
         
         Private columnRemarks As Global.System.Data.DataColumn
         
+        Private columnSelfMonitoringReport As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -2569,6 +2601,14 @@ Partial Public Class cenro_DBDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SelfMonitoringReportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSelfMonitoringReport
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2629,9 +2669,10 @@ Partial Public Class cenro_DBDataSet
                     ByVal PDEALicense As String,  _
                     ByVal PDEALicense_Expiration As Date,  _
                     ByVal SubmittedDocument() As Byte,  _
-                    ByVal Remarks As String) As IndustrialEstablishmentNonFood_tblRow
+                    ByVal Remarks As String,  _
+                    ByVal SelfMonitoringReport As String) As IndustrialEstablishmentNonFood_tblRow
             Dim rowIndustrialEstablishmentNonFood_tblRow As IndustrialEstablishmentNonFood_tblRow = CType(Me.NewRow,IndustrialEstablishmentNonFood_tblRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, SubmittedDocument, Remarks}
+            Dim columnValuesArray() As Object = New Object() {Nothing, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, SubmittedDocument, Remarks, SelfMonitoringReport}
             rowIndustrialEstablishmentNonFood_tblRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowIndustrialEstablishmentNonFood_tblRow)
             Return rowIndustrialEstablishmentNonFood_tblRow
@@ -2685,6 +2726,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnPDEALicense_Expiration = MyBase.Columns("PDEALicense_Expiration")
             Me.columnSubmittedDocument = MyBase.Columns("SubmittedDocument")
             Me.columnRemarks = MyBase.Columns("Remarks")
+            Me.columnSelfMonitoringReport = MyBase.Columns("SelfMonitoringReport")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2740,6 +2782,8 @@ Partial Public Class cenro_DBDataSet
             MyBase.Columns.Add(Me.columnSubmittedDocument)
             Me.columnRemarks = New Global.System.Data.DataColumn("Remarks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRemarks)
+            Me.columnSelfMonitoringReport = New Global.System.Data.DataColumn("SelfMonitoringReport", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSelfMonitoringReport)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIndustrialEstablishmentNonFoodID}, true))
             Me.columnIndustrialEstablishmentNonFoodID.AutoIncrement = true
             Me.columnIndustrialEstablishmentNonFoodID.AutoIncrementSeed = -1
@@ -2767,6 +2811,7 @@ Partial Public Class cenro_DBDataSet
             Me.columnAccreditedWasteHauler.MaxLength = 2147483647
             Me.columnPDEALicense.MaxLength = 2147483647
             Me.columnRemarks.MaxLength = 2147483647
+            Me.columnSelfMonitoringReport.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4158,6 +4203,22 @@ Partial Public Class cenro_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property SelfMonitoringReport() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableFastfoodCanteenAndRestaurant_tbl.SelfMonitoringReportColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SelfMonitoringReport' in table 'FastfoodCanteenAndRestauran"& _ 
+                            "t_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableFastfoodCanteenAndRestaurant_tbl.SelfMonitoringReportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsNameOfEstablishmentNull() As Boolean
             Return Me.IsNull(Me.tableFastfoodCanteenAndRestaurant_tbl.NameOfEstablishmentColumn)
         End Function
@@ -4394,6 +4455,18 @@ Partial Public Class cenro_DBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetRemarksNull()
             Me(Me.tableFastfoodCanteenAndRestaurant_tbl.RemarksColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSelfMonitoringReportNull() As Boolean
+            Return Me.IsNull(Me.tableFastfoodCanteenAndRestaurant_tbl.SelfMonitoringReportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSelfMonitoringReportNull()
+            Me(Me.tableFastfoodCanteenAndRestaurant_tbl.SelfMonitoringReportColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4814,6 +4887,22 @@ Partial Public Class cenro_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property SelfMonitoringReport() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableHospitalAndMedicalEstablishment_tbl.SelfMonitoringReportColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SelfMonitoringReport' in table 'HospitalAndMedicalEstablish"& _ 
+                            "ment_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableHospitalAndMedicalEstablishment_tbl.SelfMonitoringReportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsNameOfEstablishmentNull() As Boolean
             Return Me.IsNull(Me.tableHospitalAndMedicalEstablishment_tbl.NameOfEstablishmentColumn)
         End Function
@@ -5086,6 +5175,18 @@ Partial Public Class cenro_DBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetRemarksNull()
             Me(Me.tableHospitalAndMedicalEstablishment_tbl.RemarksColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSelfMonitoringReportNull() As Boolean
+            Return Me.IsNull(Me.tableHospitalAndMedicalEstablishment_tbl.SelfMonitoringReportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSelfMonitoringReportNull()
+            Me(Me.tableHospitalAndMedicalEstablishment_tbl.SelfMonitoringReportColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6167,6 +6268,22 @@ Partial Public Class cenro_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property SelfMonitoringReport() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableIndustrialEstablishmentNonFood_tbl.SelfMonitoringReportColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SelfMonitoringReport' in table 'IndustrialEstablishmentNonF"& _ 
+                            "ood_tbl' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableIndustrialEstablishmentNonFood_tbl.SelfMonitoringReportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsNameOfEstablishmentNull() As Boolean
             Return Me.IsNull(Me.tableIndustrialEstablishmentNonFood_tbl.NameOfEstablishmentColumn)
         End Function
@@ -6439,6 +6556,18 @@ Partial Public Class cenro_DBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetRemarksNull()
             Me(Me.tableIndustrialEstablishmentNonFood_tbl.RemarksColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSelfMonitoringReportNull() As Boolean
+            Return Me.IsNull(Me.tableIndustrialEstablishmentNonFood_tbl.SelfMonitoringReportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSelfMonitoringReportNull()
+            Me(Me.tableIndustrialEstablishmentNonFood_tbl.SelfMonitoringReportColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7598,16 +7727,17 @@ Namespace cenro_DBDataSetTableAdapters
             tableMapping.ColumnMappings.Add("AccreditedWasteHauler", "AccreditedWasteHauler")
             tableMapping.ColumnMappings.Add("SubmittedDocument", "SubmittedDocument")
             tableMapping.ColumnMappings.Add("Remarks", "Remarks")
+            tableMapping.ColumnMappings.Add("SelfMonitoringReport", "SelfMonitoringReport")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[FastfoodCanteenAndRestaurant_tbl] WHERE (([Fastfood_Canteen_Re"& _ 
-                "staurantID] = @Original_Fastfood_Canteen_RestaurantID) AND ((@IsNull_DTI_SEC_Exp"& _ 
-                "iration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] = @Origin"& _ 
-                "al_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] IS"& _ 
-                " NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_DP_Expira"& _ 
-                "tion = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP_Expirat"& _ 
-                "ion)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [FastfoodCanteenAndRestaurant_tbl] WHERE (([Fastfood_Canteen_Restaura"& _ 
+                "ntID] = @Original_Fastfood_Canteen_RestaurantID) AND ((@IsNull_DTI_SEC_Expiratio"& _ 
+                "n = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] = @Original_DTI"& _ 
+                "_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] IS NULL)"& _ 
+                " OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_DP_Expiration ="& _ 
+                " 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP_Expiration)))"& _ 
+                ""
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DTI_SEC_Expiration", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DTI_SEC_Expiration", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -7618,22 +7748,23 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DP_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DP_Expiration", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FastfoodCanteenAndRestaurant_tbl] ([NameOfEstablishment], [Add"& _ 
-                "ress], [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOffic"& _ 
-                "er], [NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [Contro"& _ 
-                "lNumber], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PTO],"& _ 
-                " [PTO_Expiration], [DP], [DP_Expiration], [AccreditedWasteHauler], [SubmittedDoc"& _ 
-                "ument], [Remarks]) VALUES (@NameOfEstablishment, @Address, @EmailAddress, @CEO_P"& _ 
-                "resident, @GeneralManager, @PollutionControlOfficer, @NatureOfBusiness, @Contact"& _ 
-                "Number, @NameOfAccreditedWasteHauler, @ControlNumber, @BrgyClearanceWithCTC, @DT"& _ 
-                "I_SEC, @DTI_SEC_Expiration, @ECC, @PTO, @PTO_Expiration, @DP, @DP_Expiration, @A"& _ 
-                "ccreditedWasteHauler, @SubmittedDocument, @Remarks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Fastfood_Canteen_Re"& _ 
-                "staurantID, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralMa"& _ 
-                "nager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccredite"& _ 
-                "dWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, "& _ 
-                "ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SubmittedDoc"& _ 
-                "ument, Remarks FROM FastfoodCanteenAndRestaurant_tbl WHERE (Fastfood_Canteen_Res"& _ 
-                "taurantID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [FastfoodCanteenAndRestaurant_tbl] ([NameOfEstablishment], [Address],"& _ 
+                " [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOfficer], ["& _ 
+                "NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [ControlNumbe"& _ 
+                "r], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PTO], [PTO_"& _ 
+                "Expiration], [DP], [DP_Expiration], [AccreditedWasteHauler], [SelfMonitoringRepo"& _ 
+                "rt], [SubmittedDocument], [Remarks]) VALUES (@NameOfEstablishment, @Address, @Em"& _ 
+                "ailAddress, @CEO_President, @GeneralManager, @PollutionControlOfficer, @NatureOf"& _ 
+                "Business, @ContactNumber, @NameOfAccreditedWasteHauler, @ControlNumber, @BrgyCle"& _ 
+                "aranceWithCTC, @DTI_SEC, @DTI_SEC_Expiration, @ECC, @PTO, @PTO_Expiration, @DP, "& _ 
+                "@DP_Expiration, @AccreditedWasteHauler, @SelfMonitoringReport, @SubmittedDocumen"& _ 
+                "t, @Remarks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Fastfood_Canteen_RestaurantID, NameOfEstablishment, Addres"& _ 
+                "s, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureO"& _ 
+                "fBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyCleara"& _ 
+                "nceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expira"& _ 
+                "tion, AccreditedWasteHauler, SelfMonitoringReport, SubmittedDocument, Remarks FR"& _ 
+                "OM FastfoodCanteenAndRestaurant_tbl WHERE (Fastfood_Canteen_RestaurantID = SCOPE"& _ 
+                "_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7654,32 +7785,33 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DP", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DP_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DP_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[FastfoodCanteenAndRestaurant_tbl] SET [NameOfEstablishment] = @Name"& _ 
-                "OfEstablishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_Pres"& _ 
-                "ident] = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionControlOf"& _ 
-                "ficer] = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [Cont"& _ 
-                "actNumber] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccreditedWa"& _ 
-                "steHauler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyClear"& _ 
-                "anceWithCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration, ["& _ 
-                "ECC] = @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [DP_E"& _ 
-                "xpiration] = @DP_Expiration, [AccreditedWasteHauler] = @AccreditedWasteHauler, ["& _ 
-                "SubmittedDocument] = @SubmittedDocument, [Remarks] = @Remarks WHERE (([Fastfood_"& _ 
-                "Canteen_RestaurantID] = @Original_Fastfood_Canteen_RestaurantID) AND ((@IsNull_D"& _ 
-                "TI_SEC_Expiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration]"& _ 
-                " = @Original_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expi"& _ 
-                "ration] IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull"& _ 
-                "_DP_Expiration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_"& _ 
-                "DP_Expiration)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Fastfood_Canteen_RestaurantID, NameOfEstablishment, Ad"& _ 
-                "dress, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, Nat"& _ 
-                "ureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyCl"& _ 
-                "earanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Ex"& _ 
-                "piration, AccreditedWasteHauler, SubmittedDocument, Remarks FROM FastfoodCanteen"& _ 
-                "AndRestaurant_tbl WHERE (Fastfood_Canteen_RestaurantID = @Fastfood_Canteen_Resta"& _ 
-                "urantID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [FastfoodCanteenAndRestaurant_tbl] SET [NameOfEstablishment] = @NameOfEsta"& _ 
+                "blishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_President]"& _ 
+                " = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionControlOfficer]"& _ 
+                " = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [ContactNum"& _ 
+                "ber] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccreditedWasteHau"& _ 
+                "ler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyClearanceWi"& _ 
+                "thCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration, [ECC] ="& _ 
+                " @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [DP_Expirat"& _ 
+                "ion] = @DP_Expiration, [AccreditedWasteHauler] = @AccreditedWasteHauler, [SelfMo"& _ 
+                "nitoringReport] = @SelfMonitoringReport, [SubmittedDocument] = @SubmittedDocumen"& _ 
+                "t, [Remarks] = @Remarks WHERE (([Fastfood_Canteen_RestaurantID] = @Original_Fast"& _ 
+                "food_Canteen_RestaurantID) AND ((@IsNull_DTI_SEC_Expiration = 1 AND [DTI_SEC_Exp"& _ 
+                "iration] IS NULL) OR ([DTI_SEC_Expiration] = @Original_DTI_SEC_Expiration)) AND "& _ 
+                "((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] IS NULL) OR ([PTO_Expiration] "& _ 
+                "= @Original_PTO_Expiration)) AND ((@IsNull_DP_Expiration = 1 AND [DP_Expiration]"& _ 
+                " IS NULL) OR ([DP_Expiration] = @Original_DP_Expiration)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Fastfood_Can"& _ 
+                "teen_RestaurantID, NameOfEstablishment, Address, EmailAddress, CEO_President, Ge"& _ 
+                "neralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAc"& _ 
+                "creditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expir"& _ 
+                "ation, ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SelfM"& _ 
+                "onitoringReport, SubmittedDocument, Remarks FROM FastfoodCanteenAndRestaurant_tb"& _ 
+                "l WHERE (Fastfood_Canteen_RestaurantID = @Fastfood_Canteen_RestaurantID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7700,6 +7832,7 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DP", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DP_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DP_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fastfood_Canteen_RestaurantID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fastfood_Canteen_RestaurantID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -7725,12 +7858,12 @@ Namespace cenro_DBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Fastfood_Canteen_RestaurantID, NameOfEstablishment, Address, EmailAddress,"& _ 
-                " CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, Conta"& _ 
-                "ctNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_"& _ 
-                "SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, Accredited"& _ 
-                "WasteHauler, SubmittedDocument, Remarks FROM dbo.FastfoodCanteenAndRestaurant_tb"& _ 
-                "l"
+            Me._commandCollection(0).CommandText = "SELECT        Fastfood_Canteen_RestaurantID, NameOfEstablishment, Address, EmailA"& _ 
+                "ddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness"& _ 
+                ", ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
+                "        BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expirat"& _ 
+                "ion, DP, DP_Expiration, AccreditedWasteHauler, SelfMonitoringReport, SubmittedDo"& _ 
+                "cument, Remarks"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            FastfoodCanteenAndRestaurant_tbl"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7852,6 +7985,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DP As String,  _
                     ByVal DP_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String) As Integer
             If (NameOfEstablishment Is Nothing) Then
@@ -7949,15 +8083,20 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(18).Value = CType(AccreditedWasteHauler,String)
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(Remarks,String)
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(SubmittedDocument,Byte())
+            End If
+            If (Remarks Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(Remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7998,6 +8137,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DP As String,  _
                     ByVal DP_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_Fastfood_Canteen_RestaurantID As Integer,  _
@@ -8100,39 +8240,44 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(AccreditedWasteHauler,String)
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Remarks,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(SubmittedDocument,Byte())
             End If
-            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Fastfood_Canteen_RestaurantID,Integer)
-            If (Original_DTI_SEC_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            If (Remarks Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Remarks,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Fastfood_Canteen_RestaurantID,Integer)
+            If (Original_DTI_SEC_Expiration.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             If (Original_PTO_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_PTO_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_PTO_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
             If (Original_DP_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_DP_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_DP_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Fastfood_Canteen_RestaurantID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Fastfood_Canteen_RestaurantID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8172,13 +8317,14 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DP As String,  _
                     ByVal DP_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_Fastfood_Canteen_RestaurantID As Integer,  _
                     ByVal Original_DTI_SEC_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_PTO_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_DP_Expiration As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks, Original_Fastfood_Canteen_RestaurantID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_Fastfood_Canteen_RestaurantID)
+            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, AccreditedWasteHauler, SelfMonitoringReport, SubmittedDocument, Remarks, Original_Fastfood_Canteen_RestaurantID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_Fastfood_Canteen_RestaurantID)
         End Function
     End Class
     
@@ -8334,18 +8480,19 @@ Namespace cenro_DBDataSetTableAdapters
             tableMapping.ColumnMappings.Add("AccreditedWasteHauler", "AccreditedWasteHauler")
             tableMapping.ColumnMappings.Add("SubmittedDocument", "SubmittedDocument")
             tableMapping.ColumnMappings.Add("Remarks", "Remarks")
+            tableMapping.ColumnMappings.Add("SelfMonitoringReport", "SelfMonitoringReport")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[HospitalAndMedicalEstablishment_tbl] WHERE (([HospitalAndMedic"& _ 
-                "alEstablishmentID] = @Original_HospitalAndMedicalEstablishmentID) AND ((@IsNull_"& _ 
-                "DTI_SEC_Expiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration"& _ 
-                "] = @Original_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Exp"& _ 
-                "iration] IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNul"& _ 
-                "l_DP_Expiration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original"& _ 
-                "_DP_Expiration)) AND ((@IsNull_DOHAccreditation_Expiration = 1 AND [DOHAccredita"& _ 
-                "tion_Expiration] IS NULL) OR ([DOHAccreditation_Expiration] = @Original_DOHAccre"& _ 
-                "ditation_Expiration)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [HospitalAndMedicalEstablishment_tbl] WHERE (([HospitalAndMedicalEsta"& _ 
+                "blishmentID] = @Original_HospitalAndMedicalEstablishmentID) AND ((@IsNull_DTI_SE"& _ 
+                "C_Expiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] = @O"& _ 
+                "riginal_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiratio"& _ 
+                "n] IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_DP_E"& _ 
+                "xpiration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP_Ex"& _ 
+                "piration)) AND ((@IsNull_DOHAccreditation_Expiration = 1 AND [DOHAccreditation_E"& _ 
+                "xpiration] IS NULL) OR ([DOHAccreditation_Expiration] = @Original_DOHAccreditati"& _ 
+                "on_Expiration)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DTI_SEC_Expiration", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DTI_SEC_Expiration", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -8358,24 +8505,25 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DOHAccreditation_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DOHAccreditation_Expiration", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HospitalAndMedicalEstablishment_tbl] ([NameOfEstablishment], ["& _ 
-                "Address], [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOf"& _ 
-                "ficer], [NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [Con"& _ 
-                "trolNumber], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PT"& _ 
-                "O], [PTO_Expiration], [DP], [DP_Expiration], [DENR_IDNumber], [DOHAccreditation]"& _ 
-                ", [DOHAccreditation_Expiration], [AccreditedWasteHauler], [SubmittedDocument], ["& _ 
-                "Remarks]) VALUES (@NameOfEstablishment, @Address, @EmailAddress, @CEO_President,"& _ 
-                " @GeneralManager, @PollutionControlOfficer, @NatureOfBusiness, @ContactNumber, @"& _ 
-                "NameOfAccreditedWasteHauler, @ControlNumber, @BrgyClearanceWithCTC, @DTI_SEC, @D"& _ 
-                "TI_SEC_Expiration, @ECC, @PTO, @PTO_Expiration, @DP, @DP_Expiration, @DENR_IDNum"& _ 
-                "ber, @DOHAccreditation, @DOHAccreditation_Expiration, @AccreditedWasteHauler, @S"& _ 
-                "ubmittedDocument, @Remarks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT HospitalAndMedicalEstablishmentID, NameOfEs"& _ 
-                "tablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionCont"& _ 
-                "rolOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, Contro"& _ 
-                "lNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expira"& _ 
-                "tion, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expir"& _ 
-                "ation, AccreditedWasteHauler, SubmittedDocument, Remarks FROM HospitalAndMedical"& _ 
-                "Establishment_tbl WHERE (HospitalAndMedicalEstablishmentID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [HospitalAndMedicalEstablishment_tbl] ([NameOfEstablishment], [Addres"& _ 
+                "s], [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOfficer]"& _ 
+                ", [NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [ControlNu"& _ 
+                "mber], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PTO], [P"& _ 
+                "TO_Expiration], [DP], [DP_Expiration], [DENR_IDNumber], [DOHAccreditation], [DOH"& _ 
+                "Accreditation_Expiration], [AccreditedWasteHauler], [SelfMonitoringReport], [Sub"& _ 
+                "mittedDocument], [Remarks]) VALUES (@NameOfEstablishment, @Address, @EmailAddres"& _ 
+                "s, @CEO_President, @GeneralManager, @PollutionControlOfficer, @NatureOfBusiness,"& _ 
+                " @ContactNumber, @NameOfAccreditedWasteHauler, @ControlNumber, @BrgyClearanceWit"& _ 
+                "hCTC, @DTI_SEC, @DTI_SEC_Expiration, @ECC, @PTO, @PTO_Expiration, @DP, @DP_Expir"& _ 
+                "ation, @DENR_IDNumber, @DOHAccreditation, @DOHAccreditation_Expiration, @Accredi"& _ 
+                "tedWasteHauler, @SelfMonitoringReport, @SubmittedDocument, @Remarks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Ho"& _ 
+                "spitalAndMedicalEstablishmentID, NameOfEstablishment, Address, EmailAddress, CEO"& _ 
+                "_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNu"& _ 
+                "mber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC,"& _ 
+                " DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber,"& _ 
+                " DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, SelfMonit"& _ 
+                "oringReport, SubmittedDocument, Remarks FROM HospitalAndMedicalEstablishment_tbl"& _ 
+                " WHERE (HospitalAndMedicalEstablishmentID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8399,36 +8547,38 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DOHAccreditation", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DOHAccreditation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DOHAccreditation_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DOHAccreditation_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[HospitalAndMedicalEstablishment_tbl] SET [NameOfEstablishment] = @N"& _ 
-                "ameOfEstablishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_P"& _ 
-                "resident] = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionContro"& _ 
-                "lOfficer] = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [C"& _ 
-                "ontactNumber] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccredite"& _ 
-                "dWasteHauler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyCl"& _ 
-                "earanceWithCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration"& _ 
-                ", [ECC] = @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [D"& _ 
-                "P_Expiration] = @DP_Expiration, [DENR_IDNumber] = @DENR_IDNumber, [DOHAccreditat"& _ 
-                "ion] = @DOHAccreditation, [DOHAccreditation_Expiration] = @DOHAccreditation_Expi"& _ 
-                "ration, [AccreditedWasteHauler] = @AccreditedWasteHauler, [SubmittedDocument] = "& _ 
-                "@SubmittedDocument, [Remarks] = @Remarks WHERE (([HospitalAndMedicalEstablishmen"& _ 
-                "tID] = @Original_HospitalAndMedicalEstablishmentID) AND ((@IsNull_DTI_SEC_Expira"& _ 
-                "tion = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] = @Original_"& _ 
-                "DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] IS NU"& _ 
-                "LL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_DP_Expiratio"& _ 
-                "n = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP_Expiration"& _ 
-                ")) AND ((@IsNull_DOHAccreditation_Expiration = 1 AND [DOHAccreditation_Expiratio"& _ 
-                "n] IS NULL) OR ([DOHAccreditation_Expiration] = @Original_DOHAccreditation_Expir"& _ 
-                "ation)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT HospitalAndMedicalEstablishmentID, NameOfEstablishment, Addres"& _ 
-                "s, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureO"& _ 
-                "fBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyCleara"& _ 
-                "nceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expira"& _ 
-                "tion, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWa"& _ 
-                "steHauler, SubmittedDocument, Remarks FROM HospitalAndMedicalEstablishment_tbl W"& _ 
-                "HERE (HospitalAndMedicalEstablishmentID = @HospitalAndMedicalEstablishmentID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [HospitalAndMedicalEstablishment_tbl] SET [NameOfEstablishment] = @NameOfE"& _ 
+                "stablishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_Preside"& _ 
+                "nt] = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionControlOffic"& _ 
+                "er] = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [Contact"& _ 
+                "Number] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccreditedWaste"& _ 
+                "Hauler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyClearanc"& _ 
+                "eWithCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration, [ECC"& _ 
+                "] = @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [DP_Expi"& _ 
+                "ration] = @DP_Expiration, [DENR_IDNumber] = @DENR_IDNumber, [DOHAccreditation] ="& _ 
+                " @DOHAccreditation, [DOHAccreditation_Expiration] = @DOHAccreditation_Expiration"& _ 
+                ", [AccreditedWasteHauler] = @AccreditedWasteHauler, [SelfMonitoringReport] = @Se"& _ 
+                "lfMonitoringReport, [SubmittedDocument] = @SubmittedDocument, [Remarks] = @Remar"& _ 
+                "ks WHERE (([HospitalAndMedicalEstablishmentID] = @Original_HospitalAndMedicalEst"& _ 
+                "ablishmentID) AND ((@IsNull_DTI_SEC_Expiration = 1 AND [DTI_SEC_Expiration] IS N"& _ 
+                "ULL) OR ([DTI_SEC_Expiration] = @Original_DTI_SEC_Expiration)) AND ((@IsNull_PTO"& _ 
+                "_Expiration = 1 AND [PTO_Expiration] IS NULL) OR ([PTO_Expiration] = @Original_P"& _ 
+                "TO_Expiration)) AND ((@IsNull_DP_Expiration = 1 AND [DP_Expiration] IS NULL) OR "& _ 
+                "([DP_Expiration] = @Original_DP_Expiration)) AND ((@IsNull_DOHAccreditation_Expi"& _ 
+                "ration = 1 AND [DOHAccreditation_Expiration] IS NULL) OR ([DOHAccreditation_Expi"& _ 
+                "ration] = @Original_DOHAccreditation_Expiration)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT HospitalAndMedicalEs"& _ 
+                "tablishmentID, NameOfEstablishment, Address, EmailAddress, CEO_President, Genera"& _ 
+                "lManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccred"& _ 
+                "itedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiratio"& _ 
+                "n, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation,"& _ 
+                " DOHAccreditation_Expiration, AccreditedWasteHauler, SelfMonitoringReport, Submi"& _ 
+                "ttedDocument, Remarks FROM HospitalAndMedicalEstablishment_tbl WHERE (HospitalAn"& _ 
+                "dMedicalEstablishmentID = @HospitalAndMedicalEstablishmentID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8452,6 +8602,7 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DOHAccreditation", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DOHAccreditation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DOHAccreditation_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DOHAccreditation_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_HospitalAndMedicalEstablishmentID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "HospitalAndMedicalEstablishmentID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -8479,12 +8630,14 @@ Namespace cenro_DBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT HospitalAndMedicalEstablishmentID, NameOfEstablishment, Address, EmailAddr"& _ 
-                "ess, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, C"& _ 
-                "ontactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, "& _ 
-                "DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_I"& _ 
-                "DNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, S"& _ 
-                "ubmittedDocument, Remarks FROM dbo.HospitalAndMedicalEstablishment_tbl"
+            Me._commandCollection(0).CommandText = "SELECT        HospitalAndMedicalEstablishmentID, NameOfEstablishment, Address, Em"& _ 
+                "ailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusi"& _ 
+                "ness, ContactNumber, NameOfAccreditedWasteHauler, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Con"& _ 
+                "trolNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Exp"& _ 
+                "iration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Ex"& _ 
+                "piration, AccreditedWasteHauler, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SelfMonitoringReport"& _ 
+                ", SubmittedDocument, Remarks"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            HospitalAndMedicalEstablishment_tb"& _ 
+                "l"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8616,6 +8769,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DOHAccreditation As String,  _
                     ByVal DOHAccreditation_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String) As Integer
             If (NameOfEstablishment Is Nothing) Then
@@ -8728,15 +8882,20 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(21).Value = CType(AccreditedWasteHauler,String)
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(Remarks,String)
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(SubmittedDocument,Byte())
+            End If
+            If (Remarks Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(Remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -8780,6 +8939,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DOHAccreditation As String,  _
                     ByVal DOHAccreditation_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_HospitalAndMedicalEstablishmentID As Integer,  _
@@ -8898,46 +9058,51 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(21).Value = CType(AccreditedWasteHauler,String)
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Remarks,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(SubmittedDocument,Byte())
             End If
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_HospitalAndMedicalEstablishmentID,Integer)
-            If (Original_DTI_SEC_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            If (Remarks Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Remarks,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_HospitalAndMedicalEstablishmentID,Integer)
+            If (Original_DTI_SEC_Expiration.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
             If (Original_PTO_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_PTO_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_PTO_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
             If (Original_DP_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_DP_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_DP_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (Original_DOHAccreditation_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_DOHAccreditation_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_DOHAccreditation_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(33).Value = CType(HospitalAndMedicalEstablishmentID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(HospitalAndMedicalEstablishmentID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8980,6 +9145,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal DOHAccreditation As String,  _
                     ByVal DOHAccreditation_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal AccreditedWasteHauler As String,  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_HospitalAndMedicalEstablishmentID As Integer,  _
@@ -8987,7 +9153,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal Original_PTO_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_DP_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_DOHAccreditation_Expiration As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, SubmittedDocument, Remarks, Original_HospitalAndMedicalEstablishmentID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_DOHAccreditation_Expiration, Original_HospitalAndMedicalEstablishmentID)
+            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, DOHAccreditation, DOHAccreditation_Expiration, AccreditedWasteHauler, SelfMonitoringReport, SubmittedDocument, Remarks, Original_HospitalAndMedicalEstablishmentID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_DOHAccreditation_Expiration, Original_HospitalAndMedicalEstablishmentID)
         End Function
     End Class
     
@@ -9909,17 +10075,18 @@ Namespace cenro_DBDataSetTableAdapters
             tableMapping.ColumnMappings.Add("PDEALicense_Expiration", "PDEALicense_Expiration")
             tableMapping.ColumnMappings.Add("SubmittedDocument", "SubmittedDocument")
             tableMapping.ColumnMappings.Add("Remarks", "Remarks")
+            tableMapping.ColumnMappings.Add("SelfMonitoringReport", "SelfMonitoringReport")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[IndustrialEstablishmentNonFood_tbl] WHERE (([IndustrialEstabli"& _ 
-                "shmentNonFoodID] = @Original_IndustrialEstablishmentNonFoodID) AND ((@IsNull_DTI"& _ 
-                "_SEC_Expiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] ="& _ 
-                " @Original_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expira"& _ 
-                "tion] IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_D"& _ 
-                "P_Expiration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP"& _ 
-                "_Expiration)) AND ((@IsNull_PDEALicense_Expiration = 1 AND [PDEALicense_Expirati"& _ 
-                "on] IS NULL) OR ([PDEALicense_Expiration] = @Original_PDEALicense_Expiration)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [IndustrialEstablishmentNonFood_tbl] WHERE (([IndustrialEstablishment"& _ 
+                "NonFoodID] = @Original_IndustrialEstablishmentNonFoodID) AND ((@IsNull_DTI_SEC_E"& _ 
+                "xpiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expiration] = @Orig"& _ 
+                "inal_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] "& _ 
+                "IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@IsNull_DP_Expi"& _ 
+                "ration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Original_DP_Expir"& _ 
+                "ation)) AND ((@IsNull_PDEALicense_Expiration = 1 AND [PDEALicense_Expiration] IS"& _ 
+                " NULL) OR ([PDEALicense_Expiration] = @Original_PDEALicense_Expiration)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DTI_SEC_Expiration", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DTI_SEC_Expiration", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -9932,24 +10099,25 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PDEALicense_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDEALicense_Expiration", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[IndustrialEstablishmentNonFood_tbl] ([NameOfEstablishment], [A"& _ 
-                "ddress], [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOff"& _ 
-                "icer], [NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [Cont"& _ 
-                "rolNumber], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PTO"& _ 
-                "], [PTO_Expiration], [DP], [DP_Expiration], [DENR_IDNumber], [AccreditedWasteHau"& _ 
-                "ler], [PDEALicense], [PDEALicense_Expiration], [SubmittedDocument], [Remarks]) V"& _ 
-                "ALUES (@NameOfEstablishment, @Address, @EmailAddress, @CEO_President, @GeneralMa"& _ 
-                "nager, @PollutionControlOfficer, @NatureOfBusiness, @ContactNumber, @NameOfAccre"& _ 
-                "ditedWasteHauler, @ControlNumber, @BrgyClearanceWithCTC, @DTI_SEC, @DTI_SEC_Expi"& _ 
-                "ration, @ECC, @PTO, @PTO_Expiration, @DP, @DP_Expiration, @DENR_IDNumber, @Accre"& _ 
-                "ditedWasteHauler, @PDEALicense, @PDEALicense_Expiration, @SubmittedDocument, @Re"& _ 
-                "marks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IndustrialEstablishmentNonFoodID, NameOfEstablishment, Address, "& _ 
-                "EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBu"& _ 
-                "siness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearance"& _ 
-                "WithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiratio"& _ 
-                "n, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, Su"& _ 
-                "bmittedDocument, Remarks FROM IndustrialEstablishmentNonFood_tbl WHERE (Industri"& _ 
-                "alEstablishmentNonFoodID = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [IndustrialEstablishmentNonFood_tbl] ([NameOfEstablishment], [Address"& _ 
+                "], [EmailAddress], [CEO_President], [GeneralManager], [PollutionControlOfficer],"& _ 
+                " [NatureOfBusiness], [ContactNumber], [NameOfAccreditedWasteHauler], [ControlNum"& _ 
+                "ber], [BrgyClearanceWithCTC], [DTI_SEC], [DTI_SEC_Expiration], [ECC], [PTO], [PT"& _ 
+                "O_Expiration], [DP], [DP_Expiration], [DENR_IDNumber], [AccreditedWasteHauler], "& _ 
+                "[PDEALicense], [PDEALicense_Expiration], [SelfMonitoringReport], [SubmittedDocum"& _ 
+                "ent], [Remarks]) VALUES (@NameOfEstablishment, @Address, @EmailAddress, @CEO_Pre"& _ 
+                "sident, @GeneralManager, @PollutionControlOfficer, @NatureOfBusiness, @ContactNu"& _ 
+                "mber, @NameOfAccreditedWasteHauler, @ControlNumber, @BrgyClearanceWithCTC, @DTI_"& _ 
+                "SEC, @DTI_SEC_Expiration, @ECC, @PTO, @PTO_Expiration, @DP, @DP_Expiration, @DEN"& _ 
+                "R_IDNumber, @AccreditedWasteHauler, @PDEALicense, @PDEALicense_Expiration, @Self"& _ 
+                "MonitoringReport, @SubmittedDocument, @Remarks);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IndustrialEstablishment"& _ 
+                "NonFoodID, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralMan"& _ 
+                "ager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccredited"& _ 
+                "WasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, E"& _ 
+                "CC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler"& _ 
+                ", PDEALicense, PDEALicense_Expiration, SelfMonitoringReport, SubmittedDocument, "& _ 
+                "Remarks FROM IndustrialEstablishmentNonFood_tbl WHERE (IndustrialEstablishmentNo"& _ 
+                "nFoodID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9973,36 +10141,38 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDEALicense", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDEALicense", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDEALicense_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDEALicense_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[IndustrialEstablishmentNonFood_tbl] SET [NameOfEstablishment] = @Na"& _ 
-                "meOfEstablishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_Pr"& _ 
-                "esident] = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionControl"& _ 
-                "Officer] = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [Co"& _ 
-                "ntactNumber] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccredited"& _ 
-                "WasteHauler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyCle"& _ 
-                "aranceWithCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration,"& _ 
-                " [ECC] = @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [DP"& _ 
-                "_Expiration] = @DP_Expiration, [DENR_IDNumber] = @DENR_IDNumber, [AccreditedWast"& _ 
-                "eHauler] = @AccreditedWasteHauler, [PDEALicense] = @PDEALicense, [PDEALicense_Ex"& _ 
-                "piration] = @PDEALicense_Expiration, [SubmittedDocument] = @SubmittedDocument, ["& _ 
-                "Remarks] = @Remarks WHERE (([IndustrialEstablishmentNonFoodID] = @Original_Indus"& _ 
-                "trialEstablishmentNonFoodID) AND ((@IsNull_DTI_SEC_Expiration = 1 AND [DTI_SEC_E"& _ 
-                "xpiration] IS NULL) OR ([DTI_SEC_Expiration] = @Original_DTI_SEC_Expiration)) AN"& _ 
-                "D ((@IsNull_PTO_Expiration = 1 AND [PTO_Expiration] IS NULL) OR ([PTO_Expiration"& _ 
-                "] = @Original_PTO_Expiration)) AND ((@IsNull_DP_Expiration = 1 AND [DP_Expiratio"& _ 
-                "n] IS NULL) OR ([DP_Expiration] = @Original_DP_Expiration)) AND ((@IsNull_PDEALi"& _ 
-                "cense_Expiration = 1 AND [PDEALicense_Expiration] IS NULL) OR ([PDEALicense_Expi"& _ 
-                "ration] = @Original_PDEALicense_Expiration)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IndustrialEstablishmentNo"& _ 
-                "nFoodID, NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManag"& _ 
-                "er, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWa"& _ 
-                "steHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC"& _ 
-                ", PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, "& _ 
-                "PDEALicense, PDEALicense_Expiration, SubmittedDocument, Remarks FROM IndustrialE"& _ 
-                "stablishmentNonFood_tbl WHERE (IndustrialEstablishmentNonFoodID = @IndustrialEst"& _ 
-                "ablishmentNonFoodID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [IndustrialEstablishmentNonFood_tbl] SET [NameOfEstablishment] = @NameOfEs"& _ 
+                "tablishment, [Address] = @Address, [EmailAddress] = @EmailAddress, [CEO_Presiden"& _ 
+                "t] = @CEO_President, [GeneralManager] = @GeneralManager, [PollutionControlOffice"& _ 
+                "r] = @PollutionControlOfficer, [NatureOfBusiness] = @NatureOfBusiness, [ContactN"& _ 
+                "umber] = @ContactNumber, [NameOfAccreditedWasteHauler] = @NameOfAccreditedWasteH"& _ 
+                "auler, [ControlNumber] = @ControlNumber, [BrgyClearanceWithCTC] = @BrgyClearance"& _ 
+                "WithCTC, [DTI_SEC] = @DTI_SEC, [DTI_SEC_Expiration] = @DTI_SEC_Expiration, [ECC]"& _ 
+                " = @ECC, [PTO] = @PTO, [PTO_Expiration] = @PTO_Expiration, [DP] = @DP, [DP_Expir"& _ 
+                "ation] = @DP_Expiration, [DENR_IDNumber] = @DENR_IDNumber, [AccreditedWasteHaule"& _ 
+                "r] = @AccreditedWasteHauler, [PDEALicense] = @PDEALicense, [PDEALicense_Expirati"& _ 
+                "on] = @PDEALicense_Expiration, [SelfMonitoringReport] = @SelfMonitoringReport, ["& _ 
+                "SubmittedDocument] = @SubmittedDocument, [Remarks] = @Remarks WHERE (([Industria"& _ 
+                "lEstablishmentNonFoodID] = @Original_IndustrialEstablishmentNonFoodID) AND ((@Is"& _ 
+                "Null_DTI_SEC_Expiration = 1 AND [DTI_SEC_Expiration] IS NULL) OR ([DTI_SEC_Expir"& _ 
+                "ation] = @Original_DTI_SEC_Expiration)) AND ((@IsNull_PTO_Expiration = 1 AND [PT"& _ 
+                "O_Expiration] IS NULL) OR ([PTO_Expiration] = @Original_PTO_Expiration)) AND ((@"& _ 
+                "IsNull_DP_Expiration = 1 AND [DP_Expiration] IS NULL) OR ([DP_Expiration] = @Ori"& _ 
+                "ginal_DP_Expiration)) AND ((@IsNull_PDEALicense_Expiration = 1 AND [PDEALicense_"& _ 
+                "Expiration] IS NULL) OR ([PDEALicense_Expiration] = @Original_PDEALicense_Expira"& _ 
+                "tion)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IndustrialEstablishmentNonFoodID, NameOfEstablishment, Address,"& _ 
+                " EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfB"& _ 
+                "usiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanc"& _ 
+                "eWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expirati"& _ 
+                "on, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, S"& _ 
+                "elfMonitoringReport, SubmittedDocument, Remarks FROM IndustrialEstablishmentNonF"& _ 
+                "ood_tbl WHERE (IndustrialEstablishmentNonFoodID = @IndustrialEstablishmentNonFoo"& _ 
+                "dID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NameOfEstablishment", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NameOfEstablishment", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Address", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Address", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10026,6 +10196,7 @@ Namespace cenro_DBDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AccreditedWasteHauler", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AccreditedWasteHauler", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDEALicense", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDEALicense", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PDEALicense_Expiration", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PDEALicense_Expiration", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SelfMonitoringReport", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SelfMonitoringReport", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubmittedDocument", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubmittedDocument", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Remarks", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Remarks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IndustrialEstablishmentNonFoodID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IndustrialEstablishmentNonFoodID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -10053,12 +10224,13 @@ Namespace cenro_DBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IndustrialEstablishmentNonFoodID, NameOfEstablishment, Address, EmailAddre"& _ 
-                "ss, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, Co"& _ 
-                "ntactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, D"& _ 
-                "TI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_ID"& _ 
-                "Number, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, SubmittedDoc"& _ 
-                "ument, Remarks FROM dbo.IndustrialEstablishmentNonFood_tbl"
+            Me._commandCollection(0).CommandText = "SELECT        IndustrialEstablishmentNonFoodID, NameOfEstablishment, Address, Ema"& _ 
+                "ilAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusin"& _ 
+                "ess, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "           BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expi"& _ 
+                "ration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PD"& _ 
+                "EALicense_Expiration, SelfMonitoringReport, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Submitted"& _ 
+                "Document, Remarks"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            IndustrialEstablishmentNonFood_tbl"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10190,6 +10362,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal AccreditedWasteHauler As String,  _
                     ByVal PDEALicense As String,  _
                     ByVal PDEALicense_Expiration As Global.System.Nullable(Of Date),  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String) As Integer
             If (NameOfEstablishment Is Nothing) Then
@@ -10302,15 +10475,20 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(Remarks,String)
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(SubmittedDocument,Byte())
+            End If
+            If (Remarks Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(Remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10354,6 +10532,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal AccreditedWasteHauler As String,  _
                     ByVal PDEALicense As String,  _
                     ByVal PDEALicense_Expiration As Global.System.Nullable(Of Date),  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_IndustrialEstablishmentNonFoodID As Integer,  _
@@ -10472,46 +10651,51 @@ Namespace cenro_DBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
-            If (SubmittedDocument Is Nothing) Then
+            If (SelfMonitoringReport Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(SubmittedDocument,Byte())
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(SelfMonitoringReport,String)
             End If
-            If (Remarks Is Nothing) Then
+            If (SubmittedDocument Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Remarks,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(SubmittedDocument,Byte())
             End If
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_IndustrialEstablishmentNonFoodID,Integer)
-            If (Original_DTI_SEC_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            If (Remarks Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Remarks,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_IndustrialEstablishmentNonFoodID,Integer)
+            If (Original_DTI_SEC_Expiration.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_DTI_SEC_Expiration.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
             If (Original_PTO_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_PTO_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_PTO_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
             If (Original_DP_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_DP_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_DP_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (Original_PDEALicense_Expiration.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_PDEALicense_Expiration.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_PDEALicense_Expiration.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(33).Value = CType(IndustrialEstablishmentNonFoodID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(IndustrialEstablishmentNonFoodID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10554,6 +10738,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal AccreditedWasteHauler As String,  _
                     ByVal PDEALicense As String,  _
                     ByVal PDEALicense_Expiration As Global.System.Nullable(Of Date),  _
+                    ByVal SelfMonitoringReport As String,  _
                     ByVal SubmittedDocument() As Byte,  _
                     ByVal Remarks As String,  _
                     ByVal Original_IndustrialEstablishmentNonFoodID As Integer,  _
@@ -10561,7 +10746,7 @@ Namespace cenro_DBDataSetTableAdapters
                     ByVal Original_PTO_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_DP_Expiration As Global.System.Nullable(Of Date),  _
                     ByVal Original_PDEALicense_Expiration As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, SubmittedDocument, Remarks, Original_IndustrialEstablishmentNonFoodID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_PDEALicense_Expiration, Original_IndustrialEstablishmentNonFoodID)
+            Return Me.Update(NameOfEstablishment, Address, EmailAddress, CEO_President, GeneralManager, PollutionControlOfficer, NatureOfBusiness, ContactNumber, NameOfAccreditedWasteHauler, ControlNumber, BrgyClearanceWithCTC, DTI_SEC, DTI_SEC_Expiration, ECC, PTO, PTO_Expiration, DP, DP_Expiration, DENR_IDNumber, AccreditedWasteHauler, PDEALicense, PDEALicense_Expiration, SelfMonitoringReport, SubmittedDocument, Remarks, Original_IndustrialEstablishmentNonFoodID, Original_DTI_SEC_Expiration, Original_PTO_Expiration, Original_DP_Expiration, Original_PDEALicense_Expiration, Original_IndustrialEstablishmentNonFoodID)
         End Function
     End Class
     

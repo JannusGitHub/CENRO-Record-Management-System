@@ -17,7 +17,7 @@ Public Class IENFCertificationPopupForm
             Dim reader As SqlDataReader = command.ExecuteReader
 
             If reader.Read = True Then
-                'DECLARE VARIABLES TO READ THE DATA IN DATABASE
+                'declare variables to read the data in database
                 Dim BrgyClearanceWithCTC As String = reader("BrgyClearanceWithCTC")
                 Dim DTI_SEC As String = reader("DTI_SEC")
                 Dim ECC As String = reader("ECC")
@@ -26,9 +26,10 @@ Public Class IENFCertificationPopupForm
                 Dim DENR_IDNumber As String = reader("DENR_IDNumber")
                 Dim AccreditedWasteHauler As String = reader("AccreditedWasteHauler")
                 Dim PDEALicense As String = reader("PDEALicense")
+                Dim SelfMonitoringReport As String = reader("SelfMonitoringReport")
 
-                'PRINT IF THE REQUIREMENTS ARE COMPLIANT
-                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And AccreditedWasteHauler = "Compliant" And PDEALicense = "Compliant" Then
+                'print if the requirements are compliant
+                If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And AccreditedWasteHauler = "Compliant" And PDEALicense = "Compliant" And SelfMonitoringReport = "Compliant" Then
                     Me.Hide()
                     With IENFPrintedCertificateForm
                         .TopLevel = False
@@ -39,7 +40,7 @@ Public Class IENFCertificationPopupForm
                     reader.Close()
                     connection.Close()
                 Else
-                    MessageBox.Show("An error occured! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             End If

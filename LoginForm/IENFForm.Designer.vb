@@ -24,10 +24,10 @@ Partial Class IENFForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IENFForm))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -58,29 +58,32 @@ Partial Class IENFForm
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IndustrialEstablishmentNonFoodtblBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PDEALicense = New System.Windows.Forms.ComboBox()
+        Me.AccreditedWasteHauler = New System.Windows.Forms.ComboBox()
+        Me.DENRIDNumber = New System.Windows.Forms.ComboBox()
+        Me.DP = New System.Windows.Forms.ComboBox()
+        Me.PTO = New System.Windows.Forms.ComboBox()
+        Me.ECC = New System.Windows.Forms.ComboBox()
+        Me.DTISEC = New System.Windows.Forms.ComboBox()
+        Me.BrgyClearance = New System.Windows.Forms.ComboBox()
+        Me.SMR = New System.Windows.Forms.ComboBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.NewButton = New System.Windows.Forms.Button()
         Me.Update = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
-        Me.PDEALicense = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.AccreditedWasteHauler = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.DENRIDNumber = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.DP = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.PTO = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ECC = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DTISEC = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.BrgyClearance = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ControlNumber = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -121,7 +124,10 @@ Partial Class IENFForm
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.NameOfEstablishment1 = New System.Windows.Forms.TextBox()
         Me.ControlNumber1 = New System.Windows.Forms.TextBox()
@@ -294,16 +300,16 @@ Partial Class IENFForm
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 26
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn1, Me.AddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn1, Me.AddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.IndustrialEstablishmentNonFoodtblBindingSource1
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(3, 410)
@@ -312,9 +318,9 @@ Partial Class IENFForm
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1080, 233)
         Me.DataGridView1.TabIndex = 13
@@ -499,6 +505,16 @@ Partial Class IENFForm
         Me.DataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewTextBoxColumn16.Width = 136
         '
+        'SelfMonitoringReport
+        '
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
+        '
         'IndustrialEstablishmentNonFoodtblBindingSource1
         '
         Me.IndustrialEstablishmentNonFoodtblBindingSource1.DataMember = "IndustrialEstablishmentNonFood_tbl"
@@ -511,22 +527,24 @@ Partial Class IENFForm
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.PDEALicense)
-        Me.GroupBox1.Controls.Add(Me.Label19)
         Me.GroupBox1.Controls.Add(Me.AccreditedWasteHauler)
-        Me.GroupBox1.Controls.Add(Me.Label18)
         Me.GroupBox1.Controls.Add(Me.DENRIDNumber)
-        Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.DP)
-        Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.PTO)
-        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.ECC)
-        Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.DTISEC)
-        Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.BrgyClearance)
+        Me.GroupBox1.Controls.Add(Me.SMR)
+        Me.GroupBox1.Controls.Add(Me.Label33)
+        Me.GroupBox1.Controls.Add(Me.GroupBox3)
+        Me.GroupBox1.Controls.Add(Me.Label19)
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.ControlNumber)
         Me.GroupBox1.Controls.Add(Me.Label11)
@@ -555,6 +573,115 @@ Partial Class IENFForm
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Industrial Establishment Non-Food"
+        '
+        'PDEALicense
+        '
+        Me.PDEALicense.BackColor = System.Drawing.Color.White
+        Me.PDEALicense.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PDEALicense.FormattingEnabled = True
+        Me.PDEALicense.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.PDEALicense.Location = New System.Drawing.Point(468, 307)
+        Me.PDEALicense.Name = "PDEALicense"
+        Me.PDEALicense.Size = New System.Drawing.Size(200, 25)
+        Me.PDEALicense.TabIndex = 64
+        '
+        'AccreditedWasteHauler
+        '
+        Me.AccreditedWasteHauler.BackColor = System.Drawing.Color.White
+        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccreditedWasteHauler.FormattingEnabled = True
+        Me.AccreditedWasteHauler.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(468, 256)
+        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
+        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(200, 25)
+        Me.AccreditedWasteHauler.TabIndex = 63
+        '
+        'DENRIDNumber
+        '
+        Me.DENRIDNumber.BackColor = System.Drawing.Color.White
+        Me.DENRIDNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DENRIDNumber.FormattingEnabled = True
+        Me.DENRIDNumber.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DENRIDNumber.Location = New System.Drawing.Point(468, 207)
+        Me.DENRIDNumber.Name = "DENRIDNumber"
+        Me.DENRIDNumber.Size = New System.Drawing.Size(200, 25)
+        Me.DENRIDNumber.TabIndex = 62
+        '
+        'DP
+        '
+        Me.DP.BackColor = System.Drawing.Color.White
+        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DP.FormattingEnabled = True
+        Me.DP.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DP.Location = New System.Drawing.Point(468, 155)
+        Me.DP.Name = "DP"
+        Me.DP.Size = New System.Drawing.Size(200, 25)
+        Me.DP.TabIndex = 61
+        '
+        'PTO
+        '
+        Me.PTO.BackColor = System.Drawing.Color.White
+        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PTO.FormattingEnabled = True
+        Me.PTO.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.PTO.Location = New System.Drawing.Point(468, 102)
+        Me.PTO.Name = "PTO"
+        Me.PTO.Size = New System.Drawing.Size(200, 25)
+        Me.PTO.TabIndex = 60
+        '
+        'ECC
+        '
+        Me.ECC.BackColor = System.Drawing.Color.White
+        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ECC.FormattingEnabled = True
+        Me.ECC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.ECC.Location = New System.Drawing.Point(468, 53)
+        Me.ECC.Name = "ECC"
+        Me.ECC.Size = New System.Drawing.Size(200, 25)
+        Me.ECC.TabIndex = 59
+        '
+        'DTISEC
+        '
+        Me.DTISEC.BackColor = System.Drawing.Color.White
+        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTISEC.FormattingEnabled = True
+        Me.DTISEC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DTISEC.Location = New System.Drawing.Point(236, 307)
+        Me.DTISEC.Name = "DTISEC"
+        Me.DTISEC.Size = New System.Drawing.Size(199, 25)
+        Me.DTISEC.TabIndex = 58
+        '
+        'BrgyClearance
+        '
+        Me.BrgyClearance.BackColor = System.Drawing.Color.White
+        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrgyClearance.FormattingEnabled = True
+        Me.BrgyClearance.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.BrgyClearance.Location = New System.Drawing.Point(236, 257)
+        Me.BrgyClearance.Name = "BrgyClearance"
+        Me.BrgyClearance.Size = New System.Drawing.Size(199, 25)
+        Me.BrgyClearance.TabIndex = 57
+        '
+        'SMR
+        '
+        Me.SMR.BackColor = System.Drawing.Color.White
+        Me.SMR.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR.FormattingEnabled = True
+        Me.SMR.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.SMR.Location = New System.Drawing.Point(698, 52)
+        Me.SMR.Name = "SMR"
+        Me.SMR.Size = New System.Drawing.Size(202, 25)
+        Me.SMR.TabIndex = 56
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(695, 32)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(43, 21)
+        Me.Label33.TabIndex = 55
+        Me.Label33.Text = "SMR"
         '
         'GroupBox3
         '
@@ -631,153 +758,81 @@ Partial Class IENFForm
         Me.Save.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Save.UseVisualStyleBackColor = False
         '
-        'PDEALicense
-        '
-        Me.PDEALicense.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PDEALicense.Location = New System.Drawing.Point(606, 307)
-        Me.PDEALicense.Multiline = True
-        Me.PDEALicense.Name = "PDEALicense"
-        Me.PDEALicense.Size = New System.Drawing.Size(200, 24)
-        Me.PDEALicense.TabIndex = 18
-        '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(602, 284)
+        Me.Label19.Location = New System.Drawing.Point(464, 284)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(113, 21)
         Me.Label19.TabIndex = 43
         Me.Label19.Text = "PDEA License"
         '
-        'AccreditedWasteHauler
-        '
-        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(606, 256)
-        Me.AccreditedWasteHauler.Multiline = True
-        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
-        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(200, 24)
-        Me.AccreditedWasteHauler.TabIndex = 17
-        '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(602, 232)
+        Me.Label18.Location = New System.Drawing.Point(464, 232)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(207, 21)
         Me.Label18.TabIndex = 37
         Me.Label18.Text = "Accredited Waste Hauler"
         '
-        'DENRIDNumber
-        '
-        Me.DENRIDNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DENRIDNumber.Location = New System.Drawing.Point(606, 206)
-        Me.DENRIDNumber.Multiline = True
-        Me.DENRIDNumber.Name = "DENRIDNumber"
-        Me.DENRIDNumber.Size = New System.Drawing.Size(200, 24)
-        Me.DENRIDNumber.TabIndex = 16
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(602, 182)
+        Me.Label17.Location = New System.Drawing.Point(464, 182)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(141, 21)
         Me.Label17.TabIndex = 35
         Me.Label17.Text = "DENR ID Number"
         '
-        'DP
-        '
-        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP.Location = New System.Drawing.Point(606, 155)
-        Me.DP.Multiline = True
-        Me.DP.Name = "DP"
-        Me.DP.Size = New System.Drawing.Size(200, 24)
-        Me.DP.TabIndex = 15
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(602, 131)
+        Me.Label16.Location = New System.Drawing.Point(464, 131)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(31, 21)
         Me.Label16.TabIndex = 33
         Me.Label16.Text = "DP"
         '
-        'PTO
-        '
-        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO.Location = New System.Drawing.Point(606, 104)
-        Me.PTO.Multiline = True
-        Me.PTO.Name = "PTO"
-        Me.PTO.Size = New System.Drawing.Size(200, 24)
-        Me.PTO.TabIndex = 14
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(602, 80)
+        Me.Label15.Location = New System.Drawing.Point(464, 80)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(41, 21)
         Me.Label15.TabIndex = 31
         Me.Label15.Text = "PTO"
         '
-        'ECC
-        '
-        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ECC.Location = New System.Drawing.Point(606, 53)
-        Me.ECC.Multiline = True
-        Me.ECC.Name = "ECC"
-        Me.ECC.Size = New System.Drawing.Size(200, 24)
-        Me.ECC.TabIndex = 13
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(602, 29)
+        Me.Label14.Location = New System.Drawing.Point(464, 29)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(45, 21)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "ECC"
         '
-        'DTISEC
-        '
-        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTISEC.Location = New System.Drawing.Point(294, 307)
-        Me.DTISEC.Multiline = True
-        Me.DTISEC.Name = "DTISEC"
-        Me.DTISEC.Size = New System.Drawing.Size(200, 24)
-        Me.DTISEC.TabIndex = 12
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(291, 283)
+        Me.Label13.Location = New System.Drawing.Point(232, 282)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(72, 21)
         Me.Label13.TabIndex = 27
         Me.Label13.Text = "DTI/SEC"
         '
-        'BrgyClearance
-        '
-        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BrgyClearance.Location = New System.Drawing.Point(294, 256)
-        Me.BrgyClearance.Multiline = True
-        Me.BrgyClearance.Name = "BrgyClearance"
-        Me.BrgyClearance.Size = New System.Drawing.Size(200, 24)
-        Me.BrgyClearance.TabIndex = 11
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(290, 232)
+        Me.Label12.Location = New System.Drawing.Point(231, 231)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(134, 21)
         Me.Label12.TabIndex = 25
@@ -807,7 +862,8 @@ Partial Class IENFForm
         'NameOfAccreditedWasteHauler
         '
         Me.NameOfAccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameOfAccreditedWasteHauler.Location = New System.Drawing.Point(294, 205)
+        Me.NameOfAccreditedWasteHauler.Location = New System.Drawing.Point(235, 207)
+        Me.NameOfAccreditedWasteHauler.MaxLength = 25
         Me.NameOfAccreditedWasteHauler.Multiline = True
         Me.NameOfAccreditedWasteHauler.Name = "NameOfAccreditedWasteHauler"
         Me.NameOfAccreditedWasteHauler.Size = New System.Drawing.Size(200, 24)
@@ -817,16 +873,17 @@ Partial Class IENFForm
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(291, 181)
+        Me.Label10.Location = New System.Drawing.Point(232, 180)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(278, 21)
+        Me.Label10.Size = New System.Drawing.Size(117, 21)
         Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Name of Accredited Waste Hauler"
+        Me.Label10.Text = "Name of AWS"
         '
         'ContactNumber
         '
         Me.ContactNumber.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactNumber.Location = New System.Drawing.Point(294, 154)
+        Me.ContactNumber.Location = New System.Drawing.Point(235, 155)
+        Me.ContactNumber.MaxLength = 11
         Me.ContactNumber.Multiline = True
         Me.ContactNumber.Name = "ContactNumber"
         Me.ContactNumber.Size = New System.Drawing.Size(200, 24)
@@ -836,7 +893,7 @@ Partial Class IENFForm
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(291, 130)
+        Me.Label9.Location = New System.Drawing.Point(232, 129)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(145, 21)
         Me.Label9.TabIndex = 19
@@ -845,7 +902,8 @@ Partial Class IENFForm
         'NatureOfBusiness
         '
         Me.NatureOfBusiness.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NatureOfBusiness.Location = New System.Drawing.Point(294, 103)
+        Me.NatureOfBusiness.Location = New System.Drawing.Point(235, 102)
+        Me.NatureOfBusiness.MaxLength = 25
         Me.NatureOfBusiness.Multiline = True
         Me.NatureOfBusiness.Name = "NatureOfBusiness"
         Me.NatureOfBusiness.Size = New System.Drawing.Size(200, 24)
@@ -855,7 +913,7 @@ Partial Class IENFForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(291, 80)
+        Me.Label8.Location = New System.Drawing.Point(232, 79)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(148, 21)
         Me.Label8.TabIndex = 17
@@ -864,7 +922,8 @@ Partial Class IENFForm
         'PollutionControlOfficer
         '
         Me.PollutionControlOfficer.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PollutionControlOfficer.Location = New System.Drawing.Point(294, 53)
+        Me.PollutionControlOfficer.Location = New System.Drawing.Point(235, 52)
+        Me.PollutionControlOfficer.MaxLength = 25
         Me.PollutionControlOfficer.Multiline = True
         Me.PollutionControlOfficer.Name = "PollutionControlOfficer"
         Me.PollutionControlOfficer.Size = New System.Drawing.Size(200, 24)
@@ -874,7 +933,7 @@ Partial Class IENFForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(290, 28)
+        Me.Label7.Location = New System.Drawing.Point(231, 27)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(193, 21)
         Me.Label7.TabIndex = 15
@@ -884,6 +943,7 @@ Partial Class IENFForm
         '
         Me.GeneralManager.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralManager.Location = New System.Drawing.Point(6, 308)
+        Me.GeneralManager.MaxLength = 25
         Me.GeneralManager.Multiline = True
         Me.GeneralManager.Name = "GeneralManager"
         Me.GeneralManager.Size = New System.Drawing.Size(200, 24)
@@ -903,6 +963,7 @@ Partial Class IENFForm
         '
         Me.CEOPresident.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CEOPresident.Location = New System.Drawing.Point(6, 257)
+        Me.CEOPresident.MaxLength = 25
         Me.CEOPresident.Multiline = True
         Me.CEOPresident.Name = "CEOPresident"
         Me.CEOPresident.Size = New System.Drawing.Size(200, 24)
@@ -922,6 +983,7 @@ Partial Class IENFForm
         '
         Me.NameOfEstablishment.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameOfEstablishment.Location = New System.Drawing.Point(6, 104)
+        Me.NameOfEstablishment.MaxLength = 25
         Me.NameOfEstablishment.Multiline = True
         Me.NameOfEstablishment.Name = "NameOfEstablishment"
         Me.NameOfEstablishment.Size = New System.Drawing.Size(200, 24)
@@ -931,6 +993,7 @@ Partial Class IENFForm
         '
         Me.EmailAddress.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailAddress.Location = New System.Drawing.Point(6, 206)
+        Me.EmailAddress.MaxLength = 25
         Me.EmailAddress.Multiline = True
         Me.EmailAddress.Name = "EmailAddress"
         Me.EmailAddress.Size = New System.Drawing.Size(200, 24)
@@ -970,6 +1033,7 @@ Partial Class IENFForm
         '
         Me.Address.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Address.Location = New System.Drawing.Point(6, 155)
+        Me.Address.MaxLength = 25
         Me.Address.Multiline = True
         Me.Address.Name = "Address"
         Me.Address.Size = New System.Drawing.Size(200, 24)
@@ -1075,25 +1139,25 @@ Partial Class IENFForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView2.ColumnHeadersHeight = 26
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn17})
         Me.DataGridView2.DataSource = Me.IndustrialEstablishmentNonFoodtblBindingSource1
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(3, 379)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(1080, 260)
         Me.DataGridView2.TabIndex = 67
@@ -1197,8 +1261,20 @@ Partial Class IENFForm
         Me.DataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewTextBoxColumn29.Width = 177
         '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "SelfMonitoringReport"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "SMR"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn17.Width = 66
+        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.SMR1)
+        Me.GroupBox2.Controls.Add(Me.Label34)
         Me.GroupBox2.Controls.Add(Me.Label31)
         Me.GroupBox2.Controls.Add(Me.NameOfEstablishment1)
         Me.GroupBox2.Controls.Add(Me.ControlNumber1)
@@ -1227,6 +1303,27 @@ Partial Class IENFForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Industrial Establishment Non-Food"
         '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(641, 178)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(250, 24)
+        Me.SMR1.TabIndex = 67
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(637, 154)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 21)
+        Me.Label34.TabIndex = 68
+        Me.Label34.Text = "SMR"
+        '
         'Label31
         '
         Me.Label31.AutoSize = True
@@ -1239,20 +1336,24 @@ Partial Class IENFForm
         '
         'NameOfEstablishment1
         '
+        Me.NameOfEstablishment1.BackColor = System.Drawing.Color.White
         Me.NameOfEstablishment1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameOfEstablishment1.Location = New System.Drawing.Point(17, 78)
         Me.NameOfEstablishment1.Multiline = True
         Me.NameOfEstablishment1.Name = "NameOfEstablishment1"
-        Me.NameOfEstablishment1.Size = New System.Drawing.Size(250, 23)
+        Me.NameOfEstablishment1.ReadOnly = True
+        Me.NameOfEstablishment1.Size = New System.Drawing.Size(250, 24)
         Me.NameOfEstablishment1.TabIndex = 1
         '
         'ControlNumber1
         '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
         Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ControlNumber1.Location = New System.Drawing.Point(17, 128)
         Me.ControlNumber1.Multiline = True
         Me.ControlNumber1.Name = "ControlNumber1"
-        Me.ControlNumber1.Size = New System.Drawing.Size(250, 23)
+        Me.ControlNumber1.ReadOnly = True
+        Me.ControlNumber1.Size = New System.Drawing.Size(250, 24)
         Me.ControlNumber1.TabIndex = 2
         '
         'Label26
@@ -1297,20 +1398,24 @@ Partial Class IENFForm
         '
         'BrgyClearance1
         '
+        Me.BrgyClearance1.BackColor = System.Drawing.Color.White
         Me.BrgyClearance1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BrgyClearance1.Location = New System.Drawing.Point(17, 178)
         Me.BrgyClearance1.Multiline = True
         Me.BrgyClearance1.Name = "BrgyClearance1"
-        Me.BrgyClearance1.Size = New System.Drawing.Size(250, 23)
+        Me.BrgyClearance1.ReadOnly = True
+        Me.BrgyClearance1.Size = New System.Drawing.Size(250, 24)
         Me.BrgyClearance1.TabIndex = 3
         '
         'PDEALicense1
         '
+        Me.PDEALicense1.BackColor = System.Drawing.Color.White
         Me.PDEALicense1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PDEALicense1.Location = New System.Drawing.Point(641, 128)
         Me.PDEALicense1.Multiline = True
         Me.PDEALicense1.Name = "PDEALicense1"
-        Me.PDEALicense1.Size = New System.Drawing.Size(250, 23)
+        Me.PDEALicense1.ReadOnly = True
+        Me.PDEALicense1.Size = New System.Drawing.Size(250, 24)
         Me.PDEALicense1.TabIndex = 10
         '
         'Label24
@@ -1335,29 +1440,35 @@ Partial Class IENFForm
         '
         'DTISEC1
         '
+        Me.DTISEC1.BackColor = System.Drawing.Color.White
         Me.DTISEC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTISEC1.Location = New System.Drawing.Point(17, 228)
         Me.DTISEC1.Multiline = True
         Me.DTISEC1.Name = "DTISEC1"
-        Me.DTISEC1.Size = New System.Drawing.Size(250, 23)
+        Me.DTISEC1.ReadOnly = True
+        Me.DTISEC1.Size = New System.Drawing.Size(250, 24)
         Me.DTISEC1.TabIndex = 4
         '
         'AccreditedWasteHauler1
         '
+        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
         Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(641, 78)
         Me.AccreditedWasteHauler1.Multiline = True
         Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
-        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(250, 23)
+        Me.AccreditedWasteHauler1.ReadOnly = True
+        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(250, 24)
         Me.AccreditedWasteHauler1.TabIndex = 9
         '
         'ECC1
         '
+        Me.ECC1.BackColor = System.Drawing.Color.White
         Me.ECC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ECC1.Location = New System.Drawing.Point(334, 78)
         Me.ECC1.Multiline = True
         Me.ECC1.Name = "ECC1"
-        Me.ECC1.Size = New System.Drawing.Size(250, 23)
+        Me.ECC1.ReadOnly = True
+        Me.ECC1.Size = New System.Drawing.Size(250, 24)
         Me.ECC1.TabIndex = 5
         '
         'Label21
@@ -1372,20 +1483,24 @@ Partial Class IENFForm
         '
         'PTO1
         '
+        Me.PTO1.BackColor = System.Drawing.Color.White
         Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PTO1.Location = New System.Drawing.Point(334, 128)
         Me.PTO1.Multiline = True
         Me.PTO1.Name = "PTO1"
-        Me.PTO1.Size = New System.Drawing.Size(250, 23)
+        Me.PTO1.ReadOnly = True
+        Me.PTO1.Size = New System.Drawing.Size(250, 24)
         Me.PTO1.TabIndex = 6
         '
         'DENRIDNumber1
         '
+        Me.DENRIDNumber1.BackColor = System.Drawing.Color.White
         Me.DENRIDNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DENRIDNumber1.Location = New System.Drawing.Point(334, 228)
         Me.DENRIDNumber1.Multiline = True
         Me.DENRIDNumber1.Name = "DENRIDNumber1"
-        Me.DENRIDNumber1.Size = New System.Drawing.Size(250, 23)
+        Me.DENRIDNumber1.ReadOnly = True
+        Me.DENRIDNumber1.Size = New System.Drawing.Size(250, 24)
         Me.DENRIDNumber1.TabIndex = 8
         '
         'Label23
@@ -1410,11 +1525,13 @@ Partial Class IENFForm
         '
         'DP1
         '
+        Me.DP1.BackColor = System.Drawing.Color.White
         Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DP1.Location = New System.Drawing.Point(334, 178)
         Me.DP1.Multiline = True
         Me.DP1.Name = "DP1"
-        Me.DP1.Size = New System.Drawing.Size(250, 23)
+        Me.DP1.ReadOnly = True
+        Me.DP1.Size = New System.Drawing.Size(250, 24)
         Me.DP1.TabIndex = 7
         '
         'IndustrialEstablishmentNonFood_tblTableAdapter
@@ -1505,23 +1622,15 @@ Partial Class IENFForm
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Private WithEvents DeleteButton As Button
-    Friend WithEvents PDEALicense As TextBox
     Friend WithEvents Label19 As Label
     Private WithEvents Update As Button
-    Friend WithEvents AccreditedWasteHauler As TextBox
     Friend WithEvents Save As Button
     Friend WithEvents Label18 As Label
-    Friend WithEvents DENRIDNumber As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents DP As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents PTO As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents ECC As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents DTISEC As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents BrgyClearance As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ControlNumber As TextBox
     Friend WithEvents Label11 As Label
@@ -1560,6 +1669,16 @@ Partial Class IENFForm
     Friend WithEvents Label32 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents IndustrialEstablishmentNonFoodtblBindingSource1 As BindingSource
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents NewButton As Button
+    Friend WithEvents SMR As ComboBox
+    Friend WithEvents Label33 As Label
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1578,6 +1697,15 @@ Partial Class IENFForm
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
+    Friend WithEvents DTISEC As ComboBox
+    Friend WithEvents BrgyClearance As ComboBox
+    Friend WithEvents PDEALicense As ComboBox
+    Friend WithEvents AccreditedWasteHauler As ComboBox
+    Friend WithEvents DENRIDNumber As ComboBox
+    Friend WithEvents DP As ComboBox
+    Friend WithEvents PTO As ComboBox
+    Friend WithEvents ECC As ComboBox
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
@@ -1588,12 +1716,7 @@ Partial Class IENFForm
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents NewButton As Button
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents SMR1 As TextBox
+    Friend WithEvents Label34 As Label
 End Class
