@@ -180,10 +180,13 @@ Public Class Login
                     MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
+
                 ElseIf Password.Text = "" Then
                     MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
 
                 ElseIf reader.Read = True Then
                     'declaring variables to store data from the database
@@ -263,10 +266,13 @@ Public Class Login
                     MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
+
                 ElseIf Password.Text = "" Then
                     MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
 
                 ElseIf reader.Read = True Then
                     'declaring variables to store data from the database

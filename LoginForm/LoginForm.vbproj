@@ -136,6 +136,12 @@
     <Compile Include="cenro_DBDataSet.vb">
       <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ChangePasswordForm.Designer.vb">
+      <DependentUpon>ChangePasswordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IEFCertificationPopupForm.Designer.vb">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
     </Compile>
@@ -405,6 +411,9 @@
       <DependentUpon>Backup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Certificate.rdlc" />
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IEFCertificationPopupForm.resx">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -614,6 +623,7 @@
     <None Include="Resources\icons8_Certificate_28px1.png" />
     <None Include="Resources\icons8_Undo_28px.png" />
     <None Include="Resources\icons8_Undo_28px_1.png" />
+    <None Include="Resources\icons8_Change_Theme_28px.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

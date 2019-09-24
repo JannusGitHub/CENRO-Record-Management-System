@@ -32,6 +32,11 @@ LoginForm
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LoginForm.My.Resources.Resources.icons8_Change_Theme_28px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LoginForm.My.Resources.Resources.icons8_Search_28px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
