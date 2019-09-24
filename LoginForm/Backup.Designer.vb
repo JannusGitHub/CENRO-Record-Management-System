@@ -160,6 +160,7 @@ Partial Class Backup
         Me.txtPassword.Location = New System.Drawing.Point(99, 489)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(246, 28)
         Me.txtPassword.TabIndex = 11
         '

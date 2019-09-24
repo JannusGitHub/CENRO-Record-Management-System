@@ -379,3 +379,5 @@ C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\Login
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.xml
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.pdb
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.Settings.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\bin\Debug\System.Security.Cryptography.Primitives.dll

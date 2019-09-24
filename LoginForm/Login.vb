@@ -1,13 +1,34 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text
+Imports System.Security.Cryptography
 
 Public Class Login
     Dim mouse_move As System.Drawing.Point
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8; Initial Catalog=cenro_DB; Integrated Security=True")
+
+    Public Function Md5FromString(ByVal Source As String) As String
+        Dim bytes() As Byte
+        Dim stringBuilder As New StringBuilder()
+        If String.IsNullOrEmpty(Source) Then
+            Throw New ArgumentNullException
+        End If
+
+        bytes = Encoding.Default.GetBytes(Source)
+        bytes = MD5.Create().ComputeHash(bytes)
+        For x As Integer = 0 To bytes.Length - 1
+            stringBuilder.Append(bytes(x).ToString("x2"))
+        Next
+        Return stringBuilder.ToString
+    End Function
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim hashCode As Login
+        hashCode = New Login()
+
         Try
             Dim command As New SqlCommand("SELECT * FROM user_tbl WHERE Username = @Username and Password = @Password", connection)
             command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username.Text
-            command.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password.Text
+            command.Parameters.Add("@Password", SqlDbType.VarChar).Value = hashCode.Md5FromString(Password.Text)
             Dim adapter As New SqlDataAdapter(command)
             Dim table As New DataTable()
             adapter.Fill(table)
@@ -137,11 +158,14 @@ Public Class Login
     End Sub
 
     Private Sub Password_KeyDown(sender As Object, e As KeyEventArgs) Handles Password.KeyDown
+        Dim hashCode As Login
+        hashCode = New Login()
+
         If e.KeyCode = Keys.Enter Then
             Try
                 Dim command As New SqlCommand("SELECT * FROM user_tbl WHERE Username = @Username and Password = @Password", connection)
                 command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username.Text
-                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password.Text
+                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = hashCode.Md5FromString(Password.Text)
                 Dim adapter As New SqlDataAdapter(command)
                 Dim table As New DataTable()
                 adapter.Fill(table)
@@ -217,11 +241,14 @@ Public Class Login
     End Sub
 
     Private Sub Username_KeyDown(sender As Object, e As KeyEventArgs) Handles Username.KeyDown
+        Dim hashCode As Login
+        hashCode = New Login()
+
         If e.KeyCode = Keys.Enter Then
             Try
                 Dim command As New SqlCommand("SELECT * FROM user_tbl WHERE Username = @Username and Password = @Password", connection)
                 command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username.Text
-                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password.Text
+                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = hashCode.Md5FromString(Password.Text)
                 Dim adapter As New SqlDataAdapter(command)
                 Dim table As New DataTable()
                 adapter.Fill(table)

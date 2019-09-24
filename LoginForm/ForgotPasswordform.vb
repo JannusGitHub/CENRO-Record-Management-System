@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
-
+Imports System.Text
+Imports System.Security.Cryptography
 
 Public Class ForgotPasswordform
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8;Initial Catalog=cenro_DB;Integrated Security=True")
@@ -51,7 +52,25 @@ Public Class ForgotPasswordform
 
     End Sub
 
+    Public Function Md5FromString(ByVal Source As String) As String
+        Dim bytes() As Byte
+        Dim stringBuilder As New StringBuilder()
+        If String.IsNullOrEmpty(Source) Then
+            Throw New ArgumentNullException
+        End If
+
+        bytes = Encoding.Default.GetBytes(Source)
+        bytes = MD5.Create().ComputeHash(bytes)
+        For x As Integer = 0 To bytes.Length - 1
+            stringBuilder.Append(bytes(x).ToString("x2"))
+        Next
+        Return stringBuilder.ToString
+    End Function
+
     Private Sub ChangePasswordbtn_Click(sender As Object, e As EventArgs) Handles ChangePasswordbtn.Click
+        Dim hashCode As Login
+        hashCode = New Login()
+
         Try
             Dim username As String
             username = Me.Username.Text
@@ -65,7 +84,7 @@ Public Class ForgotPasswordform
             ElseIf NewPassword.Text <> ConfirmPassword.Text Then
                 MessageBox.Show("Password didn't matched!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf NewPassword.Text = ConfirmPassword.Text Then
-                Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & ConfirmPassword.Text & "' where Username = '" & username & "'", connection)
+                Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & hashCode.Md5FromString(ConfirmPassword.Text) & "' where Username = '" & username & "'", connection)
                 command.ExecuteNonQuery()
                 MessageBox.Show("Successfully updated", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Login.Show()
@@ -104,6 +123,9 @@ Public Class ForgotPasswordform
     End Sub
 
     Private Sub NewPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles NewPassword.KeyDown
+        Dim hashCode As Login
+        hashCode = New Login()
+
         If e.KeyCode = Keys.Enter Then
             Try
                 Dim username As String
@@ -118,7 +140,7 @@ Public Class ForgotPasswordform
                 ElseIf NewPassword.Text <> ConfirmPassword.Text Then
                     MessageBox.Show("Password didn't matched!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ElseIf NewPassword.Text = ConfirmPassword.Text Then
-                    Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & ConfirmPassword.Text & "' where Username = '" & username & "'", connection)
+                    Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & hashCode.Md5FromString(ConfirmPassword.Text) & "' where Username = '" & username & "'", connection)
                     command.ExecuteNonQuery()
                     MessageBox.Show("Successfully updated", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Login.Show()
@@ -138,6 +160,9 @@ Public Class ForgotPasswordform
     End Sub
 
     Private Sub ConfirmPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles ConfirmPassword.KeyDown
+        Dim hashCode As Login
+        hashCode = New Login()
+
         If e.KeyCode = Keys.Enter Then
             Try
                 Dim username As String
@@ -152,7 +177,7 @@ Public Class ForgotPasswordform
                 ElseIf NewPassword.Text <> ConfirmPassword.Text Then
                     MessageBox.Show("Password didn't matched!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ElseIf NewPassword.Text = ConfirmPassword.Text Then
-                    Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & ConfirmPassword.Text & "' where Username = '" & username & "'", connection)
+                    Dim command = New SqlCommand("UPDATE user_tbl set Password = '" & hashCode.Md5FromString(ConfirmPassword.Text) & "' where Username = '" & username & "'", connection)
                     command.ExecuteNonQuery()
                     MessageBox.Show("Successfully updated", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Login.Show()

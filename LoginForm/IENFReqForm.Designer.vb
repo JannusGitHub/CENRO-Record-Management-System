@@ -24,9 +24,9 @@ Partial Class IENFReqForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IENFReqForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -137,6 +137,7 @@ Partial Class IENFReqForm
         Me.GroupBox1.Controls.Add(Me.Label28)
         Me.GroupBox1.Controls.Add(Me.DataGridView2)
         Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 48)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(700, 605)
@@ -236,19 +237,23 @@ Partial Class IENFReqForm
         '
         'NameOfEstablishment1
         '
+        Me.NameOfEstablishment1.BackColor = System.Drawing.Color.White
         Me.NameOfEstablishment1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameOfEstablishment1.Location = New System.Drawing.Point(19, 54)
         Me.NameOfEstablishment1.Multiline = True
         Me.NameOfEstablishment1.Name = "NameOfEstablishment1"
+        Me.NameOfEstablishment1.ReadOnly = True
         Me.NameOfEstablishment1.Size = New System.Drawing.Size(202, 24)
         Me.NameOfEstablishment1.TabIndex = 1
         '
         'ControlNumber1
         '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
         Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ControlNumber1.Location = New System.Drawing.Point(19, 105)
         Me.ControlNumber1.Multiline = True
         Me.ControlNumber1.Name = "ControlNumber1"
+        Me.ControlNumber1.ReadOnly = True
         Me.ControlNumber1.Size = New System.Drawing.Size(202, 24)
         Me.ControlNumber1.TabIndex = 2
         '
@@ -294,19 +299,23 @@ Partial Class IENFReqForm
         '
         'BrgyClearance1
         '
+        Me.BrgyClearance1.BackColor = System.Drawing.Color.White
         Me.BrgyClearance1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BrgyClearance1.Location = New System.Drawing.Point(19, 156)
         Me.BrgyClearance1.Multiline = True
         Me.BrgyClearance1.Name = "BrgyClearance1"
+        Me.BrgyClearance1.ReadOnly = True
         Me.BrgyClearance1.Size = New System.Drawing.Size(202, 24)
         Me.BrgyClearance1.TabIndex = 3
         '
         'PDEALicense1
         '
+        Me.PDEALicense1.BackColor = System.Drawing.Color.White
         Me.PDEALicense1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PDEALicense1.Location = New System.Drawing.Point(273, 258)
         Me.PDEALicense1.Multiline = True
         Me.PDEALicense1.Name = "PDEALicense1"
+        Me.PDEALicense1.ReadOnly = True
         Me.PDEALicense1.Size = New System.Drawing.Size(202, 24)
         Me.PDEALicense1.TabIndex = 10
         '
@@ -332,28 +341,34 @@ Partial Class IENFReqForm
         '
         'DTISEC1
         '
+        Me.DTISEC1.BackColor = System.Drawing.Color.White
         Me.DTISEC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTISEC1.Location = New System.Drawing.Point(19, 207)
         Me.DTISEC1.Multiline = True
         Me.DTISEC1.Name = "DTISEC1"
+        Me.DTISEC1.ReadOnly = True
         Me.DTISEC1.Size = New System.Drawing.Size(202, 24)
         Me.DTISEC1.TabIndex = 4
         '
         'AccreditedWasteHauler1
         '
+        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
         Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(273, 207)
         Me.AccreditedWasteHauler1.Multiline = True
         Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
+        Me.AccreditedWasteHauler1.ReadOnly = True
         Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(202, 24)
         Me.AccreditedWasteHauler1.TabIndex = 9
         '
         'ECC1
         '
+        Me.ECC1.BackColor = System.Drawing.Color.White
         Me.ECC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ECC1.Location = New System.Drawing.Point(19, 258)
         Me.ECC1.Multiline = True
         Me.ECC1.Name = "ECC1"
+        Me.ECC1.ReadOnly = True
         Me.ECC1.Size = New System.Drawing.Size(202, 24)
         Me.ECC1.TabIndex = 5
         '
@@ -369,19 +384,23 @@ Partial Class IENFReqForm
         '
         'PTO1
         '
+        Me.PTO1.BackColor = System.Drawing.Color.White
         Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PTO1.Location = New System.Drawing.Point(273, 54)
         Me.PTO1.Multiline = True
         Me.PTO1.Name = "PTO1"
+        Me.PTO1.ReadOnly = True
         Me.PTO1.Size = New System.Drawing.Size(202, 24)
         Me.PTO1.TabIndex = 6
         '
         'DENRIDNumber1
         '
+        Me.DENRIDNumber1.BackColor = System.Drawing.Color.White
         Me.DENRIDNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DENRIDNumber1.Location = New System.Drawing.Point(273, 156)
         Me.DENRIDNumber1.Multiline = True
         Me.DENRIDNumber1.Name = "DENRIDNumber1"
+        Me.DENRIDNumber1.ReadOnly = True
         Me.DENRIDNumber1.Size = New System.Drawing.Size(202, 24)
         Me.DENRIDNumber1.TabIndex = 8
         '
@@ -407,10 +426,12 @@ Partial Class IENFReqForm
         '
         'DP1
         '
+        Me.DP1.BackColor = System.Drawing.Color.White
         Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DP1.Location = New System.Drawing.Point(273, 105)
         Me.DP1.Multiline = True
         Me.DP1.Name = "DP1"
+        Me.DP1.ReadOnly = True
         Me.DP1.Size = New System.Drawing.Size(202, 24)
         Me.DP1.TabIndex = 7
         '
@@ -455,34 +476,34 @@ Partial Class IENFReqForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.ColumnHeadersHeight = 26
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DENRIDNumberDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.PDEALicenseDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.IndustrialEstablishmentNonFoodtblBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(5, 351)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(691, 250)
         Me.DataGridView2.TabIndex = 70

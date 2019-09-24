@@ -127,6 +127,7 @@ Partial Class FastfoodReqForm
         Me.GroupBox1.Controls.Add(Me.Label28)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 48)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(700, 605)
@@ -226,19 +227,23 @@ Partial Class FastfoodReqForm
         '
         'NameOfEstablishmentReq
         '
+        Me.NameOfEstablishmentReq.BackColor = System.Drawing.Color.White
         Me.NameOfEstablishmentReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameOfEstablishmentReq.Location = New System.Drawing.Point(20, 56)
         Me.NameOfEstablishmentReq.Multiline = True
         Me.NameOfEstablishmentReq.Name = "NameOfEstablishmentReq"
+        Me.NameOfEstablishmentReq.ReadOnly = True
         Me.NameOfEstablishmentReq.Size = New System.Drawing.Size(202, 24)
         Me.NameOfEstablishmentReq.TabIndex = 1
         '
         'ControlNumber1
         '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
         Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ControlNumber1.Location = New System.Drawing.Point(20, 107)
         Me.ControlNumber1.Multiline = True
         Me.ControlNumber1.Name = "ControlNumber1"
+        Me.ControlNumber1.ReadOnly = True
         Me.ControlNumber1.Size = New System.Drawing.Size(202, 24)
         Me.ControlNumber1.TabIndex = 2
         '
@@ -254,19 +259,23 @@ Partial Class FastfoodReqForm
         '
         'BrgyClearance1
         '
+        Me.BrgyClearance1.BackColor = System.Drawing.Color.White
         Me.BrgyClearance1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BrgyClearance1.Location = New System.Drawing.Point(20, 158)
         Me.BrgyClearance1.Multiline = True
         Me.BrgyClearance1.Name = "BrgyClearance1"
+        Me.BrgyClearance1.ReadOnly = True
         Me.BrgyClearance1.Size = New System.Drawing.Size(202, 24)
         Me.BrgyClearance1.TabIndex = 3
         '
         'AccreditedWasteHauler1
         '
+        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
         Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(273, 158)
         Me.AccreditedWasteHauler1.Multiline = True
         Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
+        Me.AccreditedWasteHauler1.ReadOnly = True
         Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(202, 24)
         Me.AccreditedWasteHauler1.TabIndex = 8
         '
@@ -302,10 +311,12 @@ Partial Class FastfoodReqForm
         '
         'DTISEC1
         '
+        Me.DTISEC1.BackColor = System.Drawing.Color.White
         Me.DTISEC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTISEC1.Location = New System.Drawing.Point(20, 209)
         Me.DTISEC1.Multiline = True
         Me.DTISEC1.Name = "DTISEC1"
+        Me.DTISEC1.ReadOnly = True
         Me.DTISEC1.Size = New System.Drawing.Size(202, 24)
         Me.DTISEC1.TabIndex = 4
         '
@@ -321,19 +332,23 @@ Partial Class FastfoodReqForm
         '
         'DP1
         '
+        Me.DP1.BackColor = System.Drawing.Color.White
         Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DP1.Location = New System.Drawing.Point(273, 107)
         Me.DP1.Multiline = True
         Me.DP1.Name = "DP1"
+        Me.DP1.ReadOnly = True
         Me.DP1.Size = New System.Drawing.Size(202, 24)
         Me.DP1.TabIndex = 7
         '
         'ECC1
         '
+        Me.ECC1.BackColor = System.Drawing.Color.White
         Me.ECC1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ECC1.Location = New System.Drawing.Point(20, 260)
         Me.ECC1.Multiline = True
         Me.ECC1.Name = "ECC1"
+        Me.ECC1.ReadOnly = True
         Me.ECC1.Size = New System.Drawing.Size(202, 24)
         Me.ECC1.TabIndex = 5
         '
@@ -359,10 +374,12 @@ Partial Class FastfoodReqForm
         '
         'PTO1
         '
+        Me.PTO1.BackColor = System.Drawing.Color.White
         Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PTO1.Location = New System.Drawing.Point(273, 56)
         Me.PTO1.Multiline = True
         Me.PTO1.Name = "PTO1"
+        Me.PTO1.ReadOnly = True
         Me.PTO1.Size = New System.Drawing.Size(202, 24)
         Me.PTO1.TabIndex = 6
         '
@@ -409,7 +426,7 @@ Partial Class FastfoodReqForm
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
@@ -420,7 +437,7 @@ Partial Class FastfoodReqForm
         Me.DataGridView1.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -447,7 +464,7 @@ Partial Class FastfoodReqForm
         Me.NameOfEstablishmentDataGridViewTextBoxColumn.Name = "NameOfEstablishmentDataGridViewTextBoxColumn"
         Me.NameOfEstablishmentDataGridViewTextBoxColumn.ReadOnly = True
         Me.NameOfEstablishmentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 153
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 212
         '
         'ControlNumberDataGridViewTextBoxColumn
         '
@@ -457,7 +474,7 @@ Partial Class FastfoodReqForm
         Me.ControlNumberDataGridViewTextBoxColumn.Name = "ControlNumberDataGridViewTextBoxColumn"
         Me.ControlNumberDataGridViewTextBoxColumn.ReadOnly = True
         Me.ControlNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ControlNumberDataGridViewTextBoxColumn.Width = 116
+        Me.ControlNumberDataGridViewTextBoxColumn.Width = 158
         '
         'BrgyClearanceWithCTCDataGridViewTextBoxColumn
         '
@@ -467,7 +484,7 @@ Partial Class FastfoodReqForm
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn"
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.ReadOnly = True
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 117
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 157
         '
         'DTI_SEC
         '
@@ -477,7 +494,7 @@ Partial Class FastfoodReqForm
         Me.DTI_SEC.Name = "DTI_SEC"
         Me.DTI_SEC.ReadOnly = True
         Me.DTI_SEC.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTI_SEC.Width = 73
+        Me.DTI_SEC.Width = 95
         '
         'ECCDataGridViewTextBoxColumn
         '
@@ -487,7 +504,7 @@ Partial Class FastfoodReqForm
         Me.ECCDataGridViewTextBoxColumn.Name = "ECCDataGridViewTextBoxColumn"
         Me.ECCDataGridViewTextBoxColumn.ReadOnly = True
         Me.ECCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ECCDataGridViewTextBoxColumn.Width = 55
+        Me.ECCDataGridViewTextBoxColumn.Width = 68
         '
         'PTODataGridViewTextBoxColumn
         '
@@ -497,7 +514,7 @@ Partial Class FastfoodReqForm
         Me.PTODataGridViewTextBoxColumn.Name = "PTODataGridViewTextBoxColumn"
         Me.PTODataGridViewTextBoxColumn.ReadOnly = True
         Me.PTODataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PTODataGridViewTextBoxColumn.Width = 53
+        Me.PTODataGridViewTextBoxColumn.Width = 64
         '
         'DPDataGridViewTextBoxColumn
         '
@@ -507,7 +524,7 @@ Partial Class FastfoodReqForm
         Me.DPDataGridViewTextBoxColumn.Name = "DPDataGridViewTextBoxColumn"
         Me.DPDataGridViewTextBoxColumn.ReadOnly = True
         Me.DPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DPDataGridViewTextBoxColumn.Width = 46
+        Me.DPDataGridViewTextBoxColumn.Width = 54
         '
         'AccreditedWasteHaulerDataGridViewTextBoxColumn
         '
@@ -517,7 +534,7 @@ Partial Class FastfoodReqForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn"
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 166
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
         '
         'FastfoodCanteenAndRestauranttblBindingSource
         '

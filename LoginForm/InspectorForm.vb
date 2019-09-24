@@ -32,6 +32,8 @@ Public Class InspectorForm
             .BringToFront()
             .Show()
         End With
+        activeButton.Height = Button1.Height
+        activeButton.Top = Button1.Top
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -67,6 +69,8 @@ Public Class InspectorForm
             Login.Password.Clear()
             connection.Close()
         End If
+        activeButton.Height = Button3.Height
+        activeButton.Top = Button3.Top
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

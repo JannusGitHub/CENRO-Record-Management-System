@@ -38,6 +38,7 @@ Partial Class InspectorForm
         Me.MDIpanel = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.activeButton = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -48,6 +49,7 @@ Partial Class InspectorForm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.activeButton)
         Me.Panel1.Controls.Add(Me.Datenow2)
         Me.Panel1.Controls.Add(Me.Datenow)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -195,6 +197,14 @@ Partial Class InspectorForm
         'Timer2
         '
         '
+        'activeButton
+        '
+        Me.activeButton.BackColor = System.Drawing.Color.White
+        Me.activeButton.Location = New System.Drawing.Point(255, 193)
+        Me.activeButton.Name = "activeButton"
+        Me.activeButton.Size = New System.Drawing.Size(5, 30)
+        Me.activeButton.TabIndex = 12
+        '
         'InspectorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -233,4 +243,5 @@ Partial Class InspectorForm
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents activeButton As Panel
 End Class

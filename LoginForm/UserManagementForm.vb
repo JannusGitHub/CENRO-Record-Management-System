@@ -1,8 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
+Imports System.Text
+Imports System.Security.Cryptography
 
 Public Class UserManagementForm
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8;Initial Catalog=cenro_DB;Integrated Security=True")
+
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click
         Try
             Dim ValidateEmail As Boolean
@@ -88,7 +91,25 @@ Public Class UserManagementForm
         connection.Close()
     End Sub
 
+    Public Function Md5FromString(ByVal Source As String) As String
+        Dim bytes() As Byte
+        Dim stringBuilder As New StringBuilder()
+        If String.IsNullOrEmpty(Source) Then
+            Throw New ArgumentNullException
+        End If
+
+        bytes = Encoding.Default.GetBytes(Source)
+        bytes = MD5.Create().ComputeHash(bytes)
+        For x As Integer = 0 To bytes.Length - 1
+            stringBuilder.Append(bytes(x).ToString("x2"))
+        Next
+        Return stringBuilder.ToString
+    End Function
+
     Public Sub executequery(ByVal query As String)
+        Dim hashCode As UserManagementForm
+        hashCode = New UserManagementForm()
+
         Dim cmd As New SqlCommand(query, connection)
         cmd.Parameters.AddWithValue("@Firstname", Firstname.Text)
         cmd.Parameters.AddWithValue("@Middlename", Middlename.Text)
@@ -101,7 +122,7 @@ Public Class UserManagementForm
         cmd.Parameters.AddWithValue("@Division", Division.Text)
         cmd.Parameters.AddWithValue("@Position", Position.Text)
         cmd.Parameters.AddWithValue("@Username", Username.Text)
-        cmd.Parameters.AddWithValue("@Password", Password.Text)
+        cmd.Parameters.AddWithValue("@Password", hashCode.Md5FromString(Password.Text))
         cmd.Parameters.AddWithValue("@Question", Question.SelectedItem)
         cmd.Parameters.AddWithValue("@Answer", Answer.Text)
         cmd.Parameters.AddWithValue("@Usertype", Usertype.Text)
@@ -118,6 +139,9 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
+        Dim hashCode As UserManagementForm
+        hashCode = New UserManagementForm()
+
         Try
             Dim ValidateEmail As Boolean
             ValidateEmail = Regex.IsMatch(EmailEdit.Text, "^([\w]+)@([\w]+)\.([\w]+)$", RegexOptions.IgnoreCase)
@@ -161,7 +185,7 @@ Public Class UserManagementForm
             ElseIf QuestionEdit.SelectedIndex <> 0 And QuestionEdit.SelectedIndex <> 1 And QuestionEdit.SelectedIndex <> 2 And QuestionEdit.SelectedIndex <> 3 And QuestionEdit.SelectedIndex <> 4 Then
                 MessageBox.Show("Invalid data", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 QuestionEdit.Focus()
-            ElseIf Genderedit.SelectedIndex <> 0 And Genderedit.SelectedIndex <> 1 Then
+            ElseIf GenderEdit.SelectedIndex <> 0 And GenderEdit.SelectedIndex <> 1 Then
                 MessageBox.Show("Invalid data", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 GenderEdit.Focus()
             Else
@@ -178,7 +202,7 @@ Public Class UserManagementForm
                     connection.Open()
                     cmd.Connection = connection
                     cmd.CommandType = CommandType.Text
-                    cmd.CommandText = "UPDATE user_tbl SET Firstname = '" & FirstnameEdit.Text & "', Middlename = '" & MiddlenameEdit.Text & "', Lastname = '" & LastnameEdit.Text & "', Birthdate = @Birthdate, Age = '" & AgeEdit.Text & "', Gender = '" & GenderEdit.SelectedItem & "', ContactNumber = '" & ContactNumberEdit.Text & "', EmailAddress = '" & EmailEdit.Text & "', Division = '" & DivisionEdit.Text & "', Position = '" & PositionEdit.Text & "',Usertype = @Usertype, Username = '" & UsernameEdit.Text & "', Password = '" & PasswordEdit.Text & "', Answer = '" & AnswerEdit.Text & "', Question = @Question WHERE UserID = '" & UserID.Text & "' "
+                    cmd.CommandText = "UPDATE user_tbl SET Firstname = '" & FirstnameEdit.Text & "', Middlename = '" & MiddlenameEdit.Text & "', Lastname = '" & LastnameEdit.Text & "', Birthdate = @Birthdate, Age = '" & AgeEdit.Text & "', Gender = '" & GenderEdit.SelectedItem & "', ContactNumber = '" & ContactNumberEdit.Text & "', EmailAddress = '" & EmailEdit.Text & "', Division = '" & DivisionEdit.Text & "', Position = '" & PositionEdit.Text & "',Usertype = @Usertype, Username = '" & UsernameEdit.Text & "', Password = '" & hashCode.Md5FromString(PasswordEdit.Text) & "', Answer = '" & AnswerEdit.Text & "', Question = @Question WHERE UserID = '" & UserID.Text & "' "
                     cmd.Parameters.Add("@Birthdate", SqlDbType.Date).Value = BirthdateEdit.Value
                     cmd.Parameters.AddWithValue("@Question", QuestionEdit.SelectedItem)
                     cmd.Parameters.AddWithValue("@Usertype", UsertypeEdit.SelectedItem)
