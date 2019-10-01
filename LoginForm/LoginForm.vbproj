@@ -396,10 +396,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="IEFReqForm.Designer.vb">
-      <DependentUpon>IEFReqForm.vb</DependentUpon>
+    <Compile Include="IEF-InpectorForm.Designer.vb">
+      <DependentUpon>IEF-InpectorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="IEFReqForm.vb">
+    <Compile Include="IEF-InpectorForm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -534,8 +534,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="IEFReqForm.resx">
-      <DependentUpon>IEFReqForm.vb</DependentUpon>
+    <EmbeddedResource Include="IEF-InpectorForm.resx">
+      <DependentUpon>IEF-InpectorForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

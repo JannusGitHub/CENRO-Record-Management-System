@@ -24,13 +24,13 @@ Partial Class FastfoodCanteenAndRestoForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FastfoodCanteenAndRestoForm))
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -42,10 +42,35 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GeneralManagerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NatureOfBusinessDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FastfoodCanteenAndRestauranttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.SMR = New System.Windows.Forms.ComboBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.AccreditedWasteHauler = New System.Windows.Forms.ComboBox()
+        Me.DP = New System.Windows.Forms.ComboBox()
+        Me.PTO = New System.Windows.Forms.ComboBox()
+        Me.ECC = New System.Windows.Forms.ComboBox()
+        Me.DTISEC = New System.Windows.Forms.ComboBox()
+        Me.BrgyClearance = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.NewButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
@@ -90,7 +115,18 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ControlNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ECCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DPDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.NameOfEstablishmentReq = New System.Windows.Forms.TextBox()
         Me.ControlNumber1 = New System.Windows.Forms.TextBox()
@@ -108,42 +144,6 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PTO1 = New System.Windows.Forms.TextBox()
         Me.FastfoodCanteenAndRestaurant_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter()
-        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GeneralManagerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NatureOfBusinessDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ControlNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ECCDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DPDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DTISEC = New System.Windows.Forms.ComboBox()
-        Me.BrgyClearance = New System.Windows.Forms.ComboBox()
-        Me.DP = New System.Windows.Forms.ComboBox()
-        Me.PTO = New System.Windows.Forms.ComboBox()
-        Me.ECC = New System.Windows.Forms.ComboBox()
-        Me.AccreditedWasteHauler = New System.Windows.Forms.ComboBox()
-        Me.SMR = New System.Windows.Forms.ComboBox()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.SMR1 = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -289,46 +289,216 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 26
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ControlNumberDataGridViewTextBoxColumn, Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.EmailAddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.GeneralManagerDataGridViewTextBoxColumn, Me.PollutionControlOfficerDataGridViewTextBoxColumn, Me.NatureOfBusinessDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(3, 414)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 50
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1080, 238)
         Me.DataGridView1.TabIndex = 51
+        '
+        'ControlNumberDataGridViewTextBoxColumn
+        '
+        Me.ControlNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ControlNumberDataGridViewTextBoxColumn.DataPropertyName = "ControlNumber"
+        Me.ControlNumberDataGridViewTextBoxColumn.HeaderText = "Control Number"
+        Me.ControlNumberDataGridViewTextBoxColumn.Name = "ControlNumberDataGridViewTextBoxColumn"
+        Me.ControlNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ControlNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ControlNumberDataGridViewTextBoxColumn.Width = 158
+        '
+        'NameOfEstablishmentDataGridViewTextBoxColumn
+        '
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.DataPropertyName = "NameOfEstablishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.HeaderText = "Name of Establishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Name = "NameOfEstablishmentDataGridViewTextBoxColumn"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 212
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AddressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AddressDataGridViewTextBoxColumn.Width = 95
+        '
+        'EmailAddressDataGridViewTextBoxColumn
+        '
+        Me.EmailAddressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.EmailAddressDataGridViewTextBoxColumn.DataPropertyName = "EmailAddress"
+        Me.EmailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address"
+        Me.EmailAddressDataGridViewTextBoxColumn.Name = "EmailAddressDataGridViewTextBoxColumn"
+        Me.EmailAddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmailAddressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EmailAddressDataGridViewTextBoxColumn.Width = 140
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "CEO_President"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CEO_President"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn1.Width = 148
+        '
+        'GeneralManagerDataGridViewTextBoxColumn
+        '
+        Me.GeneralManagerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.GeneralManagerDataGridViewTextBoxColumn.DataPropertyName = "GeneralManager"
+        Me.GeneralManagerDataGridViewTextBoxColumn.HeaderText = "General Manager"
+        Me.GeneralManagerDataGridViewTextBoxColumn.Name = "GeneralManagerDataGridViewTextBoxColumn"
+        Me.GeneralManagerDataGridViewTextBoxColumn.ReadOnly = True
+        Me.GeneralManagerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GeneralManagerDataGridViewTextBoxColumn.Width = 173
+        '
+        'PollutionControlOfficerDataGridViewTextBoxColumn
+        '
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.DataPropertyName = "PollutionControlOfficer"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.HeaderText = "Pollution Control Officer"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Name = "PollutionControlOfficerDataGridViewTextBoxColumn"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Width = 216
+        '
+        'NatureOfBusinessDataGridViewTextBoxColumn
+        '
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.DataPropertyName = "NatureOfBusiness"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.HeaderText = "Nature of Business"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.Name = "NatureOfBusinessDataGridViewTextBoxColumn"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NatureOfBusinessDataGridViewTextBoxColumn.Width = 171
+        '
+        'ContactNumberDataGridViewTextBoxColumn
+        '
+        Me.ContactNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ContactNumberDataGridViewTextBoxColumn.DataPropertyName = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn.HeaderText = "Contact Number"
+        Me.ContactNumberDataGridViewTextBoxColumn.Name = "ContactNumberDataGridViewTextBoxColumn"
+        Me.ContactNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ContactNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ContactNumberDataGridViewTextBoxColumn.Width = 168
+        '
+        'NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn
+        '
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "NameOfAccreditedWasteHauler"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Nameof Accredited Waste Hauler"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 297
+        '
+        'BrgyClearanceWithCTCDataGridViewTextBoxColumn
+        '
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.DataPropertyName = "BrgyClearanceWithCTC"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.HeaderText = "Brgy. Clearance"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 157
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "DTI_SEC"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "DTI_SEC"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.Width = 96
+        '
+        'ECCDataGridViewTextBoxColumn
+        '
+        Me.ECCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ECCDataGridViewTextBoxColumn.DataPropertyName = "ECC"
+        Me.ECCDataGridViewTextBoxColumn.HeaderText = "ECC"
+        Me.ECCDataGridViewTextBoxColumn.Name = "ECCDataGridViewTextBoxColumn"
+        Me.ECCDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ECCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ECCDataGridViewTextBoxColumn.Width = 68
+        '
+        'PTODataGridViewTextBoxColumn
+        '
+        Me.PTODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PTODataGridViewTextBoxColumn.DataPropertyName = "PTO"
+        Me.PTODataGridViewTextBoxColumn.HeaderText = "PTO"
+        Me.PTODataGridViewTextBoxColumn.Name = "PTODataGridViewTextBoxColumn"
+        Me.PTODataGridViewTextBoxColumn.ReadOnly = True
+        Me.PTODataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PTODataGridViewTextBoxColumn.Width = 64
+        '
+        'DPDataGridViewTextBoxColumn
+        '
+        Me.DPDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DPDataGridViewTextBoxColumn.DataPropertyName = "DP"
+        Me.DPDataGridViewTextBoxColumn.HeaderText = "DP"
+        Me.DPDataGridViewTextBoxColumn.Name = "DPDataGridViewTextBoxColumn"
+        Me.DPDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DPDataGridViewTextBoxColumn.Width = 54
+        '
+        'AccreditedWasteHaulerDataGridViewTextBoxColumn
+        '
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "AccreditedWasteHauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Accredited Waste Hauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
+        '
+        'SelfMonitoringReport
+        '
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'FastfoodCanteenAndRestauranttblBindingSource
         '
@@ -394,6 +564,93 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.GroupBox1.TabIndex = 46
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Fastfood, Canteen and Restaurant"
+        '
+        'SMR
+        '
+        Me.SMR.BackColor = System.Drawing.Color.White
+        Me.SMR.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR.FormattingEnabled = True
+        Me.SMR.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.SMR.Location = New System.Drawing.Point(601, 249)
+        Me.SMR.Name = "SMR"
+        Me.SMR.Size = New System.Drawing.Size(202, 25)
+        Me.SMR.TabIndex = 57
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(598, 229)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(43, 21)
+        Me.Label31.TabIndex = 56
+        Me.Label31.Text = "SMR"
+        '
+        'AccreditedWasteHauler
+        '
+        Me.AccreditedWasteHauler.BackColor = System.Drawing.Color.White
+        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccreditedWasteHauler.FormattingEnabled = True
+        Me.AccreditedWasteHauler.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(601, 199)
+        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
+        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(202, 25)
+        Me.AccreditedWasteHauler.TabIndex = 55
+        '
+        'DP
+        '
+        Me.DP.BackColor = System.Drawing.Color.White
+        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DP.FormattingEnabled = True
+        Me.DP.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DP.Location = New System.Drawing.Point(601, 149)
+        Me.DP.Name = "DP"
+        Me.DP.Size = New System.Drawing.Size(202, 25)
+        Me.DP.TabIndex = 54
+        '
+        'PTO
+        '
+        Me.PTO.BackColor = System.Drawing.Color.White
+        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PTO.FormattingEnabled = True
+        Me.PTO.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.PTO.Location = New System.Drawing.Point(601, 99)
+        Me.PTO.Name = "PTO"
+        Me.PTO.Size = New System.Drawing.Size(202, 25)
+        Me.PTO.TabIndex = 53
+        '
+        'ECC
+        '
+        Me.ECC.BackColor = System.Drawing.Color.White
+        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ECC.FormattingEnabled = True
+        Me.ECC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.ECC.Location = New System.Drawing.Point(601, 49)
+        Me.ECC.Name = "ECC"
+        Me.ECC.Size = New System.Drawing.Size(202, 25)
+        Me.ECC.TabIndex = 52
+        '
+        'DTISEC
+        '
+        Me.DTISEC.BackColor = System.Drawing.Color.White
+        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTISEC.FormattingEnabled = True
+        Me.DTISEC.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.DTISEC.Location = New System.Drawing.Point(288, 299)
+        Me.DTISEC.Name = "DTISEC"
+        Me.DTISEC.Size = New System.Drawing.Size(202, 25)
+        Me.DTISEC.TabIndex = 50
+        '
+        'BrgyClearance
+        '
+        Me.BrgyClearance.BackColor = System.Drawing.Color.White
+        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrgyClearance.FormattingEnabled = True
+        Me.BrgyClearance.Items.AddRange(New Object() {"Compliant", "Oath"})
+        Me.BrgyClearance.Location = New System.Drawing.Point(288, 249)
+        Me.BrgyClearance.Name = "BrgyClearance"
+        Me.BrgyClearance.Size = New System.Drawing.Size(202, 25)
+        Me.BrgyClearance.TabIndex = 49
         '
         'GroupBox3
         '
@@ -567,9 +824,9 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(284, 175)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(278, 21)
+        Me.Label10.Size = New System.Drawing.Size(207, 21)
         Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Name of Accredited Waste Hauler"
+        Me.Label10.Text = "Accredited Waste Hauler"
         '
         'ContactNumber
         '
@@ -875,37 +1132,127 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView2.ColumnHeadersHeight = 26
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn1, Me.ControlNumberDataGridViewTextBoxColumn1, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3})
         Me.DataGridView2.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(3, 381)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(1080, 266)
         Me.DataGridView2.TabIndex = 57
+        '
+        'NameOfEstablishmentDataGridViewTextBoxColumn1
+        '
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.DataPropertyName = "NameOfEstablishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.HeaderText = "Name of Establishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Name = "NameOfEstablishmentDataGridViewTextBoxColumn1"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Width = 212
+        '
+        'ControlNumberDataGridViewTextBoxColumn1
+        '
+        Me.ControlNumberDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ControlNumberDataGridViewTextBoxColumn1.DataPropertyName = "ControlNumber"
+        Me.ControlNumberDataGridViewTextBoxColumn1.HeaderText = "Control Number"
+        Me.ControlNumberDataGridViewTextBoxColumn1.Name = "ControlNumberDataGridViewTextBoxColumn1"
+        Me.ControlNumberDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ControlNumberDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ControlNumberDataGridViewTextBoxColumn1.Width = 158
+        '
+        'BrgyClearanceWithCTCDataGridViewTextBoxColumn1
+        '
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.DataPropertyName = "BrgyClearanceWithCTC"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.HeaderText = "Brgy. Clearance"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn1"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Width = 157
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "DTI_SEC"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "DTI_SEC"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn4.Width = 96
+        '
+        'ECCDataGridViewTextBoxColumn1
+        '
+        Me.ECCDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ECCDataGridViewTextBoxColumn1.DataPropertyName = "ECC"
+        Me.ECCDataGridViewTextBoxColumn1.HeaderText = "ECC"
+        Me.ECCDataGridViewTextBoxColumn1.Name = "ECCDataGridViewTextBoxColumn1"
+        Me.ECCDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ECCDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ECCDataGridViewTextBoxColumn1.Width = 68
+        '
+        'PTODataGridViewTextBoxColumn1
+        '
+        Me.PTODataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PTODataGridViewTextBoxColumn1.DataPropertyName = "PTO"
+        Me.PTODataGridViewTextBoxColumn1.HeaderText = "PTO"
+        Me.PTODataGridViewTextBoxColumn1.Name = "PTODataGridViewTextBoxColumn1"
+        Me.PTODataGridViewTextBoxColumn1.ReadOnly = True
+        Me.PTODataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PTODataGridViewTextBoxColumn1.Width = 64
+        '
+        'DPDataGridViewTextBoxColumn1
+        '
+        Me.DPDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DPDataGridViewTextBoxColumn1.DataPropertyName = "DP"
+        Me.DPDataGridViewTextBoxColumn1.HeaderText = "DP"
+        Me.DPDataGridViewTextBoxColumn1.Name = "DPDataGridViewTextBoxColumn1"
+        Me.DPDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DPDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DPDataGridViewTextBoxColumn1.Width = 54
+        '
+        'AccreditedWasteHaulerDataGridViewTextBoxColumn1
+        '
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.DataPropertyName = "AccreditedWasteHauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.HeaderText = "Accredited Waste Hauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn1"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Width = 230
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "SelfMonitoringReport"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "SMR"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn3.Width = 66
         '
         'GroupBox2
         '
@@ -934,6 +1281,27 @@ Partial Class FastfoodCanteenAndRestoForm
         Me.GroupBox2.TabIndex = 54
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Fastfood, Canteen and Restaurant"
+        '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(650, 173)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(250, 23)
+        Me.SMR1.TabIndex = 59
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(646, 149)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(43, 21)
+        Me.Label32.TabIndex = 60
+        Me.Label32.Text = "SMR"
         '
         'Label29
         '
@@ -1106,374 +1474,6 @@ Partial Class FastfoodCanteenAndRestoForm
         'FastfoodCanteenAndRestaurant_tblTableAdapter
         '
         Me.FastfoodCanteenAndRestaurant_tblTableAdapter.ClearBeforeFill = True
-        '
-        'ControlNumberDataGridViewTextBoxColumn
-        '
-        Me.ControlNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ControlNumberDataGridViewTextBoxColumn.DataPropertyName = "ControlNumber"
-        Me.ControlNumberDataGridViewTextBoxColumn.HeaderText = "Control Number"
-        Me.ControlNumberDataGridViewTextBoxColumn.Name = "ControlNumberDataGridViewTextBoxColumn"
-        Me.ControlNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ControlNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ControlNumberDataGridViewTextBoxColumn.Width = 158
-        '
-        'NameOfEstablishmentDataGridViewTextBoxColumn
-        '
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.DataPropertyName = "NameOfEstablishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.HeaderText = "Name of Establishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Name = "NameOfEstablishmentDataGridViewTextBoxColumn"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 212
-        '
-        'AddressDataGridViewTextBoxColumn
-        '
-        Me.AddressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
-        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
-        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
-        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AddressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AddressDataGridViewTextBoxColumn.Width = 95
-        '
-        'EmailAddressDataGridViewTextBoxColumn
-        '
-        Me.EmailAddressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.EmailAddressDataGridViewTextBoxColumn.DataPropertyName = "EmailAddress"
-        Me.EmailAddressDataGridViewTextBoxColumn.HeaderText = "Email Address"
-        Me.EmailAddressDataGridViewTextBoxColumn.Name = "EmailAddressDataGridViewTextBoxColumn"
-        Me.EmailAddressDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EmailAddressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EmailAddressDataGridViewTextBoxColumn.Width = 140
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "CEO_President"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "CEO_President"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewTextBoxColumn1.Width = 148
-        '
-        'GeneralManagerDataGridViewTextBoxColumn
-        '
-        Me.GeneralManagerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.GeneralManagerDataGridViewTextBoxColumn.DataPropertyName = "GeneralManager"
-        Me.GeneralManagerDataGridViewTextBoxColumn.HeaderText = "General Manager"
-        Me.GeneralManagerDataGridViewTextBoxColumn.Name = "GeneralManagerDataGridViewTextBoxColumn"
-        Me.GeneralManagerDataGridViewTextBoxColumn.ReadOnly = True
-        Me.GeneralManagerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GeneralManagerDataGridViewTextBoxColumn.Width = 173
-        '
-        'PollutionControlOfficerDataGridViewTextBoxColumn
-        '
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.DataPropertyName = "PollutionControlOfficer"
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.HeaderText = "Pollution Control Officer"
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Name = "PollutionControlOfficerDataGridViewTextBoxColumn"
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PollutionControlOfficerDataGridViewTextBoxColumn.Width = 216
-        '
-        'NatureOfBusinessDataGridViewTextBoxColumn
-        '
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.DataPropertyName = "NatureOfBusiness"
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.HeaderText = "Nature of Business"
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.Name = "NatureOfBusinessDataGridViewTextBoxColumn"
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NatureOfBusinessDataGridViewTextBoxColumn.Width = 171
-        '
-        'ContactNumberDataGridViewTextBoxColumn
-        '
-        Me.ContactNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ContactNumberDataGridViewTextBoxColumn.DataPropertyName = "ContactNumber"
-        Me.ContactNumberDataGridViewTextBoxColumn.HeaderText = "Contact Number"
-        Me.ContactNumberDataGridViewTextBoxColumn.Name = "ContactNumberDataGridViewTextBoxColumn"
-        Me.ContactNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ContactNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ContactNumberDataGridViewTextBoxColumn.Width = 168
-        '
-        'NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn
-        '
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "NameOfAccreditedWasteHauler"
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Nameof Accredited Waste Hauler"
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn"
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 297
-        '
-        'BrgyClearanceWithCTCDataGridViewTextBoxColumn
-        '
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.DataPropertyName = "BrgyClearanceWithCTC"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.HeaderText = "Brgy. Clearance"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 157
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "DTI_SEC"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "DTI_SEC"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewTextBoxColumn2.Width = 96
-        '
-        'ECCDataGridViewTextBoxColumn
-        '
-        Me.ECCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ECCDataGridViewTextBoxColumn.DataPropertyName = "ECC"
-        Me.ECCDataGridViewTextBoxColumn.HeaderText = "ECC"
-        Me.ECCDataGridViewTextBoxColumn.Name = "ECCDataGridViewTextBoxColumn"
-        Me.ECCDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ECCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ECCDataGridViewTextBoxColumn.Width = 68
-        '
-        'PTODataGridViewTextBoxColumn
-        '
-        Me.PTODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.PTODataGridViewTextBoxColumn.DataPropertyName = "PTO"
-        Me.PTODataGridViewTextBoxColumn.HeaderText = "PTO"
-        Me.PTODataGridViewTextBoxColumn.Name = "PTODataGridViewTextBoxColumn"
-        Me.PTODataGridViewTextBoxColumn.ReadOnly = True
-        Me.PTODataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PTODataGridViewTextBoxColumn.Width = 64
-        '
-        'DPDataGridViewTextBoxColumn
-        '
-        Me.DPDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DPDataGridViewTextBoxColumn.DataPropertyName = "DP"
-        Me.DPDataGridViewTextBoxColumn.HeaderText = "DP"
-        Me.DPDataGridViewTextBoxColumn.Name = "DPDataGridViewTextBoxColumn"
-        Me.DPDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DPDataGridViewTextBoxColumn.Width = 54
-        '
-        'AccreditedWasteHaulerDataGridViewTextBoxColumn
-        '
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "AccreditedWasteHauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Accredited Waste Hauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
-        '
-        'SelfMonitoringReport
-        '
-        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
-        Me.SelfMonitoringReport.HeaderText = "SMR"
-        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
-        Me.SelfMonitoringReport.ReadOnly = True
-        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.SelfMonitoringReport.Width = 66
-        '
-        'NameOfEstablishmentDataGridViewTextBoxColumn1
-        '
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.DataPropertyName = "NameOfEstablishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.HeaderText = "Name of Establishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Name = "NameOfEstablishmentDataGridViewTextBoxColumn1"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn1.Width = 212
-        '
-        'ControlNumberDataGridViewTextBoxColumn1
-        '
-        Me.ControlNumberDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ControlNumberDataGridViewTextBoxColumn1.DataPropertyName = "ControlNumber"
-        Me.ControlNumberDataGridViewTextBoxColumn1.HeaderText = "Control Number"
-        Me.ControlNumberDataGridViewTextBoxColumn1.Name = "ControlNumberDataGridViewTextBoxColumn1"
-        Me.ControlNumberDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.ControlNumberDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ControlNumberDataGridViewTextBoxColumn1.Width = 158
-        '
-        'BrgyClearanceWithCTCDataGridViewTextBoxColumn1
-        '
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.DataPropertyName = "BrgyClearanceWithCTC"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.HeaderText = "Brgy. Clearance"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn1"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1.Width = 157
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "DTI_SEC"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "DTI_SEC"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewTextBoxColumn4.Width = 96
-        '
-        'ECCDataGridViewTextBoxColumn1
-        '
-        Me.ECCDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ECCDataGridViewTextBoxColumn1.DataPropertyName = "ECC"
-        Me.ECCDataGridViewTextBoxColumn1.HeaderText = "ECC"
-        Me.ECCDataGridViewTextBoxColumn1.Name = "ECCDataGridViewTextBoxColumn1"
-        Me.ECCDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.ECCDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ECCDataGridViewTextBoxColumn1.Width = 68
-        '
-        'PTODataGridViewTextBoxColumn1
-        '
-        Me.PTODataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.PTODataGridViewTextBoxColumn1.DataPropertyName = "PTO"
-        Me.PTODataGridViewTextBoxColumn1.HeaderText = "PTO"
-        Me.PTODataGridViewTextBoxColumn1.Name = "PTODataGridViewTextBoxColumn1"
-        Me.PTODataGridViewTextBoxColumn1.ReadOnly = True
-        Me.PTODataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PTODataGridViewTextBoxColumn1.Width = 64
-        '
-        'DPDataGridViewTextBoxColumn1
-        '
-        Me.DPDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DPDataGridViewTextBoxColumn1.DataPropertyName = "DP"
-        Me.DPDataGridViewTextBoxColumn1.HeaderText = "DP"
-        Me.DPDataGridViewTextBoxColumn1.Name = "DPDataGridViewTextBoxColumn1"
-        Me.DPDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DPDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DPDataGridViewTextBoxColumn1.Width = 54
-        '
-        'AccreditedWasteHaulerDataGridViewTextBoxColumn1
-        '
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.DataPropertyName = "AccreditedWasteHauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.HeaderText = "Accredited Waste Hauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn1"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1.Width = 230
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "SelfMonitoringReport"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "SMR"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewTextBoxColumn3.Width = 66
-        '
-        'DTISEC
-        '
-        Me.DTISEC.BackColor = System.Drawing.Color.White
-        Me.DTISEC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTISEC.FormattingEnabled = True
-        Me.DTISEC.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.DTISEC.Location = New System.Drawing.Point(288, 299)
-        Me.DTISEC.Name = "DTISEC"
-        Me.DTISEC.Size = New System.Drawing.Size(202, 25)
-        Me.DTISEC.TabIndex = 50
-        '
-        'BrgyClearance
-        '
-        Me.BrgyClearance.BackColor = System.Drawing.Color.White
-        Me.BrgyClearance.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BrgyClearance.FormattingEnabled = True
-        Me.BrgyClearance.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.BrgyClearance.Location = New System.Drawing.Point(288, 249)
-        Me.BrgyClearance.Name = "BrgyClearance"
-        Me.BrgyClearance.Size = New System.Drawing.Size(202, 25)
-        Me.BrgyClearance.TabIndex = 49
-        '
-        'DP
-        '
-        Me.DP.BackColor = System.Drawing.Color.White
-        Me.DP.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP.FormattingEnabled = True
-        Me.DP.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.DP.Location = New System.Drawing.Point(601, 149)
-        Me.DP.Name = "DP"
-        Me.DP.Size = New System.Drawing.Size(202, 25)
-        Me.DP.TabIndex = 54
-        '
-        'PTO
-        '
-        Me.PTO.BackColor = System.Drawing.Color.White
-        Me.PTO.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO.FormattingEnabled = True
-        Me.PTO.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.PTO.Location = New System.Drawing.Point(601, 99)
-        Me.PTO.Name = "PTO"
-        Me.PTO.Size = New System.Drawing.Size(202, 25)
-        Me.PTO.TabIndex = 53
-        '
-        'ECC
-        '
-        Me.ECC.BackColor = System.Drawing.Color.White
-        Me.ECC.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ECC.FormattingEnabled = True
-        Me.ECC.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.ECC.Location = New System.Drawing.Point(601, 49)
-        Me.ECC.Name = "ECC"
-        Me.ECC.Size = New System.Drawing.Size(202, 25)
-        Me.ECC.TabIndex = 52
-        '
-        'AccreditedWasteHauler
-        '
-        Me.AccreditedWasteHauler.BackColor = System.Drawing.Color.White
-        Me.AccreditedWasteHauler.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler.FormattingEnabled = True
-        Me.AccreditedWasteHauler.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.AccreditedWasteHauler.Location = New System.Drawing.Point(601, 199)
-        Me.AccreditedWasteHauler.Name = "AccreditedWasteHauler"
-        Me.AccreditedWasteHauler.Size = New System.Drawing.Size(202, 25)
-        Me.AccreditedWasteHauler.TabIndex = 55
-        '
-        'SMR
-        '
-        Me.SMR.BackColor = System.Drawing.Color.White
-        Me.SMR.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SMR.FormattingEnabled = True
-        Me.SMR.Items.AddRange(New Object() {"Compliant", "Oath"})
-        Me.SMR.Location = New System.Drawing.Point(601, 249)
-        Me.SMR.Name = "SMR"
-        Me.SMR.Size = New System.Drawing.Size(202, 25)
-        Me.SMR.TabIndex = 57
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(598, 229)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(43, 21)
-        Me.Label31.TabIndex = 56
-        Me.Label31.Text = "SMR"
-        '
-        'SMR1
-        '
-        Me.SMR1.BackColor = System.Drawing.Color.White
-        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SMR1.Location = New System.Drawing.Point(650, 173)
-        Me.SMR1.Multiline = True
-        Me.SMR1.Name = "SMR1"
-        Me.SMR1.ReadOnly = True
-        Me.SMR1.Size = New System.Drawing.Size(250, 23)
-        Me.SMR1.TabIndex = 59
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(646, 149)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(43, 21)
-        Me.Label32.TabIndex = 60
-        Me.Label32.Text = "SMR"
         '
         'FastfoodCanteenAndRestoForm
         '

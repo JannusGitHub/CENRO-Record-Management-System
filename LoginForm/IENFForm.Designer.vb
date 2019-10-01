@@ -875,9 +875,9 @@ Partial Class IENFForm
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(232, 180)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(117, 21)
+        Me.Label10.Size = New System.Drawing.Size(207, 21)
         Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Name of AWS"
+        Me.Label10.Text = "Accredited Waste Hauler"
         '
         'ContactNumber
         '
