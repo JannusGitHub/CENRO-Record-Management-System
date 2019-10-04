@@ -15,8 +15,27 @@ Public Class Main
         Dim result As DialogResult
         result = MessageBox.Show(Me, message, caption, buttons, icons)
 
+        Dim Administrator As String = "Administrator"
+        Dim Logout As String = "Logged Out"
+        Dim dateofloghistory As String = Date.Now.ToString("dd MMM yyyy hh:mm:ss")
+        Dim Username As String = Login.Username.Text
+
         If result = DialogResult.Yes Then
+            Dim insertquery As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username & "', '" & Administrator & "', '" & Logout & "', '" & dateofloghistory & "')"
+            Dim cmd As New SqlCommand(insertquery, connection)
+            connection.Open()
+            cmd.ExecuteNonQuery()
+            Login.Username.Clear()
+            Login.Password.Clear()
+            Login.Show()
+            Login.Refresh()
+            Login.Username.Focus()
+            If Login.showpassword.Checked = True Then
+                Login.showpassword.Checked = False
+            End If
             e.Cancel = False
+            Me.Dispose()
+            connection.Close()
         Else
             e.Cancel = True
         End If
@@ -133,11 +152,13 @@ Public Class Main
         activeButton.Top = Button3.Top
 
         Dim message As String = "Do you want to logout?"
-        Dim caption As String = "Confirmation"
+        Dim caption As String = "Message"
         Dim icons As String = MessageBoxIcon.Question
         Dim buttons As String = MessageBoxButtons.YesNo
+
         Dim result As DialogResult
         result = MessageBox.Show(Me, message, caption, buttons, icons)
+
         Dim Administrator As String = "Administrator"
         Dim Logout As String = "Logged Out"
         Dim dateofloghistory As String = Date.Now.ToString("dd MMM yyyy hh:mm:ss")
@@ -278,17 +299,5 @@ Public Class Main
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        For Each form As Form In Me.MDIpanel.Controls
-            form.Close()
-        Next
-        With Settings
-            .TopLevel = False
-            MDIpanel.Controls.Add(Settings)
-            .BringToFront()
-            .Show()
-        End With
-        activeButton.Height = Button7.Height
-        activeButton.Top = Button7.Top
-    End Sub
+
 End Class

@@ -57,6 +57,12 @@ Partial Class FastfoodReqForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.FastfoodCanteenAndRestauranttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.FastfoodCanteenAndRestaurant_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
         Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -65,10 +71,7 @@ Partial Class FastfoodReqForm
         Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FastfoodCanteenAndRestauranttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.FastfoodCanteenAndRestaurant_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -104,6 +107,8 @@ Partial Class FastfoodReqForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label34)
+        Me.GroupBox1.Controls.Add(Me.SMR1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.Label29)
@@ -433,7 +438,7 @@ Partial Class FastfoodReqForm
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 26
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.FastfoodCanteenAndRestauranttblBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
@@ -455,6 +460,51 @@ Partial Class FastfoodReqForm
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(691, 250)
         Me.DataGridView1.TabIndex = 70
+        '
+        'FastfoodCanteenAndRestauranttblBindingSource
+        '
+        Me.FastfoodCanteenAndRestauranttblBindingSource.DataMember = "FastfoodCanteenAndRestaurant_tbl"
+        Me.FastfoodCanteenAndRestauranttblBindingSource.DataSource = Me.Cenro_DBDataSet
+        '
+        'Cenro_DBDataSet
+        '
+        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
+        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(148, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(395, 21)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Fastfood, Canteen and Restaurant Requirements"
+        '
+        'FastfoodCanteenAndRestaurant_tblTableAdapter
+        '
+        Me.FastfoodCanteenAndRestaurant_tblTableAdapter.ClearBeforeFill = True
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(269, 185)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 21)
+        Me.Label34.TabIndex = 102
+        Me.Label34.Text = "SMR"
+        '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(273, 209)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(202, 24)
+        Me.SMR1.TabIndex = 101
         '
         'NameOfEstablishmentDataGridViewTextBoxColumn
         '
@@ -536,29 +586,15 @@ Partial Class FastfoodReqForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
         '
-        'FastfoodCanteenAndRestauranttblBindingSource
+        'SelfMonitoringReport
         '
-        Me.FastfoodCanteenAndRestauranttblBindingSource.DataMember = "FastfoodCanteenAndRestaurant_tbl"
-        Me.FastfoodCanteenAndRestauranttblBindingSource.DataSource = Me.Cenro_DBDataSet
-        '
-        'Cenro_DBDataSet
-        '
-        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
-        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(148, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(395, 21)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "Fastfood, Canteen and Restaurant Requirements"
-        '
-        'FastfoodCanteenAndRestaurant_tblTableAdapter
-        '
-        Me.FastfoodCanteenAndRestaurant_tblTableAdapter.ClearBeforeFill = True
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'FastfoodReqForm
         '
@@ -616,6 +652,14 @@ Partial Class FastfoodReqForm
     Friend WithEvents FastfoodCanteenAndRestauranttblBindingSource As BindingSource
     Friend WithEvents FastfoodCanteenAndRestaurant_tblTableAdapter As cenro_DBDataSetTableAdapters.FastfoodCanteenAndRestaurant_tblTableAdapter
     Friend WithEvents DTISECDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents Print As Button
+    Friend WithEvents Label34 As Label
+    Friend WithEvents SMR1 As TextBox
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BrgyClearanceWithCTCDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -624,10 +668,5 @@ Partial Class FastfoodReqForm
     Friend WithEvents PTODataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents ClearButton As Button
-    Friend WithEvents Print As Button
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
 End Class

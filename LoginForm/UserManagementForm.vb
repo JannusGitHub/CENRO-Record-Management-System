@@ -55,7 +55,7 @@ Public Class UserManagementForm
                 Gender.Focus()
             ElseIf Password.Text = ConfirmPassword.Text And Gender.SelectedItem = "Male" Or Gender.SelectedItem = "Female" Then
                 Dim Status As String = "Active"
-                Dim insertquery As String = "INSERT INTO user_tbl(Firstname,Middlename,Lastname,Birthdate,Age,Gender,ContactNumber,EmailAddress,Division,Position,Username,Password,Question,Answer,Usertype,Status) VALUES(@Firstname,@Middlename,@Lastname,@Birthdate,@Age,@Gender,@ContactNumber,@EmailAddress,@Division,@Position,@Username,@Password,@Question,@Answer,@Usertype,'" & Status & "')"
+                Dim insertquery As String = "INSERT INTO user_tbl(Firstname,Middlename,Lastname,Birthdate,Age,Gender,ContactNumber,EmailAddress,Division,Position,Username,Password,Question,Answer,Usertype,Status) &_ VALUES(@Firstname,@Middlename,@Lastname,@Birthdate,@Age,@Gender,@ContactNumber,@EmailAddress,@Division,@Position,@Username,@Password,@Question,@Answer,@Usertype,'" & Status & "')"
                 executequery(insertquery)
                 MessageBox.Show("Registered Successfully", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Firstname.Clear()

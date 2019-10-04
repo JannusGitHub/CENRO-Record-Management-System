@@ -25,6 +25,8 @@ Partial Class Main
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.MDIpanel = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -32,13 +34,10 @@ Partial Class Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.activeButton = New System.Windows.Forms.Panel()
-        Me.Datenow2 = New System.Windows.Forms.Label()
-        Me.Datenow = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.HistoryButton = New System.Windows.Forms.Button()
+        Me.Datenow2 = New System.Windows.Forms.Label()
+        Me.Datenow = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ActivateButton = New System.Windows.Forms.Button()
@@ -47,9 +46,9 @@ Partial Class Main
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,6 +62,28 @@ Partial Class Main
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1106, 35)
         Me.Panel2.TabIndex = 1
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(1048, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox3.TabIndex = 15
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(1077, 4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
         '
         'Panel3
         '
@@ -103,7 +124,6 @@ Partial Class Main
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.Panel1.Controls.Add(Me.activeButton)
-        Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.HistoryButton)
         Me.Panel1.Controls.Add(Me.Datenow2)
@@ -129,68 +149,6 @@ Partial Class Main
         Me.activeButton.Name = "activeButton"
         Me.activeButton.Size = New System.Drawing.Size(5, 30)
         Me.activeButton.TabIndex = 11
-        '
-        'Datenow2
-        '
-        Me.Datenow2.AutoSize = True
-        Me.Datenow2.BackColor = System.Drawing.Color.Transparent
-        Me.Datenow2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datenow2.ForeColor = System.Drawing.Color.White
-        Me.Datenow2.Location = New System.Drawing.Point(80, 744)
-        Me.Datenow2.Name = "Datenow2"
-        Me.Datenow2.Size = New System.Drawing.Size(20, 17)
-        Me.Datenow2.TabIndex = 9
-        Me.Datenow2.Text = "   "
-        '
-        'Datenow
-        '
-        Me.Datenow.AutoSize = True
-        Me.Datenow.BackColor = System.Drawing.Color.Transparent
-        Me.Datenow.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datenow.ForeColor = System.Drawing.Color.White
-        Me.Datenow.Location = New System.Drawing.Point(63, 724)
-        Me.Datenow.Name = "Datenow"
-        Me.Datenow.Size = New System.Drawing.Size(20, 17)
-        Me.Datenow.TabIndex = 8
-        Me.Datenow.Text = "   "
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(1048, 4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox3.TabIndex = 15
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(1077, 4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'Button7
-        '
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Image = Global.LoginForm.My.Resources.Resources.icons8_Change_Theme_28px
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 445)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(260, 30)
-        Me.Button7.TabIndex = 10
-        Me.Button7.Text = "      Change Theme"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -223,6 +181,30 @@ Partial Class Main
         Me.HistoryButton.Text = "      Log History"
         Me.HistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.HistoryButton.UseVisualStyleBackColor = True
+        '
+        'Datenow2
+        '
+        Me.Datenow2.AutoSize = True
+        Me.Datenow2.BackColor = System.Drawing.Color.Transparent
+        Me.Datenow2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Datenow2.ForeColor = System.Drawing.Color.White
+        Me.Datenow2.Location = New System.Drawing.Point(80, 744)
+        Me.Datenow2.Name = "Datenow2"
+        Me.Datenow2.Size = New System.Drawing.Size(20, 17)
+        Me.Datenow2.TabIndex = 9
+        Me.Datenow2.Text = "   "
+        '
+        'Datenow
+        '
+        Me.Datenow.AutoSize = True
+        Me.Datenow.BackColor = System.Drawing.Color.Transparent
+        Me.Datenow.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Datenow.ForeColor = System.Drawing.Color.White
+        Me.Datenow.Location = New System.Drawing.Point(63, 724)
+        Me.Datenow.Name = "Datenow"
+        Me.Datenow.Size = New System.Drawing.Size(20, 17)
+        Me.Datenow.TabIndex = 8
+        Me.Datenow.Text = "   "
         '
         'Button5
         '
@@ -280,7 +262,7 @@ Partial Class Main
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 481)
+        Me.Button3.Location = New System.Drawing.Point(0, 445)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(260, 30)
         Me.Button3.TabIndex = 8
@@ -346,10 +328,10 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.Panel2.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -373,7 +355,6 @@ Partial Class Main
     Friend WithEvents HistoryButton As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Button7 As Button
     Friend WithEvents ActivateButton As Button
     Friend WithEvents activeButton As Panel
 End Class

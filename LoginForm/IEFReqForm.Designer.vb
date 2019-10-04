@@ -53,15 +53,6 @@ Partial Class IEFReqForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BFADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IndustrialEstablishmentFoodtblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
         Me.NameOfEstablishmentReq = New System.Windows.Forms.TextBox()
@@ -72,6 +63,18 @@ Partial Class IEFReqForm
         Me.ControlNumber1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.IndustrialEstablishmentFood_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentFood_tblTableAdapter()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ECCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BFADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -233,6 +236,8 @@ Partial Class IEFReqForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label34)
+        Me.GroupBox1.Controls.Add(Me.SMR1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.Label10)
@@ -396,7 +401,7 @@ Partial Class IEFReqForm
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView2.ColumnHeadersHeight = 26
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.BFADDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.BFADDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView2.DataSource = Me.IndustrialEstablishmentFoodtblBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
@@ -418,6 +423,114 @@ Partial Class IEFReqForm
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(691, 250)
         Me.DataGridView2.TabIndex = 70
+        '
+        'IndustrialEstablishmentFoodtblBindingSource
+        '
+        Me.IndustrialEstablishmentFoodtblBindingSource.DataMember = "IndustrialEstablishmentFood_tbl"
+        Me.IndustrialEstablishmentFoodtblBindingSource.DataSource = Me.Cenro_DBDataSet
+        '
+        'Cenro_DBDataSet
+        '
+        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
+        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NameOfEstablishmentReq
+        '
+        Me.NameOfEstablishmentReq.BackColor = System.Drawing.Color.White
+        Me.NameOfEstablishmentReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameOfEstablishmentReq.Location = New System.Drawing.Point(22, 54)
+        Me.NameOfEstablishmentReq.Multiline = True
+        Me.NameOfEstablishmentReq.Name = "NameOfEstablishmentReq"
+        Me.NameOfEstablishmentReq.ReadOnly = True
+        Me.NameOfEstablishmentReq.Size = New System.Drawing.Size(202, 24)
+        Me.NameOfEstablishmentReq.TabIndex = 1
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(18, 30)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(189, 21)
+        Me.Label31.TabIndex = 68
+        Me.Label31.Text = "Name of Establishment"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(275, 183)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(207, 21)
+        Me.Label9.TabIndex = 45
+        Me.Label9.Text = "Accredited Waste Hauler"
+        '
+        'AccreditedWasteHauler1
+        '
+        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
+        Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(279, 207)
+        Me.AccreditedWasteHauler1.Multiline = True
+        Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
+        Me.AccreditedWasteHauler1.ReadOnly = True
+        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(202, 24)
+        Me.AccreditedWasteHauler1.TabIndex = 9
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(18, 81)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(135, 21)
+        Me.Label8.TabIndex = 44
+        Me.Label8.Text = "Control Number"
+        '
+        'ControlNumber1
+        '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
+        Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ControlNumber1.Location = New System.Drawing.Point(22, 105)
+        Me.ControlNumber1.Multiline = True
+        Me.ControlNumber1.Name = "ControlNumber1"
+        Me.ControlNumber1.ReadOnly = True
+        Me.ControlNumber1.Size = New System.Drawing.Size(202, 24)
+        Me.ControlNumber1.TabIndex = 2
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(164, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(347, 21)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Industrial Establishment Food Requirements"
+        '
+        'IndustrialEstablishmentFood_tblTableAdapter
+        '
+        Me.IndustrialEstablishmentFood_tblTableAdapter.ClearBeforeFill = True
+        '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(279, 258)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(202, 24)
+        Me.SMR1.TabIndex = 79
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(275, 234)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 21)
+        Me.Label34.TabIndex = 80
+        Me.Label34.Text = "SMR"
         '
         'NameOfEstablishmentDataGridViewTextBoxColumn
         '
@@ -509,92 +622,15 @@ Partial Class IEFReqForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
         '
-        'IndustrialEstablishmentFoodtblBindingSource
+        'SelfMonitoringReport
         '
-        Me.IndustrialEstablishmentFoodtblBindingSource.DataMember = "IndustrialEstablishmentFood_tbl"
-        Me.IndustrialEstablishmentFoodtblBindingSource.DataSource = Me.Cenro_DBDataSet
-        '
-        'Cenro_DBDataSet
-        '
-        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
-        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NameOfEstablishmentReq
-        '
-        Me.NameOfEstablishmentReq.BackColor = System.Drawing.Color.White
-        Me.NameOfEstablishmentReq.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameOfEstablishmentReq.Location = New System.Drawing.Point(22, 54)
-        Me.NameOfEstablishmentReq.Multiline = True
-        Me.NameOfEstablishmentReq.Name = "NameOfEstablishmentReq"
-        Me.NameOfEstablishmentReq.ReadOnly = True
-        Me.NameOfEstablishmentReq.Size = New System.Drawing.Size(202, 24)
-        Me.NameOfEstablishmentReq.TabIndex = 1
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(18, 30)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(189, 21)
-        Me.Label31.TabIndex = 68
-        Me.Label31.Text = "Name of Establishment"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(275, 183)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(207, 21)
-        Me.Label9.TabIndex = 45
-        Me.Label9.Text = "Accredited Waste Hauler"
-        '
-        'AccreditedWasteHauler1
-        '
-        Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
-        Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(279, 207)
-        Me.AccreditedWasteHauler1.Multiline = True
-        Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
-        Me.AccreditedWasteHauler1.ReadOnly = True
-        Me.AccreditedWasteHauler1.Size = New System.Drawing.Size(202, 24)
-        Me.AccreditedWasteHauler1.TabIndex = 9
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(18, 81)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(135, 21)
-        Me.Label8.TabIndex = 44
-        Me.Label8.Text = "Control Number"
-        '
-        'ControlNumber1
-        '
-        Me.ControlNumber1.BackColor = System.Drawing.Color.White
-        Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ControlNumber1.Location = New System.Drawing.Point(22, 105)
-        Me.ControlNumber1.Multiline = True
-        Me.ControlNumber1.Name = "ControlNumber1"
-        Me.ControlNumber1.ReadOnly = True
-        Me.ControlNumber1.Size = New System.Drawing.Size(202, 24)
-        Me.ControlNumber1.TabIndex = 2
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(164, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(347, 21)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "Industrial Establishment Food Requirements"
-        '
-        'IndustrialEstablishmentFood_tblTableAdapter
-        '
-        Me.IndustrialEstablishmentFood_tblTableAdapter.ClearBeforeFill = True
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'IEFReqForm
         '
@@ -654,6 +690,14 @@ Partial Class IEFReqForm
     Friend WithEvents IndustrialEstablishmentFoodtblBindingSource As BindingSource
     Friend WithEvents IndustrialEstablishmentFood_tblTableAdapter As cenro_DBDataSetTableAdapters.IndustrialEstablishmentFood_tblTableAdapter
     Friend WithEvents DTISECDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Print As Button
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents SMR1 As TextBox
+    Friend WithEvents Label34 As Label
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BrgyClearanceWithCTCDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -663,10 +707,5 @@ Partial Class IEFReqForm
     Friend WithEvents DPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BFADDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Print As Button
-    Friend WithEvents ClearButton As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
 End Class

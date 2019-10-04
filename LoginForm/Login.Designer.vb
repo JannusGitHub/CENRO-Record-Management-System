@@ -126,7 +126,6 @@ Partial Class Login
         Me.Password.Multiline = True
         Me.Password.Name = "Password"
         Me.Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.Password.ShortcutsEnabled = False
         Me.Password.Size = New System.Drawing.Size(250, 31)
         Me.Password.TabIndex = 2
         '

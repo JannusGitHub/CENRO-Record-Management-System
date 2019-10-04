@@ -125,7 +125,7 @@ Partial Class FastfoodReportForm
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 100)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1100, 500)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1100, 630)
         Me.ReportViewer1.TabIndex = 11
         '
         'FastfoodCanteenAndRestaurant_tblTableAdapter
@@ -137,7 +137,7 @@ Partial Class FastfoodReportForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1100, 600)
+        Me.ClientSize = New System.Drawing.Size(1100, 730)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)

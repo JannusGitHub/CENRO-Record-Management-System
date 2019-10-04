@@ -142,6 +142,18 @@
     <Compile Include="ChangePasswordForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FastfoodCanteenAndRestoReportOption.Designer.vb">
+      <DependentUpon>FastfoodCanteenAndRestoReportOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastfoodCanteenAndRestoReportOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalAndEstablishmentReportOption.Designer.vb">
+      <DependentUpon>HospitalAndEstablishmentReportOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalAndEstablishmentReportOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IEFCertificationPopupForm.Designer.vb">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
     </Compile>
@@ -235,6 +247,18 @@
     <Compile Include="IEFReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IEFReportOption.Designer.vb">
+      <DependentUpon>IEFReportOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFReportOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IEFYearEndReportForm.Designer.vb">
+      <DependentUpon>IEFYearEndReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IEFYearEndReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IENFCertificationPopupForm.Designer.vb">
       <DependentUpon>IENFCertificationPopupForm.vb</DependentUpon>
     </Compile>
@@ -262,6 +286,12 @@
       <DependentUpon>IENFReportForm.vb</DependentUpon>
     </Compile>
     <Compile Include="IENFReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFReportOption.Designer.vb">
+      <DependentUpon>IENFReportOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFReportOption.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InspectorCategoryForm.Designer.vb">
@@ -396,11 +426,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="IEF-InpectorForm.Designer.vb">
-      <DependentUpon>IEF-InpectorForm.vb</DependentUpon>
+    <Compile Include="IEFReqForm.Designer.vb">
+      <DependentUpon>IEFReqForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="IEF-InpectorForm.vb">
+    <Compile Include="IEFReqForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearEndReportDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YearEndReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YearEndReportDataSet.vb">
+      <DependentUpon>YearEndReportDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -413,6 +451,12 @@
     <EmbeddedResource Include="Certificate.rdlc" />
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastfoodCanteenAndRestoReportOption.resx">
+      <DependentUpon>FastfoodCanteenAndRestoReportOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalAndEstablishmentReportOption.resx">
+      <DependentUpon>HospitalAndEstablishmentReportOption.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IEFCertificationPopupForm.resx">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
@@ -456,6 +500,12 @@
       <DependentUpon>IEFReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HospitalIENFOathOfUndertaking.rdlc" />
+    <EmbeddedResource Include="IEFReportOption.resx">
+      <DependentUpon>IEFReportOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IEFYearEndReportForm.resx">
+      <DependentUpon>IEFYearEndReportForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IENFCertificationPopupForm.resx">
       <DependentUpon>IENFCertificationPopupForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +518,9 @@
     <EmbeddedResource Include="IENFReport.rdlc" />
     <EmbeddedResource Include="IENFReportForm.resx">
       <DependentUpon>IENFReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFReportOption.resx">
+      <DependentUpon>IENFReportOption.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InspectorCategoryForm.resx">
       <DependentUpon>InspectorCategoryForm.vb</DependentUpon>
@@ -534,9 +587,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="IEF-InpectorForm.resx">
-      <DependentUpon>IEF-InpectorForm.vb</DependentUpon>
+    <EmbeddedResource Include="IEFReqForm.resx">
+      <DependentUpon>IEFReqForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IEFYearEndReport.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cenro_DBDataSet.xsc">
@@ -616,6 +670,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="YearEndReportDataSet.xsc">
+      <DependentUpon>YearEndReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YearEndReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YearEndReportDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YearEndReportDataSet.xss">
+      <DependentUpon>YearEndReportDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Search_28px.png" />

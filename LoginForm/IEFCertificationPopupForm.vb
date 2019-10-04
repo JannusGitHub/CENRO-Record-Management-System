@@ -39,7 +39,7 @@ Public Class IEFCertificationPopupForm
                     reader.Close()
                     connection.Close()
                 Else
-                    MessageBox.Show("An error occured! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Error! Please check the requirement/s.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             End If
@@ -96,16 +96,6 @@ Public Class IEFCertificationPopupForm
         End If
 
 
-    End Sub
-
-    Private Sub ControlNumber1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ControlNumber1.KeyPress
-        If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedchars As String = ""
-            If Not allowedchars.Contains(e.KeyChar.ToString) Then
-                e.KeyChar = ChrW(0)
-                e.Handled = True
-            End If
-        End If
     End Sub
 
     Private Sub NameOfEstablishment1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Owner1.KeyPress, NameOfEstablishment1.KeyPress, Address1.KeyPress

@@ -23,9 +23,9 @@
         For Each form As Form In Main.MDIpanel.Controls
             form.Close()
         Next
-        With IEFReportForm
+        With IEFReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(IEFReportForm)
+            Main.MDIpanel.Controls.Add(IEFReportOption)
             .BringToFront()
             .Show()
         End With
@@ -35,9 +35,9 @@
         For Each form As Form In Main.MDIpanel.Controls
             form.Close()
         Next
-        With IENFReportForm
+        With IENFReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(IENFReportForm)
+            Main.MDIpanel.Controls.Add(IENFReportOption)
             .BringToFront()
             .Show()
         End With
@@ -47,9 +47,9 @@
         For Each form As Form In Main.MDIpanel.Controls
             form.Close()
         Next
-        With HospitalReportForm
+        With HospitalAndEstablishmentReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(HospitalReportForm)
+            Main.MDIpanel.Controls.Add(HospitalAndEstablishmentReportOption)
             .BringToFront()
             .Show()
         End With
@@ -59,9 +59,9 @@
         For Each form As Form In Main.MDIpanel.Controls
             form.Close()
         Next
-        With FastfoodReportForm
+        With FastfoodCanteenAndRestoReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(FastfoodReportForm)
+            Main.MDIpanel.Controls.Add(FastfoodCanteenAndRestoReportOption)
             .BringToFront()
             .Show()
         End With

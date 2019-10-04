@@ -50,7 +50,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Name of Establishment</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -80,7 +83,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Address</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -110,7 +116,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Email Address</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -140,7 +149,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>CEO President</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -170,7 +182,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>General Manager</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -200,7 +215,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Pollution Control Officer</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -230,7 +248,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nature Of Business</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -260,7 +281,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Contact Number</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -290,7 +314,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Name Of Accredited Waste Hauler</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -320,7 +347,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Control Number</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -355,7 +385,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NameOfEstablishment.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -385,7 +417,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Address.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -415,7 +449,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!EmailAddress.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -445,7 +481,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CEO_President.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -475,7 +513,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!GeneralManager.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -505,7 +545,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PollutionControlOfficer.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -535,7 +577,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NatureOfBusiness.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -565,7 +609,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ContactNumber.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -595,7 +641,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NameOfAccreditedWasteHauler.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -625,7 +673,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ControlNumber.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -674,10 +724,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>IEFDataSet</DataSetName>
-        <Top>0.17638cm</Top>
+        <Top>0.17637cm</Top>
         <Left>0cm</Left>
         <Height>1.2cm</Height>
-        <Width>28.9507cm</Width>
+        <Width>28.95071cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -688,10 +738,10 @@
     <Height>9.02228cm</Height>
     <Style />
   </Body>
-  <Width>28.9507cm</Width>
+  <Width>28.95071cm</Width>
   <Page>
     <PageHeader>
-      <Height>1.64458in</Height>
+      <Height>1.68625in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -705,7 +755,7 @@
                   <Value>Republic of the Philippines</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>LimeGreen</Color>
+                    <Color>#009900</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -716,7 +766,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>0.39014in</Top>
-          <Left>5.13138in</Left>
+          <Left>5.12096in</Left>
           <Height>0.25in</Height>
           <Width>2.08958in</Width>
           <Style>
@@ -739,7 +789,7 @@
                   <Value>CITY OF CALAMBA</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>LimeGreen</Color>
+                    <Color>#009900</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -774,7 +824,7 @@
                   <Value>City Environment and Natural Resources Office</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>LimeGreen</Color>
+                    <Color>#009900</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -785,7 +835,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>0.76514in</Top>
-          <Left>4.57013in</Left>
+          <Left>4.55971in</Left>
           <Height>0.25in</Height>
           <Width>3.40625in</Width>
           <ZIndex>2</ZIndex>
@@ -809,7 +859,7 @@
                   <Value>Tel: 049-545-6789 loc. 8218</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>LimeGreen</Color>
+                    <Color>#009900</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -820,7 +870,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>1.01514in</Top>
-          <Left>5.13138in</Left>
+          <Left>5.12096in</Left>
           <Height>0.25in</Height>
           <Width>1.98542in</Width>
           <ZIndex>3</ZIndex>
@@ -844,7 +894,7 @@
                   <Value>E-mail address: cenro_calamba@yahoo.com.ph</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>LimeGreen</Color>
+                    <Color>#009900</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -877,7 +927,7 @@
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
-              <Color>LimeGreen</Color>
+              <Color>#009900</Color>
               <Style>Solid</Style>
             </Border>
           </Style>
@@ -890,7 +940,7 @@
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
-              <Color>LimeGreen</Color>
+              <Color>#009900</Color>
               <Style>Solid</Style>
               <Width>5pt</Width>
             </Border>
@@ -904,7 +954,7 @@
           <ZIndex>7</ZIndex>
           <Style>
             <Border>
-              <Color>LimeGreen</Color>
+              <Color>#009900</Color>
               <Style>Solid</Style>
             </Border>
           </Style>

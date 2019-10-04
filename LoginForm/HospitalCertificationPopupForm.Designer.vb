@@ -99,21 +99,25 @@ Partial Class HospitalCertificationPopupForm
         '
         'ControlNumber1
         '
+        Me.ControlNumber1.BackColor = System.Drawing.Color.White
         Me.ControlNumber1.Enabled = False
         Me.ControlNumber1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ControlNumber1.Location = New System.Drawing.Point(154, 84)
         Me.ControlNumber1.Multiline = True
         Me.ControlNumber1.Name = "ControlNumber1"
+        Me.ControlNumber1.ReadOnly = True
         Me.ControlNumber1.Size = New System.Drawing.Size(231, 28)
         Me.ControlNumber1.TabIndex = 0
         '
         'Address1
         '
+        Me.Address1.BackColor = System.Drawing.Color.White
         Me.Address1.Enabled = False
         Me.Address1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Address1.Location = New System.Drawing.Point(154, 207)
         Me.Address1.Multiline = True
         Me.Address1.Name = "Address1"
+        Me.Address1.ReadOnly = True
         Me.Address1.Size = New System.Drawing.Size(231, 28)
         Me.Address1.TabIndex = 2
         '
@@ -164,21 +168,25 @@ Partial Class HospitalCertificationPopupForm
         '
         'Owner1
         '
+        Me.Owner1.BackColor = System.Drawing.Color.White
         Me.Owner1.Enabled = False
         Me.Owner1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Owner1.Location = New System.Drawing.Point(154, 271)
         Me.Owner1.Multiline = True
         Me.Owner1.Name = "Owner1"
+        Me.Owner1.ReadOnly = True
         Me.Owner1.Size = New System.Drawing.Size(231, 28)
         Me.Owner1.TabIndex = 3
         '
         'NameOfEstablishment1
         '
+        Me.NameOfEstablishment1.BackColor = System.Drawing.Color.White
         Me.NameOfEstablishment1.Enabled = False
         Me.NameOfEstablishment1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameOfEstablishment1.Location = New System.Drawing.Point(154, 148)
         Me.NameOfEstablishment1.Multiline = True
         Me.NameOfEstablishment1.Name = "NameOfEstablishment1"
+        Me.NameOfEstablishment1.ReadOnly = True
         Me.NameOfEstablishment1.Size = New System.Drawing.Size(231, 28)
         Me.NameOfEstablishment1.TabIndex = 1
         '

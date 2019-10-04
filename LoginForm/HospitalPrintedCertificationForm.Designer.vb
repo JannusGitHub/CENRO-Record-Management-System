@@ -32,10 +32,11 @@ Partial Class HospitalPrintedCertificationForm
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.ShowExportButton = False
         Me.ReportViewer1.Size = New System.Drawing.Size(850, 730)
         Me.ReportViewer1.TabIndex = 0
         '
-        'HospitalPrintCertificationForm
+        'HospitalPrintedCertificationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -43,7 +44,7 @@ Partial Class HospitalPrintedCertificationForm
         Me.ClientSize = New System.Drawing.Size(850, 730)
         Me.Controls.Add(Me.ReportViewer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "HospitalPrintCertificationForm"
+        Me.Name = "HospitalPrintedCertificationForm"
         Me.Text = "HospitalPrintCertificationForm"
         Me.ResumeLayout(False)
 

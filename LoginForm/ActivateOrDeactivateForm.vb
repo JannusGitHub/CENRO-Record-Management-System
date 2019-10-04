@@ -76,10 +76,6 @@ Public Class ActivateOrDeactivateForm
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             connection.Close()
         End Try
-
-
-
-
     End Sub
 
     Private Sub ActivateOrDeactivateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,13 +91,18 @@ Public Class ActivateOrDeactivateForm
     End Sub
 
     Public Sub FilterData(valueToSearch As String)
-        'SELECT * From Users WHERE CONCAT(fname, lname, age) like '%F%'
-        Dim searchQuery As String = "SELECT * From user_tbl WHERE Convert(nvarchar(50),UserID)+'-'+Convert(nvarchar(50),Username)+'-'+Convert(nvarchar(50),Usertype)+'-'+Convert(nvarchar(50),Status) like '%" & valueToSearch & "%' "
-        Dim command As New SqlCommand(searchQuery, connection)
-        Dim adapter As New SqlDataAdapter(command)
-        Dim table As New DataTable()
-        adapter.Fill(table)
-        DataGridView1.DataSource = table
+        Try
+            'SELECT * From Users WHERE CONCAT(fname, lname, age) like '%F%'
+            Dim searchQuery As String = "SELECT * From user_tbl WHERE Convert(nvarchar(50),UserID)+'-'+Convert(nvarchar(50),Username)+'-'+Convert(nvarchar(50),Usertype)+'-'+Convert(nvarchar(50),Status) like '%" & valueToSearch & "%' "
+            Dim command As New SqlCommand(searchQuery, connection)
+            Dim adapter As New SqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+            DataGridView1.DataSource = table
+        Catch ex As Exception
+            MessageBox.Show("Error! " + ex.Message.ToString() + " Error Handler" + MessageBoxIcon.Error)
+        End Try
+
     End Sub
     Private Sub load_datagrid()
         Dim cmd As New SqlCommand
@@ -185,5 +186,12 @@ Public Class ActivateOrDeactivateForm
         End If
     End Sub
 
-
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Dim searchQuery As String = "SELECT * From user_tbl WHERE Convert(nvarchar(50),UserID)+'-'+Convert(nvarchar(50),Username)+'-'+Convert(nvarchar(50),Usertype)+'-'+Convert(nvarchar(50),Status) like '%" & Search.Text & "%' "
+        Dim command As New SqlCommand(searchQuery, connection)
+        Dim adapter As New SqlDataAdapter(command)
+        Dim table As New DataTable()
+        adapter.Fill(table)
+        DataGridView1.DataSource = table
+    End Sub
 End Class

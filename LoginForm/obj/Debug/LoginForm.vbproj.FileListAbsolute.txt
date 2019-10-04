@@ -382,3 +382,8 @@ C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\Login
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\bin\Debug\System.Security.Cryptography.Algorithms.dll
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\bin\Debug\System.Security.Cryptography.Primitives.dll
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.ChangePasswordForm.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.FastfoodCanteenAndRestoReportOption.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.HospitalAndEstablishmentReportOption.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IEFReportOption.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IEFYearEndReportForm.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IENFReportOption.resources

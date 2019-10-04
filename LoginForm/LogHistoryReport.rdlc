@@ -198,7 +198,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Name</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -230,7 +233,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Type</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -262,7 +268,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Action</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -294,7 +303,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Date</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -331,7 +343,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!logName.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -361,7 +375,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!logType.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -391,7 +407,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!logOperation.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Century Gothic</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -422,6 +440,7 @@
                             <TextRun>
                               <Value>=Fields!logDate.Value</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <Format>M/d/yyyy h:mm tt</Format>
                               </Style>
                             </TextRun>
@@ -441,7 +460,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -467,7 +485,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>LogHistoryDataSet</DataSetName>
-        <Top>1.7448in</Top>
+        <Top>1.60938in</Top>
         <Height>0.5in</Height>
         <Width>8.5in</Width>
         <ZIndex>4</ZIndex>

@@ -50,6 +50,7 @@ Public Class IEFReqForm
             DP1.Text = selectedrow.Cells(6).Value.ToString
             BFAD1.Text = selectedrow.Cells(7).Value.ToString
             AccreditedWasteHauler1.Text = selectedrow.Cells(8).Value.ToString
+            SMR1.Text = selectedrow.Cells(9).Value.ToString
         End If
     End Sub
 
@@ -79,7 +80,7 @@ Public Class IEFReqForm
             adapter1.Fill(table1)
             DataGridView2.DataSource = table1
         ElseIf ComboBox1.SelectedItem.ToString() = "All" Then
-            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)  like '%" & SearchReq.Text & "%' "
+            Dim searchQuery2 As String = "SELECT * From IndustrialEstablishmentFood_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),BrgyClearanceWithCTC)+'-'+Convert(nvarchar(50),DTI_SEC)+'-'+Convert(nvarchar(50),ECC)+'-'+Convert(nvarchar(50),PTO)+'-'+Convert(nvarchar(50),DP)+'-'+Convert(nvarchar(50),BFAD)+'-'+Convert(nvarchar(50),AccreditedWasteHauler)+'-'+Convert(nvarchar(50),SelfMonitoringReport)  like '%" & SearchReq.Text & "%' "
             Dim command2 As New SqlCommand(searchQuery2, connection)
             Dim adapter2 As New SqlDataAdapter(command2)
             Dim table2 As New DataTable()
@@ -112,6 +113,7 @@ Public Class IEFReqForm
         DP1.Clear()
         BFAD1.Clear()
         AccreditedWasteHauler1.Clear()
+        SMR1.Clear()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click

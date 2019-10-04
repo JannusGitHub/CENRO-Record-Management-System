@@ -61,6 +61,12 @@ Partial Class HospitalAndMedicalReqForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.HospitalAndMedicalEstablishmenttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.HospitalAndMedicalEstablishment_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.HospitalAndMedicalEstablishment_tblTableAdapter()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
         Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -71,10 +77,7 @@ Partial Class HospitalAndMedicalReqForm
         Me.DENRIDNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DOHAccreditationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HospitalAndMedicalEstablishmenttblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.HospitalAndMedicalEstablishment_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.HospitalAndMedicalEstablishment_tblTableAdapter()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -110,6 +113,8 @@ Partial Class HospitalAndMedicalReqForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label34)
+        Me.GroupBox1.Controls.Add(Me.SMR1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.NameOfEstablishment1)
@@ -250,7 +255,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.DOHAccreditation1.BackColor = System.Drawing.Color.White
         Me.DOHAccreditation1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DOHAccreditation1.Location = New System.Drawing.Point(267, 200)
+        Me.DOHAccreditation1.Location = New System.Drawing.Point(257, 200)
         Me.DOHAccreditation1.Multiline = True
         Me.DOHAccreditation1.Name = "DOHAccreditation1"
         Me.DOHAccreditation1.ReadOnly = True
@@ -261,7 +266,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(263, 177)
+        Me.Label20.Location = New System.Drawing.Point(253, 177)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(148, 20)
         Me.Label20.TabIndex = 91
@@ -271,7 +276,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
         Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(267, 250)
+        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(257, 250)
         Me.AccreditedWasteHauler1.Multiline = True
         Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
         Me.AccreditedWasteHauler1.ReadOnly = True
@@ -282,7 +287,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(263, 227)
+        Me.Label21.Location = New System.Drawing.Point(253, 227)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(194, 20)
         Me.Label21.TabIndex = 89
@@ -292,7 +297,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.DENRIDNumber1.BackColor = System.Drawing.Color.White
         Me.DENRIDNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DENRIDNumber1.Location = New System.Drawing.Point(267, 150)
+        Me.DENRIDNumber1.Location = New System.Drawing.Point(257, 150)
         Me.DENRIDNumber1.Multiline = True
         Me.DENRIDNumber1.Name = "DENRIDNumber1"
         Me.DENRIDNumber1.ReadOnly = True
@@ -303,7 +308,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(263, 127)
+        Me.Label22.Location = New System.Drawing.Point(253, 127)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(130, 20)
         Me.Label22.TabIndex = 87
@@ -313,7 +318,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.DP1.BackColor = System.Drawing.Color.White
         Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP1.Location = New System.Drawing.Point(267, 100)
+        Me.DP1.Location = New System.Drawing.Point(257, 100)
         Me.DP1.Multiline = True
         Me.DP1.Name = "DP1"
         Me.DP1.ReadOnly = True
@@ -324,7 +329,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(263, 77)
+        Me.Label23.Location = New System.Drawing.Point(253, 77)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(29, 20)
         Me.Label23.TabIndex = 85
@@ -355,7 +360,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(263, 27)
+        Me.Label27.Location = New System.Drawing.Point(253, 27)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(36, 20)
         Me.Label27.TabIndex = 84
@@ -428,7 +433,7 @@ Partial Class HospitalAndMedicalReqForm
         '
         Me.PTO1.BackColor = System.Drawing.Color.White
         Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO1.Location = New System.Drawing.Point(267, 50)
+        Me.PTO1.Location = New System.Drawing.Point(257, 50)
         Me.PTO1.Multiline = True
         Me.PTO1.Name = "PTO1"
         Me.PTO1.ReadOnly = True
@@ -485,7 +490,7 @@ Partial Class HospitalAndMedicalReqForm
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 26
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DENRIDNumberDataGridViewTextBoxColumn, Me.DOHAccreditationDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DENRIDNumberDataGridViewTextBoxColumn, Me.DOHAccreditationDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.HospitalAndMedicalEstablishmenttblBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
@@ -507,6 +512,51 @@ Partial Class HospitalAndMedicalReqForm
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(691, 250)
         Me.DataGridView1.TabIndex = 70
+        '
+        'HospitalAndMedicalEstablishmenttblBindingSource
+        '
+        Me.HospitalAndMedicalEstablishmenttblBindingSource.DataMember = "HospitalAndMedicalEstablishment_tbl"
+        Me.HospitalAndMedicalEstablishmenttblBindingSource.DataSource = Me.Cenro_DBDataSet
+        '
+        'Cenro_DBDataSet
+        '
+        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
+        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(208, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(286, 21)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Hospital and Medical Requirements"
+        '
+        'HospitalAndMedicalEstablishment_tblTableAdapter
+        '
+        Me.HospitalAndMedicalEstablishment_tblTableAdapter.ClearBeforeFill = True
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(485, 26)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 21)
+        Me.Label34.TabIndex = 100
+        Me.Label34.Text = "SMR"
+        '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(489, 50)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(202, 24)
+        Me.SMR1.TabIndex = 99
         '
         'NameOfEstablishmentDataGridViewTextBoxColumn
         '
@@ -608,29 +658,15 @@ Partial Class HospitalAndMedicalReqForm
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
         '
-        'HospitalAndMedicalEstablishmenttblBindingSource
+        'SelfMonitoringReport
         '
-        Me.HospitalAndMedicalEstablishmenttblBindingSource.DataMember = "HospitalAndMedicalEstablishment_tbl"
-        Me.HospitalAndMedicalEstablishmenttblBindingSource.DataSource = Me.Cenro_DBDataSet
-        '
-        'Cenro_DBDataSet
-        '
-        Me.Cenro_DBDataSet.DataSetName = "cenro_DBDataSet"
-        Me.Cenro_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(208, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(286, 21)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "Hospital and Medical Requirements"
-        '
-        'HospitalAndMedicalEstablishment_tblTableAdapter
-        '
-        Me.HospitalAndMedicalEstablishment_tblTableAdapter.ClearBeforeFill = True
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'HospitalAndMedicalReqForm
         '
@@ -692,6 +728,14 @@ Partial Class HospitalAndMedicalReqForm
     Friend WithEvents HospitalAndMedicalEstablishmenttblBindingSource As BindingSource
     Friend WithEvents HospitalAndMedicalEstablishment_tblTableAdapter As cenro_DBDataSetTableAdapters.HospitalAndMedicalEstablishment_tblTableAdapter
     Friend WithEvents DTISECDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents Print As Button
+    Friend WithEvents Label34 As Label
+    Friend WithEvents SMR1 As TextBox
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BrgyClearanceWithCTCDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -702,10 +746,5 @@ Partial Class HospitalAndMedicalReqForm
     Friend WithEvents DENRIDNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DOHAccreditationDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents ClearButton As Button
-    Friend WithEvents Print As Button
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
 End Class

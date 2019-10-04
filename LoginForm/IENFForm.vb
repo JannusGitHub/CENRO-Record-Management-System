@@ -151,15 +151,25 @@ Public Class IENFForm
                     Dim oathStatus As String = "Oath"
 
                     If BrgyClearanceWithCTC = "Compliant" And DTI_SEC = "Compliant" And ECC = "Compliant" And PTO = "Compliant" And DP = "Compliant" And DENR_IDNumber = "Compliant" And AccreditedWasteHauler = "Compliant" And PDEALicense = "Compliant" And SelfMonitoringReport = "Compliant" Then
-                        Dim insertCompliant As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentNonFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & compliantStatus & "')"
+                        Dim insertCompliant As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES(@IndustrialEstablishmentNonFoodID,@NameOfEstablishment,@Address,@ControlNumber,@compliantStatus)"
                         Dim commandToInsertCompliant As New SqlCommand(insertCompliant, connection)
+                        commandToInsertCompliant.Parameters.AddWithValue("@IndustrialEstablishmentNonFoodID", IndustrialEstablishmentNonFoodID)
+                        commandToInsertCompliant.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment)
+                        commandToInsertCompliant.Parameters.AddWithValue("@Address", Address)
+                        commandToInsertCompliant.Parameters.AddWithValue("@ControlNumber", ControlNumber)
+                        commandToInsertCompliant.Parameters.AddWithValue("@compliantStatus", compliantStatus)
                         reader.Close()
                         commandToInsertCompliant.ExecuteNonQuery()
                         connection.Close()
 
                     ElseIf BrgyClearanceWithCTC = "Oath" Or DTI_SEC = "Oath" Or ECC = "Oath" Or PTO = "Oath" Or DP = "Oath" Or DENR_IDNumber = "Oath" Or AccreditedWasteHauler = "Oath" Or PDEALicense = "Oath" Or SelfMonitoringReport = "Oath" Then
-                        Dim insertOath As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES('" & IndustrialEstablishmentNonFoodID & "','" & NameOfEstablishment & "', '" & Address & "', '" & ControlNumber & "', '" & oathStatus & "')"
+                        Dim insertOath As String = "INSERT into YearEndReport_tbl(IndustrialEstablishmentNonFoodID,NameOfEstablishment,Address,ControlNumber,Status) VALUES(@IndustrialEstablishmentNonFoodID,@NameOfEstablishment,@Address,@ControlNumber,@oathStatus)"
                         Dim commandToInsertOath As New SqlCommand(insertOath, connection)
+                        commandToInsertOath.Parameters.AddWithValue("@IndustrialEstablishmentNonFoodID", IndustrialEstablishmentNonFoodID)
+                        commandToInsertOath.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment)
+                        commandToInsertOath.Parameters.AddWithValue("@Address", Address)
+                        commandToInsertOath.Parameters.AddWithValue("@ControlNumber", ControlNumber)
+                        commandToInsertOath.Parameters.AddWithValue("@oathStatus", oathStatus)
                         reader.Close()
                         commandToInsertOath.ExecuteNonQuery()
                         connection.Close()

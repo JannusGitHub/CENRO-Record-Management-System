@@ -61,6 +61,12 @@ Partial Class IENFReqForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.IndustrialEstablishmentNonFoodtblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.IndustrialEstablishmentNonFood_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.SMR1 = New System.Windows.Forms.TextBox()
         Me.NameOfEstablishmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ControlNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -71,10 +77,7 @@ Partial Class IENFReqForm
         Me.DENRIDNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AccreditedWasteHaulerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PDEALicenseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IndustrialEstablishmentNonFoodtblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Cenro_DBDataSet = New LoginForm.cenro_DBDataSet()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.IndustrialEstablishmentNonFood_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter()
+        Me.SelfMonitoringReport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -110,7 +113,9 @@ Partial Class IENFReqForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label34)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.SMR1)
         Me.GroupBox1.Controls.Add(Me.Panel3)
         Me.GroupBox1.Controls.Add(Me.Label31)
         Me.GroupBox1.Controls.Add(Me.NameOfEstablishment1)
@@ -148,7 +153,7 @@ Partial Class IENFReqForm
         '
         Me.GroupBox2.Controls.Add(Me.Print)
         Me.GroupBox2.Controls.Add(Me.ClearButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(590, 103)
+        Me.GroupBox2.Location = New System.Drawing.Point(590, 132)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(109, 95)
         Me.GroupBox2.TabIndex = 97
@@ -271,7 +276,7 @@ Partial Class IENFReqForm
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(269, 30)
+        Me.Label27.Location = New System.Drawing.Point(253, 30)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(41, 21)
         Me.Label27.TabIndex = 92
@@ -312,7 +317,7 @@ Partial Class IENFReqForm
         '
         Me.PDEALicense1.BackColor = System.Drawing.Color.White
         Me.PDEALicense1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PDEALicense1.Location = New System.Drawing.Point(273, 258)
+        Me.PDEALicense1.Location = New System.Drawing.Point(257, 258)
         Me.PDEALicense1.Multiline = True
         Me.PDEALicense1.Name = "PDEALicense1"
         Me.PDEALicense1.ReadOnly = True
@@ -333,7 +338,7 @@ Partial Class IENFReqForm
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(269, 234)
+        Me.Label20.Location = New System.Drawing.Point(253, 234)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(113, 21)
         Me.Label20.TabIndex = 90
@@ -354,7 +359,7 @@ Partial Class IENFReqForm
         '
         Me.AccreditedWasteHauler1.BackColor = System.Drawing.Color.White
         Me.AccreditedWasteHauler1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(273, 207)
+        Me.AccreditedWasteHauler1.Location = New System.Drawing.Point(257, 207)
         Me.AccreditedWasteHauler1.Multiline = True
         Me.AccreditedWasteHauler1.Name = "AccreditedWasteHauler1"
         Me.AccreditedWasteHauler1.ReadOnly = True
@@ -376,7 +381,7 @@ Partial Class IENFReqForm
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(269, 183)
+        Me.Label21.Location = New System.Drawing.Point(253, 183)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(207, 21)
         Me.Label21.TabIndex = 89
@@ -386,7 +391,7 @@ Partial Class IENFReqForm
         '
         Me.PTO1.BackColor = System.Drawing.Color.White
         Me.PTO1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PTO1.Location = New System.Drawing.Point(273, 54)
+        Me.PTO1.Location = New System.Drawing.Point(257, 54)
         Me.PTO1.Multiline = True
         Me.PTO1.Name = "PTO1"
         Me.PTO1.ReadOnly = True
@@ -397,7 +402,7 @@ Partial Class IENFReqForm
         '
         Me.DENRIDNumber1.BackColor = System.Drawing.Color.White
         Me.DENRIDNumber1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DENRIDNumber1.Location = New System.Drawing.Point(273, 156)
+        Me.DENRIDNumber1.Location = New System.Drawing.Point(257, 156)
         Me.DENRIDNumber1.Multiline = True
         Me.DENRIDNumber1.Name = "DENRIDNumber1"
         Me.DENRIDNumber1.ReadOnly = True
@@ -408,7 +413,7 @@ Partial Class IENFReqForm
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(269, 81)
+        Me.Label23.Location = New System.Drawing.Point(253, 81)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(31, 21)
         Me.Label23.TabIndex = 87
@@ -418,7 +423,7 @@ Partial Class IENFReqForm
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(269, 132)
+        Me.Label22.Location = New System.Drawing.Point(253, 132)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(141, 21)
         Me.Label22.TabIndex = 88
@@ -428,7 +433,7 @@ Partial Class IENFReqForm
         '
         Me.DP1.BackColor = System.Drawing.Color.White
         Me.DP1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DP1.Location = New System.Drawing.Point(273, 105)
+        Me.DP1.Location = New System.Drawing.Point(257, 105)
         Me.DP1.Multiline = True
         Me.DP1.Name = "DP1"
         Me.DP1.ReadOnly = True
@@ -485,7 +490,7 @@ Partial Class IENFReqForm
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.ColumnHeadersHeight = 26
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DENRIDNumberDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.PDEALicenseDataGridViewTextBoxColumn})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.ControlNumberDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DTI_SEC, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.DENRIDNumberDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.PDEALicenseDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView2.DataSource = Me.IndustrialEstablishmentNonFoodtblBindingSource
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
@@ -507,106 +512,6 @@ Partial Class IENFReqForm
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(691, 250)
         Me.DataGridView2.TabIndex = 70
-        '
-        'NameOfEstablishmentDataGridViewTextBoxColumn
-        '
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.DataPropertyName = "NameOfEstablishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.HeaderText = "Name of Establishment"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Name = "NameOfEstablishmentDataGridViewTextBoxColumn"
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 153
-        '
-        'ControlNumberDataGridViewTextBoxColumn
-        '
-        Me.ControlNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ControlNumberDataGridViewTextBoxColumn.DataPropertyName = "ControlNumber"
-        Me.ControlNumberDataGridViewTextBoxColumn.HeaderText = "Control Number"
-        Me.ControlNumberDataGridViewTextBoxColumn.Name = "ControlNumberDataGridViewTextBoxColumn"
-        Me.ControlNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ControlNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ControlNumberDataGridViewTextBoxColumn.Width = 116
-        '
-        'BrgyClearanceWithCTCDataGridViewTextBoxColumn
-        '
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.DataPropertyName = "BrgyClearanceWithCTC"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.HeaderText = "Brgy. Clearance"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn"
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 117
-        '
-        'DTI_SEC
-        '
-        Me.DTI_SEC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DTI_SEC.DataPropertyName = "DTI_SEC"
-        Me.DTI_SEC.HeaderText = "DTI_SEC"
-        Me.DTI_SEC.Name = "DTI_SEC"
-        Me.DTI_SEC.ReadOnly = True
-        Me.DTI_SEC.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTI_SEC.Width = 74
-        '
-        'ECCDataGridViewTextBoxColumn
-        '
-        Me.ECCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.ECCDataGridViewTextBoxColumn.DataPropertyName = "ECC"
-        Me.ECCDataGridViewTextBoxColumn.HeaderText = "ECC"
-        Me.ECCDataGridViewTextBoxColumn.Name = "ECCDataGridViewTextBoxColumn"
-        Me.ECCDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ECCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ECCDataGridViewTextBoxColumn.Width = 55
-        '
-        'PTODataGridViewTextBoxColumn
-        '
-        Me.PTODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.PTODataGridViewTextBoxColumn.DataPropertyName = "PTO"
-        Me.PTODataGridViewTextBoxColumn.HeaderText = "PTO"
-        Me.PTODataGridViewTextBoxColumn.Name = "PTODataGridViewTextBoxColumn"
-        Me.PTODataGridViewTextBoxColumn.ReadOnly = True
-        Me.PTODataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PTODataGridViewTextBoxColumn.Width = 53
-        '
-        'DPDataGridViewTextBoxColumn
-        '
-        Me.DPDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DPDataGridViewTextBoxColumn.DataPropertyName = "DP"
-        Me.DPDataGridViewTextBoxColumn.HeaderText = "DP"
-        Me.DPDataGridViewTextBoxColumn.Name = "DPDataGridViewTextBoxColumn"
-        Me.DPDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DPDataGridViewTextBoxColumn.Width = 46
-        '
-        'DENRIDNumberDataGridViewTextBoxColumn
-        '
-        Me.DENRIDNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DENRIDNumberDataGridViewTextBoxColumn.DataPropertyName = "DENR_IDNumber"
-        Me.DENRIDNumberDataGridViewTextBoxColumn.HeaderText = "DENR ID Number"
-        Me.DENRIDNumberDataGridViewTextBoxColumn.Name = "DENRIDNumberDataGridViewTextBoxColumn"
-        Me.DENRIDNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DENRIDNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DENRIDNumberDataGridViewTextBoxColumn.Width = 120
-        '
-        'AccreditedWasteHaulerDataGridViewTextBoxColumn
-        '
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "AccreditedWasteHauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Accredited Waste Hauler"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn"
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 166
-        '
-        'PDEALicenseDataGridViewTextBoxColumn
-        '
-        Me.PDEALicenseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.PDEALicenseDataGridViewTextBoxColumn.DataPropertyName = "PDEALicense"
-        Me.PDEALicenseDataGridViewTextBoxColumn.HeaderText = "PDEA License"
-        Me.PDEALicenseDataGridViewTextBoxColumn.Name = "PDEALicenseDataGridViewTextBoxColumn"
-        Me.PDEALicenseDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PDEALicenseDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PDEALicenseDataGridViewTextBoxColumn.Width = 101
         '
         'IndustrialEstablishmentNonFoodtblBindingSource
         '
@@ -631,6 +536,137 @@ Partial Class IENFReqForm
         'IndustrialEstablishmentNonFood_tblTableAdapter
         '
         Me.IndustrialEstablishmentNonFood_tblTableAdapter.ClearBeforeFill = True
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(482, 30)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(43, 21)
+        Me.Label34.TabIndex = 82
+        Me.Label34.Text = "SMR"
+        '
+        'SMR1
+        '
+        Me.SMR1.BackColor = System.Drawing.Color.White
+        Me.SMR1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SMR1.Location = New System.Drawing.Point(486, 54)
+        Me.SMR1.Multiline = True
+        Me.SMR1.Name = "SMR1"
+        Me.SMR1.ReadOnly = True
+        Me.SMR1.Size = New System.Drawing.Size(202, 24)
+        Me.SMR1.TabIndex = 81
+        '
+        'NameOfEstablishmentDataGridViewTextBoxColumn
+        '
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.DataPropertyName = "NameOfEstablishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.HeaderText = "Name of Establishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Name = "NameOfEstablishmentDataGridViewTextBoxColumn"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn.Width = 212
+        '
+        'ControlNumberDataGridViewTextBoxColumn
+        '
+        Me.ControlNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ControlNumberDataGridViewTextBoxColumn.DataPropertyName = "ControlNumber"
+        Me.ControlNumberDataGridViewTextBoxColumn.HeaderText = "Control Number"
+        Me.ControlNumberDataGridViewTextBoxColumn.Name = "ControlNumberDataGridViewTextBoxColumn"
+        Me.ControlNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ControlNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ControlNumberDataGridViewTextBoxColumn.Width = 158
+        '
+        'BrgyClearanceWithCTCDataGridViewTextBoxColumn
+        '
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.DataPropertyName = "BrgyClearanceWithCTC"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.HeaderText = "Brgy. Clearance"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Name = "BrgyClearanceWithCTCDataGridViewTextBoxColumn"
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn.Width = 157
+        '
+        'DTI_SEC
+        '
+        Me.DTI_SEC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DTI_SEC.DataPropertyName = "DTI_SEC"
+        Me.DTI_SEC.HeaderText = "DTI_SEC"
+        Me.DTI_SEC.Name = "DTI_SEC"
+        Me.DTI_SEC.ReadOnly = True
+        Me.DTI_SEC.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTI_SEC.Width = 96
+        '
+        'ECCDataGridViewTextBoxColumn
+        '
+        Me.ECCDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ECCDataGridViewTextBoxColumn.DataPropertyName = "ECC"
+        Me.ECCDataGridViewTextBoxColumn.HeaderText = "ECC"
+        Me.ECCDataGridViewTextBoxColumn.Name = "ECCDataGridViewTextBoxColumn"
+        Me.ECCDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ECCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ECCDataGridViewTextBoxColumn.Width = 68
+        '
+        'PTODataGridViewTextBoxColumn
+        '
+        Me.PTODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PTODataGridViewTextBoxColumn.DataPropertyName = "PTO"
+        Me.PTODataGridViewTextBoxColumn.HeaderText = "PTO"
+        Me.PTODataGridViewTextBoxColumn.Name = "PTODataGridViewTextBoxColumn"
+        Me.PTODataGridViewTextBoxColumn.ReadOnly = True
+        Me.PTODataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PTODataGridViewTextBoxColumn.Width = 64
+        '
+        'DPDataGridViewTextBoxColumn
+        '
+        Me.DPDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DPDataGridViewTextBoxColumn.DataPropertyName = "DP"
+        Me.DPDataGridViewTextBoxColumn.HeaderText = "DP"
+        Me.DPDataGridViewTextBoxColumn.Name = "DPDataGridViewTextBoxColumn"
+        Me.DPDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DPDataGridViewTextBoxColumn.Width = 54
+        '
+        'DENRIDNumberDataGridViewTextBoxColumn
+        '
+        Me.DENRIDNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DENRIDNumberDataGridViewTextBoxColumn.DataPropertyName = "DENR_IDNumber"
+        Me.DENRIDNumberDataGridViewTextBoxColumn.HeaderText = "DENR ID Number"
+        Me.DENRIDNumberDataGridViewTextBoxColumn.Name = "DENRIDNumberDataGridViewTextBoxColumn"
+        Me.DENRIDNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DENRIDNumberDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DENRIDNumberDataGridViewTextBoxColumn.Width = 164
+        '
+        'AccreditedWasteHaulerDataGridViewTextBoxColumn
+        '
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.DataPropertyName = "AccreditedWasteHauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.HeaderText = "Accredited Waste Hauler"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Name = "AccreditedWasteHaulerDataGridViewTextBoxColumn"
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AccreditedWasteHaulerDataGridViewTextBoxColumn.Width = 230
+        '
+        'PDEALicenseDataGridViewTextBoxColumn
+        '
+        Me.PDEALicenseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PDEALicenseDataGridViewTextBoxColumn.DataPropertyName = "PDEALicense"
+        Me.PDEALicenseDataGridViewTextBoxColumn.HeaderText = "PDEA License"
+        Me.PDEALicenseDataGridViewTextBoxColumn.Name = "PDEALicenseDataGridViewTextBoxColumn"
+        Me.PDEALicenseDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PDEALicenseDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PDEALicenseDataGridViewTextBoxColumn.Width = 136
+        '
+        'SelfMonitoringReport
+        '
+        Me.SelfMonitoringReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.SelfMonitoringReport.DataPropertyName = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.HeaderText = "SMR"
+        Me.SelfMonitoringReport.Name = "SelfMonitoringReport"
+        Me.SelfMonitoringReport.ReadOnly = True
+        Me.SelfMonitoringReport.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SelfMonitoringReport.Width = 66
         '
         'IENFReqForm
         '
@@ -692,6 +728,14 @@ Partial Class IENFReqForm
     Friend WithEvents IndustrialEstablishmentNonFoodtblBindingSource As BindingSource
     Friend WithEvents IndustrialEstablishmentNonFood_tblTableAdapter As cenro_DBDataSetTableAdapters.IndustrialEstablishmentNonFood_tblTableAdapter
     Friend WithEvents DTISECDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents Print As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents SMR1 As TextBox
     Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ControlNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BrgyClearanceWithCTCDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -702,10 +746,5 @@ Partial Class IENFReqForm
     Friend WithEvents DENRIDNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AccreditedWasteHaulerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PDEALicenseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ClearButton As Button
-    Friend WithEvents Print As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents SelfMonitoringReport As DataGridViewTextBoxColumn
 End Class

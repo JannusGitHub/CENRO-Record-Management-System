@@ -24,7 +24,7 @@ Partial Class IEFReportForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IEFReportForm))
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.IndustrialEstablishmentFood_tblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IEFDataSet = New LoginForm.IEFDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -122,14 +122,15 @@ Partial Class IEFReportForm
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "IEFDataSet"
-        ReportDataSource2.Value = Me.IndustrialEstablishmentFood_tblBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "IEFDataSet"
+        ReportDataSource1.Value = Me.IndustrialEstablishmentFood_tblBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LoginForm.IEFReport.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 100)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1100, 500)
+        Me.ReportViewer1.ShowExportButton = False
+        Me.ReportViewer1.Size = New System.Drawing.Size(1100, 630)
         Me.ReportViewer1.TabIndex = 10
         '
         'IEFReportForm
@@ -137,7 +138,7 @@ Partial Class IEFReportForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1100, 600)
+        Me.ClientSize = New System.Drawing.Size(1100, 730)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)

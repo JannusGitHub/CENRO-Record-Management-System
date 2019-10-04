@@ -25,7 +25,6 @@
             Else
                 Me.IndustrialEstablishmentFood_tblBindingSource.RemoveFilter()
                 IEFReportForm_Load(sender, e)
-
             End If
         Catch ex As Exception
             MessageBox.Show("Error " + ex.Message.ToString() + "Error Handler")
@@ -34,9 +33,9 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
-        With ReportCategory
+        With IEFReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(ReportCategory)
+            Main.MDIpanel.Controls.Add(IEFReportOption)
             .BringToFront()
             .Show()
         End With
