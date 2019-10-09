@@ -364,6 +364,54 @@ Public Class IEFForm
                         MessageBox.Show("Successfully deleted!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         clear()
                         connection.Close()
+
+                        'insert to another table(EstablishmentArchive_tbl) after deleting establishment
+                        Dim commandToSelectInIndustrialEstablishmentFood_tbl As New SqlCommand("SELECT * FROM IndustrialEstablishmentFood_tbl ORDER BY IndustrialEstablishmentFoodID DESC", connection)
+                        Dim adapterToSelectInIndustrialEstablishmentFood_tbl As New SqlDataAdapter(commandToSelectInIndustrialEstablishmentFood_tbl)
+                        Dim tableToSelectInIndustrialEstablishmentFood_tbl As New DataTable()
+                        adapterToSelectInIndustrialEstablishmentFood_tbl.Fill(tableToSelectInIndustrialEstablishmentFood_tbl)
+
+                        'open connection
+                        If connection.State = ConnectionState.Closed Then connection.Open()
+
+                        'declare variable reader to read data in database
+                        Dim reader As SqlDataReader = commandToSelectInIndustrialEstablishmentFood_tbl.ExecuteReader
+
+                        If reader.Read = True Then
+                            'this is the column of IndustrialEstablishmentFood_tbl to get the profile of the establishment
+                            'then pass to EstablishmentArchive_tbl
+                            Dim NameOfEstablishment As String = reader("NameOfEstablishment")
+                            Dim Address As String = reader("Address")
+                            Dim EmailAddress As String = reader("EmailAddress")
+                            Dim CEO_President As String = reader("CEO_President")
+                            Dim GeneralManager As String = reader("GeneralManager")
+                            Dim PollutionControlOfficer As String = reader("PollutionControlOfficer")
+                            Dim NatureOfBusiness As String = reader("NatureOfBusiness")
+                            Dim ContactNumber As String = reader("ControlNumber")
+                            Dim NameOfAccreditedWasteHauler As String = reader("NameOfAccreditedWasteHauler")
+                            Dim ControlNumber As String = reader("ControlNumber")
+                            Dim DeletedDate As String = Date.Now.ToString("dd MMM yyyy hh:mm:ss")
+                            Dim Status As String = "Inactive"
+
+                            Dim insertToEstablishmentArchive As String = "INSERT into EstablishmentArchive_tbl(NameOfEstablishment,ControlNumber,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,DeletedDate,Status) VALUES(@NameOfEstablishment,@ControlNumber,@Address,@EmailAddress,@CEO_President,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@DeletedDate,@Status)"
+                            Dim commandToInsertToEstablishmentArchive As New SqlCommand(insertToEstablishmentArchive, connection)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@ControlNumber", ControlNumber)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@Address", Address)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@EmailAddress", EmailAddress)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@CEO_President", CEO_President)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@GeneralManager", GeneralManager)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@PollutionControlOfficer", PollutionControlOfficer)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@NatureOfBusiness", NatureOfBusiness)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@ContactNumber", ContactNumber)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@NameOfAccreditedWasteHauler", NameOfAccreditedWasteHauler)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@DeletedDate", DeletedDate)
+                            commandToInsertToEstablishmentArchive.Parameters.AddWithValue("@Status", Status)
+                            reader.Close()
+                            commandToInsertToEstablishmentArchive.ExecuteNonQuery()
+                            connection.Close()
+                        End If
+
                     Else
                         clear()
                         Me.Refresh()
