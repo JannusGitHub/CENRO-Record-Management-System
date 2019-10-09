@@ -36,4 +36,16 @@
             PictureBox2.BackColor = color
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each form As Form In Main.MDIpanel.Controls
+            form.Close()
+        Next
+        With HospitalYearEndReportForm
+            .TopLevel = False
+            Main.MDIpanel.Controls.Add(HospitalYearEndReportForm)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 End Class

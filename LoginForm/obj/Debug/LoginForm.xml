@@ -222,6 +222,136 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSet.YearEndReport_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSet.YearEndReport_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSet.YearEndReport_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSetTableAdapters.YearEndReport_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.FastFoodYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.FastFoodYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.FastFoodYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.FastFoodYearEndReportDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.FastFoodYearEndReportDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSet.YearEndReport_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSet.YearEndReport_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSet.YearEndReport_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSetTableAdapters.YearEndReport_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.HospitalYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.HospitalYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.HospitalYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.HospitalYearEndReportDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.HospitalYearEndReportDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:LoginForm.FastfoodDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -478,6 +608,91 @@ Update Order Option
 </summary>
 </member>
 <member name="T:LoginForm.IENFDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tblDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tbl1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tblRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tbl1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tblRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSet.YearEndReport_tbl1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSetTableAdapters.YearEndReport_tblTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSetTableAdapters.YearEndReport_tbl1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(LoginForm.IENFYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(LoginForm.IENFYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(LoginForm.IENFYearEndReportDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateAll(LoginForm.IENFYearEndReportDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:LoginForm.IENFYearEndReportDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

@@ -15,30 +15,46 @@ Public Class UserManagementForm
                 MessageBox.Show("All confirmation are required", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf Firstname.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Firstname.Focus()
             ElseIf Middlename.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Middlename.Focus()
             ElseIf Lastname.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Lastname.Focus()
             ElseIf Birthdate.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Birthdate.Focus()
             ElseIf Age.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Age.Focus()
             ElseIf Gender.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Gender.Focus()
             ElseIf ContactNumber.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ContactNumber.Focus()
             ElseIf EmailAddress.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                EmailAddress.Focus()
             ElseIf Division.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Division.Focus()
             ElseIf Position.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Position.Focus()
             ElseIf Username.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Username.Focus()
             ElseIf Password.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Password.Focus()
             ElseIf ConfirmPassword.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ConfirmPassword.Focus()
+            ElseIf Answer.Text = "" Then
+                MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Answer.Focus()
             ElseIf Password.Text <> ConfirmPassword.Text Then
                 MessageBox.Show("Password didn't matched!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf Not ValidateEmail Then
@@ -55,7 +71,7 @@ Public Class UserManagementForm
                 Gender.Focus()
             ElseIf Password.Text = ConfirmPassword.Text And Gender.SelectedItem = "Male" Or Gender.SelectedItem = "Female" Then
                 Dim Status As String = "Active"
-                Dim insertquery As String = "INSERT INTO user_tbl(Firstname,Middlename,Lastname,Birthdate,Age,Gender,ContactNumber,EmailAddress,Division,Position,Username,Password,Question,Answer,Usertype,Status) &_ VALUES(@Firstname,@Middlename,@Lastname,@Birthdate,@Age,@Gender,@ContactNumber,@EmailAddress,@Division,@Position,@Username,@Password,@Question,@Answer,@Usertype,'" & Status & "')"
+                Dim insertquery As String = "INSERT INTO user_tbl(Firstname,Middlename,Lastname,Birthdate,Age,Gender,ContactNumber,EmailAddress,Division,Position,Username,Password,Question,Answer,Usertype,Status) VALUES(@Firstname,@Middlename,@Lastname,@Birthdate,@Age,@Gender,@ContactNumber,@EmailAddress,@Division,@Position,@Username,@Password,@Question,@Answer,@Usertype,'" & Status & "')"
                 executequery(insertquery)
                 MessageBox.Show("Registered Successfully", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Firstname.Clear()
@@ -92,18 +108,69 @@ Public Class UserManagementForm
     End Sub
 
     Public Function Md5FromString(ByVal Source As String) As String
+        Dim salt As String = "62#&*!28!^%#"
+        Dim encoder As New UTF8Encoding()
         Dim bytes() As Byte
         Dim stringBuilder As New StringBuilder()
-        If String.IsNullOrEmpty(Source) Then
-            Throw New ArgumentNullException
-        End If
+        Dim md5Hasher As New MD5CryptoServiceProvider
 
-        bytes = Encoding.Default.GetBytes(Source)
-        bytes = MD5.Create().ComputeHash(bytes)
+        ' Get Bytes for "password"
+        Dim passwordBytes As Byte() = encoder.GetBytes(Source)
+
+        ' Get Bytes for "salt"
+        Dim saltBytes As Byte() = encoder.GetBytes(salt)
+
+        ' Creat new Array to store both "password" and "salt" bytes
+        Dim passwordAndSaltBytes As Byte() = New Byte(passwordBytes.Length + saltBytes.Length - 1) {}
+
+        ' Store "password" bytes
+        For i As Integer = 0 To passwordBytes.Length - 1
+            passwordAndSaltBytes(i) = passwordBytes(i)
+        Next
+
+        ' Append "salt" bytes
+        For i As Integer = 0 To saltBytes.Length - 1
+            passwordAndSaltBytes(i + passwordBytes.Length) = saltBytes(i)
+        Next
+
+        ' Compute hash value for "password" and "salt" bytes
+        bytes = md5Hasher.ComputeHash(passwordAndSaltBytes)
+
+        ' Create array which will hold hash and original "salt" bytes.
+        Dim hashWithSaltBytes() As Byte = New Byte(bytes.Length + saltBytes.Length - 1) {}
+
+        ' Copy hash bytes into resulting array.
+        For x As Integer = 0 To bytes.Length - 1
+            hashWithSaltBytes(x) = bytes(x)
+        Next x
+
+        ' Append salt bytes to the result.
+        For x As Integer = 0 To saltBytes.Length - 1
+            hashWithSaltBytes(bytes.Length + x) = saltBytes(x)
+        Next x
+
+        ' Convert result into a base64-encoded string.
+        Dim hashValue As String
+        hashValue = Convert.ToBase64String(hashWithSaltBytes)
+
+        bytes = Encoding.Default.GetBytes(hashValue)
+        bytes = SHA256.Create().ComputeHash(bytes)
         For x As Integer = 0 To bytes.Length - 1
             stringBuilder.Append(bytes(x).ToString("x2"))
         Next
         Return stringBuilder.ToString
+        'Dim bytes() As Byte
+        'Dim stringBuilder As New StringBuilder()
+        'If String.IsNullOrEmpty(Source) Then
+        '    Throw New ArgumentNullException
+        'End If
+
+        'bytes = Encoding.Default.GetBytes(Source)
+        'bytes = MD5.Create().ComputeHash(bytes)
+        'For x As Integer = 0 To bytes.Length - 1
+        '    stringBuilder.Append(bytes(x).ToString("x2"))
+        'Next
+        'Return stringBuilder.ToString
     End Function
 
     Public Sub executequery(ByVal query As String)
@@ -145,7 +212,6 @@ Public Class UserManagementForm
         Try
             Dim ValidateEmail As Boolean
             ValidateEmail = Regex.IsMatch(EmailEdit.Text, "^([\w]+)@([\w]+)\.([\w]+)$", RegexOptions.IgnoreCase)
-
 
             If UserID.Text = "" Then
                 MessageBox.Show("Please enter ID", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)

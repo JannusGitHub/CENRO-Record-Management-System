@@ -7,14 +7,53 @@ Public Class Login
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8; Initial Catalog=cenro_DB; Integrated Security=True")
 
     Public Function Md5FromString(ByVal Source As String) As String
+        Dim salt As String = "62#&*!28!^%#"
+        Dim encoder As New UTF8Encoding()
         Dim bytes() As Byte
         Dim stringBuilder As New StringBuilder()
-        If String.IsNullOrEmpty(Source) Then
-            Throw New ArgumentNullException
-        End If
+        Dim md5Hasher As New MD5CryptoServiceProvider
 
-        bytes = Encoding.Default.GetBytes(Source)
-        bytes = MD5.Create().ComputeHash(bytes)
+        ' Get Bytes for "password"
+        Dim passwordBytes As Byte() = encoder.GetBytes(Source)
+
+        ' Get Bytes for "salt"
+        Dim saltBytes As Byte() = encoder.GetBytes(salt)
+
+        ' Creat new Array to store both "password" and "salt" bytes
+        Dim passwordAndSaltBytes As Byte() = New Byte(passwordBytes.Length + saltBytes.Length - 1) {}
+
+        ' Store "password" bytes
+        For i As Integer = 0 To passwordBytes.Length - 1
+            passwordAndSaltBytes(i) = passwordBytes(i)
+        Next
+
+        ' Append "salt" bytes
+        For i As Integer = 0 To saltBytes.Length - 1
+            passwordAndSaltBytes(i + passwordBytes.Length) = saltBytes(i)
+        Next
+
+        ' Compute hash value for "password" and "salt" bytes
+        bytes = md5Hasher.ComputeHash(passwordAndSaltBytes)
+
+        ' Create array which will hold hash and original "salt" bytes.
+        Dim hashWithSaltBytes() As Byte = New Byte(bytes.Length + saltBytes.Length - 1) {}
+
+        ' Copy hash bytes into resulting array.
+        For x As Integer = 0 To bytes.Length - 1
+            hashWithSaltBytes(x) = bytes(x)
+        Next x
+
+        ' Append salt bytes to the result.
+        For x As Integer = 0 To saltBytes.Length - 1
+            hashWithSaltBytes(bytes.Length + x) = saltBytes(x)
+        Next x
+
+        ' Convert result into a base64-encoded string.
+        Dim hashValue As String
+        hashValue = Convert.ToBase64String(hashWithSaltBytes)
+
+        bytes = Encoding.Default.GetBytes(hashValue)
+        bytes = SHA256.Create().ComputeHash(bytes)
         For x As Integer = 0 To bytes.Length - 1
             stringBuilder.Append(bytes(x).ToString("x2"))
         Next
@@ -24,7 +63,6 @@ Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim hashCode As Login
         hashCode = New Login()
-
         Try
             Dim command As New SqlCommand("SELECT * FROM user_tbl WHERE Username = @Username and Password = @Password", connection)
             command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username.Text
@@ -43,10 +81,13 @@ Public Class Login
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Username.Clear()
                 Password.Clear()
+                Username.Focus()
+
             ElseIf Password.Text = "" Then
                 MessageBox.Show("Please fill the blanks", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Username.Clear()
                 Password.Clear()
+                Username.Focus()
 
             ElseIf reader.Read = True Then
                 'declaring variables to store data from the database
@@ -73,6 +114,7 @@ Public Class Login
                     MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
 
                     'if inspector exist then execute this
                 ElseIf usertype = "Inspector" And status = "Active" Then
@@ -89,11 +131,14 @@ Public Class Login
                     MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
                 End If
 
-            ElseIf MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
+            Else
+                MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Username.Clear()
                 Password.Clear()
+                Username.Focus()
             End If
             reader.Close()
             If connection.State = ConnectionState.Open Then connection.Close()
@@ -205,6 +250,7 @@ Public Class Login
                         cmd.ExecuteNonQuery()
                         MessageBox.Show(("Successfully login as Administrator"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Main.Show()
+                        Me.Refresh()
                         Me.Hide()
                         connection.Close()
 
@@ -212,10 +258,12 @@ Public Class Login
                         MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Username.Clear()
                         Password.Clear()
+                        Username.Focus()
 
+                        'if inspector exist then execute this
                     ElseIf usertype = "Inspector" And status = "Active" Then
-                        Dim insertquery As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username.Text & "', '" & Inpector & "', '" & Login & "', '" & dateofloghistory & "')"
-                        Dim cmd As New SqlCommand(insertquery, connection)
+                        Dim insertqueryinspector As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username.Text & "', '" & Inpector & "', '" & Login & "', '" & dateofloghistory & "')"
+                        Dim cmd As New SqlCommand(insertqueryinspector, connection)
                         reader.Close()
                         cmd.ExecuteNonQuery()
                         MessageBox.Show(("Successfully login as Inspector"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -227,11 +275,14 @@ Public Class Login
                         MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Username.Clear()
                         Password.Clear()
+                        Username.Focus()
                     End If
 
-                ElseIf MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
+                Else
+                    MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
                 End If
                 reader.Close()
                 If connection.State = ConnectionState.Open Then connection.Close()
@@ -291,6 +342,7 @@ Public Class Login
                         cmd.ExecuteNonQuery()
                         MessageBox.Show(("Successfully login as Administrator"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Main.Show()
+                        Me.Refresh()
                         Me.Hide()
                         connection.Close()
 
@@ -298,10 +350,12 @@ Public Class Login
                         MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Username.Clear()
                         Password.Clear()
+                        Username.Focus()
 
+                        'if inspector exist then execute this
                     ElseIf usertype = "Inspector" And status = "Active" Then
-                        Dim insertquery As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username.Text & "', '" & Inpector & "', '" & Login & "', '" & dateofloghistory & "')"
-                        Dim cmd As New SqlCommand(insertquery, connection)
+                        Dim insertqueryinspector As String = "insert into LogHistory_tbl(logName,logType,logOperation,logDate) VALUES('" & Username.Text & "', '" & Inpector & "', '" & Login & "', '" & dateofloghistory & "')"
+                        Dim cmd As New SqlCommand(insertqueryinspector, connection)
                         reader.Close()
                         cmd.ExecuteNonQuery()
                         MessageBox.Show(("Successfully login as Inspector"), "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -313,11 +367,14 @@ Public Class Login
                         MessageBox.Show("Your account is inactive!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Username.Clear()
                         Password.Clear()
+                        Username.Focus()
                     End If
 
-                ElseIf MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
+                Else
+                    MessageBox.Show("Incorrect please try again!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Username.Clear()
                     Password.Clear()
+                    Username.Focus()
                 End If
                 reader.Close()
                 If connection.State = ConnectionState.Open Then connection.Close()

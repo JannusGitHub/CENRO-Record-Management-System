@@ -148,10 +148,32 @@
     <Compile Include="FastfoodCanteenAndRestoReportOption.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FastFoodYearEndReportDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FastFoodYearEndReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FastFoodYearEndReportForm.Designer.vb">
+      <DependentUpon>FastFoodYearEndReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FastFoodYearEndReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HospitalAndEstablishmentReportOption.Designer.vb">
       <DependentUpon>HospitalAndEstablishmentReportOption.vb</DependentUpon>
     </Compile>
     <Compile Include="HospitalAndEstablishmentReportOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalYearEndReportDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalYearEndReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalYearEndReportForm.Designer.vb">
+      <DependentUpon>HospitalYearEndReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalYearEndReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IEFCertificationPopupForm.Designer.vb">
@@ -292,6 +314,20 @@
       <DependentUpon>IENFReportOption.vb</DependentUpon>
     </Compile>
     <Compile Include="IENFReportOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IENFYearEndReportDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IENFYearEndReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IENFYearEndReportDataSet.vb">
+      <DependentUpon>IENFYearEndReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IENFYearEndReportForm.Designer.vb">
+      <DependentUpon>IENFYearEndReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IENFYearEndReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InspectorCategoryForm.Designer.vb">
@@ -455,8 +491,16 @@
     <EmbeddedResource Include="FastfoodCanteenAndRestoReportOption.resx">
       <DependentUpon>FastfoodCanteenAndRestoReportOption.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FastFoodYearEndReport.rdlc" />
+    <EmbeddedResource Include="FastFoodYearEndReportForm.resx">
+      <DependentUpon>FastFoodYearEndReportForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HospitalAndEstablishmentReportOption.resx">
       <DependentUpon>HospitalAndEstablishmentReportOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalYearEndReport.rdlc" />
+    <EmbeddedResource Include="HospitalYearEndReportForm.resx">
+      <DependentUpon>HospitalYearEndReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IEFCertificationPopupForm.resx">
       <DependentUpon>IEFCertificationPopupForm.vb</DependentUpon>
@@ -521,6 +565,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IENFReportOption.resx">
       <DependentUpon>IENFReportOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IENFYearEndReport.rdlc" />
+    <EmbeddedResource Include="IENFYearEndReportForm.resx">
+      <DependentUpon>IENFYearEndReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InspectorCategoryForm.resx">
       <DependentUpon>InspectorCategoryForm.vb</DependentUpon>
@@ -615,6 +663,17 @@
     <None Include="FastfoodDataSet.xss">
       <DependentUpon>FastfoodDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FastFoodYearEndReportDataSet.xsc">
+      <DependentUpon>FastFoodYearEndReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FastFoodYearEndReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FastFoodYearEndReportDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FastFoodYearEndReportDataSet.xss">
+      <DependentUpon>FastFoodYearEndReportDataSet.xsd</DependentUpon>
+    </None>
     <None Include="HospitalDataSet.xsc">
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
     </None>
@@ -625,6 +684,17 @@
     </None>
     <None Include="HospitalDataSet.xss">
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalYearEndReportDataSet.xsc">
+      <DependentUpon>HospitalYearEndReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalYearEndReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalYearEndReportDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalYearEndReportDataSet.xss">
+      <DependentUpon>HospitalYearEndReportDataSet.xsd</DependentUpon>
     </None>
     <None Include="IEFDataSet.xsc">
       <DependentUpon>IEFDataSet.xsd</DependentUpon>
@@ -647,6 +717,17 @@
     </None>
     <None Include="IENFDataSet.xss">
       <DependentUpon>IENFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IENFYearEndReportDataSet.xsc">
+      <DependentUpon>IENFYearEndReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IENFYearEndReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IENFYearEndReportDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IENFYearEndReportDataSet.xss">
+      <DependentUpon>IENFYearEndReportDataSet.xsd</DependentUpon>
     </None>
     <None Include="LogHistoryDataSet.xsc">
       <DependentUpon>LogHistoryDataSet.xsd</DependentUpon>

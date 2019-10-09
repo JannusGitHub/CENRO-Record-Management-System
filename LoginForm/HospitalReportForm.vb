@@ -36,9 +36,9 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
-        With ReportCategory
+        With HospitalAndEstablishmentReportOption
             .TopLevel = False
-            Main.MDIpanel.Controls.Add(ReportCategory)
+            Main.MDIpanel.Controls.Add(HospitalAndEstablishmentReportOption)
             .BringToFront()
             .Show()
         End With

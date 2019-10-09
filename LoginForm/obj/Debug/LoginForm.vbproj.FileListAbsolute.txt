@@ -387,3 +387,6 @@ C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\Login
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IEFReportOption.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IEFYearEndReportForm.resources
 C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IENFReportOption.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.IENFYearEndReportForm.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.HospitalYearEndReportForm.resources
+C:\Users\HP - PC\Documents\CenroRecordManagementSystem\LoginForm\obj\Debug\LoginForm.FastFoodYearEndReportForm.resources
