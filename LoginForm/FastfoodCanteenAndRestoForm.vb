@@ -4,6 +4,8 @@ Public Class FastfoodCanteenAndRestoForm
     Dim connection As New SqlConnection("Data Source=DESKTOP-KFTOEG8;Initial Catalog=cenro_DB;Integrated Security=True")
 
     Private Sub FastfoodCanteenAndRestoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EstablishmentArchiveDataSet.EstablishmentArchive_tbl' table. You can move, or remove it, as needed.
+        Me.EstablishmentArchive_tblTableAdapter.Fill(Me.EstablishmentArchiveDataSet.EstablishmentArchive_tbl)
         'TODO: This line of code loads data into the 'Cenro_DBDataSet.FastfoodCanteenAndRestaurant_tbl' table. You can move, or remove it, as needed.
         Me.FastfoodCanteenAndRestaurant_tblTableAdapter.Fill(Me.Cenro_DBDataSet.FastfoodCanteenAndRestaurant_tbl)
         'TODO: This line of code loads data into the 'Cenro_DBDataSet.FastfoodCanteenAndRestaurant_tbl' table. You can move, or remove it, as needed.
@@ -263,20 +265,42 @@ Public Class FastfoodCanteenAndRestoForm
                 result = MessageBox.Show(Me, message, caption, buttons, icons)
 
                 If result = DialogResult.Yes Then
-                    Dim Delete1 As String = "delete from FastfoodCanteenAndRestaurant_tbl WHERE ControlNumber = '" & ControlNumber.Text & "'"
-                    Dim cmd1 As New SqlCommand(Delete1, connection)
-                    Dim adapter1 As New SqlDataAdapter(cmd1)
-                    Dim table1 As New DataTable
-                    adapter1.Fill(table1)
-                    connection.Open()
-                    cmd.ExecuteNonQuery()
+                    'declare variable to store the data in the parameter
+                    Dim DeletedDate As String = Date.Now.ToString("dd MMM yyyy")
+                    Dim Status As String = "Inactive"
+
+                    'insert to another table(EstablishmentArchive_tbl) after deleting establishment
+                    Dim insertToEstablishmentArchive As String = "INSERT into EstablishmentArchive_tbl(NameOfEstablishment,ControlNumber,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,DeletedDate,Status) VALUES(@NameOfEstablishment,@ControlNumber,@Address,@EmailAddress,@CEO_President,@GeneralManager,@PollutionControlOfficer,@NatureOfBusiness,@ContactNumber,@NameOfAccreditedWasteHauler,@DeletedDate,@Status)"
+                    Dim commandToInsertInEstablishmentArchive As New SqlCommand(insertToEstablishmentArchive, connection)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@NameOfEstablishment", NameOfEstablishment.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@ControlNumber", ControlNumber.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@Address", Address.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@EmailAddress", EmailAddress.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@CEO_President", CEOPresident.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@GeneralManager", GeneralManager.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@PollutionControlOfficer", PollutionControlOfficer.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@NatureOfBusiness", NatureOfBusiness.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@ContactNumber", ContactNumber.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@NameOfAccreditedWasteHauler", NameOfAccreditedWasteHauler.Text)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@DeletedDate", DeletedDate)
+                    commandToInsertInEstablishmentArchive.Parameters.AddWithValue("@Status", Status)
+                    If connection.State = ConnectionState.Closed Then connection.Open()
+                    commandToInsertInEstablishmentArchive.ExecuteNonQuery()
+                    If connection.State = ConnectionState.Open Then connection.Close()
+
+                    Dim deleteDataOfIENF As String = "delete from FastfoodCanteenAndRestaurant_tbl WHERE ControlNumber = '" & ControlNumber.Text & "'"
+                    Dim cmdToDeleteDataOfFastfood As New SqlCommand(deleteDataOfIENF, connection)
+                    Dim adapterToDeleteDataOfFastfood As New SqlDataAdapter(cmdToDeleteDataOfFastfood)
+                    Dim tableToDeleteDataOfFastfood As New DataTable
+                    adapterToDeleteDataOfFastfood.Fill(tableToDeleteDataOfFastfood)
+                    If connection.State = ConnectionState.Closed Then connection.Open()
+                    cmdToDeleteDataOfFastfood.ExecuteNonQuery()
+                    If connection.State = ConnectionState.Open Then connection.Close()
                     MessageBox.Show("Successfully deleted!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     clear()
-                    connection.Close()
-                Else
-                    clear()
-                    Me.Refresh()
+
                 End If
+                If connection.State = ConnectionState.Open Then connection.Close()
             End If
         End If
         load_datagrid()
@@ -333,6 +357,11 @@ Public Class FastfoodCanteenAndRestoForm
         Dim adapter1 As New SqlDataAdapter
         Dim table1 As New DataTable
         Dim bindingsource1 As New BindingSource
+        Dim cmd2 As New SqlCommand
+        Dim adapter2 As New SqlDataAdapter
+        Dim table2 As New DataTable
+        Dim bindingsource2 As New BindingSource
+
         Try
             connection.Open()
             cmd = New SqlCommand("select  Fastfood_Canteen_RestaurantID,NameOfEstablishment,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,ControlNumber,BrgyClearanceWithCTC,DTI_SEC,ECC,PTO,DP,AccreditedWasteHauler,SelfMonitoringReport FROM FastfoodCanteenAndRestaurant_tbl", connection)
@@ -349,6 +378,14 @@ Public Class FastfoodCanteenAndRestoForm
             DataGridView2.DataSource = bindingsource1
             adapter1.Update(table1)
             DataGridView2.Refresh()
+            cmd2 = New SqlCommand("select NameOfEstablishment,ControlNumber,Address,EmailAddress,CEO_President,GeneralManager,PollutionControlOfficer,NatureOfBusiness,ContactNumber,NameOfAccreditedWasteHauler,DeletedDate,Status from EstablishmentArchive_tbl", connection)
+            adapter2 = New SqlDataAdapter(cmd2)
+            adapter2.Fill(table2)
+            bindingsource2.DataSource = table2
+            archiveDataGridView.DataSource = bindingsource2
+            adapter2.Update(table2)
+            archiveDataGridView.Refresh()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
@@ -600,6 +637,48 @@ Public Class FastfoodCanteenAndRestoForm
                 e.KeyChar = ChrW(0)
                 e.Handled = True
             End If
+        End If
+    End Sub
+
+    Private Sub searchEstablishmentArchive_TextChanged(sender As Object, e As EventArgs) Handles searchEstablishmentArchive.TextChanged
+        searchDataOfEstablishmentArchive()
+    End Sub
+
+    Public Sub searchDataOfEstablishmentArchive()
+        'INITIALIZATION
+        Dim table1 As New DataTable()
+        Dim dataview As New DataView(table1)
+
+        If ComboBox3.SelectedItem() = "" Then
+            MessageBox.Show("Select category to search", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            searchEstablishmentArchive.Focus()
+        ElseIf ComboBox3.SelectedItem.ToString() = "by Control Number" Then
+            Dim searchQuery As String = "SELECT * From EstablishmentArchive_tbl WHERE Convert(nvarchar(50),ControlNumber)  like '%" & searchEstablishmentArchive.Text & "%' "
+            Dim command As New SqlCommand(searchQuery, connection)
+            Dim adapter As New SqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+            archiveDataGridView.DataSource = table
+        ElseIf ComboBox3.SelectedItem.ToString() = "by Name of Establishment" Then
+            Dim searchQuery1 As String = "SELECT * From EstablishmentArchive_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)  like '%" & searchEstablishmentArchive.Text & "%' "
+            Dim command1 As New SqlCommand(searchQuery1, connection)
+            Dim adapter1 As New SqlDataAdapter(command1)
+            adapter1.Fill(table1)
+            archiveDataGridView.DataSource = table1
+        ElseIf ComboBox3.SelectedItem.ToString() = "by Address" Then
+            Dim searchQuery2 As String = "SELECT * From EstablishmentArchive_tbl WHERE Convert(nvarchar(50),Address)  like '%" & searchEstablishmentArchive.Text & "%' "
+            Dim command2 As New SqlCommand(searchQuery2, connection)
+            Dim adapter2 As New SqlDataAdapter(command2)
+            Dim table2 As New DataTable()
+            adapter2.Fill(table2)
+            archiveDataGridView.DataSource = table2
+        ElseIf ComboBox3.SelectedItem.ToString() = "All" Then
+            Dim searchQuery3 As String = "SELECT * From EstablishmentArchive_tbl WHERE Convert(nvarchar(50),NameOfEstablishment)+'-'+Convert(nvarchar(50),ControlNumber)+'-'+Convert(nvarchar(50),Address)+'-'+Convert(nvarchar(50),EmailAddress)+'-'+Convert(nvarchar(50),CEO_President)+'-'+Convert(nvarchar(50),GeneralManager)+'-'+Convert(nvarchar(50),PollutionControlOfficer)+'-'+Convert(nvarchar(50),NatureOfBusiness)+'-'+Convert(nvarchar(50),ContactNumber)+'-'+Convert(nvarchar(50),NameOfAccreditedWasteHauler)+'-'+Convert(nvarchar(50),Status)  like '%" & searchEstablishmentArchive.Text & "%' "
+            Dim command3 As New SqlCommand(searchQuery3, connection)
+            Dim adapter3 As New SqlDataAdapter(command3)
+            Dim table3 As New DataTable()
+            adapter3.Fill(table3)
+            archiveDataGridView.DataSource = table3
         End If
     End Sub
 End Class

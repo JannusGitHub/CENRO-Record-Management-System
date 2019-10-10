@@ -130,6 +130,37 @@
         /+l6F6D0/jusyK8Ajdk55KX74+kfKZN5A1j+TnIxaAyRAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="EstablishmentArchivetblBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>516, 56</value>
+  </metadata>
+  <metadata name="EstablishmentArchiveDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>227, 56</value>
+  </metadata>
+  <data name="PictureBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAOtJREFUSEvt
+        1j0KwkAQhuFU3kA8gZUnEATByspG0lgH8kcO4QG8pU1AtBELKz/lG0ixxt2Z3c4XFuMQ98Hggtm/pOV5
+        PinLcsm35uq6XvPSXdM0K9x0x9pxpA57HLH6ruumHLkDuiV64Cg4fPaEdcbTmnM0ngUNxiQNqsakENSM
+        ST5oNEwaQ6NjkgtNhklDNDkmEX1iXZNj7/jNLlVVPfDqfWRUEfs8Rp9fr6khxpHXkVHlwqTo6BgmRUN9
+        MMmMhmCSGtVgUjBqwSRvFId5g5v6tm0XHKnDXnvsdfv5F6MoihkvzcXc69+XsuwFyxHSnZ/cG1QAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="PictureBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAitJREFUSEvd
+        lU1IVGEUhqcQisQkIjXxp0UhRIagSEEuIje6kHYu0hyGcf4vKAyKuJlWStCmnegmCNyLYDAoga1auGgh
+        GFqEGUmipCJIgj6fvi5azPW7N4fEB17unPOdc977M/e7gTNJLBYricfjD1AzakI1WjpdGNyGptEe+oHm
+        0BLaRQuoPxKJXFG5fxKJRBnDZtA35BBXaumQdDpdSP4pMiezkkwmn2jJOwy/zS1cZtCI4ziXlM4J9e3U
+        bqIupezB4CqN8+iVUlZg+pieLY6PlLKDpmGUzWQyF5Wyhj4HzdNboJQ7PIfrNGynUqlapTxhjOj/jDqU
+        cofbEaT4g0JfMKOPGRMK3aFwDL1Q6AsM65ixrtAdCt/x7wwp9AXvZDFz9kOhUJFSuaFwmjN8rtAXej/3
+        0TWlcoPZWwoHFPqC/hq0o9AdDHspnlLoC2Z0M2NWoTs8v1vm7HgON5XyDP3vUY/Ck9FtHVXoiWg02krv
+        qtUf5hiuroqmNYzblbKCLbGCnp/cpU6l7KHR7Iu/kdVmzJXdxWiRvk8c7yntDczMR3YNTTLwodJ/wRZY
+        zvpLtI3ZR47mdVj1bcptusGA12YgWkTjaAS9QbPoD8pi0MhJ3eH3d2RMN4gbNMY7wWDwMkNaUA9XMoQG
+        MXkWDodLVXKIMSVvvqP/bmoLhubV+irTdVSvpfzxX0z5tlZj9EWmv9B9LeUPTMy+uiLTOVIXjlbyiK40
+        a45KnXsCgQMp2xlXAC2GjgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="PictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAitJREFUSEvd
@@ -160,6 +191,9 @@
   </metadata>
   <metadata name="HospitalAndMedicalEstablishmenttblBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 17</value>
+  </metadata>
+  <metadata name="Cenro_DBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="Cenro_DBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -232,5 +266,17 @@
   </metadata>
   <metadata name="HospitalAndMedicalEstablishment_tblTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>496, 17</value>
+  </metadata>
+  <metadata name="EstablishmentArchiveDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="EstablishmentArchiveDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>227, 56</value>
+  </metadata>
+  <metadata name="EstablishmentArchiveDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="EstablishmentArchive_tblTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
   </metadata>
 </root>

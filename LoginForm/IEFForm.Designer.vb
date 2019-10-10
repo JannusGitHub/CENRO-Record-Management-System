@@ -24,12 +24,15 @@ Partial Class IEFForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IEFForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -106,7 +109,7 @@ Partial Class IEFForm
         Me.Address = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SearchReq = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -144,7 +147,33 @@ Partial Class IEFForm
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PTO1 = New System.Windows.Forms.TextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.searchEstablishmentArchive = New System.Windows.Forms.TextBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.archiveDataGridView = New System.Windows.Forms.DataGridView()
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ControlNumberDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailAddressDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GeneralManagerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactNumberDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeletedDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstablishmentArchivetblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EstablishmentArchiveDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EstablishmentArchiveDataSet = New LoginForm.EstablishmentArchiveDataSet()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.IndustrialEstablishmentFood_tblTableAdapter = New LoginForm.cenro_DBDataSetTableAdapters.IndustrialEstablishmentFood_tblTableAdapter()
+        Me.EstablishmentArchive_tblTableAdapter = New LoginForm.EstablishmentArchiveDataSetTableAdapters.EstablishmentArchive_tblTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -159,10 +188,19 @@ Partial Class IEFForm
         Me.GroupBox3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.archiveDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EstablishmentArchivetblBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EstablishmentArchiveDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EstablishmentArchiveDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -190,6 +228,7 @@ Partial Class IEFForm
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 41)
         Me.TabControl1.Name = "TabControl1"
@@ -209,7 +248,7 @@ Partial Class IEFForm
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Size = New System.Drawing.Size(1092, 653)
         Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "Company Profile"
+        Me.TabPage1.Text = "Establishment Profile"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Panel3
@@ -296,25 +335,25 @@ Partial Class IEFForm
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.ColumnHeadersHeight = 26
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ControlNumberDataGridViewTextBoxColumn, Me.NameOfEstablishmentDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.EmailAddressDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1, Me.GeneralManagerDataGridViewTextBoxColumn, Me.PollutionControlOfficerDataGridViewTextBoxColumn, Me.NatureOfBusinessDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn2, Me.ECCDataGridViewTextBoxColumn, Me.PTODataGridViewTextBoxColumn, Me.DPDataGridViewTextBoxColumn, Me.BFADDataGridViewTextBoxColumn, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn, Me.SelfMonitoringReport})
         Me.DataGridView1.DataSource = Me.IndustrialEstablishmentFoodtblBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(3, 409)
         Me.DataGridView1.Name = "DataGridView1"
@@ -322,9 +361,9 @@ Partial Class IEFForm
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 50
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1080, 241)
         Me.DataGridView1.TabIndex = 46
@@ -1019,13 +1058,13 @@ Partial Class IEFForm
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1092, 653)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Company Requirements"
+        Me.TabPage2.Text = "Establishment Requirements"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox7)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.SearchReq)
         Me.Panel1.Location = New System.Drawing.Point(3, 313)
@@ -1033,16 +1072,16 @@ Partial Class IEFForm
         Me.Panel1.Size = New System.Drawing.Size(278, 27)
         Me.Panel1.TabIndex = 66
         '
-        'PictureBox3
+        'PictureBox7
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(-1, -1)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(28, 26)
-        Me.PictureBox3.TabIndex = 44
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox7.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox7.TabIndex = 67
+        Me.PictureBox7.TabStop = False
         '
         'PictureBox1
         '
@@ -1068,10 +1107,10 @@ Partial Class IEFForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(357, 293)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(356, 289)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(116, 17)
+        Me.Label5.Size = New System.Drawing.Size(143, 21)
         Me.Label5.TabIndex = 58
         Me.Label5.Text = "Search Category"
         '
@@ -1088,10 +1127,10 @@ Partial Class IEFForm
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(0, 293)
+        Me.Label28.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(3, 289)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(51, 17)
+        Me.Label28.Size = New System.Drawing.Size(64, 21)
         Me.Label28.TabIndex = 55
         Me.Label28.Text = "Search"
         '
@@ -1106,34 +1145,34 @@ Partial Class IEFForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView2.ColumnHeadersHeight = 26
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn1, Me.ControlNumberDataGridViewTextBoxColumn1, Me.BrgyClearanceWithCTCDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.ECCDataGridViewTextBoxColumn1, Me.PTODataGridViewTextBoxColumn1, Me.DPDataGridViewTextBoxColumn1, Me.BFADDataGridViewTextBoxColumn1, Me.AccreditedWasteHaulerDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3})
         Me.DataGridView2.DataSource = Me.IndustrialEstablishmentFoodtblBindingSource
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(3, 346)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(1080, 301)
         Me.DataGridView2.TabIndex = 54
@@ -1478,9 +1517,287 @@ Partial Class IEFForm
         Me.PTO1.Size = New System.Drawing.Size(250, 23)
         Me.PTO1.TabIndex = 6
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.GroupBox4)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(1092, 653)
+        Me.TabPage3.TabIndex = 3
+        Me.TabPage3.Text = "Establishment Archive"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Panel4)
+        Me.GroupBox4.Controls.Add(Me.Label34)
+        Me.GroupBox4.Controls.Add(Me.ComboBox3)
+        Me.GroupBox4.Controls.Add(Me.archiveDataGridView)
+        Me.GroupBox4.Controls.Add(Me.Label33)
+        Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(1086, 647)
+        Me.GroupBox4.TabIndex = 0
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Industrial Establishment Food"
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.searchEstablishmentArchive)
+        Me.Panel4.Controls.Add(Me.PictureBox6)
+        Me.Panel4.Controls.Add(Me.PictureBox3)
+        Me.Panel4.Location = New System.Drawing.Point(9, 57)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(278, 27)
+        Me.Panel4.TabIndex = 67
+        '
+        'searchEstablishmentArchive
+        '
+        Me.searchEstablishmentArchive.Location = New System.Drawing.Point(25, -1)
+        Me.searchEstablishmentArchive.Name = "searchEstablishmentArchive"
+        Me.searchEstablishmentArchive.Size = New System.Drawing.Size(224, 27)
+        Me.searchEstablishmentArchive.TabIndex = 51
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox6.Location = New System.Drawing.Point(249, 0)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox6.TabIndex = 49
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(-2, -1)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 26)
+        Me.PictureBox3.TabIndex = 50
+        Me.PictureBox3.TabStop = False
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(416, 33)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(143, 21)
+        Me.Label34.TabIndex = 62
+        Me.Label34.Text = "Search Category"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"by Control Number", "by Name of Establishment", "by Address", "All"})
+        Me.ComboBox3.Location = New System.Drawing.Point(420, 57)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(212, 25)
+        Me.ComboBox3.TabIndex = 61
+        '
+        'archiveDataGridView
+        '
+        Me.archiveDataGridView.AllowUserToAddRows = False
+        Me.archiveDataGridView.AllowUserToDeleteRows = False
+        Me.archiveDataGridView.AllowUserToResizeColumns = False
+        Me.archiveDataGridView.AllowUserToResizeRows = False
+        Me.archiveDataGridView.AutoGenerateColumns = False
+        Me.archiveDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.archiveDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.archiveDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.archiveDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.archiveDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        Me.archiveDataGridView.ColumnHeadersHeight = 26
+        Me.archiveDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameOfEstablishmentDataGridViewTextBoxColumn2, Me.ControlNumberDataGridViewTextBoxColumn2, Me.AddressDataGridViewTextBoxColumn1, Me.EmailAddressDataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.GeneralManagerDataGridViewTextBoxColumn1, Me.PollutionControlOfficerDataGridViewTextBoxColumn1, Me.NatureOfBusinessDataGridViewTextBoxColumn1, Me.ContactNumberDataGridViewTextBoxColumn1, Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1, Me.DeletedDateDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
+        Me.archiveDataGridView.DataSource = Me.EstablishmentArchivetblBindingSource
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.archiveDataGridView.DefaultCellStyle = DataGridViewCellStyle17
+        Me.archiveDataGridView.EnableHeadersVisualStyles = False
+        Me.archiveDataGridView.Location = New System.Drawing.Point(9, 89)
+        Me.archiveDataGridView.Name = "archiveDataGridView"
+        Me.archiveDataGridView.ReadOnly = True
+        Me.archiveDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.archiveDataGridView.RowHeadersVisible = False
+        Me.archiveDataGridView.RowHeadersWidth = 50
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black
+        Me.archiveDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle18
+        Me.archiveDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.archiveDataGridView.Size = New System.Drawing.Size(1069, 555)
+        Me.archiveDataGridView.TabIndex = 52
+        '
+        'NameOfEstablishmentDataGridViewTextBoxColumn2
+        '
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.DataPropertyName = "NameOfEstablishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.HeaderText = "Name of Establishment"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.Name = "NameOfEstablishmentDataGridViewTextBoxColumn2"
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.ReadOnly = True
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfEstablishmentDataGridViewTextBoxColumn2.Width = 212
+        '
+        'ControlNumberDataGridViewTextBoxColumn2
+        '
+        Me.ControlNumberDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ControlNumberDataGridViewTextBoxColumn2.DataPropertyName = "ControlNumber"
+        Me.ControlNumberDataGridViewTextBoxColumn2.HeaderText = "Control Number"
+        Me.ControlNumberDataGridViewTextBoxColumn2.Name = "ControlNumberDataGridViewTextBoxColumn2"
+        Me.ControlNumberDataGridViewTextBoxColumn2.ReadOnly = True
+        Me.ControlNumberDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ControlNumberDataGridViewTextBoxColumn2.Width = 158
+        '
+        'AddressDataGridViewTextBoxColumn1
+        '
+        Me.AddressDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.AddressDataGridViewTextBoxColumn1.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn1.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn1.Name = "AddressDataGridViewTextBoxColumn1"
+        Me.AddressDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.AddressDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AddressDataGridViewTextBoxColumn1.Width = 95
+        '
+        'EmailAddressDataGridViewTextBoxColumn1
+        '
+        Me.EmailAddressDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.EmailAddressDataGridViewTextBoxColumn1.DataPropertyName = "EmailAddress"
+        Me.EmailAddressDataGridViewTextBoxColumn1.HeaderText = "Email"
+        Me.EmailAddressDataGridViewTextBoxColumn1.Name = "EmailAddressDataGridViewTextBoxColumn1"
+        Me.EmailAddressDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.EmailAddressDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EmailAddressDataGridViewTextBoxColumn1.Width = 74
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "CEO_President"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "CEO President"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn5.Width = 144
+        '
+        'GeneralManagerDataGridViewTextBoxColumn1
+        '
+        Me.GeneralManagerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.GeneralManagerDataGridViewTextBoxColumn1.DataPropertyName = "GeneralManager"
+        Me.GeneralManagerDataGridViewTextBoxColumn1.HeaderText = "General Manager"
+        Me.GeneralManagerDataGridViewTextBoxColumn1.Name = "GeneralManagerDataGridViewTextBoxColumn1"
+        Me.GeneralManagerDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.GeneralManagerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GeneralManagerDataGridViewTextBoxColumn1.Width = 173
+        '
+        'PollutionControlOfficerDataGridViewTextBoxColumn1
+        '
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.DataPropertyName = "PollutionControlOfficer"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.HeaderText = "PCO"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.Name = "PollutionControlOfficerDataGridViewTextBoxColumn1"
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.PollutionControlOfficerDataGridViewTextBoxColumn1.Width = 69
+        '
+        'NatureOfBusinessDataGridViewTextBoxColumn1
+        '
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.DataPropertyName = "NatureOfBusiness"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.HeaderText = "Nature of Business"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.Name = "NatureOfBusinessDataGridViewTextBoxColumn1"
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NatureOfBusinessDataGridViewTextBoxColumn1.Width = 171
+        '
+        'ContactNumberDataGridViewTextBoxColumn1
+        '
+        Me.ContactNumberDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ContactNumberDataGridViewTextBoxColumn1.DataPropertyName = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn1.HeaderText = "Contact Number"
+        Me.ContactNumberDataGridViewTextBoxColumn1.Name = "ContactNumberDataGridViewTextBoxColumn1"
+        Me.ContactNumberDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ContactNumberDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ContactNumberDataGridViewTextBoxColumn1.Width = 168
+        '
+        'NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1
+        '
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.DataPropertyName = "NameOfAccreditedWasteHauler"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.HeaderText = "Name of Accredited Waste Hauler"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.Name = "NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1"
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1.Width = 301
+        '
+        'DeletedDateDataGridViewTextBoxColumn
+        '
+        Me.DeletedDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DeletedDateDataGridViewTextBoxColumn.DataPropertyName = "DeletedDate"
+        Me.DeletedDateDataGridViewTextBoxColumn.HeaderText = "Deleted Date"
+        Me.DeletedDateDataGridViewTextBoxColumn.Name = "DeletedDateDataGridViewTextBoxColumn"
+        Me.DeletedDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DeletedDateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DeletedDateDataGridViewTextBoxColumn.Width = 140
+        '
+        'StatusDataGridViewTextBoxColumn
+        '
+        Me.StatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.StatusDataGridViewTextBoxColumn.DataPropertyName = "Status"
+        Me.StatusDataGridViewTextBoxColumn.HeaderText = "Status"
+        Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
+        Me.StatusDataGridViewTextBoxColumn.ReadOnly = True
+        Me.StatusDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StatusDataGridViewTextBoxColumn.Width = 82
+        '
+        'EstablishmentArchivetblBindingSource
+        '
+        Me.EstablishmentArchivetblBindingSource.DataMember = "EstablishmentArchive_tbl"
+        Me.EstablishmentArchivetblBindingSource.DataSource = Me.EstablishmentArchiveDataSetBindingSource
+        '
+        'EstablishmentArchiveDataSetBindingSource
+        '
+        Me.EstablishmentArchiveDataSetBindingSource.DataSource = Me.EstablishmentArchiveDataSet
+        Me.EstablishmentArchiveDataSetBindingSource.Position = 0
+        '
+        'EstablishmentArchiveDataSet
+        '
+        Me.EstablishmentArchiveDataSet.DataSetName = "EstablishmentArchiveDataSet"
+        Me.EstablishmentArchiveDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(5, 33)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(64, 21)
+        Me.Label33.TabIndex = 0
+        Me.Label33.Text = "Search"
+        '
         'IndustrialEstablishmentFood_tblTableAdapter
         '
         Me.IndustrialEstablishmentFood_tblTableAdapter.ClearBeforeFill = True
+        '
+        'EstablishmentArchive_tblTableAdapter
+        '
+        Me.EstablishmentArchive_tblTableAdapter.ClearBeforeFill = True
         '
         'IEFForm
         '
@@ -1512,11 +1829,22 @@ Partial Class IEFForm
         Me.TabPage2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.archiveDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EstablishmentArchivetblBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EstablishmentArchiveDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EstablishmentArchiveDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1596,7 +1924,6 @@ Partial Class IEFForm
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox3 As GroupBox
     Private WithEvents NewButton As Button
@@ -1639,4 +1966,31 @@ Partial Class IEFForm
     Friend WithEvents PTO As ComboBox
     Friend WithEvents ECC As ComboBox
     Friend WithEvents DTISEC As ComboBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents searchEstablishmentArchive As TextBox
+    Friend WithEvents archiveDataGridView As DataGridView
+    Friend WithEvents Label34 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents EstablishmentArchiveDataSetBindingSource As BindingSource
+    Friend WithEvents EstablishmentArchiveDataSet As EstablishmentArchiveDataSet
+    Friend WithEvents EstablishmentArchivetblBindingSource As BindingSource
+    Friend WithEvents EstablishmentArchive_tblTableAdapter As EstablishmentArchiveDataSetTableAdapters.EstablishmentArchive_tblTableAdapter
+    Friend WithEvents NameOfEstablishmentDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents ControlNumberDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents AddressDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents EmailAddressDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents GeneralManagerDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents PollutionControlOfficerDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NatureOfBusinessDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ContactNumberDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NameOfAccreditedWasteHaulerDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DeletedDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents PictureBox7 As PictureBox
 End Class

@@ -237,9 +237,9 @@ Partial Class CertificationMainForm
         Me.Label27.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.Location = New System.Drawing.Point(2, 30)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(151, 21)
+        Me.Label27.Size = New System.Drawing.Size(64, 21)
         Me.Label27.TabIndex = 74
-        Me.Label27.Text = "Search Everything"
+        Me.Label27.Text = "Search"
         '
         'DataGridView1
         '
@@ -417,9 +417,9 @@ Partial Class CertificationMainForm
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(2, 30)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(151, 21)
+        Me.Label7.Size = New System.Drawing.Size(64, 21)
         Me.Label7.TabIndex = 80
-        Me.Label7.Text = "Search Everything"
+        Me.Label7.Text = "Search"
         '
         'IENFDataGridView
         '
@@ -596,9 +596,9 @@ Partial Class CertificationMainForm
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(2, 30)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(151, 21)
+        Me.Label2.Size = New System.Drawing.Size(64, 21)
         Me.Label2.TabIndex = 80
-        Me.Label2.Text = "Search Everything"
+        Me.Label2.Text = "Search"
         '
         'HospitalDataGridView
         '
@@ -780,9 +780,9 @@ Partial Class CertificationMainForm
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(2, 30)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(151, 21)
+        Me.Label4.Size = New System.Drawing.Size(64, 21)
         Me.Label4.TabIndex = 85
-        Me.Label4.Text = "Search Everything"
+        Me.Label4.Text = "Search"
         '
         'FastfoodDataGridView
         '

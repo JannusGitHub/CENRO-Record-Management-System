@@ -45,6 +45,14 @@ Partial Class Main
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip4 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip5 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip6 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip7 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip8 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,9 +66,9 @@ Partial Class Main
         Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(260, 0)
+        Me.Panel2.Location = New System.Drawing.Point(265, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1106, 35)
+        Me.Panel2.Size = New System.Drawing.Size(1101, 35)
         Me.Panel2.TabIndex = 1
         '
         'PictureBox3
@@ -89,18 +97,18 @@ Partial Class Main
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(260, 35)
+        Me.Panel3.Location = New System.Drawing.Point(265, 35)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1106, 1)
+        Me.Panel3.Size = New System.Drawing.Size(1101, 1)
         Me.Panel3.TabIndex = 2
         '
         'MDIpanel
         '
         Me.MDIpanel.BackColor = System.Drawing.Color.White
         Me.MDIpanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MDIpanel.Location = New System.Drawing.Point(260, 36)
+        Me.MDIpanel.Location = New System.Drawing.Point(265, 36)
         Me.MDIpanel.Name = "MDIpanel"
-        Me.MDIpanel.Size = New System.Drawing.Size(1106, 744)
+        Me.MDIpanel.Size = New System.Drawing.Size(1101, 744)
         Me.MDIpanel.TabIndex = 3
         '
         'Timer1
@@ -139,13 +147,13 @@ Partial Class Main
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(260, 780)
+        Me.Panel1.Size = New System.Drawing.Size(265, 780)
         Me.Panel1.TabIndex = 0
         '
         'activeButton
         '
         Me.activeButton.BackColor = System.Drawing.Color.White
-        Me.activeButton.Location = New System.Drawing.Point(255, 193)
+        Me.activeButton.Location = New System.Drawing.Point(260, 193)
         Me.activeButton.Name = "activeButton"
         Me.activeButton.Size = New System.Drawing.Size(5, 30)
         Me.activeButton.TabIndex = 11
@@ -154,32 +162,35 @@ Partial Class Main
         '
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(0, 409)
+        Me.Button6.Location = New System.Drawing.Point(0, 397)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(260, 30)
+        Me.Button6.Size = New System.Drawing.Size(262, 30)
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "      Backup/Restore database"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip7.SetToolTip(Me.Button6, "This is the form of Backup or Restore. You can backup" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your data anytime you want" &
+        "")
         Me.Button6.UseVisualStyleBackColor = True
         '
         'HistoryButton
         '
         Me.HistoryButton.FlatAppearance.BorderSize = 0
         Me.HistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HistoryButton.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HistoryButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HistoryButton.ForeColor = System.Drawing.Color.White
         Me.HistoryButton.Image = CType(resources.GetObject("HistoryButton.Image"), System.Drawing.Image)
         Me.HistoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.HistoryButton.Location = New System.Drawing.Point(0, 373)
+        Me.HistoryButton.Location = New System.Drawing.Point(0, 363)
         Me.HistoryButton.Name = "HistoryButton"
-        Me.HistoryButton.Size = New System.Drawing.Size(260, 30)
+        Me.HistoryButton.Size = New System.Drawing.Size(262, 30)
         Me.HistoryButton.TabIndex = 6
         Me.HistoryButton.Text = "      Log History"
         Me.HistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip6.SetToolTip(Me.HistoryButton, "This is the form of Log History to view the history" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of the user")
         Me.HistoryButton.UseVisualStyleBackColor = True
         '
         'Datenow2
@@ -188,7 +199,7 @@ Partial Class Main
         Me.Datenow2.BackColor = System.Drawing.Color.Transparent
         Me.Datenow2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Datenow2.ForeColor = System.Drawing.Color.White
-        Me.Datenow2.Location = New System.Drawing.Point(80, 744)
+        Me.Datenow2.Location = New System.Drawing.Point(94, 744)
         Me.Datenow2.Name = "Datenow2"
         Me.Datenow2.Size = New System.Drawing.Size(20, 17)
         Me.Datenow2.TabIndex = 9
@@ -200,7 +211,7 @@ Partial Class Main
         Me.Datenow.BackColor = System.Drawing.Color.Transparent
         Me.Datenow.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Datenow.ForeColor = System.Drawing.Color.White
-        Me.Datenow.Location = New System.Drawing.Point(63, 724)
+        Me.Datenow.Location = New System.Drawing.Point(77, 724)
         Me.Datenow.Name = "Datenow"
         Me.Datenow.Size = New System.Drawing.Size(20, 17)
         Me.Datenow.TabIndex = 8
@@ -210,96 +221,104 @@ Partial Class Main
         '
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Image = Global.LoginForm.My.Resources.Resources.icons8_Certificate_28px1
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 301)
+        Me.Button5.Location = New System.Drawing.Point(0, 295)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(260, 30)
+        Me.Button5.Size = New System.Drawing.Size(262, 30)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "      Certification"
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip4.SetToolTip(Me.Button5, "This is the form of Certification. You can Search" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or Print Certificate")
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 337)
+        Me.Button4.Location = New System.Drawing.Point(0, 329)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(260, 30)
+        Me.Button4.Size = New System.Drawing.Size(262, 30)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "      Print Report"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip5.SetToolTip(Me.Button4, "This is the form to Print Report of the establishment" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "including Company Profile " &
+        "Report and Year End Report")
         Me.Button4.UseVisualStyleBackColor = True
         '
         'ActivateButton
         '
         Me.ActivateButton.FlatAppearance.BorderSize = 0
         Me.ActivateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ActivateButton.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ActivateButton.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ActivateButton.ForeColor = System.Drawing.Color.White
         Me.ActivateButton.Image = CType(resources.GetObject("ActivateButton.Image"), System.Drawing.Image)
         Me.ActivateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ActivateButton.Location = New System.Drawing.Point(0, 265)
+        Me.ActivateButton.Location = New System.Drawing.Point(0, 261)
         Me.ActivateButton.Name = "ActivateButton"
-        Me.ActivateButton.Size = New System.Drawing.Size(260, 30)
+        Me.ActivateButton.Size = New System.Drawing.Size(262, 30)
         Me.ActivateButton.TabIndex = 3
         Me.ActivateButton.Text = "      Activate or Deactivate"
         Me.ActivateButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip3.SetToolTip(Me.ActivateButton, "This is the form to Activate or Deactive the user")
         Me.ActivateButton.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 445)
+        Me.Button3.Location = New System.Drawing.Point(0, 431)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(260, 30)
+        Me.Button3.Size = New System.Drawing.Size(262, 30)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "      Logout"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip8.SetToolTip(Me.Button3, "Secure your account by clicking Logout")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 229)
+        Me.Button2.Location = New System.Drawing.Point(0, 227)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(260, 30)
+        Me.Button2.Size = New System.Drawing.Size(265, 30)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "      User Management"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip2.SetToolTip(Me.Button2, "This is the form to manage user. You can " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Register, Update or Delete the user")
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(0, 193)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(260, 30)
+        Me.Button1.Size = New System.Drawing.Size(265, 30)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "      Company Management"
+        Me.Button1.Text = "      Establishment Management"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolTip1.SetToolTip(Me.Button1, "This is the form to manage establishment including" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "their profile and requirement" &
+        "s")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -312,6 +331,38 @@ Partial Class Main
         Me.PictureBox1.Size = New System.Drawing.Size(100, 102)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipTitle = "Establishment Management"
+        '
+        'ToolTip2
+        '
+        Me.ToolTip2.ToolTipTitle = "User Management"
+        '
+        'ToolTip3
+        '
+        Me.ToolTip3.ToolTipTitle = "Activate or Deactivate"
+        '
+        'ToolTip4
+        '
+        Me.ToolTip4.ToolTipTitle = "Certification"
+        '
+        'ToolTip5
+        '
+        Me.ToolTip5.ToolTipTitle = "Print Report"
+        '
+        'ToolTip6
+        '
+        Me.ToolTip6.ToolTipTitle = "Log History"
+        '
+        'ToolTip7
+        '
+        Me.ToolTip7.ToolTipTitle = "Backup or Restore"
+        '
+        'ToolTip8
+        '
+        Me.ToolTip8.ToolTipTitle = "Logout"
         '
         'Main
         '
@@ -357,4 +408,12 @@ Partial Class Main
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents ActivateButton As Button
     Friend WithEvents activeButton As Panel
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ToolTip2 As ToolTip
+    Friend WithEvents ToolTip4 As ToolTip
+    Friend WithEvents ToolTip5 As ToolTip
+    Friend WithEvents ToolTip3 As ToolTip
+    Friend WithEvents ToolTip7 As ToolTip
+    Friend WithEvents ToolTip6 As ToolTip
+    Friend WithEvents ToolTip8 As ToolTip
 End Class

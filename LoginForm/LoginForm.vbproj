@@ -142,6 +142,11 @@
     <Compile Include="ChangePasswordForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EstablishmentArchiveDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstablishmentArchiveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FastfoodCanteenAndRestoReportOption.Designer.vb">
       <DependentUpon>FastfoodCanteenAndRestoReportOption.vb</DependentUpon>
     </Compile>
@@ -651,6 +656,17 @@
     </None>
     <None Include="cenro_DBDataSet.xss">
       <DependentUpon>cenro_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EstablishmentArchiveDataSet.xsc">
+      <DependentUpon>EstablishmentArchiveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EstablishmentArchiveDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstablishmentArchiveDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstablishmentArchiveDataSet.xss">
+      <DependentUpon>EstablishmentArchiveDataSet.xsd</DependentUpon>
     </None>
     <None Include="FastfoodDataSet.xsc">
       <DependentUpon>FastfoodDataSet.xsd</DependentUpon>

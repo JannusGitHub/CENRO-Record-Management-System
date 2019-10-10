@@ -133,11 +133,11 @@ Partial Class Category
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(135, 0)
+        Me.Label1.Location = New System.Drawing.Point(77, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 21)
+        Me.Label1.Size = New System.Drawing.Size(197, 21)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Category"
+        Me.Label1.Text = "Establishment Category"
         '
         'GroupBox1
         '
